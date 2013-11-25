@@ -1,0 +1,5 @@
+<?php
+
+	Debugger::dump($ideas);
+
+?>
