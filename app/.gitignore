@@ -12,9 +12,3 @@ webroot/uploads/
 
 # Others
 .DS_Store
-./Plugin/*
-!./Plugin/Acl
-!./Plugin/Extensions
-!./Plugin/Example
-!./Plugin/Install
-!./Plugin/Translate
