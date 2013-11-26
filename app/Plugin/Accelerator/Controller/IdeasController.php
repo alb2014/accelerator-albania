@@ -1,10 +1,17 @@
 <?php
 
 class IdeasController extends AcceleratorAppController {
-    public function index() {
+
+    function beforeFilter() {
+        parent::beforeFilter();
         $this->set('ideas', $this->Idea->find('all'));
     }
-	    public function add() {
+
+    public function index() {
+
+    }
+	    
+    public function add() {
         if ($this->request->is('post')) {
             $this->Idea->create();
             if ($this->Idea->save($this->request->data)) {
@@ -15,9 +22,22 @@ class IdeasController extends AcceleratorAppController {
         }
     }
 
-	public function edit($ideaId){
+    public function view($ideaId = null){
+        if (!$ideaId) {
+            throw new NotFoundException(__('Invalid idea'));
+        }
 
-	}
+        $idea = $this->Idea->findById($ideaId);
+
+        if (!$idea) {
+            throw new NotFoundException(__('Invalid idea'));
+        }
+        $this->set('idea', $idea);
+    }
+
+    public function edit($ideaId){
+
+    }
 
 	//
 	//
