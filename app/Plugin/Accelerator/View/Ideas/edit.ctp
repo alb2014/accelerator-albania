@@ -21,13 +21,16 @@ echo $this->Form->create('Idea');
 echo $this->Form->input('title');
 echo $this->Form->input('description', array('rows' => '3'));
 echo $this->Form->input('type', array('options'=> $typeOpts));
-echo $this->Form->input('userId', array('type' => 'hidden',
-										'value' => AuthComponent::user()['id']));
+$user = AuthComponent::user();
+echo $this->Form->input('user_id', array('type' => 'hidden',
+										'value' => $user['id']));
 echo $this->Form->input('problem', array('rows' => '3',
 										));
 echo $this->Form->input('solution', array('rows' => '3'));
 echo $this->Form->input('market', array('rows' => '3'));
 echo $this->Form->input('competition', array('rows' => '3'));
 echo $this->Form->input('model', array('options'=> $modelOpts));
+echo $this->Form->input('promise', array('rows' => '3'));
+
 echo $this->Form->end('Pitch');
 ?>
