@@ -7,8 +7,9 @@ echo $this->Form->input('type', array('options'=> array('social'=>'Social',
 														'tech' =>'Tech',
 														'scientific' => 'Scientfic',
 														'other' => 'Other')));
+$user = AuthComponent::user();
 echo $this->Form->input('user_id', array('type' => 'hidden',
-										'value' => AuthComponent::user()['id']));
+										'value' => $user['id']));
 
 echo $this->Form->end('Pitch');
 ?>
