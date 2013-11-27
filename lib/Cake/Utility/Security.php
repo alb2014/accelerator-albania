@@ -122,6 +122,8 @@ class Security {
 
 		if (!$type || $type === 'sha1') {
 			if (function_exists('sha1')) {
+				// Debugger::dump(sha1($string));
+				// echo Debugger::trace();
 				return sha1($string);
 			}
 			$type = 'sha256';

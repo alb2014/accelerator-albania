@@ -2,9 +2,9 @@
 class EmailConfig {    
     public $default = array(    
         'transport' => 'Smtp',    
-        'from' => array('test_mail@gmail.com' => 'Test Mail name sender'),    
-        'host' => 'ssl://smtp.gmail.com',    
-        'port' => 465,    
-        'username' => 'nathanieltsmith@gmail.com',    
-        'password' => 'mi-42gak35');    
+        'from' => array('app19805266@heroku.com' => 'Albania Accel'),    
+        'host' => 'smtp.sendgrid.net',    
+        'port' => 587,    
+        'username' => 'app19805266@heroku.com',    
+        'password' => 'w8or1w97');    
 }?>
