@@ -79,40 +79,32 @@
 /* Config Database */
 
 class DATABASE_CONFIG {
-
-	public $default;
-
-	function __construct() {
-
-		/* Get ClearDB config from environment */
-
-		$url=parse_url(getenv("CLEARDB_DATABASE_URL"));
-		$server = $url["host"];
-		$username = $url["user"];
-		$password = $url["pass"];
-		$db = substr($url["path"],1);
-
-		/* Set default config */ 
-		
-		$this->default = array(
-			'datasource' => 'Database/Mysql',
-			'persistent' => false,
-			'host' => $server,
-			'login' => $username,
-			'password' => $password,
-			'database' => $db,
-			'encoding' => 'UTF8',
-		);
-	}
-
-	public $test = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'user',
-		'password' => 'password',
-		'database' => 'test_database_name',
-		'prefix' => '',
-		'encoding' => 'UTF8',
-	);
+ 
+    function __construct() {
+ 
+        $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
+ 
+        $this->default = array(
+            'datasource' => 'Database/Mysql',
+            'persistent' => false,
+            'host' => $url['host'],
+            'login' => $url['user'],
+            'password' => $url['pass'],
+            'database' => substr($url['path'],1),
+            'prefix' => '',
+            // 'encoding' => 'utf8',
+        );
+ 
+        $this->test = array(
+            'datasource' => 'Database/Mysql',
+            'persistent' => false,
+            'host' => 'localhost',
+            'login' => 'user',
+            'password' => 'password',
+            'database' => 'test_database_name',
+            'prefix' => '',
+            //'encoding' => 'utf8',
+        );
+ 
+    }
 }
