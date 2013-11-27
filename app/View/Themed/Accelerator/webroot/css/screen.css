@@ -1,0 +1,686 @@
+/* -------------------------------------------------------------------------
+   Imports */
+/* Vars */
+/* line 61, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
+}
+
+/* line 64, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 1.4375em;
+}
+
+/* Mixins & Extension Classes */
+/* line 39, sass/screen.scss */
+.inline-padding, .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .program h3, .program p, .submissions article header, .learn-more ul, .idea h3, .idea p {
+  padding: 0 1em;
+}
+
+/* line 43, sass/screen.scss */
+.action-button, input[type='submit'], a.button, .votes a {
+  display: inline-block;
+  padding: .5em 1em;
+  background-color: #333333;
+  color: white;
+  border: 0;
+}
+/* line 49, sass/screen.scss */
+.action-button:hover, input[type='submit']:hover, a.button:hover, .votes a:hover {
+  background-color: #222222;
+}
+
+/* A Fluid Grid based on 960gs */
+/* Not Fluid */
+/* -------------------------------------------------------------------------
+   Layout */
+/* line 67, sass/screen.scss */
+.container, .content header.global, .content > section.main, .content > footer, div.organization-info div, section.people ul {
+  *zoom: 1;
+  width: 940px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after, .content header.global:after, .content > section.main:after, .content > footer:after, div.organization-info div:after, section.people ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------------------------------------------------
+   Basic Defaults & Overrides */
+/* line 76, sass/screen.scss */
+html, body {
+  font-family: 'PT Sans', 'Myriad Pro', sans-serif;
+  color: #222222;
+}
+
+/* line 81, sass/screen.scss */
+ul {
+  list-style: none;
+  list-style-image: none;
+  padding: 0;
+}
+
+/* line 87, sass/screen.scss */
+label, input {
+  display: block;
+}
+
+/* line 95, sass/screen.scss */
+p {
+  margin: 1em 0 .5em;
+}
+
+/* line 99, sass/screen.scss */
+a {
+  color: #1375e1;
+  /* Buttons */
+}
+/* line 101, sass/screen.scss */
+a:hover {
+  color: #1162bc;
+}
+/* line 104, sass/screen.scss */
+a:visited {
+  color: #5aa3f4;
+}
+
+/* Vote Buttons */
+/* line 116, sass/screen.scss */
+.votes a {
+  padding: .25em .5em;
+  margin: 3px;
+}
+
+/* -------------------------------------------------------------------------
+   Main Content Sections */
+/* Live within 12-column grid */
+/* line 128, sass/screen.scss */
+.content {
+  /* Main Header */
+}
+/* line 136, sass/screen.scss */
+.content header.global {
+  /* Not supported by IE */
+}
+/* line 137, sass/screen.scss */
+.content header.global a.button, .content header.global .votes a, .votes .content header.global a {
+  float: right;
+}
+/* line 141, sass/screen.scss */
+.content header.global nav li.sub {
+  float: right;
+}
+/* line 145, sass/screen.scss */
+.content header.global li {
+  display: inline-block;
+}
+/* line 149, sass/screen.scss */
+.content header.global li:not(.sub) a {
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------
+   Extensions : Individual Section Blocks */
+/* line 158, sass/screen.scss */
+.column-wrapper, .news, .submissions.sidebar, .submissions.main,
+.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-form, .direct-contact, .idea {
+  background: #eeeeee;
+  color: #222222;
+  margin-bottom: 1em;
+}
+/* line 162, sass/screen.scss */
+.column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header {
+  color: white;
+  background: #333333;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 167, sass/screen.scss */
+.column-wrapper > header a, .news > header a, .submissions.sidebar > header a, .submissions.main > header a,
+.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-form > header a, .direct-contact > header a, .idea > header a {
+  color: white;
+}
+
+/* line 174, sass/screen.scss */
+.horizontal-ul li, .submissions ul.submission-sort li, .learn header ul li {
+  display: inline-block;
+  padding: 0 .5em;
+}
+
+/* -------------------------------------------------------------------------
+   Column Setups */
+/* Home */
+/* line 185, sass/screen.scss */
+.news {
+  width: 540px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+
+/* line 188, sass/screen.scss */
+.submissions.sidebar {
+  width: 380px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* Engage */
+/* line 193, sass/screen.scss */
+.submissions.main {
+  width: 540px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+
+/* line 196, sass/screen.scss */
+.program {
+  width: 380px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* Submit */
+/* line 201, sass/screen.scss */
+.submit-idea, .create-profile {
+  width: 940px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* Learn */
+/* line 206, sass/screen.scss */
+.learn {
+  width: 700px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+
+/* line 209, sass/screen.scss */
+.learn-more {
+  width: 220px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* About */
+/* line 214, sass/screen.scss */
+.what-is-hapi, .program-structure {
+  width: 620px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+
+/* line 217, sass/screen.scss */
+.who-is {
+  width: 300px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* Contact */
+/* line 222, sass/screen.scss */
+.contact-form {
+  width: 620px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+
+/* line 225, sass/screen.scss */
+.direct-contact {
+  width: 300px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* Idea Page */
+/* line 230, sass/screen.scss */
+.idea {
+  width: 540px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+
+/* Full-width miscellaneous text between main content and footer */
+/* line 236, sass/screen.scss */
+aside.miscellaneous {
+  width: 940px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+  clear: both;
+}
+
+/* line 241, sass/screen.scss */
+section.main {
+  clear: both;
+  /* Main Content Aside */
+}
+/* line 245, sass/screen.scss */
+section.main > aside h3 {
+  text-align: center;
+}
+
+/* Home elements */
+/* line 254, sass/screen.scss */
+.news article {
+  width: 540px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+/* line 256, sass/screen.scss */
+.news article .image {
+  width: 140px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+/* line 259, sass/screen.scss */
+.news article .content {
+  width: 380px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+/* line 262, sass/screen.scss */
+.news article img {
+  margin: 1.5em 0 1.5em 1em;
+}
+/* line 265, sass/screen.scss */
+.news article p {
+  float: left;
+}
+/* line 268, sass/screen.scss */
+.news article header ~ p {
+  margin-top: 0;
+  font-size: 0.875em;
+  line-height: 1.64286em;
+  line-height: 1.4375em;
+}
+/* line 273, sass/screen.scss */
+.news article time {
+  padding: 0 .5em 0 0;
+}
+
+/* line 280, sass/screen.scss */
+.submissions.sidebar .votes {
+  width: 60px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+/* line 282, sass/screen.scss */
+.submissions.sidebar .votes ~ div {
+  width: 300px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+/* line 284, sass/screen.scss */
+.submissions.sidebar .votes ~ div p {
+  margin: 1em;
+}
+
+/* Engage elements - fixed height, unfortunately */
+/* line 294, sass/screen.scss */
+.submissions.main,
+.program {
+  height: 920px;
+  overflow: scroll;
+}
+
+/* Full-length Backgrounds for columns
+   Not working right now -- percentages off for some reason */
+/*.columns-7-5 {
+  @include clearfix;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #ccc),
+    color-stop(columns(7,12), #ccc),
+    color-stop(columns(7,12), #eee),
+    color-stop(space(7,12), #eee),
+    color-stop(space(7,12), #ccc),
+    color-stop(100%, #ccc)
+  );    
+  background-image: -webkit-linear-gradient(
+    left, 
+    #ccc, 
+    #ccc columns(7,12),
+    #eee columns(7,12),
+    #eee space(7,12),
+    #ccc space(7,12),
+    #ccc 100%
+  );
+  background-image: -moz-linear-gradient(
+    left, 
+    #ccc, 
+    #ccc columns(7,12),
+    #eee columns(7,12),
+    #eee space(7,12),
+    #ccc space(7,12),
+    #ccc 100%
+  );
+  background-image: -ms-linear-gradient(
+    left, 
+    #ccc, 
+    #ccc columns(7,12),
+    #eee columns(7,12),
+    #eee space(7,12),
+    #ccc space(7,12),
+    #ccc 100%
+  );
+  background-image: -o-linear-gradient(
+    left, 
+    #ccc, 
+    #ccc columns(7,12),
+    #eee columns(7,12),
+    #eee space(7,12),
+    #ccc space(7,12),
+    #ccc 100%
+  );
+}*/
+/* Universal Article Elements */
+/* line 361, sass/screen.scss */
+article header {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 364, sass/screen.scss */
+article h1 {
+  font-size: 1.17em;
+  margin: 0.8em 0 0;
+  font-weight: bold;
+}
+
+/* Homepage Submissions */
+/* line 370, sass/screen.scss */
+.submissions {
+  /* Individual Submissions */
+  /* Wider submissions */
+}
+/* line 371, sass/screen.scss */
+.submissions ul.submission-sort {
+  float: right;
+}
+/* line 374, sass/screen.scss */
+.submissions ul.submission-sort a {
+  color: white;
+}
+/* line 380, sass/screen.scss */
+.submissions article {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 382, sass/screen.scss */
+.submissions article h1 {
+  float: left;
+}
+/* line 388, sass/screen.scss */
+.submissions article time {
+  padding: 0 0 0 .5em;
+}
+/* line 396, sass/screen.scss */
+.submissions.main .votes {
+  width: 60px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+/* line 399, sass/screen.scss */
+.submissions.main article > p {
+  width: 300px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+/* line 402, sass/screen.scss */
+.submissions.main aside {
+  width: 140px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* -------------------------------------------------------------------------
+   Submit Idea & Create Profile Form & Page */
+/* line 418, sass/screen.scss */
+.create-profile .form-column1 {
+  width: 460px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+/* line 421, sass/screen.scss */
+.create-profile .form-column2 {
+  width: 460px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* -------------------------------------------------------------------------
+   Learn Page */
+/* line 436, sass/screen.scss */
+.learn header ul {
+  float: right;
+}
+
+/* -------------------------------------------------------------------------
+   About Page */
+/* line 454, sass/screen.scss */
+.what-is-hapi h3, .what-is-hapi p, .program-structure h3, .program-structure p, .who-is h3, .who-is p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* -------------------------------------------------------------------------
+   Contact Page */
+/* -------------------------------------------------------------------------
+   Idea Page */
+/* line 471, sass/screen.scss */
+.idea .votes {
+  float: right;
+}
+
+/* -------------------------------------------------------------------------
+   Edit Idea Page */
+/* line 484, sass/screen.scss */
+.idea.edit label {
+  font-size: 1.17em;
+  margin: 0.8em 0 0;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------
+   Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
+/* line 493, sass/screen.scss */
+div.organization-info {
+  background-color: #eeeeee;
+  color: #222222;
+  margin-bottom: -1em;
+}
+/* line 499, sass/screen.scss */
+div.organization-info div section {
+  width: 460px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+/* line 184, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/susy-1.0.9/sass/susy/_grid.scss */
+div.organization-info div section:nth-child(2n) {
+  float: right;
+  margin-right: 0;
+}
+/* line 504, sass/screen.scss */
+div.organization-info h1 {
+  font-size: 1.17em;
+  margin: 0.8em 0 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------
+   Full width 'People' Bar (breaks out of grid) */
+/* line 514, sass/screen.scss */
+section.people {
+  background-color: #333333;
+  color: white;
+}
+/* line 519, sass/screen.scss */
+section.people ul li {
+  width: 300px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+/* line 184, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/susy-1.0.9/sass/susy/_grid.scss */
+section.people ul li:nth-child(3n) {
+  float: right;
+  margin-right: 0;
+}
+/* line 524, sass/screen.scss */
+section.people img {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+/* line 528, sass/screen.scss */
+section.people a {
+  color: white;
+}
+
+/* -------------------------------------------------------------------------
+   Footer */
+/* line 538, sass/screen.scss */
+.content > footer .sitemap {
+  width: 620px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+/* line 540, sass/screen.scss */
+.content > footer .sitemap ul {
+  float: left;
+  width: 140px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+/* line 545, sass/screen.scss */
+.content > footer .social {
+  width: 300px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+/* line 548, sass/screen.scss */
+.content > footer ul {
+  margin: 0;
+}
+/* line 551, sass/screen.scss */
+.content > footer p {
+  width: 940px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+  text-align: center;
+  margin: 2em 0;
+}
+
+/* -------------------------------------------------------------------------
+   Footer */
+/* line 561, sass/screen.scss */
+.modal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+/* line 574, sass/screen.scss */
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* line 579, sass/screen.scss */
+.modal > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: #fff;
+}
+/* line 587, sass/screen.scss */
+.modal .modal-close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 3px black;
+  -moz-box-shadow: 1px 1px 3px black;
+  box-shadow: 1px 1px 3px black;
+}
+/* line 600, sass/screen.scss */
+.modal .modal-close:hover {
+  background: #00d9ff;
+}

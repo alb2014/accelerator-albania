@@ -1,0 +1,602 @@
+/* -------------------------------------------------------------------------
+   Imports */
+
+@import "base";
+
+@import "compass/typography/vertical_rhythm";
+
+@import "compass/css3";
+
+/* Vars */
+$primary_bg:         #333;
+$primary_bg_text:    white;
+$primary_bg_hover:   #222;
+
+$secondary_bg:       #eee;
+$secondary_bg_text:  #222;
+
+$body_text:          #222;
+
+$link_color:         #1375e1;
+$link_color_hover:   #1162bc;
+$link_color_visited: #5aa3f4;
+
+
+$base-font-size: 16px;
+$base-line-height: 23px;
+
+$default-rhythm-border-style: solid;
+
+@include establish-baseline($base-font-size);
+
+/* Mixins & Extension Classes */
+@mixin h3 {
+  font-size: 1.17em;
+  margin: 0.8em 0 0;
+  font-weight: bold;
+}
+
+.inline-padding {
+  padding: 0 1em;
+}
+
+.action-button {
+  display: inline-block;
+  padding: .5em 1em;
+  background-color: $primary_bg;
+  color: $primary_bg_text;
+  border: 0;
+  &:hover {
+    background-color: $primary_bg_hover;
+  }
+}
+
+/* A Fluid Grid based on 960gs */
+$total-columns: 12;
+$column-width: 60px;
+$gutter-width: 20px;
+$grid-padding: 10px;
+
+/* Not Fluid */
+$container-style: static;
+
+
+/* -------------------------------------------------------------------------
+   Layout */
+
+.container {
+  @include container;
+  //@include susy-grid-background;
+}
+
+
+/* -------------------------------------------------------------------------
+   Basic Defaults & Overrides */
+
+html, body {
+  font-family: 'PT Sans', 'Myriad Pro', sans-serif;
+  color: $body_text;
+}
+
+ul {
+  list-style: none;
+  list-style-image: none;
+  padding: 0;
+}
+
+label, input {
+  display: block;
+}
+
+input[type='submit'] {
+  @extend .action-button;
+}
+
+p {
+  margin: 1em 0 .5em;
+}
+
+a {
+  color: $link_color;
+  &:hover {
+    color: $link_color_hover;
+  }
+  &:visited {
+    color: $link_color_visited;
+  }
+
+  /* Buttons */
+  &.button {
+    @extend .action-button;
+  }
+}
+
+/* Vote Buttons */
+.votes {
+  a {
+    @extend a.button;
+    padding: .25em .5em;
+    margin: 3px;
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Main Content Sections */
+
+/* Live within 12-column grid */
+.content {
+  header.global,
+  & > section.main,
+  & > footer {
+    @extend .container;
+  }
+
+  /* Main Header */
+  header.global {
+    a.button {
+      float: right;
+    }
+    nav {
+      li.sub {
+        float: right;
+      }
+    }
+    li {
+      display: inline-block;
+    }
+    /* Not supported by IE */
+    li:not(.sub) a {
+      font-weight: bold;
+    }
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Extensions : Individual Section Blocks */
+.column-wrapper {
+  background: $secondary_bg;
+  color: $secondary_bg_text;
+  margin-bottom: 1em;
+  > header {
+    color: $primary_bg_text;
+    background: $primary_bg;
+    @include clearfix;
+    @extend .inline-padding;
+    a {
+      color: $primary_bg_text;
+    }
+  }
+}
+
+.horizontal-ul {
+  li {
+    display: inline-block;
+    padding: 0 .5em;
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Column Setups */
+
+/* Home */
+.news {
+  @include span-columns(7,12);
+}
+.submissions.sidebar {
+  @include span-columns(5 omega,12);
+}
+
+/* Engage */
+.submissions.main {
+  @include span-columns(7,12);
+}
+.program {
+  @include span-columns(5 omega,12);
+}
+
+/* Submit */
+.submit-idea, .create-profile {
+  @include span-columns(12 omega,12);
+}
+
+/* Learn */
+.learn {
+  @include span-columns(9,12);
+}
+.learn-more {
+  @include span-columns(3 omega,12);
+}
+
+/* About */
+.what-is-hapi, .program-structure {
+  @include span-columns(8,12);
+}
+.who-is {
+  @include span-columns(4 omega,12);
+}
+
+/* Contact */
+.contact-form {
+  @include span-columns(8,12);
+}
+.direct-contact {
+  @include span-columns(4 omega,12);
+}
+
+/* Idea Page */
+.idea {
+  @include span-columns(7,12);
+}
+
+
+/* Full-width miscellaneous text between main content and footer */
+aside.miscellaneous {
+  @include span-columns(12 omega,12);
+  clear: both;
+}
+
+section.main {
+  clear: both;
+  /* Main Content Aside */
+  > aside {
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+/* Home elements */
+.news {
+  @extend .column-wrapper;
+  article {
+    @include span-columns(7 omega,7);
+    .image {
+      @include span-columns(2,7);
+    }
+    .content {
+      @include span-columns(5 omega, 7);
+    }
+    img {
+      margin: 1.5em 0 1.5em 1em;
+    }
+    p {
+      float: left;
+    }
+    header ~ p {
+      margin-top: 0;
+      @include adjust-font-size-to(14px);
+      @include adjust-leading-to(1);
+    }
+    time {
+      padding: 0 .5em 0 0;
+    }
+  }
+}
+.submissions.sidebar {
+  @extend .column-wrapper;
+  .votes {
+    @include span-columns(1 omega,5);
+    ~ div {
+      @include span-columns(4,5);
+      p {
+        margin: 1em;
+      }
+    }
+  }
+}
+
+
+/* Engage elements - fixed height, unfortunately */
+.submissions.main,
+.program {
+  @extend .column-wrapper;
+  height: 920px;
+  overflow: scroll;
+}
+
+/* Full-length Backgrounds for columns
+   Not working right now -- percentages off for some reason */
+/*.columns-7-5 {
+  @include clearfix;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #ccc),
+    color-stop(columns(7,12), #ccc),
+    color-stop(columns(7,12), #eee),
+    color-stop(space(7,12), #eee),
+    color-stop(space(7,12), #ccc),
+    color-stop(100%, #ccc)
+  );    
+  background-image: -webkit-linear-gradient(
+    left, 
+    #ccc, 
+    #ccc columns(7,12),
+    #eee columns(7,12),
+    #eee space(7,12),
+    #ccc space(7,12),
+    #ccc 100%
+  );
+  background-image: -moz-linear-gradient(
+    left, 
+    #ccc, 
+    #ccc columns(7,12),
+    #eee columns(7,12),
+    #eee space(7,12),
+    #ccc space(7,12),
+    #ccc 100%
+  );
+  background-image: -ms-linear-gradient(
+    left, 
+    #ccc, 
+    #ccc columns(7,12),
+    #eee columns(7,12),
+    #eee space(7,12),
+    #ccc space(7,12),
+    #ccc 100%
+  );
+  background-image: -o-linear-gradient(
+    left, 
+    #ccc, 
+    #ccc columns(7,12),
+    #eee columns(7,12),
+    #eee space(7,12),
+    #ccc space(7,12),
+    #ccc 100%
+  );
+}*/
+
+.program {
+  h3, p {
+    @extend .inline-padding;
+  }
+}
+
+/* Universal Article Elements */
+article {
+  header {
+    @include clearfix;
+  }
+  h1 {
+    @include h3;
+  }
+}
+
+/* Homepage Submissions */
+.submissions {
+  ul.submission-sort {
+    @extend .horizontal-ul;
+    float: right;
+    a {
+      color: $primary_bg_text;
+    }
+  }
+
+  /* Individual Submissions */
+  article {
+    @include clearfix;
+    h1 {
+      float: left;
+    }
+    header {
+      @extend .inline-padding;
+    }
+    time {
+      padding: 0 0 0 .5em;
+    }
+  }
+
+  /* Wider submissions */
+  &.main {
+
+    .votes {
+      @include span-columns(1, 7);
+    }
+    article > p {
+      @include span-columns(4, 7);
+    }
+    aside {
+      @include span-columns(2 omega, 7);
+    }
+
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Submit Idea & Create Profile Form & Page */
+.submit-idea {
+  @extend .column-wrapper;
+}
+
+.create-profile {
+  @extend .column-wrapper;
+  .form-column1 {
+    @include span-columns(6, 12);
+  }
+  .form-column2 {
+    @include span-columns(6 omega, 12);
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Learn Page */
+
+.learn, .learn-more {
+  @extend .column-wrapper;
+}
+
+.learn {
+  header {
+    ul {
+      @extend .horizontal-ul;
+      float: right;
+    }
+  }
+}
+
+.learn-more {
+  ul {
+    @extend .inline-padding;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   About Page */
+
+.what-is-hapi, .program-structure, .who-is {
+  @extend .column-wrapper;
+  h3, p {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Contact Page */
+.contact-form, .direct-contact {
+  @extend .column-wrapper;
+}
+
+/* -------------------------------------------------------------------------
+   Idea Page */
+.idea {
+  @extend .column-wrapper;
+  .votes {
+    float: right;
+  }
+  h3, p {
+    @extend .inline-padding;
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Edit Idea Page */
+.idea.edit {
+
+  label {
+    @include h3;
+  }
+
+}
+
+/* -------------------------------------------------------------------------
+   Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
+
+div.organization-info {
+  background-color: $secondary_bg;
+  color: $secondary_bg_text;
+  margin-bottom: -1em;
+  div {
+    @extend .container;
+    section {
+      @include span-columns(6,12);
+      @include nth-omega(2n);
+    }
+  }
+  h1 {
+    @include h3;
+    text-align: center;
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Full width 'People' Bar (breaks out of grid) */
+
+section.people {
+  background-color: $primary_bg;
+  color: $primary_bg_text;
+  ul {
+    @extend .container;
+    li {
+      @include span-columns(4,12);
+      @include nth-omega(3n);
+    }
+  }
+  img {
+    float: left;
+    margin: 1em 1em 1em 0;
+  }
+  a {
+    color: $primary_bg_text;
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Footer */
+
+.content > footer {
+  .sitemap {
+    @include span-columns(8,12);
+    ul {
+      float: left;
+      @include span-columns(2,8);
+    }
+  }
+  .social {
+    @include span-columns(4 omega,12);
+  }
+  ul {
+    margin: 0;
+  }
+  p {
+    @include span-columns(12 omega,12);
+    text-align: center;
+    margin: 2em 0;
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Footer */
+.modal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  @include transition(opacity 400ms ease-in);
+  pointer-events: none;
+
+  &:target {
+    opacity:1;
+    pointer-events: auto;
+  }
+
+  & > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    @include border-radius(3px);
+    background: #fff;
+  }
+  .modal-close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    @include border-radius(3px);
+    @include box-shadow(1px 1px 3px #000);
+    &:hover { background: #00d9ff; }
+  }
+}
