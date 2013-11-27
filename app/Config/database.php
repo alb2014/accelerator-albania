@@ -92,7 +92,7 @@ class DATABASE_CONFIG {
             'password' => $url['pass'],
             'database' => substr($url['path'],1),
             'prefix' => '',
-            // 'encoding' => 'utf8',
+            'encoding' => 'utf8',
         );
  
         $this->test = array(
