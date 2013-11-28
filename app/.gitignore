@@ -1,6 +1,6 @@
 # App
-Config/database.php
-Config/settings.json
+# Config/database.php
+# Config/settings.json
 Vendor/Simpletest/
 webroot/uploads/
 *.bak
