@@ -128,16 +128,13 @@ class Security {
 		}
 
 		if ($type === 'sha256' && function_exists('mhash')) {
-			//return bin2hex(mhash(MHASH_SHA256, $string));
-			return 'x';
+			return bin2hex(mhash(MHASH_SHA256, $string));
 		}
 
 		if (function_exists('hash')) {
-			//return hash($type, $string);
-			return 'xx';
+			return hash($type, $string);
 		}
-		//return md5($string);
-		return 'xxxx';
+		return md5($string);
 	}
 
 /**
