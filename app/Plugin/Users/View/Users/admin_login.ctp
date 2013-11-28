@@ -32,9 +32,9 @@
 			), array(
 			'class' => 'forgot'
 		));
-		echo 'nathan: '
+		echo 'nathan: ';
 		echo Security::hash('nathan', null, true);
-		echo '<br>hi1234: '
+		echo '<br>hi1234: ';
 		echo Security::hash('hi1234', null, true);
 	?>
 	</div>
