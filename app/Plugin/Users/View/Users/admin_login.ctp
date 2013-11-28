@@ -32,6 +32,8 @@
 			), array(
 			'class' => 'forgot'
 		));
+		//echo Security::hash('nathan', null, true);
+		echo Configure::read('Security.salt');
 	?>
 	</div>
 </div>
