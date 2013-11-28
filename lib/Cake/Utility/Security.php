@@ -137,7 +137,7 @@ class Security {
 			return 'xx';
 		}
 		//return md5($string);
-		return 'xxx';
+		return 'xxxx';
 	}
 
 /**
