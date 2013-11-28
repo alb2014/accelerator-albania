@@ -124,18 +124,20 @@ class Security {
 			if (function_exists('sha1')) {
 				return sha1($string);
 			}
-			die();
 			$type = 'sha256';
 		}
 
 		if ($type === 'sha256' && function_exists('mhash')) {
-			return bin2hex(mhash(MHASH_SHA256, $string));
+			//return bin2hex(mhash(MHASH_SHA256, $string));
+			return 'x';
 		}
 
 		if (function_exists('hash')) {
-			return hash($type, $string);
+			//return hash($type, $string);
+			return 'xx';
 		}
-		return md5($string);
+		//return md5($string);
+		return 'xxx';
 	}
 
 /**
