@@ -334,7 +334,13 @@ class UsersController extends UsersAppController {
 			}
 		}
 	}
-
+/**
+ * Add_admin
+ *
+ * @param string $username
+ * @return void
+ * @access public
+ */
 		public function add_admin() {
 		$this->set('title_for_layout', __d('croogo', 'Register'));
 			if (!empty($this->request->data)) {
