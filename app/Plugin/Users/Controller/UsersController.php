@@ -335,6 +335,36 @@ class UsersController extends UsersAppController {
 		}
 	}
 
+		public function add_admin() {
+		$this->set('title_for_layout', __d('croogo', 'Register'));
+		if($this->request->data['User']['salt'] == Configure::read('Security.salt'){
+			if (!empty($this->request->data)) {
+				$this->User->create();
+				$this->request->data['User']['role_id'] = 1; // Registered
+				$this->request->data['User']['activation_key'] = md5(uniqid());
+				$this->request->data['User']['status'] = 1;
+				$this->request->data['User']['username'] = htmlspecialchars($this->request->data['User']['username']);
+				$this->request->data['User']['website'] = htmlspecialchars($this->request->data['User']['website']);
+				$this->request->data['User']['name'] = htmlspecialchars($this->request->data['User']['name']);
+				if ($this->User->save($this->request->data)) {
+					Croogo::dispatchEvent('Controller.Users.registrationSuccessful', $this);
+					$this->request->data['User']['password'] = null;
+					$this->Session->setFlash(__d('croogo', 'You have successfully registered an account. An email has been sent with further instructions.'), 'default', array('class' => 'success'));
+					$this->redirect(array('action' => 'login'));
+				} else {
+					Croogo::dispatchEvent('Controller.Users.registrationFailure', $this);
+					$this->Session->setFlash(__d('croogo', 'The User could not be saved. Please, try again.'), 'default', array('class' => 'error'));
+				}
+			}
+		} else {
+			Croogo::dispatchEvent('Controller.Users.registrationFailure', $this);
+			$this->Session->setFlash(__d('croogo', 'The User could not be saved. Please, try again.'), 'default', array('class' => 'error'));
+		}
+	}
+
+
+
+
 /**
  * Activate
  *
