@@ -1,3 +1,43 @@
+Entreprenuership Accelerator for Albania
+========================================
+
+This is an "Entrepreneurship Accelerator" website that aims to network Albanian entrepreneurs and financiers.  It's built on top of a [CakePHP](http://www.cakephp.org) framework.
+
+Setting Up the Database
+-----------------------
+This project is setup to require a MySQL database.  If you are deploying to our Heroku server, this isn't necessary, it's already set up.  But if you're creating your own local version, here are the steps you have to file.
+
+Create a database and run the files
+*  app/Config/Schema/sql/croogo.sql
+*  app/Config/Schema/sql/croogo_data.sql
+
+This will set up the CMS database that we use.
+
+Now you need to populate environmental variables so that your installations can find the database connection information:
+
+AA_DB_HOST
+
+AA_DB_USER
+
+AA_DB_PASS
+
+AA_DB_NAME
+
+Also you'll need to set up the following security variables
+
+AA_SECURITY_SALT  - Choose a random string
+
+AA_CIPHER_SEED  - Choose a random string of digits
+
+Pushing to Heroku
+-----------------
+
+heroku git:remote -a infinite-brushlands-4936
+
+git push heroku master
+
+The site will be deployed [here.](http://infinite-brushlands-4936.herokuapp.com)
+
 CakePHP
 =======
 
