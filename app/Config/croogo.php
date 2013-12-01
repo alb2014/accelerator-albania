@@ -337,6 +337,7 @@ Cache::config('_cake_model_', array(
 
 /* Configure Console logging for Heroku */
 
+/*
 App::uses('ConsoleOutput', 'Console');
 
 CakeLog::config('default', array(
@@ -370,3 +371,4 @@ CakeLog::config('error', array(
     'format' => 'error %s: %s',
     'stream' =>  new ConsoleOutput('php://stderr')
 ));
+*/
