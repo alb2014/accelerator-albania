@@ -1,6 +1,12 @@
 <?php
 
 class IdeasController extends AcceleratorAppController {
+    public $paginate = array(
+        'limit' => 25,
+        'order' => array(
+            'Post.title' => 'asc'
+        )
+    );
 
     public function index($userId=false) {
         $conditions = array();
@@ -84,14 +90,15 @@ class IdeasController extends AcceleratorAppController {
                 break;
         }
         $vote = new Vote();
+        $data = array('Vote' => array('value' => $mod,
+                                      'userId' => AuthComponent::user()['id'])
         $vote=>id = $ideaId.'-'AuthCompenent::user()['id'];
-        if ($this->Idea->save($this->request->data)) {
+        if ($this->Idea->save($data) {
             $this->Session->setFlash(__('Your idea has been updated.'));
+            $this->updateVotes($ideaId)
             return $this->redirect(array('action' => 'index/'.AuthComponent::user()['id']));
         }
         $this->Session->setFlash(__('Unable to update your idea.'));
-
-
     }
 
     private function updateVotes($ideaId){
