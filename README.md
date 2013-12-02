@@ -1,39 +1,46 @@
-CakePHP
-=======
+Entreprenuership Accelerator for Albania
+========================================
 
-[![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
+This is an "Entrepreneurship Accelerator" website that aims to network Albanian entrepreneurs and financiers.  It's built on top of a [CakePHP](http://www.cakephp.org) framework.
 
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+Setting Up the Database
+-----------------------
+This project is setup to require a MySQL database.  If you are deploying to our Heroku server, this isn't necessary, it's already set up.  But if you're creating your own local version, here are the steps you have to file.
 
-Some Handy Links
-----------------
+Create a database and run the files
+*  app/Config/Schema/sql/croogo.sql
+*  app/Config/Schema/sql/croogo_data.sql
 
-[CakePHP](http://www.cakephp.org) - The rapid development PHP framework
+This will set up the CMS database that we use.
 
-[Cookbook](http://book.cakephp.org) - THE Cake user documentation; start learning here!
+Now you need to populate environmental variables so that your installations can find the database connection information:
 
-[Plugins](http://plugins.cakephp.org/) - A repository of extensions to the framework
+AA_DB_HOST
 
-[The Bakery](http://bakery.cakephp.org) - Tips, tutorials and articles
+AA_DB_USER
 
-[API](http://api.cakephp.org) - A reference to Cake's classes
+AA_DB_PASS
 
-[CakePHP TV](http://tv.cakephp.org) - Screen casts from events and video tutorials
+AA_DB_NAME
 
-[The Cake Software Foundation](http://cakefoundation.org/) - promoting development related to CakePHP
+Also you'll need to set up the following security variables
 
-Get Support!
-------------
+AA_SECURITY_SALT  - Choose a random string
 
-[Our Google Group](https://groups.google.com/group/cake-php) - community mailing list and forum
+AA_CIPHER_SEED  - Choose a random string of digits
 
-[#cakephp](http://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake.
+Pushing to Heroku
+-----------------
 
-[Q & A](http://ask.cakephp.org/) - Ask questions here, all questions welcome
+heroku git:remote -a infinite-brushlands-4936
 
-[Lighthouse](https://cakephp.lighthouseapp.com/) - Got issues? Please tell us!
+git push heroku master
 
-[![Bake Status](https://secure.travis-ci.org/cakephp/cakephp.png?branch=master)](http://travis-ci.org/cakephp/cakephp)
+The site will be deployed [here.](http://infinite-brushlands-4936.herokuapp.com)
 
-![Cake Power](https://raw.github.com/cakephp/cakephp/master/lib/Cake/Console/Templates/skel/webroot/img/cake.power.gif)
+Creating an Admin User
+----------------------
+
+Once the site is live you can create an admin user by going to the url /users/users/add and creating a user.  This will create a normal user which you can modify to create an admin by changing the database so that that user's role is 1 and their status is also set to 1.  Here's the SQL
+
+UPDATE `DATABASENAME`.`users` SET `role_id`='1', `status`='1' WHERE `id`='THE USER'S ID.  PROBABLY 1';
