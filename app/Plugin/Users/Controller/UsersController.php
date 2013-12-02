@@ -335,6 +335,9 @@ class UsersController extends UsersAppController {
 		}
 	}
 
+
+
+
 /**
  * Activate
  *
@@ -516,8 +519,7 @@ class UsersController extends UsersAppController {
 	}
 
 	protected function _getSenderEmail() {
-		return 'nathanieltsmith@gmail.com';
-		//return 'croogo@' . preg_replace('#^www\.#', '', strtolower($_SERVER['SERVER_NAME']));
+		return 'croogo@' . preg_replace('#^www\.#', '', strtolower($_SERVER['SERVER_NAME']));
 	}
 
 }
