@@ -1,14 +1,14 @@
 {
     "Site": {
         "acl_plugin": "Acl",
-        "email": "you@your-site.com",
+        "email": "phillip.wilt@gmail.com",
         "feed_url": "",
         "locale": "eng",
         "status": 1,
         "tagline": "A CakePHP powered Content Management System.",
-        "theme": "",
+        "theme": "Accelerator",
         "timezone": 0,
-        "title": "Croogo"
+        "title": "Albania Accelerator"
     },
     "Hook": {
         "bootstraps": "Settings,Comments,Contacts,Nodes,Meta,Menus,Users,Blocks,Taxonomy,FileManager,Wysiwyg,Ckeditor,Accelerator"
