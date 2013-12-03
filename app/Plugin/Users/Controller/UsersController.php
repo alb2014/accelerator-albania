@@ -281,8 +281,10 @@ class UsersController extends UsersAppController {
 		$success = false;
 
 		try {
+			// $this->log(func_get_args()); //for debugging
 			$email = new CakeEmail();
-			$email->from($from[1], $from[0]);
+			$email->config('default');
+			// $email->from($from[1], $from[0]);
 			$email->to($to);
 			$email->subject($subject);
 			$email->template($template);
@@ -519,6 +521,7 @@ class UsersController extends UsersAppController {
 	}
 
 	protected function _getSenderEmail() {
+		// return 'phillip.wilt@gmail.com';
 		return 'croogo@' . preg_replace('#^www\.#', '', strtolower($_SERVER['SERVER_NAME']));
 	}
 
