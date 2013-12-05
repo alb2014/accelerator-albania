@@ -1,19 +1,23 @@
 <?php
 
 class IdeasController extends AcceleratorAppController {
+        public $components = array('Paginator');
+
+
     public $paginate = array(
         'limit' => 25,
         'order' => array(
-            'Post.title' => 'asc'
+            'Idea.total_votes' => 'asc'
         )
     );
 
     public function index($userId=false) {
+        $this->Paginator->settings = $this->paginate;
         $conditions = array();
         if ($userId){
-            $conditions['Idea.userId'] = $userId;
+            $this->Paginator->settings['conditions']['Idea.userId'] = $userId;
         }
-        $this->set('ideas', $this->Idea->find('all', array('conditions' => $conditions)));
+        $this->set('ideas', $this->Paginator->paginate('Idea'));
     }
 	    
     public function add() {
@@ -92,13 +96,13 @@ class IdeasController extends AcceleratorAppController {
         $vote = new Vote();
         $data = array('Vote' => array('value' => $mod,
                                       'userId' => AuthComponent::user()['id'])
-        $vote=>id = $ideaId.'-'AuthCompenent::user()['id'];
-        if ($this->Idea->save($data) {
-            $this->Session->setFlash(__('Your idea has been updated.'));
+        $vote->id = $ideaId.'-'AuthCompenent::user()['id'];
+        if ($vote->save($data) {
+            $this->Session->setFlash(__('Vote cast!'));
             $this->updateVotes($ideaId)
-            return $this->redirect(array('action' => 'index/'.AuthComponent::user()['id']));
+            return $this->redirect(array('action' => 'index/'));
         }
-        $this->Session->setFlash(__('Unable to update your idea.'));
+        $this->Session->setFlash(__('Voting failed.'));
     }
 
     private function updateVotes($ideaId){
@@ -115,10 +119,10 @@ class IdeasController extends AcceleratorAppController {
                 $downvotes++;
             }
         }
-        $data['User']['upvotes'] = $upvotes;
-        $data['User']['downvotes'] = $downvotes;
-        $data['User']['totalvotes'] = $upvotes - $downvotes;
-        $this->User->save($data);
+        $data['Idea']['up_votes'] = $upvotes;
+        $data['Idea']['down_votes'] = $downvotes;
+        $data['Idea']['total_votes'] = $upvotes - $downvotes;
+        $this->Idea->save($data);
     }
 
 
