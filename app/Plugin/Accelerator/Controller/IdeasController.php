@@ -59,6 +59,7 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function edit($id = null) {
+        $user = AuthComponent::user();
         if (!$id) {
             throw new NotFoundException(__("We couldn't find that idea."));
         }
@@ -72,7 +73,7 @@ class IdeasController extends AcceleratorAppController {
             $this->Idea->id = $id;
             if ($this->Idea->save($this->request->data)) {
                 $this->Session->setFlash(__('Your idea has been updated.'));
-                return $this->redirect(array('action' => 'index/'.AuthComponent::user()['id']));
+                return $this->redirect(array('action' => 'index/'.$user['id']));
             }
             $this->Session->setFlash(__('Unable to update your idea.'));
         }
@@ -96,8 +97,9 @@ class IdeasController extends AcceleratorAppController {
                 break;
         }
         $vote = new Vote();
+        $user ＝ AuthComponent::user();
         $data = array('Vote' => array('value' => $mod,
-                                      'userId' => AuthComponent::user()['id'])
+                                      'userId' => $user['id'])
         $vote->id = $ideaId.'-'AuthCompenent::user()['id'];
         if ($vote->save($data) {
             $this->Session->setFlash(__('Vote cast!'));
