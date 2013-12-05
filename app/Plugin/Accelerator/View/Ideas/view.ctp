@@ -55,5 +55,7 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $i
 </section>
 
 <?php
-    echo $this->element('mentors');
+    $this->start('footer_bar');
+        echo $this->element('mentors');
+    $this->end();
 ?>
