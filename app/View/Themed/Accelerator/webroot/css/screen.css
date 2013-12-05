@@ -15,8 +15,8 @@ html {
 /* Mixins & Extension Classes */
 /* line 39, sass/screen.scss */
 .inline-padding, .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .program h3, .program p, .submissions article header, .learn-more ul, .idea h3, .idea p {
-  padding: 0 1em;
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .users > header, .program h3, .program p, .submissions article header, .learn-more ul, .idea h3, .idea p, .users > div {
+  padding: 1em;
 }
 
 /* line 43, sass/screen.scss */
@@ -37,7 +37,7 @@ html {
 /* -------------------------------------------------------------------------
    Layout */
 /* line 67, sass/screen.scss */
-.container, .content header.global, .content > section.main, .content > footer, div.organization-info div, section.people ul {
+.container, .content header.global, .content > div.main, .content > footer, div.organization-info div, section.people ul {
   *zoom: 1;
   width: 940px;
   padding-left: 10px;
@@ -46,7 +46,7 @@ html {
   margin-right: auto;
 }
 /* line 38, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.container:after, .content header.global:after, .content > section.main:after, .content > footer:after, div.organization-info div:after, section.people ul:after {
+.container:after, .content header.global:after, .content > div.main:after, .content > footer:after, div.organization-info div:after, section.people ul:after {
   content: "";
   display: table;
   clear: both;
@@ -72,27 +72,32 @@ label, input {
   display: block;
 }
 
-/* line 95, sass/screen.scss */
+/* line 91, sass/screen.scss */
+input[type='submit'] {
+  margin: 1em 0;
+}
+
+/* line 96, sass/screen.scss */
 p {
   margin: 1em 0 .5em;
 }
 
-/* line 99, sass/screen.scss */
+/* line 100, sass/screen.scss */
 a {
   color: #1375e1;
   /* Buttons */
 }
-/* line 101, sass/screen.scss */
+/* line 102, sass/screen.scss */
 a:hover {
   color: #1162bc;
 }
-/* line 104, sass/screen.scss */
+/* line 105, sass/screen.scss */
 a:visited {
   color: #5aa3f4;
 }
 
 /* Vote Buttons */
-/* line 116, sass/screen.scss */
+/* line 117, sass/screen.scss */
 .votes a {
   padding: .25em .5em;
   margin: 3px;
@@ -101,55 +106,55 @@ a:visited {
 /* -------------------------------------------------------------------------
    Main Content Sections */
 /* Live within 12-column grid */
-/* line 128, sass/screen.scss */
+/* line 129, sass/screen.scss */
 .content {
   /* Main Header */
 }
-/* line 136, sass/screen.scss */
+/* line 137, sass/screen.scss */
 .content header.global {
   /* Not supported by IE */
 }
-/* line 137, sass/screen.scss */
+/* line 138, sass/screen.scss */
 .content header.global a.button, .content header.global .votes a, .votes .content header.global a {
   float: right;
 }
-/* line 141, sass/screen.scss */
+/* line 142, sass/screen.scss */
 .content header.global nav li.sub {
   float: right;
 }
-/* line 145, sass/screen.scss */
+/* line 146, sass/screen.scss */
 .content header.global li {
   display: inline-block;
 }
-/* line 149, sass/screen.scss */
+/* line 150, sass/screen.scss */
 .content header.global li:not(.sub) a {
   font-weight: bold;
 }
 
 /* -------------------------------------------------------------------------
    Extensions : Individual Section Blocks */
-/* line 158, sass/screen.scss */
+/* line 159, sass/screen.scss */
 .column-wrapper, .news, .submissions.sidebar, .submissions.main,
-.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-form, .direct-contact, .idea {
+.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-form, .direct-contact, .idea, .users {
   background: #eeeeee;
   color: #222222;
   margin-bottom: 1em;
 }
-/* line 162, sass/screen.scss */
+/* line 163, sass/screen.scss */
 .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header {
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .users > header {
   color: white;
   background: #333333;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 167, sass/screen.scss */
+/* line 168, sass/screen.scss */
 .column-wrapper > header a, .news > header a, .submissions.sidebar > header a, .submissions.main > header a,
-.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-form > header a, .direct-contact > header a, .idea > header a {
+.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-form > header a, .direct-contact > header a, .idea > header a, .users > header a {
   color: white;
 }
 
-/* line 174, sass/screen.scss */
+/* line 175, sass/screen.scss */
 .horizontal-ul li, .submissions ul.submission-sort li, .learn header ul li {
   display: inline-block;
   padding: 0 .5em;
@@ -158,7 +163,7 @@ a:visited {
 /* -------------------------------------------------------------------------
    Column Setups */
 /* Home */
-/* line 185, sass/screen.scss */
+/* line 186, sass/screen.scss */
 .news {
   width: 540px;
   float: left;
@@ -166,7 +171,7 @@ a:visited {
   display: inline;
 }
 
-/* line 188, sass/screen.scss */
+/* line 189, sass/screen.scss */
 .submissions.sidebar {
   width: 380px;
   float: right;
@@ -176,7 +181,7 @@ a:visited {
 }
 
 /* Engage */
-/* line 193, sass/screen.scss */
+/* line 194, sass/screen.scss */
 .submissions.main {
   width: 540px;
   float: left;
@@ -184,7 +189,7 @@ a:visited {
   display: inline;
 }
 
-/* line 196, sass/screen.scss */
+/* line 197, sass/screen.scss */
 .program {
   width: 380px;
   float: right;
@@ -194,7 +199,7 @@ a:visited {
 }
 
 /* Submit */
-/* line 201, sass/screen.scss */
+/* line 202, sass/screen.scss */
 .submit-idea, .create-profile {
   width: 940px;
   float: right;
@@ -204,7 +209,7 @@ a:visited {
 }
 
 /* Learn */
-/* line 206, sass/screen.scss */
+/* line 207, sass/screen.scss */
 .learn {
   width: 700px;
   float: left;
@@ -212,7 +217,7 @@ a:visited {
   display: inline;
 }
 
-/* line 209, sass/screen.scss */
+/* line 210, sass/screen.scss */
 .learn-more {
   width: 220px;
   float: right;
@@ -222,7 +227,7 @@ a:visited {
 }
 
 /* About */
-/* line 214, sass/screen.scss */
+/* line 215, sass/screen.scss */
 .what-is-hapi, .program-structure {
   width: 620px;
   float: left;
@@ -230,7 +235,7 @@ a:visited {
   display: inline;
 }
 
-/* line 217, sass/screen.scss */
+/* line 218, sass/screen.scss */
 .who-is {
   width: 300px;
   float: right;
@@ -240,7 +245,7 @@ a:visited {
 }
 
 /* Contact */
-/* line 222, sass/screen.scss */
+/* line 223, sass/screen.scss */
 .contact-form {
   width: 620px;
   float: left;
@@ -248,7 +253,7 @@ a:visited {
   display: inline;
 }
 
-/* line 225, sass/screen.scss */
+/* line 226, sass/screen.scss */
 .direct-contact {
   width: 300px;
   float: right;
@@ -258,7 +263,7 @@ a:visited {
 }
 
 /* Idea Page */
-/* line 230, sass/screen.scss */
+/* line 231, sass/screen.scss */
 .idea {
   width: 540px;
   float: left;
@@ -266,8 +271,17 @@ a:visited {
   display: inline;
 }
 
-/* Full-width miscellaneous text between main content and footer */
+/* Login */
 /* line 236, sass/screen.scss */
+.users.login {
+  width: 540px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+
+/* Full-width miscellaneous text between main content and footer */
+/* line 242, sass/screen.scss */
 aside.miscellaneous {
   width: 940px;
   float: right;
@@ -277,18 +291,18 @@ aside.miscellaneous {
   clear: both;
 }
 
-/* line 241, sass/screen.scss */
-section.main {
+/* line 247, sass/screen.scss */
+div.main {
   clear: both;
   /* Main Content Aside */
 }
-/* line 245, sass/screen.scss */
-section.main > aside h3 {
+/* line 251, sass/screen.scss */
+div.main > aside h3 {
   text-align: center;
 }
 
 /* Home elements */
-/* line 254, sass/screen.scss */
+/* line 260, sass/screen.scss */
 .news article {
   width: 540px;
   float: right;
@@ -296,14 +310,14 @@ section.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 256, sass/screen.scss */
+/* line 262, sass/screen.scss */
 .news article .image {
   width: 140px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 259, sass/screen.scss */
+/* line 265, sass/screen.scss */
 .news article .content {
   width: 380px;
   float: right;
@@ -311,27 +325,27 @@ section.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 262, sass/screen.scss */
+/* line 268, sass/screen.scss */
 .news article img {
   margin: 1.5em 0 1.5em 1em;
 }
-/* line 265, sass/screen.scss */
+/* line 271, sass/screen.scss */
 .news article p {
   float: left;
 }
-/* line 268, sass/screen.scss */
+/* line 274, sass/screen.scss */
 .news article header ~ p {
   margin-top: 0;
   font-size: 0.875em;
   line-height: 1.64286em;
   line-height: 1.4375em;
 }
-/* line 273, sass/screen.scss */
+/* line 279, sass/screen.scss */
 .news article time {
   padding: 0 .5em 0 0;
 }
 
-/* line 280, sass/screen.scss */
+/* line 286, sass/screen.scss */
 .submissions.sidebar .votes {
   width: 60px;
   float: right;
@@ -339,85 +353,33 @@ section.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 282, sass/screen.scss */
+/* line 288, sass/screen.scss */
 .submissions.sidebar .votes ~ div {
   width: 300px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 284, sass/screen.scss */
+/* line 290, sass/screen.scss */
 .submissions.sidebar .votes ~ div p {
   margin: 1em;
 }
 
 /* Engage elements - fixed height, unfortunately */
-/* line 294, sass/screen.scss */
+/* line 300, sass/screen.scss */
 .submissions.main,
 .program {
   height: 920px;
   overflow: scroll;
 }
 
-/* Full-length Backgrounds for columns
-   Not working right now -- percentages off for some reason */
-/*.columns-7-5 {
-  @include clearfix;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(0, #ccc),
-    color-stop(columns(7,12), #ccc),
-    color-stop(columns(7,12), #eee),
-    color-stop(space(7,12), #eee),
-    color-stop(space(7,12), #ccc),
-    color-stop(100%, #ccc)
-  );    
-  background-image: -webkit-linear-gradient(
-    left, 
-    #ccc, 
-    #ccc columns(7,12),
-    #eee columns(7,12),
-    #eee space(7,12),
-    #ccc space(7,12),
-    #ccc 100%
-  );
-  background-image: -moz-linear-gradient(
-    left, 
-    #ccc, 
-    #ccc columns(7,12),
-    #eee columns(7,12),
-    #eee space(7,12),
-    #ccc space(7,12),
-    #ccc 100%
-  );
-  background-image: -ms-linear-gradient(
-    left, 
-    #ccc, 
-    #ccc columns(7,12),
-    #eee columns(7,12),
-    #eee space(7,12),
-    #ccc space(7,12),
-    #ccc 100%
-  );
-  background-image: -o-linear-gradient(
-    left, 
-    #ccc, 
-    #ccc columns(7,12),
-    #eee columns(7,12),
-    #eee space(7,12),
-    #ccc space(7,12),
-    #ccc 100%
-  );
-}*/
 /* Universal Article Elements */
-/* line 361, sass/screen.scss */
+/* line 314, sass/screen.scss */
 article header {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 364, sass/screen.scss */
+/* line 317, sass/screen.scss */
 article h1 {
   font-size: 1.17em;
   margin: 0.8em 0 0;
@@ -425,47 +387,47 @@ article h1 {
 }
 
 /* Homepage Submissions */
-/* line 370, sass/screen.scss */
+/* line 323, sass/screen.scss */
 .submissions {
   /* Individual Submissions */
   /* Wider submissions */
 }
-/* line 371, sass/screen.scss */
+/* line 324, sass/screen.scss */
 .submissions ul.submission-sort {
   float: right;
 }
-/* line 374, sass/screen.scss */
+/* line 327, sass/screen.scss */
 .submissions ul.submission-sort a {
   color: white;
 }
-/* line 380, sass/screen.scss */
+/* line 333, sass/screen.scss */
 .submissions article {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 382, sass/screen.scss */
+/* line 335, sass/screen.scss */
 .submissions article h1 {
   float: left;
 }
-/* line 388, sass/screen.scss */
+/* line 341, sass/screen.scss */
 .submissions article time {
   padding: 0 0 0 .5em;
 }
-/* line 396, sass/screen.scss */
+/* line 349, sass/screen.scss */
 .submissions.main .votes {
   width: 60px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 399, sass/screen.scss */
+/* line 352, sass/screen.scss */
 .submissions.main article > p {
   width: 300px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 402, sass/screen.scss */
+/* line 355, sass/screen.scss */
 .submissions.main aside {
   width: 140px;
   float: right;
@@ -476,14 +438,14 @@ article h1 {
 
 /* -------------------------------------------------------------------------
    Submit Idea & Create Profile Form & Page */
-/* line 418, sass/screen.scss */
+/* line 371, sass/screen.scss */
 .create-profile .form-column1 {
   width: 460px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 421, sass/screen.scss */
+/* line 374, sass/screen.scss */
 .create-profile .form-column2 {
   width: 460px;
   float: right;
@@ -494,14 +456,14 @@ article h1 {
 
 /* -------------------------------------------------------------------------
    Learn Page */
-/* line 436, sass/screen.scss */
+/* line 389, sass/screen.scss */
 .learn header ul {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    About Page */
-/* line 454, sass/screen.scss */
+/* line 407, sass/screen.scss */
 .what-is-hapi h3, .what-is-hapi p, .program-structure h3, .program-structure p, .who-is h3, .who-is p {
   margin-left: 1em;
   margin-right: 1em;
@@ -511,14 +473,14 @@ article h1 {
    Contact Page */
 /* -------------------------------------------------------------------------
    Idea Page */
-/* line 471, sass/screen.scss */
+/* line 424, sass/screen.scss */
 .idea .votes {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    Edit Idea Page */
-/* line 484, sass/screen.scss */
+/* line 437, sass/screen.scss */
 .idea.edit label {
   font-size: 1.17em;
   margin: 0.8em 0 0;
@@ -526,14 +488,16 @@ article h1 {
 }
 
 /* -------------------------------------------------------------------------
+   Login Page */
+/* -------------------------------------------------------------------------
    Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
-/* line 493, sass/screen.scss */
+/* line 456, sass/screen.scss */
 div.organization-info {
   background-color: #eeeeee;
   color: #222222;
   margin-bottom: -1em;
 }
-/* line 499, sass/screen.scss */
+/* line 462, sass/screen.scss */
 div.organization-info div section {
   width: 460px;
   float: left;
@@ -545,7 +509,7 @@ div.organization-info div section:nth-child(2n) {
   float: right;
   margin-right: 0;
 }
-/* line 504, sass/screen.scss */
+/* line 467, sass/screen.scss */
 div.organization-info h1 {
   font-size: 1.17em;
   margin: 0.8em 0 0;
@@ -555,12 +519,12 @@ div.organization-info h1 {
 
 /* -------------------------------------------------------------------------
    Full width 'People' Bar (breaks out of grid) */
-/* line 514, sass/screen.scss */
+/* line 477, sass/screen.scss */
 section.people {
   background-color: #333333;
   color: white;
 }
-/* line 519, sass/screen.scss */
+/* line 482, sass/screen.scss */
 section.people ul li {
   width: 300px;
   float: left;
@@ -572,26 +536,26 @@ section.people ul li:nth-child(3n) {
   float: right;
   margin-right: 0;
 }
-/* line 524, sass/screen.scss */
+/* line 487, sass/screen.scss */
 section.people img {
   float: left;
   margin: 1em 1em 1em 0;
 }
-/* line 528, sass/screen.scss */
+/* line 491, sass/screen.scss */
 section.people a {
   color: white;
 }
 
 /* -------------------------------------------------------------------------
    Footer */
-/* line 538, sass/screen.scss */
+/* line 501, sass/screen.scss */
 .content > footer .sitemap {
   width: 620px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 540, sass/screen.scss */
+/* line 503, sass/screen.scss */
 .content > footer .sitemap ul {
   float: left;
   width: 140px;
@@ -599,7 +563,7 @@ section.people a {
   margin-right: 20px;
   display: inline;
 }
-/* line 545, sass/screen.scss */
+/* line 508, sass/screen.scss */
 .content > footer .social {
   width: 300px;
   float: right;
@@ -607,11 +571,11 @@ section.people a {
   *margin-left: -20px;
   display: inline;
 }
-/* line 548, sass/screen.scss */
+/* line 511, sass/screen.scss */
 .content > footer ul {
   margin: 0;
 }
-/* line 551, sass/screen.scss */
+/* line 514, sass/screen.scss */
 .content > footer p {
   width: 940px;
   float: right;
@@ -624,7 +588,7 @@ section.people a {
 
 /* -------------------------------------------------------------------------
    Footer */
-/* line 561, sass/screen.scss */
+/* line 524, sass/screen.scss */
 .modal {
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
@@ -641,12 +605,12 @@ section.people a {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 574, sass/screen.scss */
+/* line 537, sass/screen.scss */
 .modal:target {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 579, sass/screen.scss */
+/* line 542, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -659,7 +623,7 @@ section.people a {
   border-radius: 3px;
   background: #fff;
 }
-/* line 587, sass/screen.scss */
+/* line 550, sass/screen.scss */
 .modal .modal-close {
   background: #606061;
   color: #FFFFFF;
@@ -680,7 +644,7 @@ section.people a {
   -moz-box-shadow: 1px 1px 3px black;
   box-shadow: 1px 1px 3px black;
 }
-/* line 600, sass/screen.scss */
+/* line 563, sass/screen.scss */
 .modal .modal-close:hover {
   background: #00d9ff;
 }
