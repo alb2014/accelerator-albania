@@ -60,7 +60,18 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
                             <li><a href="/accelerator/ideas/add">Submit</a></li>
                             <li><a href="/accelerator/ideas">Engage</a></li>
                             <li><a href="/blog">Learn</a></li>
-                            <li><a href="#login" href="login.html">Login</a></li>
+                            <li>
+                                <?php 
+                                    echo $this->Html->link(
+                                        'Login', 
+                                        array(
+                                            'plugin' => 'users', 
+                                            'controller' => 'users', 
+                                            'action' => 'login'
+                                        )
+                                    ); 
+                                ?>
+                            </li>
                         </ul>
 
                         <ul>
