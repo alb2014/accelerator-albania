@@ -36,7 +36,8 @@ class IdeasController extends AcceleratorAppController {
             throw new MethodNotAllowedException();
         }
         $idea = $this->Idea->findById($id);
-        if ($idea['userID'] == AuthComponent::user()['id']){
+        $user = AuthComponent::user();
+        if ($idea['userID'] == $user['id']){
             if ($this->Idea->delete($id)) {
                 $this->Session->setFlash(__('The idea with id: %s has been deleted.', h($id)));
                 return $this->redirect(array('action' => 'index'));
@@ -82,6 +83,7 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function vote($ideaId, $value, $async=false){
+        if(AuthComponent::user()){
         switch ($value) {
             case "up":
                  $mod = 1;
@@ -103,6 +105,8 @@ class IdeasController extends AcceleratorAppController {
             return $this->redirect(array('action' => 'index/'));
         }
         $this->Session->setFlash(__('Voting failed.'));
+    }
+       $this->Session->setFlash(__('You must be logged in to vote.'));
     }
 
     private function updateVotes($ideaId){
