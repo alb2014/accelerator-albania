@@ -1,5 +1,5 @@
 <?php
-App::uses('Vote', 'Model');
+App::uses('Vote', 'Accelerator.Model');
 class IdeasController extends AcceleratorAppController {
         public $components = array('Paginator');
 
