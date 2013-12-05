@@ -29,27 +29,7 @@ $default-rhythm-border-style: solid;
 
 @include establish-baseline($base-font-size);
 
-/* Mixins & Extension Classes */
-@mixin h3 {
-  font-size: 1.17em;
-  margin: 0.8em 0 0;
-  font-weight: bold;
-}
 
-.inline-padding {
-  padding: 1em;
-}
-
-.action-button {
-  display: inline-block;
-  padding: .5em 1em;
-  background-color: $primary_bg;
-  color: $primary_bg_text;
-  border: 0;
-  &:hover {
-    background-color: $primary_bg_hover;
-  }
-}
 
 /* A Fluid Grid based on 960gs */
 $total-columns: 12;
@@ -67,6 +47,56 @@ $container-style: static;
 .container {
   @include container;
   //@include susy-grid-background;
+}
+
+/* -------------------------------------------------------------------------
+   Extensions : Individual Section Blocks */
+
+@mixin h3 {
+  font-size: 1.17em;
+  margin: 0.8em 0 0;
+  font-weight: bold;
+}
+
+.inline-padding {
+  padding: 0 1em;
+}
+
+.full-padding {
+  padding: 1em;
+}
+
+.action-button {
+  display: inline-block;
+  padding: .5em 1em;
+  background-color: $primary_bg;
+  color: $primary_bg_text;
+  border: 0;
+  &:hover {
+    background-color: $primary_bg_hover;
+  }
+}
+
+.column-wrapper {
+  background: $secondary_bg;
+  color: $secondary_bg_text;
+  margin-bottom: 1em;
+  > header {
+    color: $primary_bg_text;
+    background: $primary_bg;
+    @include clearfix;
+    @extend .inline-padding;
+    a {
+      color: $primary_bg_text;
+    }
+  }
+}
+
+.horizontal-ul {
+  li {
+    display: inline-block;
+    padding: 0 .5em;
+  }
 }
 
 
@@ -155,31 +185,6 @@ a {
 
 
 /* -------------------------------------------------------------------------
-   Extensions : Individual Section Blocks */
-.column-wrapper {
-  background: $secondary_bg;
-  color: $secondary_bg_text;
-  margin-bottom: 1em;
-  > header {
-    color: $primary_bg_text;
-    background: $primary_bg;
-    @include clearfix;
-    @extend .inline-padding;
-    a {
-      color: $primary_bg_text;
-    }
-  }
-}
-
-.horizontal-ul {
-  li {
-    display: inline-block;
-    padding: 0 .5em;
-  }
-}
-
-
-/* -------------------------------------------------------------------------
    Column Setups */
 
 /* Home */
@@ -234,6 +239,21 @@ a {
 
 /* Login */
 .users.login {
+  @include span-columns(7,12);
+}
+
+/* Posts (Croogo Nodes) Index Page */
+.nodes {
+  @include span-columns(7,12);
+}
+
+
+/* Post (Croogo Node) View Page */
+.node-wrapper {
+  @include span-columns(7,12);
+}
+
+.node-comments {
   @include span-columns(7,12);
 }
 
@@ -445,7 +465,28 @@ article {
 .users {
   @extend .column-wrapper;
   > div {
-    @extend .inline-padding;
+    @extend .full-padding;
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+  Posts (Croogo Nodes) Index Page */
+.nodes {
+  @extend .column-wrapper;
+  .node {
+    @extend .full-padding;
+  }
+}
+
+
+/* Post (Croogo Node) View Page */
+.node-wrapper {
+  .node {
+    @extend .column-wrapper;
+    header + div {
+      @extend .full-padding;
+    }
   }
 }
 
@@ -520,7 +561,7 @@ section.people {
 
 
 /* -------------------------------------------------------------------------
-   Footer */
+   Modal */
 .modal {
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;

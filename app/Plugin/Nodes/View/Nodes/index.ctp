@@ -1,4 +1,7 @@
-<div class="nodes">
+<section class="nodes">
+	<header>
+		<h2>Learn</h2>
+	</header>
 	<?php
 		if (count($nodes) == 0) {
 			echo __d('croogo', 'No items found.');
@@ -22,4 +25,4 @@
 	?>
 
 	<div class="paging"><?php echo $this->Paginator->numbers(); ?></div>
-</div>
+</section>
