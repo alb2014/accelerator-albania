@@ -5,7 +5,7 @@ Vendor/Simpletest/
 webroot/uploads/
 *.bak
 *.swp
-app/View/Themed/Accelerator/webroot/.sass-cache/
+View/Themed/Accelerator/webroot/.sass-cache/
 
 # Cake cache
 
