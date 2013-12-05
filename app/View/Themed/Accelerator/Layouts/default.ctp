@@ -36,15 +36,21 @@
                 <nav>
                     <ul>
                         <li><?php echo $this->Html->link('Submit',
-array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
                         <li><?php echo $this->Html->link('Engage',
-array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
                         <li><a href="/blog">Learn</a></li>
                         <li class="sub"><a href="#faq">FAQs</a></li>
                     </ul>
             </header>
 
-            <?php echo $content_for_layout; ?>
+            <div class="main">
+
+                <?php echo $content_for_layout; ?>
+
+            </div>
+
+            <?php echo $this->fetch('footer_bar'); ?>
 
             <footer>
                 <div class="sitemap">
@@ -92,22 +98,9 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
             <div>
                 <a href="#close" title="Close" class="modal-close">x</a>
                 <h2>Login</h2>
-                <form>
-
-                    <label for="email">E-mail</label>
-                    <input type="text" id="email" name="email" value="">
-
-                    <label for="email">Password</label>
-                    <input type="text" id="email" name="email" value="">
-
-                    <input type="submit" value="Log In">
-
-                </form>
-
-                <p>
-                    <?php echo $this->Html->link('Register',
-array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?>
-                </p>
+                <?php
+                    echo $this->element('login_form', array(), array('plugin' => 'Users'));
+                ?>
             </div>
         </div>
 

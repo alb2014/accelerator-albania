@@ -37,7 +37,7 @@ $default-rhythm-border-style: solid;
 }
 
 .inline-padding {
-  padding: 0 1em;
+  padding: 1em;
 }
 
 .action-button {
@@ -90,6 +90,7 @@ label, input {
 
 input[type='submit'] {
   @extend .action-button;
+  margin: 1em 0;
 }
 
 p {
@@ -127,7 +128,7 @@ a {
 /* Live within 12-column grid */
 .content {
   header.global,
-  & > section.main,
+  & > div.main,
   & > footer {
     @extend .container;
   }
@@ -231,6 +232,11 @@ a {
   @include span-columns(7,12);
 }
 
+/* Login */
+.users.login {
+  @include span-columns(7,12);
+}
+
 
 /* Full-width miscellaneous text between main content and footer */
 aside.miscellaneous {
@@ -238,7 +244,7 @@ aside.miscellaneous {
   clear: both;
 }
 
-section.main {
+div.main {
   clear: both;
   /* Main Content Aside */
   > aside {
@@ -296,59 +302,6 @@ section.main {
   height: 920px;
   overflow: scroll;
 }
-
-/* Full-length Backgrounds for columns
-   Not working right now -- percentages off for some reason */
-/*.columns-7-5 {
-  @include clearfix;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(0, #ccc),
-    color-stop(columns(7,12), #ccc),
-    color-stop(columns(7,12), #eee),
-    color-stop(space(7,12), #eee),
-    color-stop(space(7,12), #ccc),
-    color-stop(100%, #ccc)
-  );    
-  background-image: -webkit-linear-gradient(
-    left, 
-    #ccc, 
-    #ccc columns(7,12),
-    #eee columns(7,12),
-    #eee space(7,12),
-    #ccc space(7,12),
-    #ccc 100%
-  );
-  background-image: -moz-linear-gradient(
-    left, 
-    #ccc, 
-    #ccc columns(7,12),
-    #eee columns(7,12),
-    #eee space(7,12),
-    #ccc space(7,12),
-    #ccc 100%
-  );
-  background-image: -ms-linear-gradient(
-    left, 
-    #ccc, 
-    #ccc columns(7,12),
-    #eee columns(7,12),
-    #eee space(7,12),
-    #ccc space(7,12),
-    #ccc 100%
-  );
-  background-image: -o-linear-gradient(
-    left, 
-    #ccc, 
-    #ccc columns(7,12),
-    #eee columns(7,12),
-    #eee space(7,12),
-    #ccc space(7,12),
-    #ccc 100%
-  );
-}*/
 
 .program {
   h3, p {
@@ -486,6 +439,16 @@ article {
   }
 
 }
+
+/* -------------------------------------------------------------------------
+   Login Page */
+.users {
+  @extend .column-wrapper;
+  > div {
+    @extend .inline-padding;
+  }
+}
+
 
 /* -------------------------------------------------------------------------
    Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
