@@ -1,6 +1,12 @@
 <?php
 
 class IdeasController extends AcceleratorAppController {
+    public $paginate = array(
+        'limit' => 25,
+        'order' => array(
+            'Post.title' => 'asc'
+        )
+    );
 
     public function index($userId=false) {
         $conditions = array();
@@ -84,16 +90,39 @@ class IdeasController extends AcceleratorAppController {
                 break;
         }
         $vote = new Vote();
+        $data = array('Vote' => array('value' => $mod,
+                                      'userId' => AuthComponent::user()['id'])
         $vote=>id = $ideaId.'-'AuthCompenent::user()['id'];
-
+        if ($this->Idea->save($data) {
+            $this->Session->setFlash(__('Your idea has been updated.'));
+            $this->updateVotes($ideaId)
+            return $this->redirect(array('action' => 'index/'.AuthComponent::user()['id']));
+        }
+        $this->Session->setFlash(__('Unable to update your idea.'));
     }
 
-        //modify vote in the table
-
-        //Update the idea
-
-
+    private function updateVotes($ideaId){
+        $this->Idea->id = $ideaId;
+        $voteHandle = new Vote();
+        $myVotes = $voteHandle->find('all', array('conditions' =>array('Vote.ideaId')));
+        $upvotes = 0;
+        $downvotes = 0;
+        foreach  ($myVotes as $vote){
+            if ($vote['value'] > 0){
+                $upvotes++;
+            }  
+            if ($vote['value'] < 0){
+                $downvotes++;
+            }
+        }
+        $data['User']['upvotes'] = $upvotes;
+        $data['User']['downvotes'] = $downvotes;
+        $data['User']['totalvotes'] = $upvotes - $downvotes;
+        $this->User->save($data);
     }
+
+
 }
+
 
 ?>
