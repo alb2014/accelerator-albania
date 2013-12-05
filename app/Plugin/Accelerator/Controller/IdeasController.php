@@ -97,7 +97,7 @@ class IdeasController extends AcceleratorAppController {
                 break;
         }
         $vote = new Vote();
-        $user ＝ AuthComponent::user();
+        $user = AuthComponent::user();
         $data = array('Vote' => array('value' => $mod,
                                       'userId' => $user['id'])
         $vote->id = $ideaId.'-'AuthCompenent::user()['id'];
