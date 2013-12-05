@@ -76,33 +76,41 @@
  *
  */
 class DATABASE_CONFIG {
- 
-    function __construct() {
- 
-        $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
- 
-        $this->default = array(
-            'datasource' => 'Database/Mysql',
-            'persistent' => false,
-            'host' => $url['host'],
-            'login' => $url['user'],
-            'password' => $url['pass'],
-            'database' => substr($url['path'],1),
-            'prefix' => '',
-            //'encoding' => 'utf8',
-        );
- 
-        $this->test = array(
-            'datasource' => 'Database/Mysql',
-            'persistent' => false,
-            'host' => 'localhost',
-            'login' => 'user',
-            'password' => 'password',
-            'database' => 'test_database_name',
-            'prefix' => '',
-            //'encoding' => 'utf8',
-        );
- 
-    }
- 
+
+
+  public $default;
+  function __construct() {
+    $this->default = array(
+      'datasource' => 'Database/Mysql',
+      'persistent' => false,
+      'host'       => str_replace("'", '', getenv('AA_DB_HOST')),
+      'login'      => str_replace("'", '', getenv('AA_DB_USER')),
+      'password'   => str_replace("'", '', getenv('AA_DB_PASS')),
+      'database'   => str_replace("'", '', getenv('AA_DB_NAME')),
+      'prefix'     => '',
+      'encoding'   => 'utf8',
+    );
+  }
+    public $old_default = array(
+        'datasource' => 'Database/Mysql',
+        'persistent' => false,
+        'host' => 'us-cdbr-east-04.cleardb.com',
+        'login' => 'b18eb52c19c73e',
+        'password' => '89fc5c33',
+        'database' => 'heroku_b7b2e6080fc0ad9',
+        'prefix' => '',
+        'encoding' => 'UTF8',
+        'port' => '',
+    );
+
+    public $test = array(
+        'datasource' => 'Database/Mysql',
+        'persistent' => false,
+        'host' => 'localhost',
+        'login' => 'user',
+        'password' => 'password',
+        'database' => 'test_database_name',
+        'prefix' => '',
+        'encoding' => 'UTF8',
+    );
 }
