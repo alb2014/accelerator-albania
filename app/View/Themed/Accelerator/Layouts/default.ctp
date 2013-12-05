@@ -26,6 +26,12 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <?php
+            // if ($loggedIn) {
+
+            //     echo "<h1>Hi USER</h1>";
+            // }
+        ?>
         <div class="content">
 
             <header class="global">
