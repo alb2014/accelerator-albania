@@ -36,6 +36,7 @@ class AcceleratorActivation {
 		$controller->Croogo->addAco('Accelerator/ideas/index', array('registered')); 
 		$controller->Croogo->addAco('Accelerator/ideas/add', array('registered')); 
 		$controller->Croogo->addAco('Accelerator/ideas/edit', array('registered')); 
+		$controller->Croogo->addAco('Accelerator/ideas/vote', array('registered'));
 		// Main menu: add an Example link
 		$mainMenu = $controller->Link->Menu->findByAlias('main');
 		$controller->Link->Behaviors->attach('Tree', array(
