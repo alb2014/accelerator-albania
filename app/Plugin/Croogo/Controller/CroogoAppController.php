@@ -166,6 +166,7 @@ class CroogoAppController extends Controller {
 		if (isset($this->request->params['locale'])) {
 			Configure::write('Config.language', $this->request->params['locale']);
 		}
+
 	}
 
 /**
