@@ -99,7 +99,7 @@ class IdeasController extends AcceleratorAppController {
         $vote = new Vote();
         $user = AuthComponent::user();
         $data = array('Vote' => array('value' => $mod,
-                                      'userId' => $user['id'])
+                                      'userId' => $user['id']));
         $vote->id = $ideaId.'-'.$user['id'];
         if ($vote->save($data) {
             $this->Session->setFlash(__('Vote cast!'));
