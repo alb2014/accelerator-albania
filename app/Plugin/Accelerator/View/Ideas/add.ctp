@@ -89,6 +89,8 @@
 
 
 <?php
-    echo $this->element('organization_info');
-    echo $this->element('mentors');
+    $this->start('footer_bar');
+        echo $this->element('organization_info');
+        echo $this->element('mentors');
+    $this->end();
 ?>
