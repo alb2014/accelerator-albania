@@ -103,7 +103,7 @@ class IdeasController extends AcceleratorAppController {
         $vote->id = $ideaId.'-'.$user['id'];
         if ($vote->save($data)) {
             $this->Session->setFlash(__('Vote cast!'));
-            $this->updateVotes($ideaId)
+            $this->updateVotes($ideaId);
             return $this->redirect(array('action' => 'index/'));
         }
         $this->Session->setFlash(__('Voting failed.'));
