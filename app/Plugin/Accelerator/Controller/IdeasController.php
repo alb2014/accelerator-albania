@@ -1,19 +1,23 @@
 <?php
 
 class IdeasController extends AcceleratorAppController {
+        public $components = array('Paginator');
+
+
     public $paginate = array(
         'limit' => 25,
         'order' => array(
-            'Post.title' => 'asc'
+            'Idea.total_votes' => 'asc'
         )
     );
 
     public function index($userId=false) {
+        $this->Paginator->settings = $this->paginate;
         $conditions = array();
         if ($userId){
-            $conditions['Idea.userId'] = $userId;
+            $this->Paginator->settings['conditions']['Idea.userId'] = $userId;
         }
-        $this->set('ideas', $this->Idea->find('all', array('conditions' => $conditions)));
+        $this->set('ideas', $this->Paginator->paginate('Idea'));
     }
 	    
     public function add() {
@@ -32,7 +36,8 @@ class IdeasController extends AcceleratorAppController {
             throw new MethodNotAllowedException();
         }
         $idea = $this->Idea->findById($id);
-        if ($idea['userID'] == AuthComponent::user()['id']){
+        $user = AuthComponent::user();
+        if ($idea['userID'] == $user['id']){
             if ($this->Idea->delete($id)) {
                 $this->Session->setFlash(__('The idea with id: %s has been deleted.', h($id)));
                 return $this->redirect(array('action' => 'index'));
@@ -54,6 +59,7 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function edit($id = null) {
+        $user = AuthComponent::user();
         if (!$id) {
             throw new NotFoundException(__("We couldn't find that idea."));
         }
@@ -67,7 +73,7 @@ class IdeasController extends AcceleratorAppController {
             $this->Idea->id = $id;
             if ($this->Idea->save($this->request->data)) {
                 $this->Session->setFlash(__('Your idea has been updated.'));
-                return $this->redirect(array('action' => 'index/'.AuthComponent::user()['id']));
+                return $this->redirect(array('action' => 'index/'.$user['id']));
             }
             $this->Session->setFlash(__('Unable to update your idea.'));
         }
@@ -78,6 +84,7 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function vote($ideaId, $value, $async=false){
+        if(AuthComponent::user()){
         switch ($value) {
             case "up":
                  $mod = 1;
@@ -90,15 +97,18 @@ class IdeasController extends AcceleratorAppController {
                 break;
         }
         $vote = new Vote();
+        $user = AuthComponent::user();
         $data = array('Vote' => array('value' => $mod,
-                                      'userId' => AuthComponent::user()['id'])
-        $vote=>id = $ideaId.'-'AuthCompenent::user()['id'];
-        if ($this->Idea->save($data) {
-            $this->Session->setFlash(__('Your idea has been updated.'));
+                                      'userId' => $user['id']));
+        $vote->id = $ideaId.'-'.$user['id'];
+        if ($vote->save($data) {
+            $this->Session->setFlash(__('Vote cast!'));
             $this->updateVotes($ideaId)
-            return $this->redirect(array('action' => 'index/'.AuthComponent::user()['id']));
+            return $this->redirect(array('action' => 'index/'));
         }
-        $this->Session->setFlash(__('Unable to update your idea.'));
+        $this->Session->setFlash(__('Voting failed.'));
+    }
+       $this->Session->setFlash(__('You must be logged in to vote.'));
     }
 
     private function updateVotes($ideaId){
@@ -115,10 +125,10 @@ class IdeasController extends AcceleratorAppController {
                 $downvotes++;
             }
         }
-        $data['User']['upvotes'] = $upvotes;
-        $data['User']['downvotes'] = $downvotes;
-        $data['User']['totalvotes'] = $upvotes - $downvotes;
-        $this->User->save($data);
+        $data['Idea']['up_votes'] = $upvotes;
+        $data['Idea']['down_votes'] = $downvotes;
+        $data['Idea']['total_votes'] = $upvotes - $downvotes;
+        $this->Idea->save($data);
     }
 
 
