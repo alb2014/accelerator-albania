@@ -26,3 +26,8 @@
 
 	<div class="paging"><?php echo $this->Paginator->numbers(); ?></div>
 </section>
+
+
+<?php
+	echo $layout->node('CustomFields.sidebar_content');
+?>
