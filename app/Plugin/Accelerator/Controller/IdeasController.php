@@ -1,5 +1,5 @@
 <?php
-
+App::uses('Vote', 'Accelerator.Model');
 class IdeasController extends AcceleratorAppController {
         public $components = array('Paginator');
 
@@ -84,7 +84,6 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function vote($ideaId, $value, $async=false){
-        if(AuthComponent::user()){
         switch ($value) {
             case "up":
                  $mod = 1;
@@ -107,8 +106,7 @@ class IdeasController extends AcceleratorAppController {
             return $this->redirect(array('action' => 'index/'));
         }
         $this->Session->setFlash(__('Voting failed.'));
-    }
-       $this->Session->setFlash(__('You must be logged in to vote.'));
+        return $this->redirect(array('action' => 'index/'));
     }
 
     private function updateVotes($ideaId){
