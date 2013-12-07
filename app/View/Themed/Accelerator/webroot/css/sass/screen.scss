@@ -120,6 +120,15 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
   > .inner {
     @extend .full-spacing;
   }
+  .read-more {
+    float: right;
+    line-height: 2em;
+    margin-right: .5em;
+    a {
+      padding-left: 2em;
+      background: url(../img/sprites/read_more.png) no-repeat left center transparent;
+    }
+  }
 }
 
 .horizontal-ul {
