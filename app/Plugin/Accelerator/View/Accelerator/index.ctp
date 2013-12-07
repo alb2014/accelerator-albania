@@ -14,8 +14,6 @@
 
 </div>
 
-
-<img width="940" height="175" src="">
 <h2><?php echo $title_for_layout; ?></h2>
 <p><?php echo __($acceleratorVariable); ?></p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -29,6 +27,9 @@ quis nostrud exercitation ullamco laboris nisi.</p>
     <!-- News Section -->
     <section class="news">
         <header>
+            <p class="read-more">
+                <a href="/blog">read more</a>
+            </p>
             <h2><a href="learn.html">News</a></h2>
         </header>
 
@@ -109,6 +110,14 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
     <section class="submissions sidebar">
         <header>
+            <p class="read-more">
+            <?php 
+                echo $this->Html->link(
+                    'read more', 
+                    array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')
+                ); 
+            ?>
+            </p>
             <h2><a href="">Submissions</a></h2>
         </header>
 
