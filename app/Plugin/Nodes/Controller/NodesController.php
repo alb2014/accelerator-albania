@@ -411,6 +411,8 @@ class NodesController extends NodesAppController {
 			$nodes = $this->paginate('Node');
 		}
 
+		$this->set('types', $this->Node->Taxonomy->find('all'));
+
 		$this->set(compact('type', 'nodes'));
 		$this->_viewFallback(array(
 			'index_' . $type['Type']['alias'],
