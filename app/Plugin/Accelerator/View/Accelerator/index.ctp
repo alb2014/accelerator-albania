@@ -1,3 +1,20 @@
+<div class="slideshow">
+
+    <ul class="slides">
+        <li><img width="940" height="175" src="" style="background-color: #21a4b6"></li>
+        <li><img width="940" height="175" src="" style="background-color: #80dbe8"></li>
+        <li><img width="940" height="175" src="" style="background-color: #333"></li>
+    </ul>
+
+    <ul class="toggles">
+        <li>Submit</li>
+        <li>Engage</li>
+        <li>Learn</li>
+    </ul>
+
+</div>
+
+
 <img width="940" height="175" src="">
 <h2><?php echo $title_for_layout; ?></h2>
 <p><?php echo __($acceleratorVariable); ?></p>

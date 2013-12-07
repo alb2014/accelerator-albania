@@ -10,6 +10,14 @@
       }
     });
 
+    $('.toggles').on('click','li', function() {
+      $('.slides li').removeClass('selected').eq($(this).index()).addClass('selected');
+    });
+
+    $('.main-toggles li a').hover(function() {
+      $('.slides li').removeClass('selected').eq($(this).parent().index()).addClass('selected');
+    });
+
   })
 
 }());
