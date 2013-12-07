@@ -71,8 +71,8 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
   padding: 0 1em;
 }
 
-.full-padding {
-  padding: 1em;
+.full-spacing {
+  margin: 1em;
 }
 
 .hidden-text {
@@ -113,8 +113,8 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
       text-transform: uppercase;
     }
   }
-  > div.inner {
-    @extend .full-padding;
+  > .inner {
+    @extend .full-spacing;
   }
 }
 
@@ -391,7 +391,11 @@ article {
 
 /* Posts (Croogo Nodes) Index Page */
 .nodes {
-  @include span-columns(7,12);
+  @include span-columns(9,12);
+}
+
+.categories {
+  @include span-columns(3 omega, 12);
 }
 
 
@@ -611,7 +615,7 @@ div.main {
 .users {
   @extend .column-wrapper;
   > div {
-    @extend .full-padding;
+    @extend .full-spacing;
   }
 }
 
@@ -625,8 +629,12 @@ div.main {
 .nodes {
   @extend .column-wrapper;
   .node {
-    @extend .full-padding;
+    @extend .full-spacing;
   }
+}
+
+.categories {
+  @extend .column-wrapper;
 }
 
 
@@ -635,7 +643,7 @@ div.main {
   .node {
     @extend .column-wrapper;
     header + div {
-      @extend .full-padding;
+      @extend .full-spacing;
     }
   }
 }
