@@ -29,5 +29,5 @@
 
 
 <?php
-	echo $layout->node('CustomFields.sidebar_content');
+	// echo $layout->node('CustomFields.sidebar_content');
 ?>

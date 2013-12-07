@@ -18,6 +18,7 @@ class IdeasController extends AcceleratorAppController {
             $this->Paginator->settings['conditions']['Idea.userId'] = $userId;
         }
         $this->set('ideas', $this->Paginator->paginate('Idea'));
+        $this->set('faq_node', ClassRegistry::init('Node')->findBySlug('faq'));
     }
 	    
     public function add() {

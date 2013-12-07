@@ -37,6 +37,14 @@
             <header class="global">
                 <a href="#login" class="button login">Login</a>
 
+                <?php 
+                    echo $this->Html->link(
+                        'Profile', 
+                        array('plugin' => 'users', 'controller' => 'users', 'action' => 'index'), 
+                        array('class' => 'button')
+                    ); 
+                ?>
+
                 <h1><a href="/accelerator">Hapi</a></h1>
 
                 <nav>
@@ -46,7 +54,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?
                         <li><?php echo $this->Html->link('Engage',
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
                         <li><a href="/blog">Learn</a></li>
-                        <li class="sub"><a href="#faq">FAQs</a></li>
+                        <li class="sub"><a href="#faq">What is this?</a></li>
                     </ul>
             </header>
 
@@ -59,53 +67,67 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
             <?php echo $this->fetch('footer_bar'); ?>
 
             <footer>
-                <div class="sitemap">
-                    <h4>Sitemap</h4>
-                    <nav>
-                        <ul>
-                            <li><a href="/accelerator/ideas/add">Submit</a></li>
-                            <li><a href="/accelerator/ideas">Engage</a></li>
-                            <li><a href="/blog">Learn</a></li>
-                            <li>
-                                <?php 
-                                    echo $this->Html->link(
-                                        'Login', 
-                                        array(
-                                            'plugin' => 'users', 
-                                            'controller' => 'users', 
-                                            'action' => 'login'
-                                        )
-                                    ); 
-                                ?>
-                            </li>
-                        </ul>
+                <div>
+                    <div class="sitemap">
+                        <h3>Sitemap</h3>
+                        <nav>
+                            <ul>
+                                <li><a href="/accelerator/ideas/add">Submit</a></li>
+                                <li><a href="/accelerator/ideas">Engage</a></li>
+                                <li><a href="/blog">Learn</a></li>
+                                <li>
+                                    <?php 
+                                        echo $this->Html->link(
+                                            'Login', 
+                                            array(
+                                                'plugin' => 'users', 
+                                                'controller' => 'users', 
+                                                'action' => 'login'
+                                            )
+                                        ); 
+                                    ?>
+                                </li>
+                                <li>
+                                    <?php 
+                                        echo $this->Html->link(
+                                            'Logout', 
+                                            array(
+                                                'plugin' => 'users', 
+                                                'controller' => 'users', 
+                                                'action' => 'logout'
+                                            )
+                                        ); 
+                                    ?>
+                                </li>
+                            </ul>
 
-                        <ul>
-                            <li><a href="/blog">News</a></li>
-                            <li><a href="/accelerator/ideas">Submissions</a></li>
-                            <li><a href="">What is this?</a></li>
-                            <li><a href="/about">About</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="/blog">News</a></li>
+                                <li><a href="/accelerator/ideas">Submissions</a></li>
+                                <li><a href="/page/faq">What is this?</a></li>
+                                <li><a href="/about">About</a></li>
+                            </ul>
 
+                            <ul>
+                                <li><a href="/blog/more-about-yunus">Yunus SB</a></li>
+                                <li><a href="">UNDP</a></li>
+                                <li><a href="">Albania</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="social">
+                        <h3>Follow Us</h3>
                         <ul>
-                            <li><a href="">Yunus SB</a></li>
-                            <li><a href="">UNDP</a></li>
-                            <li><a href="">Albania</a></li>
-                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="" class="fb">Facebook</a></li>
+                            <li><a href="" class="google">Google+</a></li>
+                            <li><a href="" class="rss">RSS</a></li>
                         </ul>
-                    </nav>
+                    </div>
+
+                    <p>&copy;2013 YUNUS Albania commissioned by UNPD</p>
                 </div>
-
-                <div class="social">
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="">Google+</a></li>
-                        <li><a href="">RSS</a></li>
-                        <li><a href="">Facebook</a></li>
-                    </ul>
-                </div>
-
-                <p>&copy;2013 YUNUS Albania commissioned by UNPD</p>
 
             </footer>
 
@@ -124,9 +146,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
         <div id="faq" class="modal">
             <div>
                 <a href="#close" title="Close" class="modal-close">x</a>
-                <h2>FAQs</h2>
-                <p>This is a sample modal box that can be created using the powers of CSS3.</p>
-                <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+                <?php echo $this->fetch('faq'); ?>
             </div>
         </div>
 
