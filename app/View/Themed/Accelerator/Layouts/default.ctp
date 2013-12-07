@@ -154,6 +154,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
             echo $this->Layout->js();
             echo $scripts_for_layout;
             echo $this->Html->script(array(
+                'vendor/modernizr-2.6.2.min',
                 'vendor/jquery-1.10.2.min',
                 'plugins',
                 'main'
