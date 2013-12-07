@@ -42,11 +42,11 @@
                 <a href="#login" class="button login">Login</a>
 
                 <?php 
-                    echo $this->Html->link(
-                        'Profile', 
-                        array('plugin' => 'users', 'controller' => 'users', 'action' => 'index'), 
-                        array('class' => 'button')
-                    ); 
+                    // echo $this->Html->link(
+                    //     'Profile', 
+                    //     array('plugin' => 'users', 'controller' => 'users', 'action' => 'index'), 
+                    //     array('class' => 'button')
+                    // ); 
                 ?>
 
                 <h1><a href="/accelerator">HAPide</a></h1>
@@ -151,6 +151,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
             <div>
                 <a href="#close" title="Close" class="modal-close">x</a>
                 <?php echo $this->fetch('faq'); ?>
+                <p>TBD</p>
             </div>
         </div>
 

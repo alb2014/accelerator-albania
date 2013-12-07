@@ -17,3 +17,7 @@
         <?php echo $this->Form->end('Submit');?>
     </div>
 </section>
+
+<?php
+    echo $this->element('hapide_description', array(), array('plugin' => 'Accelerator'));
+?>

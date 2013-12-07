@@ -12,8 +12,8 @@ quis nostrud exercitation ullamco laboris nisi.</p>
     <section class="idea">
         <header>
             <div class="votes">
-                <a href="">8 Up</a>
-                <a href="">8 Down</a>
+                <a href="" class="up" data-idea-id="<?php echo $idea['Idea']['id']; ?>">34</a>
+                <a href="" class="down" data-idea-id="<?php echo $idea['Idea']['id']; ?>">8</a>
             </div>
             <h2>Idea Page</h2>
         </header>

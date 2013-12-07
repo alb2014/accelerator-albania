@@ -219,7 +219,7 @@ a {
     &.up {
       background: url(../img/sprites/vote_up_wide_blue.png) no-repeat center top transparent;  
       &:hover {
-        background: url(../img/sprites/vote_up_wide_grey.png) no-repeat center top transparent;
+        background: url(../img/sprites/vote_up_wide_darkgrey.png) no-repeat center top transparent;
       }
       &.voted {
         background: url(../img/sprites/vote_up_wide_white.png) no-repeat center top transparent;
@@ -230,7 +230,7 @@ a {
       margin-top: -25px;
       line-height: 51px;
       &:hover {
-        background: url(../img/sprites/vote_down_wide_grey.png) no-repeat center bottom transparent;
+        background: url(../img/sprites/vote_down_wide_darkgrey.png) no-repeat center bottom transparent;
       }
       &.voted {
         background: url(../img/sprites/vote_down_wide_white.png) no-repeat center bottom transparent;
@@ -242,6 +242,19 @@ a {
       cursor: default;
     }
   }
+}
+
+section {
+  header {
+    .votes {
+      .up {
+        background: url(../img/sprites/vote_up_wide_grey.png) no-repeat center top transparent;
+      }
+      .down {
+        background: url(../img/sprites/vote_down_wide_grey.png) no-repeat center bottom transparent;
+      }
+    }
+  }  
 }
 
 
@@ -388,9 +401,9 @@ article {
 }
 
 /* About */
-.what-is-hapi, .program-structure {
+/*.what-is-hapi, .program-structure {
   @include span-columns(8,12);
-}
+}*/
 .who-is {
   @include span-columns(4 omega,12);
 }
@@ -410,7 +423,12 @@ article {
 
 /* Login, Profile */
 .users {
-  @include span-columns(7,12);
+  @include span-columns(8,12);
+}
+
+/* Register */
+.what-is-hapi.sidebar {
+  @include span-columns(4 omega,12);
 }
 
 
