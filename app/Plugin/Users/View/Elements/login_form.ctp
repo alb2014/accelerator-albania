@@ -7,9 +7,9 @@
     </fieldset>
 <?php echo $this->Form->end('Submit');?>
 <ul>
-    <li>
+    <li>No account?
         <?php 
-            echo $this->Html->link('Register', array('plugin' => 'users', 'controller' => 'users', 'action' => 'add')); 
+            echo $this->Html->link('Register here', array('plugin' => 'users', 'controller' => 'users', 'action' => 'add')); 
         ?>
     </li>
     <li>
