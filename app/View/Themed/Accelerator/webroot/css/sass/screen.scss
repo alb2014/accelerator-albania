@@ -249,8 +249,8 @@ a {
    Main Content Sections */
 
 .faq-tab {
-  position: absolute;
-  top: 600px;
+  position: fixed;
+  top: 30%;
   left: 0;
   background-color: $primary_bg;
   a {
@@ -730,6 +730,7 @@ div.organization-info {
   background-color: $secondary_bg;
   color: $secondary_bg_text;
   margin-bottom: -1em;
+  padding-bottom: 1em;
   div {
     @extend .container;
     section {
