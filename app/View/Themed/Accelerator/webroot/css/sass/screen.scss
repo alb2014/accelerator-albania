@@ -12,15 +12,17 @@ $primary_bg:         #21a4b6;
 $primary_bg_text:    white;
 $primary_bg_hover:   #222;
 
-$secondary_bg:       #eee;
+$secondary_bg:       #d4edf1;
 $secondary_bg_text:  #222;
 
 $body_text:          #222;
 
-$link_color:         #1375e1;
-$link_color_hover:   #1162bc;
-$link_color_visited: #5aa3f4;
+$link_color:         $primary_bg;
+$link_color_hover:   darken($primary_bg, 20%);
+$link_color_visited: $primary_bg;
 
+
+$base-font-family: 'PT Sans', 'Myriad Pro', sans-serif;
 
 $base-font-size: 16px;
 $base-line-height: 23px;
@@ -40,6 +42,13 @@ $grid-padding: 10px;
 /* Not Fluid */
 $container-style: static;
 
+/* Sprite */
+$sprites-spacing: 20px;
+$sprites-sprite-dimensions: true;
+$sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
+
+@import "sprites/*.png";
+
 
 /* -------------------------------------------------------------------------
    Layout */
@@ -54,7 +63,7 @@ $container-style: static;
 
 @mixin h3 {
   font-size: 1.17em;
-  margin: 0.8em 0 0;
+  margin: 0.85em 0 0;
   font-weight: bold;
 }
 
@@ -66,14 +75,25 @@ $container-style: static;
   padding: 1em;
 }
 
+.hidden-text {
+  text-indent: 9999px;
+  overflow: hidden;
+}
+
 .action-button {
   display: inline-block;
   padding: .5em 1em;
   background-color: $primary_bg;
   color: $primary_bg_text;
   border: 0;
+  text-decoration: none;
+  text-transform: uppercase;
   &:hover {
     background-color: $primary_bg_hover;
+    color: $primary_bg_text;
+  }
+  &:visited {
+    color: $primary_bg_text;
   }
 }
 
@@ -89,6 +109,12 @@ $container-style: static;
     a {
       color: $primary_bg_text;
     }
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+  > div.inner {
+    @extend .full-padding;
   }
 }
 
@@ -104,7 +130,7 @@ $container-style: static;
    Basic Defaults & Overrides */
 
 html, body {
-  font-family: 'PT Sans', 'Myriad Pro', sans-serif;
+  font-family: $base-font-family;
   color: $body_text;
 }
 
@@ -114,8 +140,21 @@ ul {
   padding: 0;
 }
 
+label {
+  font-weight: bold;
+}
+
 label, input {
   display: block;
+}
+
+input[type="text"],input[type="password"],input[type="email"], textarea {
+  box-shadow: inset 1px 1px 1px #ccc;
+  margin: .25em 0 1em;
+  padding: 5px 7px;
+  border: 1px solid #aaa;
+  font-family: $base-font-family;
+  min-width: 20em;
 }
 
 input[type='submit'] {
@@ -127,13 +166,20 @@ p {
   margin: 1em 0 .5em;
 }
 
+time {
+  color: $primary_bg;
+  font-weight: bold;
+}
+
 a {
   color: $link_color;
+  text-decoration: none;
   &:hover {
     color: $link_color_hover;
+    text-decoration: underline;
   }
   &:visited {
-    color: $link_color_visited;
+    color: $link_color;
   }
 
   /* Buttons */
@@ -144,10 +190,44 @@ a {
 
 /* Vote Buttons */
 .votes {
+  min-height: 82px;
+  text-align: center;
   a {
-    @extend a.button;
+    display: block;
+    width: 38px;
+    height: 45px;
+    line-height: 38px;
+    color: white;
     padding: .25em .5em;
     margin: 3px;
+    &:hover {
+      text-decoration: none
+    }
+    &.up {
+      background: url(../img/sprites/vote_up_wide_blue.png) no-repeat center top transparent;  
+      &:hover {
+        background: url(../img/sprites/vote_up_wide_grey.png) no-repeat center top transparent;
+      }
+      &.voted {
+        background: url(../img/sprites/vote_up_wide_white.png) no-repeat center top transparent;
+      }
+    }
+    &.down {
+      background: url(../img/sprites/vote_down_wide_blue.png) no-repeat center bottom transparent;
+      margin-top: -25px;
+      line-height: 51px;
+      &:hover {
+        background: url(../img/sprites/vote_down_wide_grey.png) no-repeat center bottom transparent;
+      }
+      &.voted {
+        background: url(../img/sprites/vote_down_wide_white.png) no-repeat center bottom transparent;
+      }
+    }
+
+    &.voted {
+      color: $primary_bg;
+      cursor: default;
+    }
   }
 }
 
@@ -159,26 +239,88 @@ a {
 .content {
   header.global,
   & > div.main,
-  & > footer {
+  & > footer > div {
     @extend .container;
   }
 
   /* Main Header */
   header.global {
+    h1 a {
+      display: block;
+      @include sprites-sprite(logo);
+      background-image: url(../img/sprites/logo.png);
+      @extend .hidden-text;
+    }
     a.button {
       float: right;
+      background: url(../img/concrete_bg.jpg) no-repeat center top $primary_bg;
+      @include adjust-font-size-to(18px);
     }
     nav {
       li.sub {
         float: right;
+        padding: 0;
+        font-size: 1em;
       }
     }
     li {
       display: inline-block;
+      padding: 0 1em 0 0;
+      font-size: $base-font-size*1.3;
+      a {
+        color: black;
+        text-decoration: none;
+        span {
+          font-weight: normal;
+        }
+        &:hover {
+          color: $link_color;
+        }
+      }
     }
     /* Not supported by IE */
     li:not(.sub) a {
       font-weight: bold;
+    }
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Universal Article Elements */
+article {
+  header {
+    @include clearfix;
+  }
+  h1 {
+    @include h3;
+    a {
+      color: black;
+      text-decoration: none;
+      &:visited {
+        color: black;
+      }
+    }
+  }
+  aside {
+    a {
+      display: inline-block;
+      width: 26px;
+      height: 28px;
+      @extend .hidden-text;
+      margin: 0 .5em 0 0;
+    }
+  }
+  .share_comment {
+    background: url(../img/sprites/share_comment_blue.png) no-repeat center 2px transparent;
+    &:hover {
+      background: url(../img/sprites/share_comment_grey.png) no-repeat center 2px transparent;
+    }
+  }
+  .share_fb {
+    background: url(../img/sprites/share_fb_blue.png) no-repeat center top transparent;
+    &:hover {
+      background: url(../img/sprites/share_fb_grey.png) no-repeat center top transparent;
     }
   }
 }
@@ -196,6 +338,10 @@ a {
 }
 
 /* Engage */
+.submissions.header {
+  @include span-columns(7,12);
+}
+
 .submissions.main {
   @include span-columns(7,12);
 }
@@ -237,10 +383,11 @@ a {
   @include span-columns(7,12);
 }
 
-/* Login */
-.users.login {
+/* Login, Profile */
+.users {
   @include span-columns(7,12);
 }
+
 
 /* Posts (Croogo Nodes) Index Page */
 .nodes {
@@ -307,7 +454,7 @@ div.main {
     @include span-columns(1 omega,5);
     ~ div {
       @include span-columns(4,5);
-      p {
+      p, aside {
         margin: 1em;
       }
     }
@@ -319,8 +466,10 @@ div.main {
 .submissions.main,
 .program {
   @extend .column-wrapper;
-  height: 920px;
-  overflow: scroll;
+  > div {
+    height: 920px;
+    overflow: scroll;
+  }
 }
 
 .program {
@@ -329,15 +478,6 @@ div.main {
   }
 }
 
-/* Universal Article Elements */
-article {
-  header {
-    @include clearfix;
-  }
-  h1 {
-    @include h3;
-  }
-}
 
 /* Homepage Submissions */
 .submissions {
@@ -369,11 +509,12 @@ article {
     .votes {
       @include span-columns(1, 7);
     }
-    article > p {
-      @include span-columns(4, 7);
+    p.description {
+      @include span-columns(5, 7);
+      margin-top: 0;
     }
     aside {
-      @include span-columns(2 omega, 7);
+      @include span-columns(1 omega, 7);
     }
 
   }
@@ -382,17 +523,21 @@ article {
 
 /* -------------------------------------------------------------------------
    Submit Idea & Create Profile Form & Page */
+
 .submit-idea {
   @extend .column-wrapper;
 }
 
 .create-profile {
   @extend .column-wrapper;
-  .form-column1 {
+  fieldset {
+    margin-top: 1em;
     @include span-columns(6, 12);
-  }
-  .form-column2 {
-    @include span-columns(6 omega, 12);
+    @include nth-omega(2n);
+    label, input {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
   }
 }
 
@@ -462,12 +607,17 @@ article {
 
 /* -------------------------------------------------------------------------
    Login Page */
+
 .users {
   @extend .column-wrapper;
   > div {
     @extend .full-padding;
   }
 }
+
+
+/* -------------------------------------------------------------------------
+   Profile Page */
 
 
 /* -------------------------------------------------------------------------
@@ -516,10 +666,11 @@ div.organization-info {
    Full width 'People' Bar (breaks out of grid) */
 
 section.people {
-  background-color: $primary_bg;
+  background: url(../img/suede_bg.png) repeat-x center top $primary_bg;
   color: $primary_bg_text;
   ul {
     @extend .container;
+    margin-bottom: 0;
     li {
       @include span-columns(4,12);
       @include nth-omega(3n);
@@ -530,7 +681,7 @@ section.people {
     margin: 1em 1em 1em 0;
   }
   a {
-    color: $primary_bg_text;
+    //color: $primary_bg_text;
   }
 }
 
@@ -539,6 +690,14 @@ section.people {
    Footer */
 
 .content > footer {
+  background: url(../img/concrete_bg.jpg) repeat-x center top $primary_bg;
+  color: white;
+  a {
+    color: white;
+  }
+  h3 {
+    text-transform: uppercase;
+  }
   .sitemap {
     @include span-columns(8,12);
     ul {
@@ -548,6 +707,27 @@ section.people {
   }
   .social {
     @include span-columns(4 omega,12);
+    text-align: right;
+    li a {
+      display: block;
+      float: right;
+      width: 60px;
+      height: 60px;
+      margin: 0 0 0 1em;
+      @extend .hidden-text;
+      background-color: transparent;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      &.fb {
+        @include sprites-sprite(fb);
+      }
+      &.rss {
+        background-image: url(../img/sprites/rss.png);
+      }
+      &.google {
+        background-image: url(../img/sprites/google.png);
+      }
+    }
   }
   ul {
     margin: 0;
@@ -564,7 +744,6 @@ section.people {
    Modal */
 .modal {
   position: fixed;
-  font-family: Arial, Helvetica, sans-serif;
   top: 0;
   right: 0;
   bottom: 0;
@@ -589,18 +768,15 @@ section.people {
     background: #fff;
   }
   .modal-close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
+    color: black;
     position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
+    right: 12px;
+    top: 12px;
+    padding: 5px;
+    font-size: 2em;
+    text-align: right;
     text-decoration: none;
     font-weight: bold;
-    @include border-radius(3px);
-    @include box-shadow(1px 1px 3px #000);
-    &:hover { background: #00d9ff; }
+    &:hover { color: $primary_bg; }
   }
 }

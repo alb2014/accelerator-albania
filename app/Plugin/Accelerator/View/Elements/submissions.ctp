@@ -1,24 +1,28 @@
-<!-- Here is where we loop through our $posts array, printing out post info -->
+<!-- Here is where we loop through our $ideas array, printing out idea info -->
 <?php foreach ($ideas as $idea): ?>
 
     <article>
         <header>
             <h1><?php echo $this->Html->link($idea['Idea']['name'],
-array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id'])); ?></h1>
-            <p><time pubdate="pubdate">24-12-2013</time></p>
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id'])); ?></h1>
+            <p><time pubdate="pubdate">24.12.2013</time></p>
         </header>
 
         <div class="votes">
-            <a href="">8 Up</a>
-            <a href="">8 Down</a>
+            <a href="" class="up" data-idea-id="<?php echo $idea['Idea']['id']; ?>">34</a>
+            <a href="" class="down" data-idea-id="<?php echo $idea['Idea']['id']; ?>">8</a>
         </div>
 
-        <p><?php echo $idea['Idea']['desc']; ?></p>
+        <div>
+            <p class="description"><?php echo $idea['Idea']['desc']; ?></p>
 
-        <aside>
-            <a href="">Comment</a>
-            <a href="">FB Share</a>
-        </aside>
+            <aside>
+                <a href="" class="share_comment">Comment</a>
+                <a href="" class="share_fb">FB Share</a>
+            </aside>
+
+        </div>
+
     </article>
 
 <?php endforeach; ?>
@@ -28,94 +32,71 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
 <article>
     <header>
         <h1><a href="idea.html">Social Business Albania</a></h1>
-        <p><time pubdate="pubdate">24-12-2013</time></p>
+        <p><time pubdate="pubdate">24.12.2013</time></p>
     </header>
 
     <div class="votes">
-        <a href="">8 Up</a>
-        <a href="">8 Down</a>
+        <a href="" class="up voted" data-idea-id="">34</a>
+        <a href="" class="down" data-idea-id="">8</a>
     </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat fjfnek. </p>
+    <div>
 
-    <aside>
-        <a href="">Comment</a>
-        <a href="">FB Share</a>
-    </aside>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat fjfnek. </p>
+
+        <aside>
+            <a href="" class="share_comment">Comment</a>
+            <a href="" class="share_fb">FB Share</a>
+        </aside>
+
+    </div>
+
 </article>
 
 <article>
     <header>
         <h1><a href="idea.html">Social Business Albania</a></h1>
-        <p><time pubdate="pubdate">24-12-2013</time></p>
+        <p><time pubdate="pubdate">24.12.2013</time></p>
     </header>
 
     <div class="votes">
-        <a href="">8 Up</a>
-        <a href="">8 Down</a>
+        <a href="" class="up" data-idea-id="">34</a>
+        <a href="" class="down voted" data-idea-id="">8</a>
     </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat fjfnek. </p>
+    <div>
 
-    <aside>
-        <a href="">Comment</a>
-        <a href="">FB Share</a>
-    </aside>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat fjfnek. </p>
+
+        <aside>
+            <a href="" class="share_comment">Comment</a>
+            <a href="" class="share_fb">FB Share</a>
+        </aside>
+
+    </div>
+    
 </article>
 
 <article>
     <header>
         <h1><a href="idea.html">Social Business Albania</a></h1>
-        <p><time pubdate="pubdate">24-12-2013</time></p>
+        <p><time pubdate="pubdate">24.12.2013</time></p>
     </header>
 
     <div class="votes">
-        <a href="">8 Up</a>
-        <a href="">8 Down</a>
+        <a href="" class="up" data-idea-id="">34</a>
+        <a href="" class="down" data-idea-id="">8</a>
     </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat fjfnek. </p>
+    <div>
 
-    <aside>
-        <a href="">Comment</a>
-        <a href="">FB Share</a>
-    </aside>
-</article>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat fjfnek. </p>
 
-<article>
-    <header>
-        <h1><a href="idea.html">Social Business Albania</a></h1>
-        <p><time pubdate="pubdate">24-12-2013</time></p>
-    </header>
+        <aside>
+            <a href="" class="share_comment">Comment</a>
+            <a href="" class="share_fb">FB Share</a>
+        </aside>
 
-    <div class="votes">
-        <a href="">8 Up</a>
-        <a href="">8 Down</a>
     </div>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat fjfnek. </p>
-
-    <aside>
-        <a href="">Comment</a>
-        <a href="">FB Share</a>
-    </aside>
-</article>
-
-<article>
-    <header>
-        <h1><a href="idea.html">Social Business Albania</a></h1>
-        <p><time pubdate="pubdate">24-12-2013</time></p>
-    </header>
-
-    <div class="votes">
-        <a href="">8 Up</a>
-        <a href="">8 Down</a>
-    </div>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat fjfnek. </p>
-
-    <aside>
-        <a href="">Comment</a>
-        <a href="">FB Share</a>
-    </aside>
+    
 </article>

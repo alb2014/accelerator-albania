@@ -1,4 +1,7 @@
-<img width="940" height="175" src="">
+<img width="940" height="175" src="../../View/Themed/Accelerator/webroot/img/homepage.jpg">
+<?php
+    // echo $this->Html->image(array('homepage.jpg'));
+?>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi.</p>
@@ -9,20 +12,11 @@ quis nostrud exercitation ullamco laboris nisi.</p>
         <h2>Submit Idea</h2>
     </header>
 
-    <?php
-    echo $this->Form->create('Idea');
-    echo $this->Form->input('name');
-    echo $this->Form->input('desc', array('rows' => '3'));
-    echo $this->Form->input('type', array('options'=> array('social'=>'Social',
-                                                            'tech' =>'Tech',
-                                                            'scientific' => 'Scientfic',
-                                                            'other' => 'Other')));
-    $user = AuthComponent::user();
-    echo $this->Form->input('user_id', array('type' => 'hidden',
-                                            'value' => $user['id']));
-
-    echo $this->Form->end('Pitch');
-    ?>
+    <div class="inner">
+        <?php
+            echo $this->element('add_form');
+        ?>
+    </div>
 
 <!--             <fieldset>
         <legend>Idea Category:</legend>
@@ -53,26 +47,12 @@ quis nostrud exercitation ullamco laboris nisi.</p>
         <h2>Create Profile</h2>
     </header>
 
-    <div class="form-column1">
-        <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" value="">
-
-        <label for="email">E-mail</label>
-        <input type="text" id="email" name="email" value="">
-    </div>
-
-    <div class="form-column2">
-        <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" value="">
-
-        <label for="email">E-mail</label>
-        <input type="text" id="email" name="email" value="">
-    </div>
-
-
+    <?php
+        echo $this->element('add_form', array(), array('plugin' => 'Users'));
+    ?>
 
     <!-- Main Content Aside - Varies on Pages -->
-    <aside class="miscellaneous">
+    <div class="inner">
         <h3>Competition Details</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -80,7 +60,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </aside>
+    </div>
 
 </section>
 

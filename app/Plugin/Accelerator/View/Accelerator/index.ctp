@@ -23,7 +23,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
             <div class="content">
                 <header>
-                    <p><time pubdate="pubdate">24-12</time></p>
+                    <p><time pubdate="pubdate">24.12.2013</time></p>
                     <h1><a href="">It's a new day for Social Business</a></h1>
                 </header>
 
@@ -41,7 +41,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
             <div class="content">
                 <header>
-                    <p><time pubdate="pubdate">24-12</time></p>
+                    <p><time pubdate="pubdate">24.12.2013</time></p>
                     <h1><a href="">It's a new day for Social Business</a></h1>
                 </header>
 
@@ -59,7 +59,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
             <div class="content">
                 <header>
-                    <p><time pubdate="pubdate">24-12</time></p>
+                    <p><time pubdate="pubdate">24.12.2013</time></p>
                     <h1><a href="">It's a new day for Social Business</a></h1>
                 </header>
 
@@ -77,7 +77,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
             <div class="content">
                 <header>
-                    <p><time pubdate="pubdate">24-12</time></p>
+                    <p><time pubdate="pubdate">24.12.2013</time></p>
                     <h1><a href="">It's a new day for Social Business</a></h1>
                 </header>
 
@@ -106,7 +106,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
 <!-- Main Content Aside - Varies on Pages -->
 <aside class="miscellaneous">
-    <h3>Have a business idea of your own? Click here!</h3>
+    <h3>Have a business idea of your own? <a href="">Click here!</a></h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
