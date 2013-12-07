@@ -18,6 +18,10 @@
       $('.slides li').removeClass('selected').eq($(this).parent().index()).addClass('selected');
     });
 
+    $('.voted').on('click', function(e) {
+      e.preventDefault();
+    })
+
   })
 
 }());
