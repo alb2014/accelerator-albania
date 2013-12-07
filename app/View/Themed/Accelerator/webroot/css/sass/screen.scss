@@ -67,6 +67,19 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
   font-weight: bold;
 }
 
+@mixin section_header {
+  color: $primary_bg_text;
+  background: $primary_bg;
+  @include clearfix;
+  @extend .inline-padding;
+  a {
+    color: $primary_bg_text;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+}
+
 .inline-padding {
   padding: 0 1em;
 }
@@ -102,16 +115,7 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
   color: $secondary_bg_text;
   margin-bottom: 1em;
   > header {
-    color: $primary_bg_text;
-    background: $primary_bg;
-    @include clearfix;
-    @extend .inline-padding;
-    a {
-      color: $primary_bg_text;
-    }
-    h2 {
-      text-transform: uppercase;
-    }
+    @include section_header;
   }
   > .inner {
     @extend .full-spacing;
@@ -426,6 +430,44 @@ div.main {
 }
 
 /* Home elements */
+
+.slideshow {
+  position: relative;
+  height: 175px;
+  ul.slides {
+    z-index: 1;
+    li {
+      position: absolute;
+      top:0;
+      left: 0;
+      &:nth-child(1) {
+        z-index: 1;
+      }
+      &.selected {
+        z-index: 2;  
+        pointer-events: auto;
+      }
+    }    
+  }
+  ul.toggles {
+    z-index:2;
+    position: absolute;
+    bottom: 0;
+    right: 1em;
+    li {
+      //@include sprites-sprite(toggle);
+      width: 30px;
+      height: 30px;
+      float: left;
+      @extend .hidden-text;
+      background: url(../img/sprites/toggle.png) no-repeat left top transparent;
+      z-index: 10;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}
+
 .news {
   @extend .column-wrapper;
   article {
@@ -630,6 +672,11 @@ div.main {
   @extend .column-wrapper;
   .node {
     @extend .full-spacing;
+    h2 {
+      a {
+        color: black;
+      }
+    }
   }
 }
 
@@ -640,13 +687,19 @@ div.main {
 
 /* Post (Croogo Node) View Page */
 .node-wrapper {
-  .node {
-    @extend .column-wrapper;
-    header + div {
-      @extend .full-spacing;
-    }
+  @extend .column-wrapper;
+  .node header {
+    @include section_header;
+  }
+  header + div {
+    @extend .full-spacing;
   }
 }
+
+.comments, .comment-form {
+  @extend .full-spacing;
+}
+
 
 
 /* -------------------------------------------------------------------------

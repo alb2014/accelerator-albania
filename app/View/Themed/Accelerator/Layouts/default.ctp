@@ -45,10 +45,10 @@
                     ); 
                 ?>
 
-                <h1><a href="/accelerator">Hapi</a></h1>
+                <h1><a href="/accelerator">HAPide</a></h1>
 
                 <nav>
-                    <ul>
+                    <ul class="main-toggles">
                         <li><?php echo $this->Html->link('Submit',
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
                         <li><?php echo $this->Html->link('Engage',
@@ -150,14 +150,11 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
             </div>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-
-
         <?php
             echo $this->Layout->js();
             echo $scripts_for_layout;
             echo $this->Html->script(array(
+                'vendor/jquery-1.10.2.min',
                 'plugins',
                 'main'
             ));
