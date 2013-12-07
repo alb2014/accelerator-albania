@@ -32,6 +32,10 @@
             //     echo "<h1>Hi USER</h1>";
             // }
         ?>
+
+        <div class="faq-tab">
+            <a href="#faq">FAQ</a>
+        </div>
         <div class="content">
 
             <header class="global">

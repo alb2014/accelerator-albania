@@ -157,8 +157,9 @@ label {
   font-weight: bold;
 }
 
-label, input {
+label, input, textarea {
   display: block;
+  font-family: $base-font-family;
 }
 
 input[type="text"],input[type="password"],input[type="email"], textarea {
@@ -166,7 +167,6 @@ input[type="text"],input[type="password"],input[type="email"], textarea {
   margin: .25em 0 1em;
   padding: 5px 7px;
   border: 1px solid #aaa;
-  font-family: $base-font-family;
   min-width: 20em;
 }
 
@@ -247,6 +247,18 @@ a {
 
 /* -------------------------------------------------------------------------
    Main Content Sections */
+
+.faq-tab {
+  position: absolute;
+  top: 600px;
+  left: 0;
+  background-color: $primary_bg;
+  a {
+    color: white;
+    display: inline-block;
+    padding: .5em;
+  }
+}
 
 /* Live within 12-column grid */
 .content {
