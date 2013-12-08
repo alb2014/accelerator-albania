@@ -97,9 +97,12 @@ class IdeasController extends AcceleratorAppController {
         }
         $vote = new Vote();
         $user = AuthComponent::user();
-        $data = array('Vote' => array('value' => $mod,
-                                      'userId' => $user['id']));
+        $data = array('Vote' => array('id' => $ideaId.'-'.$user['id'],
+                                      'value' => $mod,
+                                      'idea_id' => $ideaId,
+                                      'user_id' => $user['id']));
         $vote->id = $ideaId.'-'.$user['id'];
+        $this->log($data);
         if ($vote->save($data)) {
             $this->Session->setFlash(__('Vote cast!'));
             $this->updateVotes($ideaId);
@@ -112,14 +115,15 @@ class IdeasController extends AcceleratorAppController {
     private function updateVotes($ideaId){
         $this->Idea->id = $ideaId;
         $voteHandle = new Vote();
-        $myVotes = $voteHandle->find('all', array('conditions' =>array('Vote.ideaId')));
+        $myVotes = $voteHandle->find('all', array('conditions' =>array('Vote.idea_id')));
         $upvotes = 0;
         $downvotes = 0;
+        //$this->log($myVotes);
         foreach  ($myVotes as $vote){
-            if ($vote['value'] > 0){
+            if ($vote['Vote']['value'] > 0){
                 $upvotes++;
             }  
-            if ($vote['value'] < 0){
+            if ($vote['Vote']['value'] < 0){
                 $downvotes++;
             }
         }
