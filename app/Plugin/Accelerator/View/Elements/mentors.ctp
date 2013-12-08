@@ -9,7 +9,7 @@
                 <br>
                 Strategy &amp; Business Expert
                 <br>
-                <a href="">LinkedIn</a>
+                <a href="" target="_blank">LinkedIn</a>
             </p>
         </li>
         <li>
@@ -21,7 +21,7 @@
                 <br>
                 Strategy &amp; Business Expert
                 <br>
-                <a href="">LinkedIn</a>
+                <a href="" target="_blank">LinkedIn</a>
             </p>
         </li>
         <li>
@@ -33,7 +33,7 @@
                 <br>
                 Strategy &amp; Business Expert
                 <br>
-                <a href="">LinkedIn</a>
+                <a href="" target="_blank">LinkedIn</a>
             </p>
         </li>
     </ul>

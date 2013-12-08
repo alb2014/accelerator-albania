@@ -6,6 +6,15 @@
     ?>
     </fieldset>
 <?php echo $this->Form->end('Submit');?>
-<p>
-    <?php echo $this->Html->link('Register', array('plugin' => 'users', 'controller' => 'users', 'action' => 'add')); ?>
-</p>
+<ul>
+    <li>No account?
+        <?php 
+            echo $this->Html->link('Register here', array('plugin' => 'users', 'controller' => 'users', 'action' => 'add')); 
+        ?>
+    </li>
+    <li>
+        <?php
+            echo $this->Html->link('Forgot your password?', array('plugin' => 'users', 'controller' => 'users', 'action' => 'forgot')); 
+        ?>
+    </li>
+</ul>
