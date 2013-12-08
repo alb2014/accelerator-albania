@@ -27,7 +27,24 @@
 	<div class="paging"><?php echo $this->Paginator->numbers(); ?></div>
 </section>
 
+<section class="categories">
+	<header>
+		<h2>More...</h2>
+	</header>
 
+	<ul class="inner">
+		<?php
+			foreach ($types as $type):
+		?>
+			<li>
+				<?php echo $this->Html->link($type['Term']['title'], $type['Term']['slug']); ?>
+			</li>
+		<?php
+			endforeach;
+		?>
+	</ul>
+
+</section>
 <?php
-	echo $layout->node('CustomFields.sidebar_content');
+	// echo $layout->node('CustomFields.sidebar_content');
 ?>

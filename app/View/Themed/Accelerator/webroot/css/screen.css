@@ -14,10 +14,17 @@ html {
 
 /* A Fluid Grid based on 960gs */
 /* Not Fluid */
+/* Sprite */
+/* sdknf */
+/* line 274, sprites/*.png */
+.sprites-sprite, .content header.global h1 a, .content > footer .social li a.fb {
+  background: url('/img/sprites-sfc10671a2d.png') no-repeat;
+}
+
 /* -------------------------------------------------------------------------
    Layout */
-/* line 47, sass/screen.scss */
-.container, .content header.global, .content > div.main, .content > footer, div.organization-info div, section.people ul {
+/* line 56, sass/screen.scss */
+.container, .content header.global, .content > div.main, .content > footer > div, div.organization-info div, section.people ul {
   *zoom: 1;
   width: 940px;
   padding-left: 10px;
@@ -26,7 +33,7 @@ html {
   margin-right: auto;
 }
 /* line 38, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.container:after, .content header.global:after, .content > div.main:after, .content > footer:after, div.organization-info div:after, section.people ul:after {
+.container:after, .content header.global:after, .content > div.main:after, .content > footer > div:after, div.organization-info div:after, section.people ul:after {
   content: "";
   display: table;
   clear: both;
@@ -34,52 +41,84 @@ html {
 
 /* -------------------------------------------------------------------------
    Extensions : Individual Section Blocks */
-/* line 61, sass/screen.scss */
+/* line 83, sass/screen.scss */
 .inline-padding, .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .users > header, .nodes > header, .node-wrapper .node > header, .program h3, .program p, .submissions article header, .learn-more ul, .idea h3, .idea p {
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .program h3, .program p, .submissions article header, .learn-more ul, .idea h3, .idea p, .node-wrapper .node header {
   padding: 0 1em;
 }
 
-/* line 65, sass/screen.scss */
-.full-padding, .users > div, .nodes .node, .node-wrapper .node header + div {
-  padding: 1em;
+/* line 87, sass/screen.scss */
+.full-spacing, .column-wrapper > .inner, .news > .inner, .submissions.sidebar > .inner, .submissions.main > .inner,
+.program > .inner, .submit-idea > .inner, .create-profile > .inner, .learn > .inner, .learn-more > .inner, .what-is-hapi > .inner, .program-structure > .inner, .who-is > .inner, .contact-form > .inner, .direct-contact > .inner, .idea > .inner, .users > .inner, .nodes > .inner, .categories > .inner, .node-wrapper > .inner, .users > div, .nodes .node, .node-wrapper header + div, .comments, .comment-form {
+  margin: 1em;
 }
 
-/* line 69, sass/screen.scss */
-.action-button, input[type='submit'], a.button, .votes a {
-  display: inline-block;
-  padding: .5em 1em;
-  background-color: #333333;
-  color: white;
-  border: 0;
-}
-/* line 75, sass/screen.scss */
-.action-button:hover, input[type='submit']:hover, a.button:hover, .votes a:hover {
-  background-color: #222222;
-}
-
-/* line 80, sass/screen.scss */
-.column-wrapper, .news, .submissions.sidebar, .submissions.main,
-.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-form, .direct-contact, .idea, .users, .nodes, .node-wrapper .node {
-  background: #eeeeee;
-  color: #222222;
-  margin-bottom: 1em;
-}
-/* line 84, sass/screen.scss */
-.column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .users > header, .nodes > header, .node-wrapper .node > header {
-  color: white;
-  background: #333333;
+/* line 91, sass/screen.scss */
+.hidden-text, .content header.global h1 a, article aside a, .slideshow ul.toggles li, .content > footer .social li a {
+  text-indent: 9999px;
   overflow: hidden;
-  *zoom: 1;
-}
-/* line 89, sass/screen.scss */
-.column-wrapper > header a, .news > header a, .submissions.sidebar > header a, .submissions.main > header a,
-.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-form > header a, .direct-contact > header a, .idea > header a, .users > header a, .nodes > header a, .node-wrapper .node > header a {
-  color: white;
 }
 
 /* line 96, sass/screen.scss */
+.action-button, input[type='submit'], a.button {
+  display: inline-block;
+  padding: .5em 1em;
+  background-color: #21a4b6;
+  color: white;
+  border: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 104, sass/screen.scss */
+.action-button:hover, input[type='submit']:hover, a.button:hover {
+  background-color: #222222;
+  color: white;
+}
+/* line 108, sass/screen.scss */
+.action-button:visited, input[type='submit']:visited, a.button:visited {
+  color: white;
+}
+
+/* line 113, sass/screen.scss */
+.column-wrapper, .news, .submissions.sidebar, .submissions.main,
+.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-form, .direct-contact, .idea, .users, .nodes, .categories, .node-wrapper {
+  background: #d4edf1;
+  color: #222222;
+  margin-bottom: 1em;
+}
+/* line 117, sass/screen.scss */
+.column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header {
+  color: white;
+  background: #21a4b6;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 75, sass/screen.scss */
+.column-wrapper > header a, .news > header a, .submissions.sidebar > header a, .submissions.main > header a,
+.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-form > header a, .direct-contact > header a, .idea > header a, .users > header a, .nodes > header a, .categories > header a, .node-wrapper > header a {
+  color: white;
+}
+/* line 78, sass/screen.scss */
+.column-wrapper > header h2, .news > header h2, .submissions.sidebar > header h2, .submissions.main > header h2,
+.program > header h2, .submit-idea > header h2, .create-profile > header h2, .learn > header h2, .learn-more > header h2, .what-is-hapi > header h2, .program-structure > header h2, .who-is > header h2, .contact-form > header h2, .direct-contact > header h2, .idea > header h2, .users > header h2, .nodes > header h2, .categories > header h2, .node-wrapper > header h2 {
+  text-transform: uppercase;
+}
+/* line 123, sass/screen.scss */
+.column-wrapper .read-more, .news .read-more, .submissions.sidebar .read-more, .submissions.main .read-more,
+.program .read-more, .submit-idea .read-more, .create-profile .read-more, .learn .read-more, .learn-more .read-more, .what-is-hapi .read-more, .program-structure .read-more, .who-is .read-more, .contact-form .read-more, .direct-contact .read-more, .idea .read-more, .users .read-more, .nodes .read-more, .categories .read-more, .node-wrapper .read-more {
+  float: right;
+  line-height: 2em;
+  margin-right: .5em;
+}
+/* line 127, sass/screen.scss */
+.column-wrapper .read-more a, .news .read-more a, .submissions.sidebar .read-more a, .submissions.main .read-more a,
+.program .read-more a, .submit-idea .read-more a, .create-profile .read-more a, .learn .read-more a, .learn-more .read-more a, .what-is-hapi .read-more a, .program-structure .read-more a, .who-is .read-more a, .contact-form .read-more a, .direct-contact .read-more a, .idea .read-more a, .users .read-more a, .nodes .read-more a, .categories .read-more a, .node-wrapper .read-more a {
+  padding-left: 2em;
+  background: url(../img/sprites/read_more.png) no-repeat left center transparent;
+}
+
+/* line 135, sass/screen.scss */
 .horizontal-ul li, .submissions ul.submission-sort li, .learn header ul li {
   display: inline-block;
   padding: 0 .5em;
@@ -87,87 +126,252 @@ html {
 
 /* -------------------------------------------------------------------------
    Basic Defaults & Overrides */
-/* line 106, sass/screen.scss */
+/* line 145, sass/screen.scss */
 html, body {
-  font-family: 'PT Sans', 'Myriad Pro', sans-serif;
+  font-family: "PT Sans", "Myriad Pro", sans-serif;
   color: #222222;
 }
 
-/* line 111, sass/screen.scss */
+/* line 150, sass/screen.scss */
 ul {
   list-style: none;
   list-style-image: none;
   padding: 0;
 }
 
-/* line 117, sass/screen.scss */
-label, input {
-  display: block;
+/* line 156, sass/screen.scss */
+label {
+  font-weight: bold;
 }
 
-/* line 121, sass/screen.scss */
+/* line 160, sass/screen.scss */
+label, input, textarea {
+  display: block;
+  font-family: "PT Sans", "Myriad Pro", sans-serif;
+}
+
+/* line 165, sass/screen.scss */
+input[type="text"], input[type="password"], input[type="email"], textarea {
+  box-shadow: inset 1px 1px 1px #ccc;
+  margin: .25em 0 1em;
+  padding: 5px 7px;
+  border: 1px solid #aaa;
+  min-width: 20em;
+}
+
+/* line 173, sass/screen.scss */
 input[type='submit'] {
   margin: 1em 0;
 }
 
-/* line 126, sass/screen.scss */
+/* line 178, sass/screen.scss */
 p {
   margin: 1em 0 .5em;
 }
 
-/* line 130, sass/screen.scss */
+/* line 182, sass/screen.scss */
+time {
+  color: #21a4b6;
+  font-weight: bold;
+}
+
+/* line 187, sass/screen.scss */
 a {
-  color: #1375e1;
+  color: #21a4b6;
+  text-decoration: none;
   /* Buttons */
 }
-/* line 132, sass/screen.scss */
+/* line 190, sass/screen.scss */
 a:hover {
-  color: #1162bc;
+  color: #115660;
+  text-decoration: underline;
 }
-/* line 135, sass/screen.scss */
+/* line 194, sass/screen.scss */
 a:visited {
-  color: #5aa3f4;
+  color: #21a4b6;
 }
 
 /* Vote Buttons */
-/* line 147, sass/screen.scss */
+/* line 205, sass/screen.scss */
+.votes {
+  min-height: 82px;
+  text-align: center;
+}
+/* line 208, sass/screen.scss */
 .votes a {
+  display: block;
+  width: 38px;
+  height: 45px;
+  line-height: 38px;
+  color: white;
   padding: .25em .5em;
   margin: 3px;
+}
+/* line 216, sass/screen.scss */
+.votes a:hover {
+  text-decoration: none;
+}
+/* line 219, sass/screen.scss */
+.votes a.up {
+  background: url(../img/sprites/vote_up_wide_blue.png) no-repeat center top transparent;
+}
+/* line 221, sass/screen.scss */
+.votes a.up:hover {
+  background: url(../img/sprites/vote_up_wide_darkgrey.png) no-repeat center top transparent;
+}
+/* line 224, sass/screen.scss */
+.votes a.up.voted {
+  background: url(../img/sprites/vote_up_wide_white.png) no-repeat center top transparent;
+}
+/* line 228, sass/screen.scss */
+.votes a.down {
+  background: url(../img/sprites/vote_down_wide_blue.png) no-repeat center bottom transparent;
+  margin-top: -25px;
+  line-height: 51px;
+}
+/* line 232, sass/screen.scss */
+.votes a.down:hover {
+  background: url(../img/sprites/vote_down_wide_darkgrey.png) no-repeat center bottom transparent;
+}
+/* line 235, sass/screen.scss */
+.votes a.down.voted {
+  background: url(../img/sprites/vote_down_wide_white.png) no-repeat center bottom transparent;
+}
+/* line 240, sass/screen.scss */
+.votes a.voted {
+  color: #21a4b6;
+  cursor: default;
+}
+
+/* line 250, sass/screen.scss */
+section header .votes .up {
+  background: url(../img/sprites/vote_up_wide_grey.png) no-repeat center top transparent;
+}
+/* line 253, sass/screen.scss */
+section header .votes .down {
+  background: url(../img/sprites/vote_down_wide_grey.png) no-repeat center bottom transparent;
 }
 
 /* -------------------------------------------------------------------------
    Main Content Sections */
+/* line 264, sass/screen.scss */
+.faq-tab {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  background-color: #21a4b6;
+}
+/* line 269, sass/screen.scss */
+.faq-tab a {
+  color: white;
+  display: inline-block;
+  padding: .5em;
+}
+
 /* Live within 12-column grid */
-/* line 159, sass/screen.scss */
+/* line 277, sass/screen.scss */
 .content {
   /* Main Header */
 }
-/* line 167, sass/screen.scss */
+/* line 285, sass/screen.scss */
 .content header.global {
   /* Not supported by IE */
 }
-/* line 168, sass/screen.scss */
-.content header.global a.button, .content header.global .votes a, .votes .content header.global a {
-  float: right;
+/* line 286, sass/screen.scss */
+.content header.global h1 a {
+  display: block;
+  background-position: 0 0;
+  height: 73px;
+  width: 318px;
+  background-image: url(../img/sprites/logo.png);
 }
-/* line 172, sass/screen.scss */
+/* line 292, sass/screen.scss */
+.content header.global a.button {
+  float: right;
+  background: url(../img/concrete_bg.jpg) no-repeat center top #21a4b6;
+  font-size: 1.125em;
+  line-height: 1.27778em;
+}
+/* line 298, sass/screen.scss */
 .content header.global nav li.sub {
   float: right;
+  padding: 0;
+  font-size: 1em;
 }
-/* line 176, sass/screen.scss */
+/* line 304, sass/screen.scss */
 .content header.global li {
   display: inline-block;
+  padding: 0 1em 0 0;
+  font-size: 20.8px;
 }
-/* line 180, sass/screen.scss */
+/* line 308, sass/screen.scss */
+.content header.global li a {
+  color: black;
+  text-decoration: none;
+}
+/* line 311, sass/screen.scss */
+.content header.global li a span {
+  font-weight: normal;
+}
+/* line 314, sass/screen.scss */
+.content header.global li a:hover {
+  color: #21a4b6;
+}
+/* line 320, sass/screen.scss */
 .content header.global li:not(.sub) a {
   font-weight: bold;
 }
 
 /* -------------------------------------------------------------------------
+   Universal Article Elements */
+/* line 330, sass/screen.scss */
+article header {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 333, sass/screen.scss */
+article h1 {
+  font-size: 1.17em;
+  margin: 0.85em 0 0;
+  font-weight: bold;
+}
+/* line 335, sass/screen.scss */
+article h1 a {
+  color: black;
+  text-decoration: none;
+}
+/* line 338, sass/screen.scss */
+article h1 a:visited {
+  color: black;
+}
+/* line 344, sass/screen.scss */
+article aside a {
+  display: inline-block;
+  width: 26px;
+  height: 28px;
+  margin: 0 .5em 0 0;
+}
+/* line 352, sass/screen.scss */
+article .share_comment {
+  background: url(../img/sprites/share_comment_blue.png) no-repeat center 2px transparent;
+}
+/* line 354, sass/screen.scss */
+article .share_comment:hover {
+  background: url(../img/sprites/share_comment_grey.png) no-repeat center 2px transparent;
+}
+/* line 358, sass/screen.scss */
+article .share_fb {
+  background: url(../img/sprites/share_fb_blue.png) no-repeat center top transparent;
+}
+/* line 360, sass/screen.scss */
+article .share_fb:hover {
+  background: url(../img/sprites/share_fb_grey.png) no-repeat center top transparent;
+}
+
+/* -------------------------------------------------------------------------
    Column Setups */
 /* Home */
-/* line 191, sass/screen.scss */
+/* line 371, sass/screen.scss */
 .news {
   width: 540px;
   float: left;
@@ -175,7 +379,7 @@ a:visited {
   display: inline;
 }
 
-/* line 194, sass/screen.scss */
+/* line 374, sass/screen.scss */
 .submissions.sidebar {
   width: 380px;
   float: right;
@@ -185,7 +389,15 @@ a:visited {
 }
 
 /* Engage */
-/* line 199, sass/screen.scss */
+/* line 379, sass/screen.scss */
+.submissions.header {
+  width: 540px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+
+/* line 383, sass/screen.scss */
 .submissions.main {
   width: 540px;
   float: left;
@@ -193,7 +405,7 @@ a:visited {
   display: inline;
 }
 
-/* line 202, sass/screen.scss */
+/* line 386, sass/screen.scss */
 .program {
   width: 380px;
   float: right;
@@ -203,7 +415,7 @@ a:visited {
 }
 
 /* Submit */
-/* line 207, sass/screen.scss */
+/* line 391, sass/screen.scss */
 .submit-idea, .create-profile {
   width: 940px;
   float: right;
@@ -213,7 +425,7 @@ a:visited {
 }
 
 /* Learn */
-/* line 212, sass/screen.scss */
+/* line 396, sass/screen.scss */
 .learn {
   width: 700px;
   float: left;
@@ -221,7 +433,7 @@ a:visited {
   display: inline;
 }
 
-/* line 215, sass/screen.scss */
+/* line 399, sass/screen.scss */
 .learn-more {
   width: 220px;
   float: right;
@@ -231,15 +443,10 @@ a:visited {
 }
 
 /* About */
-/* line 220, sass/screen.scss */
-.what-is-hapi, .program-structure {
-  width: 620px;
-  float: left;
-  margin-right: 20px;
-  display: inline;
-}
-
-/* line 223, sass/screen.scss */
+/*.what-is-hapi, .program-structure {
+  @include span-columns(8,12);
+}*/
+/* line 407, sass/screen.scss */
 .who-is {
   width: 300px;
   float: right;
@@ -249,7 +456,7 @@ a:visited {
 }
 
 /* Contact */
-/* line 228, sass/screen.scss */
+/* line 412, sass/screen.scss */
 .contact-form {
   width: 620px;
   float: left;
@@ -257,7 +464,7 @@ a:visited {
   display: inline;
 }
 
-/* line 231, sass/screen.scss */
+/* line 415, sass/screen.scss */
 .direct-contact {
   width: 300px;
   float: right;
@@ -267,7 +474,7 @@ a:visited {
 }
 
 /* Idea Page */
-/* line 236, sass/screen.scss */
+/* line 420, sass/screen.scss */
 .idea {
   width: 540px;
   float: left;
@@ -275,26 +482,45 @@ a:visited {
   display: inline;
 }
 
-/* Login */
-/* line 241, sass/screen.scss */
-.users.login {
-  width: 540px;
+/* Login, Profile */
+/* line 425, sass/screen.scss */
+.users {
+  width: 620px;
   float: left;
   margin-right: 20px;
+  display: inline;
+}
+
+/* Register */
+/* line 430, sass/screen.scss */
+.what-is-hapi.sidebar {
+  width: 300px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
   display: inline;
 }
 
 /* Posts (Croogo Nodes) Index Page */
-/* line 246, sass/screen.scss */
+/* line 436, sass/screen.scss */
 .nodes {
-  width: 540px;
+  width: 700px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
 
+/* line 440, sass/screen.scss */
+.categories {
+  width: 220px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
 /* Post (Croogo Node) View Page */
-/* line 252, sass/screen.scss */
+/* line 446, sass/screen.scss */
 .node-wrapper {
   width: 540px;
   float: left;
@@ -302,7 +528,7 @@ a:visited {
   display: inline;
 }
 
-/* line 256, sass/screen.scss */
+/* line 450, sass/screen.scss */
 .node-comments {
   width: 540px;
   float: left;
@@ -311,7 +537,7 @@ a:visited {
 }
 
 /* Full-width miscellaneous text between main content and footer */
-/* line 262, sass/screen.scss */
+/* line 456, sass/screen.scss */
 aside.miscellaneous {
   width: 940px;
   float: right;
@@ -321,18 +547,60 @@ aside.miscellaneous {
   clear: both;
 }
 
-/* line 267, sass/screen.scss */
+/* line 461, sass/screen.scss */
 div.main {
   clear: both;
   /* Main Content Aside */
 }
-/* line 271, sass/screen.scss */
+/* line 465, sass/screen.scss */
 div.main > aside h3 {
   text-align: center;
 }
 
 /* Home elements */
-/* line 280, sass/screen.scss */
+/* line 473, sass/screen.scss */
+.slideshow {
+  position: relative;
+  height: 175px;
+}
+/* line 476, sass/screen.scss */
+.slideshow ul.slides {
+  z-index: 1;
+}
+/* line 478, sass/screen.scss */
+.slideshow ul.slides li {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 482, sass/screen.scss */
+.slideshow ul.slides li:nth-child(1) {
+  z-index: 1;
+}
+/* line 485, sass/screen.scss */
+.slideshow ul.slides li.selected {
+  z-index: 2;
+  pointer-events: auto;
+}
+/* line 491, sass/screen.scss */
+.slideshow ul.toggles {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+}
+/* line 496, sass/screen.scss */
+.slideshow ul.toggles li {
+  width: 30px;
+  height: 30px;
+  float: left;
+  background: url(../img/sprites/toggle.png) no-repeat left top transparent;
+  z-index: 10;
+  cursor: pointer;
+  color: white;
+}
+
+/* line 512, sass/screen.scss */
 .news article {
   width: 540px;
   float: right;
@@ -340,14 +608,14 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 282, sass/screen.scss */
+/* line 514, sass/screen.scss */
 .news article .image {
   width: 140px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 285, sass/screen.scss */
+/* line 517, sass/screen.scss */
 .news article .content {
   width: 380px;
   float: right;
@@ -355,27 +623,27 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 288, sass/screen.scss */
+/* line 520, sass/screen.scss */
 .news article img {
   margin: 1.5em 0 1.5em 1em;
 }
-/* line 291, sass/screen.scss */
+/* line 523, sass/screen.scss */
 .news article p {
   float: left;
 }
-/* line 294, sass/screen.scss */
+/* line 526, sass/screen.scss */
 .news article header ~ p {
   margin-top: 0;
   font-size: 0.875em;
   line-height: 1.64286em;
   line-height: 1.4375em;
 }
-/* line 299, sass/screen.scss */
+/* line 531, sass/screen.scss */
 .news article time {
   padding: 0 .5em 0 0;
 }
 
-/* line 306, sass/screen.scss */
+/* line 538, sass/screen.scss */
 .submissions.sidebar .votes {
   width: 60px;
   float: right;
@@ -383,83 +651,71 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 308, sass/screen.scss */
+/* line 540, sass/screen.scss */
 .submissions.sidebar .votes ~ div {
   width: 300px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 310, sass/screen.scss */
-.submissions.sidebar .votes ~ div p {
+/* line 542, sass/screen.scss */
+.submissions.sidebar .votes ~ div p, .submissions.sidebar .votes ~ div aside {
   margin: 1em;
 }
 
 /* Engage elements - fixed height, unfortunately */
-/* line 320, sass/screen.scss */
-.submissions.main,
-.program {
+/* line 554, sass/screen.scss */
+.submissions.main > div,
+.program > div {
   height: 920px;
   overflow: scroll;
 }
 
-/* Universal Article Elements */
-/* line 334, sass/screen.scss */
-article header {
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 337, sass/screen.scss */
-article h1 {
-  font-size: 1.17em;
-  margin: 0.8em 0 0;
-  font-weight: bold;
-}
-
 /* Homepage Submissions */
-/* line 343, sass/screen.scss */
+/* line 568, sass/screen.scss */
 .submissions {
   /* Individual Submissions */
   /* Wider submissions */
 }
-/* line 344, sass/screen.scss */
+/* line 569, sass/screen.scss */
 .submissions ul.submission-sort {
   float: right;
 }
-/* line 347, sass/screen.scss */
+/* line 572, sass/screen.scss */
 .submissions ul.submission-sort a {
   color: white;
 }
-/* line 353, sass/screen.scss */
+/* line 578, sass/screen.scss */
 .submissions article {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 355, sass/screen.scss */
+/* line 580, sass/screen.scss */
 .submissions article h1 {
   float: left;
 }
-/* line 361, sass/screen.scss */
+/* line 586, sass/screen.scss */
 .submissions article time {
   padding: 0 0 0 .5em;
 }
-/* line 369, sass/screen.scss */
+/* line 594, sass/screen.scss */
 .submissions.main .votes {
   width: 60px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 372, sass/screen.scss */
-.submissions.main article > p {
-  width: 300px;
+/* line 597, sass/screen.scss */
+.submissions.main p.description {
+  width: 380px;
   float: left;
   margin-right: 20px;
   display: inline;
+  margin-top: 0;
 }
-/* line 375, sass/screen.scss */
+/* line 601, sass/screen.scss */
 .submissions.main aside {
-  width: 140px;
+  width: 60px;
   float: right;
   margin-right: 0;
   *margin-left: -20px;
@@ -468,32 +724,35 @@ article h1 {
 
 /* -------------------------------------------------------------------------
    Submit Idea & Create Profile Form & Page */
-/* line 391, sass/screen.scss */
-.create-profile .form-column1 {
+/* line 618, sass/screen.scss */
+.create-profile fieldset {
+  margin-top: 1em;
   width: 460px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 394, sass/screen.scss */
-.create-profile .form-column2 {
-  width: 460px;
+/* line 184, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/susy-1.0.9/sass/susy/_grid.scss */
+.create-profile fieldset:nth-child(2n) {
   float: right;
   margin-right: 0;
-  *margin-left: -20px;
-  display: inline;
+}
+/* line 622, sass/screen.scss */
+.create-profile fieldset label, .create-profile fieldset input {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 /* -------------------------------------------------------------------------
    Learn Page */
-/* line 409, sass/screen.scss */
+/* line 639, sass/screen.scss */
 .learn header ul {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    About Page */
-/* line 427, sass/screen.scss */
+/* line 657, sass/screen.scss */
 .what-is-hapi h3, .what-is-hapi p, .program-structure h3, .program-structure p, .who-is h3, .who-is p {
   margin-left: 1em;
   margin-right: 1em;
@@ -503,34 +762,58 @@ article h1 {
    Contact Page */
 /* -------------------------------------------------------------------------
    Idea Page */
-/* line 444, sass/screen.scss */
+/* line 674, sass/screen.scss */
 .idea .votes {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    Edit Idea Page */
-/* line 457, sass/screen.scss */
+/* line 687, sass/screen.scss */
 .idea.edit label {
   font-size: 1.17em;
-  margin: 0.8em 0 0;
+  margin: 0.85em 0 0;
   font-weight: bold;
 }
 
 /* -------------------------------------------------------------------------
    Login Page */
 /* -------------------------------------------------------------------------
+   Profile Page */
+/* -------------------------------------------------------------------------
   Posts (Croogo Nodes) Index Page */
+/* line 715, sass/screen.scss */
+.nodes .node h2 a {
+  color: black;
+}
+
 /* Post (Croogo Node) View Page */
+/* line 730, sass/screen.scss */
+.node-wrapper .node header {
+  color: white;
+  background: #21a4b6;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 75, sass/screen.scss */
+.node-wrapper .node header a {
+  color: white;
+}
+/* line 78, sass/screen.scss */
+.node-wrapper .node header h2 {
+  text-transform: uppercase;
+}
+
 /* -------------------------------------------------------------------------
    Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
-/* line 497, sass/screen.scss */
+/* line 747, sass/screen.scss */
 div.organization-info {
-  background-color: #eeeeee;
+  background-color: #d4edf1;
   color: #222222;
   margin-bottom: -1em;
+  padding-bottom: 1em;
 }
-/* line 503, sass/screen.scss */
+/* line 754, sass/screen.scss */
 div.organization-info div section {
   width: 460px;
   float: left;
@@ -542,22 +825,26 @@ div.organization-info div section:nth-child(2n) {
   float: right;
   margin-right: 0;
 }
-/* line 508, sass/screen.scss */
+/* line 759, sass/screen.scss */
 div.organization-info h1 {
   font-size: 1.17em;
-  margin: 0.8em 0 0;
+  margin: 0.85em 0 0;
   font-weight: bold;
   text-align: center;
 }
 
 /* -------------------------------------------------------------------------
    Full width 'People' Bar (breaks out of grid) */
-/* line 518, sass/screen.scss */
+/* line 769, sass/screen.scss */
 section.people {
-  background-color: #333333;
+  background: url(../img/suede_bg.png) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 523, sass/screen.scss */
+/* line 772, sass/screen.scss */
+section.people ul {
+  margin-bottom: 0;
+}
+/* line 775, sass/screen.scss */
 section.people ul li {
   width: 300px;
   float: left;
@@ -569,26 +856,35 @@ section.people ul li:nth-child(3n) {
   float: right;
   margin-right: 0;
 }
-/* line 528, sass/screen.scss */
+/* line 780, sass/screen.scss */
 section.people img {
   float: left;
   margin: 1em 1em 1em 0;
 }
-/* line 532, sass/screen.scss */
-section.people a {
-  color: white;
-}
 
 /* -------------------------------------------------------------------------
    Footer */
-/* line 542, sass/screen.scss */
+/* line 793, sass/screen.scss */
+.content > footer {
+  background: url(../img/concrete_bg.jpg) repeat-x center top #21a4b6;
+  color: white;
+}
+/* line 796, sass/screen.scss */
+.content > footer a {
+  color: white;
+}
+/* line 799, sass/screen.scss */
+.content > footer h3 {
+  text-transform: uppercase;
+}
+/* line 802, sass/screen.scss */
 .content > footer .sitemap {
   width: 620px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 544, sass/screen.scss */
+/* line 804, sass/screen.scss */
 .content > footer .sitemap ul {
   float: left;
   width: 140px;
@@ -596,19 +892,45 @@ section.people a {
   margin-right: 20px;
   display: inline;
 }
-/* line 549, sass/screen.scss */
+/* line 809, sass/screen.scss */
 .content > footer .social {
   width: 300px;
   float: right;
   margin-right: 0;
   *margin-left: -20px;
   display: inline;
+  text-align: right;
 }
-/* line 552, sass/screen.scss */
+/* line 812, sass/screen.scss */
+.content > footer .social li a {
+  display: block;
+  float: right;
+  width: 60px;
+  height: 60px;
+  margin: 0 0 0 1em;
+  background-color: transparent;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+/* line 822, sass/screen.scss */
+.content > footer .social li a.fb {
+  background-position: 0 -1737px;
+  height: 60px;
+  width: 60px;
+}
+/* line 825, sass/screen.scss */
+.content > footer .social li a.rss {
+  background-image: url(../img/sprites/rss.png);
+}
+/* line 828, sass/screen.scss */
+.content > footer .social li a.google {
+  background-image: url(../img/sprites/google.png);
+}
+/* line 833, sass/screen.scss */
 .content > footer ul {
   margin: 0;
 }
-/* line 555, sass/screen.scss */
+/* line 836, sass/screen.scss */
 .content > footer p {
   width: 940px;
   float: right;
@@ -621,10 +943,9 @@ section.people a {
 
 /* -------------------------------------------------------------------------
    Modal */
-/* line 565, sass/screen.scss */
+/* line 846, sass/screen.scss */
 .modal {
   position: fixed;
-  font-family: Arial, Helvetica, sans-serif;
   top: 0;
   right: 0;
   bottom: 0;
@@ -638,12 +959,12 @@ section.people a {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 578, sass/screen.scss */
+/* line 858, sass/screen.scss */
 .modal:target {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 583, sass/screen.scss */
+/* line 863, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -656,28 +977,19 @@ section.people a {
   border-radius: 3px;
   background: #fff;
 }
-/* line 591, sass/screen.scss */
+/* line 871, sass/screen.scss */
 .modal .modal-close {
-  background: #606061;
-  color: #FFFFFF;
-  line-height: 25px;
+  color: black;
   position: absolute;
-  right: -12px;
-  text-align: center;
-  top: -10px;
-  width: 24px;
+  right: 12px;
+  top: 12px;
+  padding: 5px;
+  font-size: 2em;
+  text-align: right;
   text-decoration: none;
   font-weight: bold;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 1px 1px 3px black;
-  -moz-box-shadow: 1px 1px 3px black;
-  box-shadow: 1px 1px 3px black;
 }
-/* line 604, sass/screen.scss */
+/* line 881, sass/screen.scss */
 .modal .modal-close:hover {
-  background: #00d9ff;
+  color: #21a4b6;
 }

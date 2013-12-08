@@ -10,3 +10,10 @@
     </div>
 
 </section>
+
+<?php
+    $this->start('footer_bar');
+    echo $this->element('organization_info', array(), array('plugin' => 'Accelerator'));
+    echo $this->element('mentors', array(), array('plugin' => 'Accelerator'));
+    $this->end();
+?>

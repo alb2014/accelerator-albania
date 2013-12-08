@@ -1,4 +1,19 @@
-<img width="940" height="175" src="">
+<div class="slideshow">
+
+    <ul class="slides">
+        <li><img width="940" height="175" src="" style="background-color: #21a4b6"></li>
+        <li><img width="940" height="175" src="" style="background-color: #80dbe8"></li>
+        <li><img width="940" height="175" src="" style="background-color: #333"></li>
+    </ul>
+
+    <ul class="toggles">
+        <li>Submit</li>
+        <li>Engage</li>
+        <li>Learn</li>
+    </ul>
+
+</div>
+
 <h2><?php echo $title_for_layout; ?></h2>
 <p><?php echo __($acceleratorVariable); ?></p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -12,6 +27,9 @@ quis nostrud exercitation ullamco laboris nisi.</p>
     <!-- News Section -->
     <section class="news">
         <header>
+            <p class="read-more">
+                <a href="/blog">read more</a>
+            </p>
             <h2><a href="learn.html">News</a></h2>
         </header>
 
@@ -23,7 +41,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
             <div class="content">
                 <header>
-                    <p><time pubdate="pubdate">24-12</time></p>
+                    <p><time pubdate="pubdate">24.12.2013</time></p>
                     <h1><a href="">It's a new day for Social Business</a></h1>
                 </header>
 
@@ -41,7 +59,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
             <div class="content">
                 <header>
-                    <p><time pubdate="pubdate">24-12</time></p>
+                    <p><time pubdate="pubdate">24.12.2013</time></p>
                     <h1><a href="">It's a new day for Social Business</a></h1>
                 </header>
 
@@ -59,7 +77,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
             <div class="content">
                 <header>
-                    <p><time pubdate="pubdate">24-12</time></p>
+                    <p><time pubdate="pubdate">24.12.2013</time></p>
                     <h1><a href="">It's a new day for Social Business</a></h1>
                 </header>
 
@@ -77,7 +95,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
             <div class="content">
                 <header>
-                    <p><time pubdate="pubdate">24-12</time></p>
+                    <p><time pubdate="pubdate">24.12.2013</time></p>
                     <h1><a href="">It's a new day for Social Business</a></h1>
                 </header>
 
@@ -92,6 +110,14 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
     <section class="submissions sidebar">
         <header>
+            <p class="read-more">
+            <?php 
+                echo $this->Html->link(
+                    'read more', 
+                    array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')
+                ); 
+            ?>
+            </p>
             <h2><a href="">Submissions</a></h2>
         </header>
 
@@ -106,7 +132,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
 <!-- Main Content Aside - Varies on Pages -->
 <aside class="miscellaneous">
-    <h3>Have a business idea of your own? Click here!</h3>
+    <h3>Have a business idea of your own? <a href="">Click here!</a></h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
