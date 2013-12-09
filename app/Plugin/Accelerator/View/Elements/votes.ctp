@@ -9,7 +9,7 @@
                                              'up'), 
                                   array('class' => 'up')); ?>
 
-    <?php echo $this->Html->link('-' . $idea['Idea']['down_votes'], array('plugin' => 'accelerator', 
+    <?php echo $this->Html->link($idea['Idea']['down_votes'], array('plugin' => 'accelerator', 
                                              'controller' => 'ideas', 
                                              'action' => 'vote', 
                                              $idea['Idea']['id'], 
