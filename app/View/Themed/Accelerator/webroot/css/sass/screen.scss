@@ -162,6 +162,10 @@ label, input, textarea {
   font-family: $base-font-family;
 }
 
+select {
+  margin-bottom: 1em;
+}
+
 input[type="text"],input[type="password"],input[type="email"], textarea {
   box-shadow: inset 1px 1px 1px #ccc;
   margin: .25em 0 1em;
@@ -689,6 +693,11 @@ div.main {
 /* -------------------------------------------------------------------------
    Edit Idea Page */
 .idea.edit {
+
+  input[type="text"], input[type="password"], input[type="email"], textarea {
+    min-width: 30em;
+    max-width: 500px;    
+  }
 
 }
 

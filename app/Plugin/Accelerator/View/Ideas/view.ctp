@@ -1,80 +1,68 @@
-<!-- Main Content / Customized from here -->
-<img width="940" height="175" src="images/homepage.jpg">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi.</p>
+<!-- Idea -->
+<section class="idea">
+    <header>
+        <div class="votes">
+            <a href="" class="up" data-idea-id="<?php echo $idea['Idea']['id']; ?>">34</a>
+            <a href="" class="down" data-idea-id="<?php echo $idea['Idea']['id']; ?>">8</a>
+        </div>
+        <h2>Idea Page</h2>
+    </header>
 
+    <div class="inner">
 
-<!-- Column Section -->
-<div class="columns-7-5">
+        <h3>Idea Name</h3>
+        <p><?php echo $idea['Idea']['name']; ?></p>
 
-    <!-- Idea -->
-    <section class="idea">
-        <header>
-            <div class="votes">
-                <a href="" class="up" data-idea-id="<?php echo $idea['Idea']['id']; ?>">34</a>
-                <a href="" class="down" data-idea-id="<?php echo $idea['Idea']['id']; ?>">8</a>
-            </div>
-            <h2>Idea Page</h2>
-        </header>
+        <h3>Idea Description</h3>
+        <p><?php echo $idea['Idea']['desc']; ?></p>
 
-        <div class="inner">
+        <h3>Idea Category</h3>
+        <p><?php echo $idea['Idea']['type']; ?></p>
 
-            <h3>Idea Name</h3>
-            <p><?php echo $idea['Idea']['name']; ?></p>
+        <h3>Voted to round #2</h3>
 
-            <h3>Idea Description</h3>
-            <p><?php echo $idea['Idea']['desc']; ?></p>
-
-            <h3>Idea Category</h3>
-            <p><?php echo $idea['Idea']['type']; ?></p>
-
-            <h3>Voted to round #2</h3>
-
-            <?php echo $this->Html->link('Edit my idea',
+        <?php echo $this->Html->link('Edit my idea',
 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); ?>
 
-        </div>
+    </div>
 
-    </section>
+</section>
 
-    <!-- Idea -->
-    <section class="idea-comments">
-        <header>
-            <h2><?php __('Comments'); ?></h2>
-        </header>
+<!-- Submissions Sidebar (module) -->
+<section class="submissions sidebar">
+    <header>
+        <h2><a href="">Submissions</a></h2>
+    </header>
 
-        <div class="inner">
+    <!-- Submissions -->
+    <?php
+        echo $this->element('submissions');
+    ?>
 
-            <?php 
-                if($this->Session->check('Auth.User')) { 
-            ?>
-                <p>DISQUS Comments Here (user is logged in)</p>
+</section>
 
-            <?php } else { ?>
+<!-- Idea Comments -->
+<section class="idea-comments">
+    <header>
+        <h2><?php __('Comments'); ?></h2>
+    </header>
 
-                <p>Login to add Comments</p>
+    <div class="inner">
 
-            <?php } ?>
-
-        </div>
-
-    </section>
-
-    <!-- Submissions Sidebar (module) -->
-    <section class="submissions sidebar">
-        <header>
-            <h2><a href="">Submissions</a></h2>
-        </header>
-
-        <!-- Submissions -->
-        <?php
-            echo $this->element('submissions');
+        <?php 
+            if($this->Session->check('Auth.User')) { 
         ?>
+            <p>DISQUS Comments Here (user is logged in)</p>
 
-    </section>
+        <?php } else { ?>
 
-</div>
+            <p>Login to add Comments</p>
+
+        <?php } ?>
+
+    </div>
+
+</section>
 
 <?php
     $this->start('footer_bar');
