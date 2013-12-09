@@ -6,6 +6,8 @@
     <div>
         <?php
             echo $this->element('login_form');
+            echo $this->Facebook->login();
+            echo $this->Facebook->registration();
         ?>
     </div>
 
