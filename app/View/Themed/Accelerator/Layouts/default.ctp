@@ -166,9 +166,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
             <div>
                 <a href="#close" title="Close" class="modal-close">x</a>
                 <?php
-                    $this->Nodes->set($faq_node);
-                    echo $this->element('Nodes.node_title');
-                    echo $this->element('Nodes.node_body');
+                    echo $this->Layout->blocks('faq');
                 ?>
             </div>
         </div>
