@@ -1,7 +1,7 @@
 <!-- Here is where we loop through our $ideas array, printing out idea info -->
 <?php foreach ($ideas as $idea): ?>
 
-    <article>
+    <article data-date="" data-type="<?php echo $idea['Idea']['type']; ?>" data-votes="">
         <header>
             <h1><?php echo $this->Html->link($idea['Idea']['name'],
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id'])); ?></h1>
@@ -17,8 +17,10 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
             <p class="description"><?php echo $idea['Idea']['desc']; ?></p>
 
             <aside>
-                <a href="" class="share_comment">Comment</a>
-                <a href="" class="share_fb">FB Share</a>
+                <?php echo $this->Html->link('Comment',
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id'], '#' => 'comments'), array('class' => 'share_comment')); ?>
+                <?php echo $this->Html->link('Comment',
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id'], '#' => 'share'), array('class' => 'share_fb')); ?>
             </aside>
 
         </div>
