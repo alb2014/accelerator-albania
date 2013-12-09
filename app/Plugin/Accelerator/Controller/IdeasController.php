@@ -57,6 +57,7 @@ class IdeasController extends AcceleratorAppController {
             throw new NotFoundException(__('Invalid idea'));
         }
         $this->set('idea', $idea);
+        $this->set('ideas', ClassRegistry::init('Idea')->find('all'));
     }
 
     public function edit($id = null) {
