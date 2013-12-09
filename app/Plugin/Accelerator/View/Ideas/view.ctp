@@ -31,10 +31,31 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
             <h3>Voted to round #2</h3>
 
-            <h3>Comments</h3>
-
             <?php echo $this->Html->link('Edit my idea',
 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); ?>
+
+        </div>
+
+    </section>
+
+    <!-- Idea -->
+    <section class="comments">
+        <header>
+            <h2><?php __('Comments'); ?></h2>
+        </header>
+
+        <div class="inner">
+
+            <?php 
+                if($this->Session->check('Auth.User')) { 
+            ?>
+                <p>DISQUS Comments Here (user is logged in)</p>
+
+            <?php } else { ?>
+
+                <p>Login to add Comments</p>
+
+            <?php } ?>
 
         </div>
 
