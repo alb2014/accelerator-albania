@@ -481,6 +481,14 @@ article {
   @include span-columns(7,12);
 }
 
+.node-wrapper.static {
+  @include span-columns(8,12);
+}
+
+.static.sidebar {
+  @include span-columns(4 omega,12);
+}
+
 
 /* Full-width miscellaneous text between main content and footer */
 aside.miscellaneous {
@@ -778,6 +786,11 @@ div.main {
   .node-comments {
     @extend .full-spacing;
   }
+}
+
+/* 'Static' Pages - Pages w Custom Sidebar blocks */
+.static.sidebar {
+  @extend .column-wrapper;
 }
 
 
