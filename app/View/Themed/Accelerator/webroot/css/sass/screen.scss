@@ -429,13 +429,17 @@ article {
   @include span-columns(4 omega,12);
 }
 
-/* Idea Page */
+/* Idea Page, View & Edit */
 .idea {
   @include span-columns(7,12);
 }
 
 .idea-comments {
   @include span-columns(7,12);
+}
+
+.references {
+  @include span-columns(5,12);
 }
 
 /* Login, Profile */
@@ -708,6 +712,10 @@ div.main {
     max-width: 500px;    
   }
 
+}
+
+.references {
+  @extend .column-wrapper;
 }
 
 /* -------------------------------------------------------------------------

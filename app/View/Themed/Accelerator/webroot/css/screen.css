@@ -43,13 +43,13 @@ html {
    Extensions : Individual Section Blocks */
 /* line 83, sass/screen.scss */
 .inline-padding, .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .idea-comments > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .program h3, .program .block-body, .submissions article header, .learn-more ul, .node-wrapper .node header {
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .program h3, .program .block-body, .submissions article header, .learn-more ul, .node-wrapper .node header {
   padding: 0 1em;
 }
 
 /* line 87, sass/screen.scss */
 .full-spacing, .column-wrapper > .inner, .news > .inner, .submissions.sidebar > .inner, .submissions.main > .inner,
-.program > .inner, .submit-idea > .inner, .create-profile > .inner, .learn > .inner, .learn-more > .inner, .what-is-hapi > .inner, .program-structure > .inner, .who-is > .inner, .contact-form > .inner, .direct-contact > .inner, .idea > .inner, .idea-comments > .inner, .users > .inner, .nodes > .inner, .categories > .inner, .node-wrapper > .inner, .users > div, .nodes .node, .node-wrapper header + div, .node-wrapper .node-comments {
+.program > .inner, .submit-idea > .inner, .create-profile > .inner, .learn > .inner, .learn-more > .inner, .what-is-hapi > .inner, .program-structure > .inner, .who-is > .inner, .contact-form > .inner, .direct-contact > .inner, .idea > .inner, .idea-comments > .inner, .references > .inner, .users > .inner, .nodes > .inner, .categories > .inner, .node-wrapper > .inner, .users > div, .nodes .node, .node-wrapper header + div, .node-wrapper .node-comments {
   margin: 1em;
 }
 
@@ -81,14 +81,14 @@ html {
 
 /* line 113, sass/screen.scss */
 .column-wrapper, .news, .submissions.sidebar, .submissions.main,
-.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-form, .direct-contact, .idea, .idea-comments, .users, .nodes, .categories, .node-wrapper {
+.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-form, .direct-contact, .idea, .idea-comments, .references, .users, .nodes, .categories, .node-wrapper {
   background: #d4edf1;
   color: #222222;
   margin-bottom: 1em;
 }
 /* line 117, sass/screen.scss */
 .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .idea-comments > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header {
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header {
   color: white;
   background: #21a4b6;
   overflow: hidden;
@@ -96,24 +96,24 @@ html {
 }
 /* line 75, sass/screen.scss */
 .column-wrapper > header a, .news > header a, .submissions.sidebar > header a, .submissions.main > header a,
-.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-form > header a, .direct-contact > header a, .idea > header a, .idea-comments > header a, .users > header a, .nodes > header a, .categories > header a, .node-wrapper > header a {
+.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-form > header a, .direct-contact > header a, .idea > header a, .idea-comments > header a, .references > header a, .users > header a, .nodes > header a, .categories > header a, .node-wrapper > header a {
   color: white;
 }
 /* line 78, sass/screen.scss */
 .column-wrapper > header h2, .news > header h2, .submissions.sidebar > header h2, .submissions.main > header h2,
-.program > header h2, .submit-idea > header h2, .create-profile > header h2, .learn > header h2, .learn-more > header h2, .what-is-hapi > header h2, .program-structure > header h2, .who-is > header h2, .contact-form > header h2, .direct-contact > header h2, .idea > header h2, .idea-comments > header h2, .users > header h2, .nodes > header h2, .categories > header h2, .node-wrapper > header h2 {
+.program > header h2, .submit-idea > header h2, .create-profile > header h2, .learn > header h2, .learn-more > header h2, .what-is-hapi > header h2, .program-structure > header h2, .who-is > header h2, .contact-form > header h2, .direct-contact > header h2, .idea > header h2, .idea-comments > header h2, .references > header h2, .users > header h2, .nodes > header h2, .categories > header h2, .node-wrapper > header h2 {
   text-transform: uppercase;
 }
 /* line 123, sass/screen.scss */
 .column-wrapper .read-more, .news .read-more, .submissions.sidebar .read-more, .submissions.main .read-more,
-.program .read-more, .submit-idea .read-more, .create-profile .read-more, .learn .read-more, .learn-more .read-more, .what-is-hapi .read-more, .program-structure .read-more, .who-is .read-more, .contact-form .read-more, .direct-contact .read-more, .idea .read-more, .idea-comments .read-more, .users .read-more, .nodes .read-more, .categories .read-more, .node-wrapper .read-more {
+.program .read-more, .submit-idea .read-more, .create-profile .read-more, .learn .read-more, .learn-more .read-more, .what-is-hapi .read-more, .program-structure .read-more, .who-is .read-more, .contact-form .read-more, .direct-contact .read-more, .idea .read-more, .idea-comments .read-more, .references .read-more, .users .read-more, .nodes .read-more, .categories .read-more, .node-wrapper .read-more {
   float: right;
   line-height: 2em;
   margin-right: .5em;
 }
 /* line 127, sass/screen.scss */
 .column-wrapper .read-more a, .news .read-more a, .submissions.sidebar .read-more a, .submissions.main .read-more a,
-.program .read-more a, .submit-idea .read-more a, .create-profile .read-more a, .learn .read-more a, .learn-more .read-more a, .what-is-hapi .read-more a, .program-structure .read-more a, .who-is .read-more a, .contact-form .read-more a, .direct-contact .read-more a, .idea .read-more a, .idea-comments .read-more a, .users .read-more a, .nodes .read-more a, .categories .read-more a, .node-wrapper .read-more a {
+.program .read-more a, .submit-idea .read-more a, .create-profile .read-more a, .learn .read-more a, .learn-more .read-more a, .what-is-hapi .read-more a, .program-structure .read-more a, .who-is .read-more a, .contact-form .read-more a, .direct-contact .read-more a, .idea .read-more a, .idea-comments .read-more a, .references .read-more a, .users .read-more a, .nodes .read-more a, .categories .read-more a, .node-wrapper .read-more a {
   padding-left: 2em;
   background: url(../img/sprites/read_more.png) no-repeat left center transparent;
 }
@@ -489,7 +489,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* Idea Page */
+/* Idea Page, View & Edit */
 /* line 433, sass/screen.scss */
 .idea {
   width: 540px;
@@ -506,8 +506,16 @@ article .share_fb:hover {
   display: inline;
 }
 
+/* line 441, sass/screen.scss */
+.references {
+  width: 380px;
+  float: left;
+  margin-right: 20px;
+  display: inline;
+}
+
 /* Login, Profile */
-/* line 442, sass/screen.scss */
+/* line 446, sass/screen.scss */
 .users {
   width: 540px;
   float: left;
@@ -516,7 +524,7 @@ article .share_fb:hover {
 }
 
 /* Register */
-/* line 447, sass/screen.scss */
+/* line 451, sass/screen.scss */
 .what-is-hapi.sidebar {
   width: 380px;
   float: right;
@@ -526,7 +534,7 @@ article .share_fb:hover {
 }
 
 /* Posts (Croogo Nodes) Index Page */
-/* line 453, sass/screen.scss */
+/* line 457, sass/screen.scss */
 .nodes {
   width: 700px;
   float: left;
@@ -534,7 +542,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 457, sass/screen.scss */
+/* line 461, sass/screen.scss */
 .categories {
   width: 220px;
   float: right;
@@ -544,7 +552,7 @@ article .share_fb:hover {
 }
 
 /* Post (Croogo Node) View Page */
-/* line 463, sass/screen.scss */
+/* line 467, sass/screen.scss */
 .node-wrapper {
   width: 700px;
   float: left;
@@ -552,7 +560,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 467, sass/screen.scss */
+/* line 471, sass/screen.scss */
 .node-comments {
   width: 540px;
   float: left;
@@ -561,7 +569,7 @@ article .share_fb:hover {
 }
 
 /* Full-width miscellaneous text between main content and footer */
-/* line 473, sass/screen.scss */
+/* line 477, sass/screen.scss */
 aside.miscellaneous {
   width: 940px;
   float: right;
@@ -571,49 +579,49 @@ aside.miscellaneous {
   clear: both;
 }
 
-/* line 478, sass/screen.scss */
+/* line 482, sass/screen.scss */
 div.main {
   clear: both;
   /* Main Content Aside */
 }
-/* line 482, sass/screen.scss */
+/* line 486, sass/screen.scss */
 div.main > aside h3 {
   text-align: center;
 }
 
 /* Home elements */
-/* line 490, sass/screen.scss */
+/* line 494, sass/screen.scss */
 .slideshow {
   position: relative;
   height: 200px;
 }
-/* line 493, sass/screen.scss */
+/* line 497, sass/screen.scss */
 .slideshow ul.slides {
   z-index: 1;
 }
-/* line 495, sass/screen.scss */
+/* line 499, sass/screen.scss */
 .slideshow ul.slides li {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 499, sass/screen.scss */
+/* line 503, sass/screen.scss */
 .slideshow ul.slides li:nth-child(1) {
   z-index: 1;
 }
-/* line 502, sass/screen.scss */
+/* line 506, sass/screen.scss */
 .slideshow ul.slides li.selected {
   z-index: 2;
   pointer-events: auto;
 }
-/* line 508, sass/screen.scss */
+/* line 512, sass/screen.scss */
 .slideshow ul.toggles {
   z-index: 2;
   position: absolute;
   bottom: 0;
   right: 1em;
 }
-/* line 513, sass/screen.scss */
+/* line 517, sass/screen.scss */
 .slideshow ul.toggles li {
   width: 30px;
   height: 30px;
@@ -624,7 +632,7 @@ div.main > aside h3 {
   color: white;
 }
 
-/* line 529, sass/screen.scss */
+/* line 533, sass/screen.scss */
 .news article {
   width: 540px;
   float: right;
@@ -632,14 +640,14 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 531, sass/screen.scss */
+/* line 535, sass/screen.scss */
 .news article .image {
   width: 140px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 534, sass/screen.scss */
+/* line 538, sass/screen.scss */
 .news article .content {
   width: 380px;
   float: right;
@@ -649,24 +657,24 @@ div.main > aside h3 {
   font-size: 0.875em;
   line-height: 1.64286em;
 }
-/* line 537, sass/screen.scss */
+/* line 541, sass/screen.scss */
 .news article .content p {
   margin-top: 0;
 }
-/* line 541, sass/screen.scss */
+/* line 545, sass/screen.scss */
 .news article img {
   margin: 1.5em 0 1.5em 1em;
 }
-/* line 544, sass/screen.scss */
+/* line 548, sass/screen.scss */
 .news article p {
   float: left;
 }
-/* line 549, sass/screen.scss */
+/* line 553, sass/screen.scss */
 .news article time {
   padding: 0 .5em 0 0;
 }
 
-/* line 556, sass/screen.scss */
+/* line 560, sass/screen.scss */
 .submissions.sidebar .votes {
   width: 60px;
   float: right;
@@ -674,20 +682,20 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 558, sass/screen.scss */
+/* line 562, sass/screen.scss */
 .submissions.sidebar .votes ~ div {
   width: 300px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 560, sass/screen.scss */
+/* line 564, sass/screen.scss */
 .submissions.sidebar .votes ~ div p, .submissions.sidebar .votes ~ div aside {
   margin: 1em;
 }
 
 /* Engage elements - fixed height, unfortunately */
-/* line 572, sass/screen.scss */
+/* line 576, sass/screen.scss */
 .submissions.main div.fixed-height,
 .program div.fixed-height {
   height: 920px;
@@ -695,40 +703,40 @@ div.main > aside h3 {
 }
 
 /* Homepage Submissions */
-/* line 586, sass/screen.scss */
+/* line 590, sass/screen.scss */
 .submissions {
   /* Individual Submissions */
   /* Wider submissions */
 }
-/* line 587, sass/screen.scss */
+/* line 591, sass/screen.scss */
 .submissions ul.submission-sort {
   float: right;
 }
-/* line 590, sass/screen.scss */
+/* line 594, sass/screen.scss */
 .submissions ul.submission-sort a {
   color: white;
 }
-/* line 596, sass/screen.scss */
+/* line 600, sass/screen.scss */
 .submissions article {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 598, sass/screen.scss */
+/* line 602, sass/screen.scss */
 .submissions article h1 {
   float: left;
 }
-/* line 604, sass/screen.scss */
+/* line 608, sass/screen.scss */
 .submissions article time {
   padding: 0 0 0 .5em;
 }
-/* line 612, sass/screen.scss */
+/* line 616, sass/screen.scss */
 .submissions.main .votes {
   width: 60px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 615, sass/screen.scss */
+/* line 619, sass/screen.scss */
 .submissions.main p.description {
   width: 380px;
   float: left;
@@ -736,7 +744,7 @@ div.main > aside h3 {
   display: inline;
   margin-top: 0;
 }
-/* line 619, sass/screen.scss */
+/* line 623, sass/screen.scss */
 .submissions.main aside {
   width: 60px;
   float: right;
@@ -747,7 +755,7 @@ div.main > aside h3 {
 
 /* -------------------------------------------------------------------------
    Submit Idea & Create Profile Form & Page */
-/* line 636, sass/screen.scss */
+/* line 640, sass/screen.scss */
 .create-profile fieldset {
   margin-top: 1em;
   width: 460px;
@@ -760,7 +768,7 @@ div.main > aside h3 {
   float: right;
   margin-right: 0;
 }
-/* line 640, sass/screen.scss */
+/* line 644, sass/screen.scss */
 .create-profile fieldset label, .create-profile fieldset input {
   margin-left: 1em;
   margin-right: 1em;
@@ -768,14 +776,14 @@ div.main > aside h3 {
 
 /* -------------------------------------------------------------------------
    Learn Page */
-/* line 657, sass/screen.scss */
+/* line 661, sass/screen.scss */
 .learn header ul {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    About Page */
-/* line 675, sass/screen.scss */
+/* line 679, sass/screen.scss */
 .what-is-hapi h3, .what-is-hapi p, .program-structure h3, .program-structure p, .who-is h3, .who-is p {
   margin-left: 1em;
   margin-right: 1em;
@@ -785,14 +793,14 @@ div.main > aside h3 {
    Contact Page */
 /* -------------------------------------------------------------------------
    Idea Page */
-/* line 692, sass/screen.scss */
+/* line 696, sass/screen.scss */
 .idea .votes {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    Edit Idea Page */
-/* line 706, sass/screen.scss */
+/* line 710, sass/screen.scss */
 .idea.edit input[type="text"], .idea.edit input[type="password"], .idea.edit input[type="email"], .idea.edit textarea {
   min-width: 30em;
   max-width: 500px;
@@ -804,19 +812,19 @@ div.main > aside h3 {
    Profile Page */
 /* -------------------------------------------------------------------------
   Posts (Croogo Nodes) Index Page */
-/* line 734, sass/screen.scss */
+/* line 742, sass/screen.scss */
 .nodes .node:nth-child(n+3) {
   border-top: 1px solid #21a4b6;
   margin-top: 2em;
   padding-top: 1em;
 }
-/* line 740, sass/screen.scss */
+/* line 748, sass/screen.scss */
 .nodes .node h2 a {
   color: black;
 }
 
 /* Post (Croogo Node) View Page */
-/* line 755, sass/screen.scss */
+/* line 763, sass/screen.scss */
 .node-wrapper .node header {
   color: white;
   background: #21a4b6;
@@ -834,14 +842,14 @@ div.main > aside h3 {
 
 /* -------------------------------------------------------------------------
    Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
-/* line 771, sass/screen.scss */
+/* line 779, sass/screen.scss */
 div.organization-info {
   background-color: #d4edf1;
   color: #222222;
   margin-bottom: -1em;
   padding-bottom: 1em;
 }
-/* line 778, sass/screen.scss */
+/* line 786, sass/screen.scss */
 div.organization-info div section {
   width: 460px;
   float: left;
@@ -853,7 +861,7 @@ div.organization-info div section:nth-child(2n) {
   float: right;
   margin-right: 0;
 }
-/* line 783, sass/screen.scss */
+/* line 791, sass/screen.scss */
 div.organization-info h1 {
   font-size: 1.17em;
   margin: 0.85em 0 0;
@@ -863,16 +871,16 @@ div.organization-info h1 {
 
 /* -------------------------------------------------------------------------
    Full width 'People' Bar (breaks out of grid) */
-/* line 793, sass/screen.scss */
+/* line 801, sass/screen.scss */
 section.people {
   background: url(../img/suede_bg.png) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 796, sass/screen.scss */
+/* line 804, sass/screen.scss */
 section.people ul {
   margin-bottom: 0;
 }
-/* line 799, sass/screen.scss */
+/* line 807, sass/screen.scss */
 section.people ul li {
   width: 300px;
   float: left;
@@ -884,7 +892,7 @@ section.people ul li:nth-child(3n) {
   float: right;
   margin-right: 0;
 }
-/* line 804, sass/screen.scss */
+/* line 812, sass/screen.scss */
 section.people img {
   float: left;
   margin: 1em 1em 1em 0;
@@ -892,27 +900,27 @@ section.people img {
 
 /* -------------------------------------------------------------------------
    Footer */
-/* line 817, sass/screen.scss */
+/* line 825, sass/screen.scss */
 .content > footer {
   background: url(../img/concrete_bg.jpg) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 820, sass/screen.scss */
+/* line 828, sass/screen.scss */
 .content > footer a {
   color: white;
 }
-/* line 823, sass/screen.scss */
+/* line 831, sass/screen.scss */
 .content > footer h3 {
   text-transform: uppercase;
 }
-/* line 826, sass/screen.scss */
+/* line 834, sass/screen.scss */
 .content > footer .sitemap {
   width: 620px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 828, sass/screen.scss */
+/* line 836, sass/screen.scss */
 .content > footer .sitemap ul {
   float: left;
   width: 140px;
@@ -920,7 +928,7 @@ section.people img {
   margin-right: 20px;
   display: inline;
 }
-/* line 833, sass/screen.scss */
+/* line 841, sass/screen.scss */
 .content > footer .social {
   width: 300px;
   float: right;
@@ -929,7 +937,7 @@ section.people img {
   display: inline;
   text-align: right;
 }
-/* line 836, sass/screen.scss */
+/* line 844, sass/screen.scss */
 .content > footer .social li a {
   display: block;
   float: right;
@@ -940,25 +948,25 @@ section.people img {
   background-position: 0 0;
   background-repeat: no-repeat;
 }
-/* line 846, sass/screen.scss */
+/* line 854, sass/screen.scss */
 .content > footer .social li a.fb {
   background-position: 0 -1737px;
   height: 60px;
   width: 60px;
 }
-/* line 849, sass/screen.scss */
+/* line 857, sass/screen.scss */
 .content > footer .social li a.rss {
   background-image: url(../img/sprites/rss.png);
 }
-/* line 852, sass/screen.scss */
+/* line 860, sass/screen.scss */
 .content > footer .social li a.google {
   background-image: url(../img/sprites/google.png);
 }
-/* line 857, sass/screen.scss */
+/* line 865, sass/screen.scss */
 .content > footer ul {
   margin: 0;
 }
-/* line 860, sass/screen.scss */
+/* line 868, sass/screen.scss */
 .content > footer p {
   width: 940px;
   float: right;
@@ -971,7 +979,7 @@ section.people img {
 
 /* -------------------------------------------------------------------------
    Modal */
-/* line 870, sass/screen.scss */
+/* line 878, sass/screen.scss */
 .modal {
   position: fixed;
   top: 0;
@@ -987,12 +995,12 @@ section.people img {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 882, sass/screen.scss */
+/* line 890, sass/screen.scss */
 .modal:target {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 887, sass/screen.scss */
+/* line 895, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -1005,7 +1013,7 @@ section.people img {
   border-radius: 3px;
   background: #fff;
 }
-/* line 895, sass/screen.scss */
+/* line 903, sass/screen.scss */
 .modal .modal-close {
   color: black;
   position: absolute;
@@ -1017,7 +1025,7 @@ section.people img {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 905, sass/screen.scss */
+/* line 913, sass/screen.scss */
 .modal .modal-close:hover {
   color: #21a4b6;
 }
