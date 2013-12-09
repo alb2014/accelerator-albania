@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS `ideas` (
   `model` enum('notforprofit','nonprofit','enterpriseb2b','b2c','subscription','freemium','retail','ecommerce','community','advocacy','other') COLLATE utf8_unicode_ci NOT NULL COMMENT 'biz model',
   `promise` varchar(240) COLLATE utf8_unicode_ci NOT NULL,
   `submitted` tinyint(1) NOT NULL DEFAULT '0',
+  `user_id` int(20) NOT NULL, 
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
