@@ -19,15 +19,18 @@ class IdeasController extends AcceleratorAppController {
             $this->Paginator->settings['conditions']['Idea.userId'] = $userId;
         }
         $ideas = $this->Paginator->paginate('Idea');
+        $votes = new Vote();
         $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
-        foreach ($ideas as $idea){
+        for($i = 0; $i < count($ideas); ++$i) {
             foreach ($user_votes as $vote){
-                if ($idea['Idea']['id'] == $vote['Vote']['idea_id']){
-                    $idea['Idea']['vote.value'] = $vote['Vote']['value'];
+                if ($ideas[$i]['Idea']['id'] == $vote['Vote']['idea_id']){
+                    $ideas[$i]['Idea']['vote.value'] = $vote['Vote']['value'];
                 }
             }
+            if (!isset($ideas[$i]['Idea']['vote.value']){
+                $ideas[$i]['Idea']['vote.value'] = 0;
+            })
         }
-        Debugger::dump($ideas);
         $this->set('ideas', $ideas);
         $this->set('faq_node', ClassRegistry::init('Node')->findBySlug('faq'));
     }
