@@ -8,10 +8,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
             <p><time pubdate="pubdate">24.12.2013</time></p>
         </header>
 
-        <div class="votes">
-            <a href="" class="up" data-idea-id="<?php echo $idea['Idea']['id']; ?>">34</a>
-            <a href="" class="down" data-idea-id="<?php echo $idea['Idea']['id']; ?>">8</a>
-        </div>
+        <?php echo $this->element('Accelerator.votes', array("idea" => $idea)); ?>
 
         <div>
             <p class="description"><?php echo $idea['Idea']['desc']; ?></p>
