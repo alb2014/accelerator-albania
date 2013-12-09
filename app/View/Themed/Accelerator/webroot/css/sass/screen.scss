@@ -866,21 +866,16 @@ section.people {
     li a {
       display: block;
       float: right;
-      width: 60px;
-      height: 60px;
       margin: 0 0 0 1em;
       @extend .hidden-text;
-      background-color: transparent;
-      background-position: 0 0;
-      background-repeat: no-repeat;
       &.fb {
         @include sprites-sprite(fb);
       }
       &.rss {
-        background-image: url(../img/sprites/rss.png);
+        @include sprites-sprite(rss);
       }
       &.google {
-        background-image: url(../img/sprites/google.png);
+        @include sprites-sprite(google);
       }
     }
   }

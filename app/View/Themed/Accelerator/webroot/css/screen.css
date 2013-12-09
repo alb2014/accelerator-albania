@@ -17,8 +17,8 @@ html {
 /* Sprite */
 /* sdknf */
 /* line 274, sprites/*.png */
-.sprites-sprite, .content header.global h1 a, .content > footer .social li a.fb {
-  background: url('/img/sprites-sfc10671a2d.png') no-repeat;
+.sprites-sprite, .content header.global h1 a, .content > footer .social li a.fb, .content > footer .social li a.rss, .content > footer .social li a.google {
+  background: url('../img/sprites-sfc10671a2d.png') no-repeat;
 }
 
 /* -------------------------------------------------------------------------
@@ -971,32 +971,31 @@ section.people img {
 .content > footer .social li a {
   display: block;
   float: right;
-  width: 60px;
-  height: 60px;
   margin: 0 0 0 1em;
-  background-color: transparent;
-  background-position: 0 0;
-  background-repeat: no-repeat;
 }
-/* line 876, sass/screen.scss */
+/* line 871, sass/screen.scss */
 .content > footer .social li a.fb {
   background-position: 0 -1737px;
   height: 60px;
   width: 60px;
 }
-/* line 879, sass/screen.scss */
+/* line 874, sass/screen.scss */
 .content > footer .social li a.rss {
-  background-image: url(../img/sprites/rss.png);
+  background-position: 0 -93px;
+  height: 60px;
+  width: 60px;
+}
+/* line 877, sass/screen.scss */
+.content > footer .social li a.google {
+  background-position: 0 -173px;
+  height: 60px;
+  width: 60px;
 }
 /* line 882, sass/screen.scss */
-.content > footer .social li a.google {
-  background-image: url(../img/sprites/google.png);
-}
-/* line 887, sass/screen.scss */
 .content > footer ul {
   margin: 0;
 }
-/* line 890, sass/screen.scss */
+/* line 885, sass/screen.scss */
 .content > footer p {
   width: 940px;
   float: right;
@@ -1009,7 +1008,7 @@ section.people img {
 
 /* -------------------------------------------------------------------------
    Modal */
-/* line 900, sass/screen.scss */
+/* line 895, sass/screen.scss */
 .modal {
   position: fixed;
   top: 0;
@@ -1025,12 +1024,12 @@ section.people img {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 912, sass/screen.scss */
+/* line 907, sass/screen.scss */
 .modal:target {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 917, sass/screen.scss */
+/* line 912, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -1043,7 +1042,7 @@ section.people img {
   border-radius: 3px;
   background: #fff;
 }
-/* line 925, sass/screen.scss */
+/* line 920, sass/screen.scss */
 .modal .modal-close {
   color: black;
   position: absolute;
@@ -1055,7 +1054,7 @@ section.people img {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 935, sass/screen.scss */
+/* line 930, sass/screen.scss */
 .modal .modal-close:hover {
   color: #21a4b6;
 }
