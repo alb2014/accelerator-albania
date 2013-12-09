@@ -47,16 +47,13 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
     </div>
 </section>
 
-<!-- Submissions Sidebar (module) -->
-<section class="submissions sidebar">
+<!-- References Sidebar (block in admin) -->
+<section class="references">
     <header>
-        <h2><a href="">Submissions</a></h2>
+        <h2><?php echo __(); ?></h2>
     </header>
 
-    <!-- Submissions -->
-    <?php
-        echo $this->element('submissions');
-    ?>
+    <?php echo $this->Layout->blocks('tier-2-sidebar'); ?>
 
 </section>
 
