@@ -428,7 +428,7 @@ article {
 
 /* Register */
 .what-is-hapi.sidebar {
-  @include span-columns(4 omega,12);
+  @include span-columns(5 omega,12);
 }
 
 
@@ -444,7 +444,7 @@ article {
 
 /* Post (Croogo Node) View Page */
 .node-wrapper {
-  @include span-columns(7,12);
+  @include span-columns(9,12);
 }
 
 .node-comments {
@@ -516,6 +516,10 @@ div.main {
     }
     .content {
       @include span-columns(5 omega, 7);
+        @include adjust-font-size-to(14px);
+      p {
+        margin-top: 0;
+      }
     }
     img {
       margin: 1.5em 0 1.5em 1em;
@@ -524,9 +528,6 @@ div.main {
       float: left;
     }
     header ~ p {
-      margin-top: 0;
-      @include adjust-font-size-to(14px);
-      @include adjust-leading-to(1);
     }
     time {
       padding: 0 .5em 0 0;
@@ -551,14 +552,14 @@ div.main {
 .submissions.main,
 .program {
   @extend .column-wrapper;
-  > div {
+  div.fixed-height {
     height: 920px;
     overflow: scroll;
   }
 }
 
 .program {
-  h3, p {
+  h3, .block-body {
     @extend .inline-padding;
   }
 }
