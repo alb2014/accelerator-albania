@@ -29,3 +29,5 @@
     </div>
 
 </section>
+
+<?php echo $this->element('categories'); ?>

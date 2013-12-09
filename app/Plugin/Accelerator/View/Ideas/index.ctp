@@ -17,7 +17,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
         </header>
 
         <!-- Submissions -->
-        <div>
+        <div class="fixed-height">
             <?php
                 echo $this->element('submissions');
             ?>
@@ -28,14 +28,15 @@ quis nostrud exercitation ullamco laboris nisi.</p>
     <!-- The Program Section -->
     <section class="program">
         <header>
-            <h2>The Program</h2>
+            <h2><?php echo __('The Program'); ?></h2>
         </header>
 
         <!-- Individual Infos -->
-        <!-- Needs to become blocks in the admin -->
-        <?php
-            echo $this->Layout->blocks('the-program');
-        ?>
+        <div class="fixed-height">
+            <?php
+                echo $this->Layout->blocks('the-program');
+            ?>
+        </div>
 
     </section>
 </div>

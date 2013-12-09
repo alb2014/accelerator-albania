@@ -30,94 +30,39 @@ quis nostrud exercitation ullamco laboris nisi.</p>
             <p class="read-more">
                 <a href="/blog">read more</a>
             </p>
-            <h2><a href="learn.html">News</a></h2>
+            <h2><a href="/blog">News</a></h2>
         </header>
 
-
+        <!-- Individual News Items -->
         <?php foreach ($nodes as $node): ?>
 
             <article>
+                <div class="image">
+                    <img src="" width="130" height="90" alt="">
+                </div>
                 <header>
-                    <h1><?php echo $node['Node']['title']; ?></h1>
+                    <p>
+                        <time pubdate="pubdate">
+                            <?php echo $this->Time->format('d.m.Y', $node['Node']['created']); ?>
+                        </time>
+                    </p>
+                    <h1>
+                        <?php echo $this->Html->link($node['Node']['title'], $node['Node']['url']); ?>
+                    </h1>
                 </header>
-            </article>
 
+                <div class="content">
+                    <?php echo $this->Text->truncate($node['Node']['body'], 160,array(
+                        'ending' => '...', 
+                        'exact' => false,
+                        'remove' => true
+                    )) ?>
+                    <?php echo $this->Html->link('Read more', $node['Node']['url']); ?>
+                </div>
+            </article>
 
         <?php endforeach; ?>
         <?php unset($nodes); ?>
-
-        <!-- Individual News Items -->
-        <article>
-            <div class="image">
-                <img src="" width="130" height="90" alt="">
-            </div>
-
-            <div class="content">
-                <header>
-                    <p><time pubdate="pubdate">24.12.2013</time></p>
-                    <h1><a href="">It's a new day for Social Business</a></h1>
-                </header>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim... 
-                    <br><a href="">Read more...</a>
-                </p>
-            </div>
-        </article>
-
-        <article>
-            <div class="image">
-                <img src="" width="130" height="90" alt="">
-            </div>
-
-            <div class="content">
-                <header>
-                    <p><time pubdate="pubdate">24.12.2013</time></p>
-                    <h1><a href="">It's a new day for Social Business</a></h1>
-                </header>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim... 
-                    <br><a href="">Read more...</a>
-                </p>
-            </div>
-        </article>
-
-        <article>
-            <div class="image">
-                <img src="" width="130" height="90" alt="">
-            </div>
-
-            <div class="content">
-                <header>
-                    <p><time pubdate="pubdate">24.12.2013</time></p>
-                    <h1><a href="">It's a new day for Social Business</a></h1>
-                </header>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim... 
-                    <br><a href="">Read more...</a>
-                </p>
-            </div>
-        </article>
-
-        <article>
-            <div class="image">
-                <img src="" width="130" height="90" alt="">
-            </div>
-
-            <div class="content">
-                <header>
-                    <p><time pubdate="pubdate">24.12.2013</time></p>
-                    <h1><a href="">It's a new day for Social Business</a></h1>
-                </header>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim... 
-                    <br><a href="">Read more...</a>
-                </p>
-            </div>
-        </article>
 
     </section>
 
@@ -131,7 +76,14 @@ quis nostrud exercitation ullamco laboris nisi.</p>
                 ); 
             ?>
             </p>
-            <h2><a href="">Submissions</a></h2>
+            <h2>
+                <?php 
+                echo $this->Html->link(
+                    'Submissions', 
+                    array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')
+                ); 
+            ?>
+            </h2>
         </header>
 
         <!-- List of Submissions -->
