@@ -625,6 +625,16 @@ div.main {
     time {
       padding: 0 0 0 .5em;
     }
+
+    &.simplified {
+      header {
+        float: left;
+      }
+      .votes {
+        margin-top: .5em;
+        margin-bottom: .5em;
+      }
+    }
   }
 
   /* Wider submissions */
