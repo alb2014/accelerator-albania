@@ -153,13 +153,22 @@ ul {
   padding: 0;
 }
 
-label {
+label, legend {
   font-weight: bold;
 }
 
-label, input, textarea {
+label, input, textarea, legend {
   display: block;
   font-family: $base-font-family;
+}
+
+input[type="radio"] {
+  float: left;
+  margin: 2px .5em 0;
+  + label {
+    float: left;
+    margin-right: 1.5em;
+  }
 }
 
 select {
@@ -171,7 +180,7 @@ input[type="text"],input[type="password"],input[type="email"], textarea {
   margin: .25em 0 1em;
   padding: 5px 7px;
   border: 1px solid #aaa;
-  min-width: 20em;
+  min-width: 22em;
 }
 
 input[type='submit'] {
