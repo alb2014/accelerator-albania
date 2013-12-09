@@ -39,8 +39,23 @@
         <div class="content">
 
             <header class="global">
-                <a href="#login" class="button login">Login</a>
-
+                <?php 
+                if($this->Session->check('Auth.User')) { 
+                    echo $this->Html->link(
+                            'Logout',
+                            array(
+                                'plugin' => 'users',
+                                'controller' => 'users',
+                                'action' => 'logout'
+                            ),
+                            array('class' => 'button login')
+                            
+                        );
+                } else { ?>
+                    <a href="#login" class="button login">Login</a> 
+                        
+                <?php } ?> 
+                    
                 <?php 
                     // echo $this->Html->link(
                     //     'Profile', 
