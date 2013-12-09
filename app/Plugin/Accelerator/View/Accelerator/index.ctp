@@ -14,12 +14,7 @@
 
 </div>
 
-
-<h2><?php echo $title_for_layout; ?></h2>
-<p><?php echo __($acceleratorVariable); ?></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi.</p>                
+<p><?php echo $this->Layout->blocks('introduction'); ?></p>                
 
 <!-- Column Section -->
 <div class="columns-7-5">
