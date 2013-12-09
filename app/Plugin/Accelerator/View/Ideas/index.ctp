@@ -1,7 +1,5 @@
 <img width="940" height="175" src="">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi.</p>
+<p><?php echo $this->Layout->blocks('engage'); ?></p>
 
 <!-- Submission Section -->
 <div class="columns-7-5">

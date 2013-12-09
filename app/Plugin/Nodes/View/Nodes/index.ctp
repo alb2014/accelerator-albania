@@ -1,3 +1,6 @@
+<img width="940" height="175" src="">
+<p><?php echo $this->Layout->blocks('learn'); ?></p>
+
 <section class="nodes">
     <header>
         <h2>Learn</h2>
