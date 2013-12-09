@@ -40,28 +40,30 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 
 <!-- The Program Section -->
 <!-- If no user -->
-<p>(Hide this section if user is logged in)</p>
-<section class="create-profile">
-    <header>
-        <h2>Create Profile</h2>
-    </header>
+<?php if(!$this->Session->check('Auth.User')) { ?>
+    <section class="create-profile">
+        <header>
+            <h2>Create Profile</h2>
+        </header>
 
-    <?php
-        echo $this->element('add_form', array(), array('plugin' => 'Users'));
-    ?>
+        <?php
+            echo $this->element('add_form', array(), array('plugin' => 'Users'));
+        ?>
 
-    <!-- Main Content Aside - Varies on Pages -->
-    <div class="inner">
-        <h3>Competition Details</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+        <!-- Main Content Aside - Varies on Pages -->
+        <div class="inner">
+            <h3>Competition Details</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
 
-</section>
+    </section>
+
+<?php } ?>
 
 
 
