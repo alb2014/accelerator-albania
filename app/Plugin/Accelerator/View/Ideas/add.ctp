@@ -1,10 +1,7 @@
-<img width="940" height="175" src="../../View/Themed/Accelerator/webroot/img/homepage.jpg">
 <?php
-    // echo $this->Html->image(array('homepage.jpg'));
+    echo $this->Html->image('homepage2.jpg');
 ?>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi.</p>
+<p><?php echo $this->Layout->blocks('submit'); ?></p>
 
 <!-- Submission Section -->
 <section class="submit-idea">
