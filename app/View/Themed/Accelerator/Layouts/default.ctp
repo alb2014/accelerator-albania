@@ -130,7 +130,8 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
                             </ul>
 
                             <ul>
-                                <li><a href="/blog/more-about-yunus">Yunus SB</a></li>
+                                <!-- <li><?php //echo $this->Html->link('Yunus SB', array()); ?></li> -->
+                                <li><a href="/blog/yunus-sb">Yunus SB</a></li>
                                 <li><a href="">UNDP</a></li>
                                 <li><a href="">Albania</a></li>
                                 <li><a href="/contact">Contact</a></li>

@@ -448,7 +448,7 @@ article {
 }
 
 .references {
-  @include span-columns(5,12);
+  @include span-columns(5 omega,12);
 }
 
 /* Login, Profile */

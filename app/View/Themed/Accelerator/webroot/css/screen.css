@@ -520,8 +520,9 @@ article .share_fb:hover {
 /* line 450, sass/screen.scss */
 .references {
   width: 380px;
-  float: left;
-  margin-right: 20px;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
   display: inline;
 }
 
