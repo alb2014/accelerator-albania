@@ -50,9 +50,19 @@ CREATE TABLE IF NOT EXISTS `ideas` (
   `promise` varchar(240) COLLATE utf8_unicode_ci NOT NULL,
   `submitted` tinyint(1) NOT NULL DEFAULT '0',
   `user_id` int(20) NOT NULL, 
+  `tier_level` TINYINT UNSIGNED NULL COMMENT 'can be 0,1,2',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+ALTER TABLE IF EXISTS `settings` (
+  ADD COLUMN `Accelerator.tier_2_votes` BIGINT UNSIGNED NOT NULL AFTER `created`,
+  ADD COLUMN `Accelerator.tier_3_votes` BIGINT UNSIGNED NOT NULL AFTER `Accelerator.tier_2_votes`
+);
+
+INSERT IGNORE INTO `settings` (`id`, `key`, `value`, `title`, `description`, `input_type`, `editable`, `weight`, `params`) VALUES
+(NULL, 'Accelerator.tier_2_votes', 20, 'Tier 2 Total Vote Requirements', 'Required amount of votes to reach tier 2', '', 1, 1, ''),
+(NULL, 'Accelerator.tier_3_votes', 20, 'Tier 3 Total Vote Requirements', 'Required amount of votes to reach tier 3', '', 1, 1, '');
 
 -- ALTER TABLE IF EXISTS `users` 
 -- ADD COLUMN `facebook_id` BIGINT UNSIGNED NOT NULL AFTER `created`;
