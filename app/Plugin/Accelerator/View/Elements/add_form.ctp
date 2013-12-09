@@ -1,4 +1,11 @@
 <?php
+$user = AuthComponent::user();
+if ($user){
+	echo __('Hello %s', $user['name']);
+} else{
+	echo __('You are not logged in');
+}
+
 echo $this->Form->create('Idea');
 echo $this->Form->input('name');
 echo $this->Form->input('desc', array('rows' => '6'));
