@@ -1,5 +1,5 @@
 <section class="mentors">
 
-    <?php $this->Layout->blocks('mentors'); ?>
+    <?php echo $this->Layout->blocks('mentors'); ?>
 
 </section>
