@@ -1,3 +1,5 @@
+<?php $this->Nodes->set($node); ?>
+
 <?php
     $custom_sidebar = false;
     if ($this->Layout->node('CustomFields.custom_sidebar')) {
@@ -7,7 +9,6 @@
 
 <section class="node-wrapper<?php if ($custom_sidebar) {?> static<?php } ?>">
 
-    <?php $this->Nodes->set($node); ?>
     <div id="node-<?php echo $this->Nodes->field('id'); ?>" class="node node-type-<?php echo $this->Nodes->field('type'); ?>">
         <header>
             <h2><?php echo $this->Nodes->field('title'); ?></h2>
@@ -44,7 +45,7 @@
 <?php 
     if ($custom_sidebar) {
 ?>
-    <section class="">
+    <section class="static sidebar">
         <header>
             <h2><?php echo $this->Layout->node('CustomFields.sidebar_title'); ?></h2>
         </header>
