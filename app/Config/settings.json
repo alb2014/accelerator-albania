@@ -1,14 +1,17 @@
 {
     "Site": {
         "acl_plugin": "Acl",
-        "email": "phillip.wilt@gmail.com",
+        "email": "you@your-site.com",
         "feed_url": "",
         "locale": "eng",
         "status": 1,
         "tagline": "A CakePHP powered Content Management System.",
         "theme": "Accelerator",
         "timezone": 0,
-        "title": "Albania Accelerator"
+        "title": "Croogo",
+        "tier_1_votes": 20,
+        "tier_2_votes": 20,
+        "tier_3_votes": 20
     },
     "Hook": {
         "bootstraps": "Settings,Comments,Contacts,Nodes,Meta,Menus,Users,Blocks,Taxonomy,FileManager,Wysiwyg,Ckeditor,Accelerator"
@@ -36,7 +39,7 @@
         "robots": "index, follow"
     },
     "Reading": {
-        "date_time_format": "D, M d Y H:i:s",
+        "date_time_format": "D d M Y, H:i",
         "nodes_per_page": 5
     },
     "Service": {
@@ -47,5 +50,9 @@
     },
     "Writing": {
         "wysiwyg": 1
+    },
+    "Accelerator": {
+        "tier_2_votes": 20,
+        "tier_3_votes": 20
     }
 }
