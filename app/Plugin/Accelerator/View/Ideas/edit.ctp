@@ -11,10 +11,6 @@ quis nostrud exercitation ullamco laboris nisi.</p>
     <!-- Idea -->
     <section class="idea edit">
         <header>
-            <div class="votes">
-                <a href="" class="up" data-idea-id="<?php echo $idea['Idea']['id']; ?>">34</a>
-                <a href="" class="down" data-idea-id="<?php echo $idea['Idea']['id']; ?>">8</a>
-            </div>
             <h2>Edit My Idea</h2>
         </header>
 

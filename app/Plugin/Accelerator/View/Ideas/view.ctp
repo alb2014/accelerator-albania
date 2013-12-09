@@ -18,21 +18,25 @@ quis nostrud exercitation ullamco laboris nisi.</p>
             <h2>Idea Page</h2>
         </header>
 
-        <h3>Idea Name</h3>
-        <p><?php echo $idea['Idea']['name']; ?></p>
+        <div class="inner">
 
-        <h3>Idea Description</h3>
-        <p><?php echo $idea['Idea']['desc']; ?></p>
+            <h3>Idea Name</h3>
+            <p><?php echo $idea['Idea']['name']; ?></p>
 
-        <h3>Idea Category</h3>
-        <p><?php echo $idea['Idea']['type']; ?></p>
+            <h3>Idea Description</h3>
+            <p><?php echo $idea['Idea']['desc']; ?></p>
 
-        <h3>Voted to round #2</h3>
+            <h3>Idea Category</h3>
+            <p><?php echo $idea['Idea']['type']; ?></p>
 
-        <h3>Comments</h3>
+            <h3>Voted to round #2</h3>
 
-        <?php echo $this->Html->link('Edit my idea',
+            <h3>Comments</h3>
+
+            <?php echo $this->Html->link('Edit my idea',
 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); ?>
+
+        </div>
 
     </section>
 

@@ -27,18 +27,9 @@
     <div class="paging"><?php echo $this->Paginator->numbers(); ?></div>
 </section>
 
-<section class="categories">
-    <header>
-        <h2>More...</h2>
-    </header>
+<?php echo $this->element('categories'); ?>
 
-    <ul class="inner">
-        <?php
-            echo $this->Layout->blocks('right');
-        ?>
-    </ul>
 
-</section>
 <?php
     // echo $layout->node('CustomFields.sidebar_content');
 ?>
