@@ -42,11 +42,11 @@
                 <?php 
                 if($this->Session->check('Auth.User')) { 
                     echo $this->Html->link(
-                            'Logout',
+                            'Profile',
                             array(
                                 'plugin' => 'users',
                                 'controller' => 'users',
-                                'action' => 'logout'
+                                'action' => 'index'
                             ),
                             array('class' => 'button login')
                             

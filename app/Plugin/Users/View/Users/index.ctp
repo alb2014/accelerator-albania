@@ -5,8 +5,6 @@
     </header>
 
     <div class="inner">
-        <!-- <p><?php echo __d('croogo', 'Hello, ') . ' ' . $this->Session->read('Auth.User.name'); ?>.</p> -->
-
         <?php
             echo $this->element('Accelerator.add_form');
         ?>
