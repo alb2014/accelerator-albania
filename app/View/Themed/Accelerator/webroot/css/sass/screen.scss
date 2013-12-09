@@ -423,7 +423,7 @@ article {
 
 /* Login, Profile */
 .users {
-  @include span-columns(8,12);
+  @include span-columns(7,12);
 }
 
 /* Register */
@@ -472,7 +472,7 @@ div.main {
 
 .slideshow {
   position: relative;
-  height: 175px;
+  height: 200px;
   ul.slides {
     z-index: 1;
     li {

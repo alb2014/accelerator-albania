@@ -485,7 +485,7 @@ article .share_fb:hover {
 /* Login, Profile */
 /* line 425, sass/screen.scss */
 .users {
-  width: 620px;
+  width: 540px;
   float: left;
   margin-right: 20px;
   display: inline;
@@ -561,7 +561,7 @@ div.main > aside h3 {
 /* line 473, sass/screen.scss */
 .slideshow {
   position: relative;
-  height: 175px;
+  height: 200px;
 }
 /* line 476, sass/screen.scss */
 .slideshow ul.slides {

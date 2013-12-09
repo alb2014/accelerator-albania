@@ -8,9 +8,21 @@
         <!-- <p><?php echo __d('croogo', 'Hello, ') . ' ' . $this->Session->read('Auth.User.name'); ?>.</p> -->
 
         <?php
-            echo $this->element('add_form', array(), array('plugin' => 'Accelerator'));
+            echo $this->element('Accelerator.add_form');
         ?>
     </div>
+</section>
+
+<section class="submissions sidebar">
+    <header>
+        <h2>My Past Submissions</h2>
+    </header>
+
+    <!-- List of Submissions -->
+    <?php
+        echo $this->element('Accelerator.submissions');
+    ?>
+
 </section>
 
 <section class="users edit">
@@ -35,16 +47,4 @@
                     ); 
                 ?>
     </div>
-</section>
-
-<section class="submissions sidebar">
-    <header>
-        <h2>My Past Submissions</h2>
-    </header>
-
-    <!-- List of Submissions -->
-    <?php
-        echo $this->element('submissions', array(), array('plugin' => 'Accelerator'));
-    ?>
-
 </section>

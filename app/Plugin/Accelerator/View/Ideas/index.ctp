@@ -76,11 +76,4 @@ quis nostrud exercitation ullamco laboris nisi.</p>
     $this->start('footer_bar');
         echo $this->element('mentors');
     $this->end();
-
-    $this->start('faq');
-        $this->Nodes->set($faq_node);
-        echo $this->element('node_title', array(), array('plugin' => 'Nodes'));
-        echo $this->element('node_body', array(), array('plugin' => 'Nodes'));
-    $this->end();
-
 ?>

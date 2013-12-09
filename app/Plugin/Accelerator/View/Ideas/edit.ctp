@@ -9,54 +9,56 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 <div class="columns-7-5">
 
     <!-- Idea -->
-    <section class="idea">
+    <section class="idea edit">
         <header>
             <div class="votes">
-                <a href="">8 Up</a>
-                <a href="">8 Down</a>
+                <a href="" class="up" data-idea-id="<?php echo $idea['Idea']['id']; ?>">34</a>
+                <a href="" class="down" data-idea-id="<?php echo $idea['Idea']['id']; ?>">8</a>
             </div>
             <h2>Edit My Idea</h2>
         </header>
 
-        <?php
-        $modelOpts = array('notforprofit'=>'Not For Profit',
-                                    'nonprofit' =>'Nonprofit',
-                                    'enterpriseb2b' => 'Enterprise/B2B',
-                                    'b2c' => 'B2C',
-                                    'subscription' => 'Subscription',
-                                    'freemium' => 'Freemium',
-                                    'retail' => 'Retail',
-                                    'ecommerce' => 'ecommerce',
-                                    'community' => 'Community',
-                                    'advocacy' => 'Advocacy',
-                                    'other' => 'Other'
-                                    );
-        $typeOpts =  array('social'=>'Social',
-                                    'tech' =>'Tech',
-                                    'scientific' => 'Scientfic',
-                                    'other' => 'Other');
+        <div class="inner">
+            <?php
+            $modelOpts = array('notforprofit'=>'Not For Profit',
+                                        'nonprofit' =>'Nonprofit',
+                                        'enterpriseb2b' => 'Enterprise/B2B',
+                                        'b2c' => 'B2C',
+                                        'subscription' => 'Subscription',
+                                        'freemium' => 'Freemium',
+                                        'retail' => 'Retail',
+                                        'ecommerce' => 'ecommerce',
+                                        'community' => 'Community',
+                                        'advocacy' => 'Advocacy',
+                                        'other' => 'Other'
+                                        );
+            $typeOpts =  array('social'=>'Social',
+                                        'tech' =>'Tech',
+                                        'scientific' => 'Scientfic',
+                                        'other' => 'Other');
 
-        echo $this->Form->create('Idea');
-        echo $this->Form->input('title');
-        echo $this->Form->input('description', array('rows' => '3'));
-        echo $this->Form->input('type', array('options'=> $typeOpts));
-        $user = AuthComponent::user();
-        echo $this->Form->input('user_id', array('type' => 'hidden',
-                            'value' => $user['id']));
-        echo $this->Form->input('problem', array('rows' => '3',
-                            ));
-        echo $this->Form->input('solution', array('rows' => '3'));
-        echo $this->Form->input('market', array('rows' => '3'));
-        echo $this->Form->input('competition', array('rows' => '3'));
-        echo $this->Form->input('model', array('options'=> $modelOpts));
-        echo $this->Form->input('promise', array('rows' => '3'));
+            echo $this->Form->create('Idea');
+            echo $this->Form->input('title');
+            echo $this->Form->input('description', array('rows' => '3'));
+            echo $this->Form->input('type', array('options'=> $typeOpts));
+            $user = AuthComponent::user();
+            echo $this->Form->input('user_id', array('type' => 'hidden',
+                                'value' => $user['id']));
+            echo $this->Form->input('problem', array('rows' => '3',
+                                ));
+            echo $this->Form->input('solution', array('rows' => '3'));
+            echo $this->Form->input('market', array('rows' => '3'));
+            echo $this->Form->input('competition', array('rows' => '3'));
+            echo $this->Form->input('model', array('options'=> $modelOpts));
+            echo $this->Form->input('promise', array('rows' => '3'));
 
-        echo $this->Form->end('Pitch');
-        ?>
+            echo $this->Form->end('Pitch');
+            ?>
 
-        <?php /* echo $this->Html->link('Cancel',
-array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id']),array('class' => 'button')); */ ?>
-        <a class="button" href="/accelerator/ideas">Cancel</a>
+            <?php /* echo $this->Html->link('Cancel',
+    array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id']),array('class' => 'button')); */ ?>
+            <a class="button" href="/accelerator/ideas">Cancel</a>
+        </div>
     </section>
 
     <!-- Submissions Sidebar (module) -->

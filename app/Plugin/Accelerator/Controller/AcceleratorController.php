@@ -45,6 +45,7 @@ class AcceleratorController extends AcceleratorAppController {
  * @return void
  */
 	public function index() {
+		$this->set('nodes', ClassRegistry::init('Node')->find('all'));
     $this->set('ideas', ClassRegistry::init('Idea')->find('all'));
 		$this->set('title_for_layout', __('Accelerator'));
 		$this->set('acceleratorVariable', 'value here');

@@ -13,7 +13,7 @@
 
 <?php
     $this->start('footer_bar');
-    echo $this->element('organization_info', array(), array('plugin' => 'Accelerator'));
-    echo $this->element('mentors', array(), array('plugin' => 'Accelerator'));
+    echo $this->element('Accelerator.organization_info');
+    echo $this->element('Accelerator.mentors');
     $this->end();
 ?>
