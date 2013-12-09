@@ -421,6 +421,10 @@ article {
   @include span-columns(7,12);
 }
 
+.idea-comments {
+  @include span-columns(7,12);
+}
+
 /* Login, Profile */
 .users {
   @include span-columns(7,12);
@@ -677,14 +681,14 @@ div.main {
   }
 }
 
+.idea-comments {
+  @extend .column-wrapper;
+}
+
 
 /* -------------------------------------------------------------------------
    Edit Idea Page */
 .idea.edit {
-
-  label {
-    @include h3;
-  }
 
 }
 
@@ -709,6 +713,11 @@ div.main {
   @extend .column-wrapper;
   .node {
     @extend .full-spacing;
+    &:nth-child(n+3) {
+      border-top: 1px solid $primary_bg;
+      margin-top: 2em;
+      padding-top: 1em;
+    }
     h2 {
       a {
         color: black;
@@ -731,10 +740,9 @@ div.main {
   header + div {
     @extend .full-spacing;
   }
-}
-
-.comments, .comment-form {
-  @extend .full-spacing;
+  .node-comments {
+    @extend .full-spacing;
+  }
 }
 
 

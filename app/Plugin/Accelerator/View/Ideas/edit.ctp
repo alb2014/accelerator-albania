@@ -34,9 +34,9 @@ quis nostrud exercitation ullamco laboris nisi.</p>
                                         'other' => 'Other');
 
             echo $this->Form->create('Idea');
-            echo $this->Form->input('title');
-            echo $this->Form->input('description', array('rows' => '3'));
-            echo $this->Form->input('type', array('options'=> $typeOpts));
+            echo $this->Form->input('title', array('label' => 'Idea Title'));
+            echo $this->Form->input('description', array('rows' => '3', 'label' => 'The Grab'));
+            echo $this->Form->input('type', array('options'=> $typeOpts, 'label' => 'Type of Idea'));
             $user = AuthComponent::user();
             echo $this->Form->input('user_id', array('type' => 'hidden',
                                 'value' => $user['id']));
