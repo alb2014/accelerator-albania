@@ -50,10 +50,12 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
 <!-- References Sidebar (block in admin) -->
 <section class="references">
     <header>
-        <h2><?php echo __(); ?></h2>
+        <h2><?php echo __('References'); ?></h2>
     </header>
 
-    <?php echo $this->Layout->blocks('tier-2-sidebar'); ?>
+    <div class="inner">
+        <?php echo $this->Layout->blocks('tier-2-sidebar'); ?>
+    </div>
 
 </section>
 

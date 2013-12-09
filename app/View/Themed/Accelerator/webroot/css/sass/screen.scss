@@ -138,10 +138,13 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
   }
 }
 
-.message {
-  background-color: #a3f992;
+/* Could change depending on success or failure */
+#flashMessage {
   padding: 1em;
   margin-bottom: 1em;
+  &.message, &.success {
+    background-color: #c2ebaa;
+  }
 }
 
 
