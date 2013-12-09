@@ -79,6 +79,8 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
 
             <div class="main">
 
+                <?php echo $this->Session->flash(); ?>
+
                 <?php echo $content_for_layout; ?>
 
             </div>

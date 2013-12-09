@@ -124,49 +124,56 @@ html {
   padding: 0 .5em;
 }
 
+/* line 141, sass/screen.scss */
+.message {
+  background-color: #a3f992;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
 /* -------------------------------------------------------------------------
    Basic Defaults & Overrides */
-/* line 145, sass/screen.scss */
+/* line 151, sass/screen.scss */
 html, body {
   font-family: "PT Sans", "Myriad Pro", sans-serif;
   color: #222222;
 }
 
-/* line 150, sass/screen.scss */
+/* line 156, sass/screen.scss */
 ul {
   list-style: none;
   list-style-image: none;
   padding: 0;
 }
 
-/* line 156, sass/screen.scss */
+/* line 162, sass/screen.scss */
 label, legend {
   font-weight: bold;
 }
 
-/* line 160, sass/screen.scss */
+/* line 166, sass/screen.scss */
 label, input, textarea, legend {
   display: block;
   font-family: "PT Sans", "Myriad Pro", sans-serif;
 }
 
-/* line 165, sass/screen.scss */
+/* line 171, sass/screen.scss */
 input[type="radio"] {
   float: left;
   margin: 2px .5em 0;
 }
-/* line 168, sass/screen.scss */
+/* line 174, sass/screen.scss */
 input[type="radio"] + label {
   float: left;
   margin-right: 1.5em;
 }
 
-/* line 174, sass/screen.scss */
+/* line 180, sass/screen.scss */
 select {
   margin-bottom: 1em;
 }
 
-/* line 178, sass/screen.scss */
+/* line 184, sass/screen.scss */
 input[type="text"], input[type="password"], input[type="email"], textarea {
   box-shadow: inset 1px 1px 1px #ccc;
   margin: .25em 0 1em;
@@ -175,45 +182,45 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
   min-width: 22em;
 }
 
-/* line 186, sass/screen.scss */
+/* line 192, sass/screen.scss */
 input[type='submit'] {
   margin: 1em 0;
 }
 
-/* line 191, sass/screen.scss */
+/* line 197, sass/screen.scss */
 p {
   margin: 1em 0 .5em;
 }
 
-/* line 195, sass/screen.scss */
+/* line 201, sass/screen.scss */
 time {
   color: #21a4b6;
   font-weight: bold;
 }
 
-/* line 200, sass/screen.scss */
+/* line 206, sass/screen.scss */
 a {
   color: #21a4b6;
   text-decoration: none;
   /* Buttons */
 }
-/* line 203, sass/screen.scss */
+/* line 209, sass/screen.scss */
 a:hover {
   color: #115660;
   text-decoration: underline;
 }
-/* line 207, sass/screen.scss */
+/* line 213, sass/screen.scss */
 a:visited {
   color: #21a4b6;
 }
 
 /* Vote Buttons */
-/* line 218, sass/screen.scss */
+/* line 224, sass/screen.scss */
 .votes {
   min-height: 82px;
   text-align: center;
 }
-/* line 221, sass/screen.scss */
+/* line 227, sass/screen.scss */
 .votes a {
   display: block;
   width: 38px;
@@ -223,61 +230,61 @@ a:visited {
   padding: .25em .5em;
   margin: 3px;
 }
-/* line 229, sass/screen.scss */
+/* line 235, sass/screen.scss */
 .votes a:hover {
   text-decoration: none;
 }
-/* line 232, sass/screen.scss */
+/* line 238, sass/screen.scss */
 .votes a.up {
   background: url(../img/sprites/vote_up_wide_blue.png) no-repeat center top transparent;
 }
-/* line 234, sass/screen.scss */
+/* line 240, sass/screen.scss */
 .votes a.up:hover {
   background: url(../img/sprites/vote_up_wide_darkgrey.png) no-repeat center top transparent;
 }
-/* line 237, sass/screen.scss */
+/* line 243, sass/screen.scss */
 .votes a.up.voted {
   background: url(../img/sprites/vote_up_wide_white.png) no-repeat center top transparent;
 }
-/* line 241, sass/screen.scss */
+/* line 247, sass/screen.scss */
 .votes a.down {
   background: url(../img/sprites/vote_down_wide_blue.png) no-repeat center bottom transparent;
   margin-top: -25px;
   line-height: 51px;
 }
-/* line 245, sass/screen.scss */
+/* line 251, sass/screen.scss */
 .votes a.down:hover {
   background: url(../img/sprites/vote_down_wide_darkgrey.png) no-repeat center bottom transparent;
 }
-/* line 248, sass/screen.scss */
+/* line 254, sass/screen.scss */
 .votes a.down.voted {
   background: url(../img/sprites/vote_down_wide_white.png) no-repeat center bottom transparent;
 }
-/* line 253, sass/screen.scss */
+/* line 259, sass/screen.scss */
 .votes a.voted {
   color: #21a4b6;
   cursor: default;
 }
 
-/* line 263, sass/screen.scss */
+/* line 269, sass/screen.scss */
 section header .votes .up {
   background: url(../img/sprites/vote_up_wide_grey.png) no-repeat center top transparent;
 }
-/* line 266, sass/screen.scss */
+/* line 272, sass/screen.scss */
 section header .votes .down {
   background: url(../img/sprites/vote_down_wide_grey.png) no-repeat center bottom transparent;
 }
 
 /* -------------------------------------------------------------------------
    Main Content Sections */
-/* line 277, sass/screen.scss */
+/* line 283, sass/screen.scss */
 .faq-tab {
   position: fixed;
   top: 30%;
   left: 0;
   background-color: #21a4b6;
 }
-/* line 282, sass/screen.scss */
+/* line 288, sass/screen.scss */
 .faq-tab a {
   color: white;
   display: inline-block;
@@ -285,15 +292,15 @@ section header .votes .down {
 }
 
 /* Live within 12-column grid */
-/* line 290, sass/screen.scss */
+/* line 296, sass/screen.scss */
 .content {
   /* Main Header */
 }
-/* line 298, sass/screen.scss */
+/* line 304, sass/screen.scss */
 .content header.global {
   /* Not supported by IE */
 }
-/* line 299, sass/screen.scss */
+/* line 305, sass/screen.scss */
 .content header.global h1 a {
   display: block;
   background-position: 0 0;
@@ -301,85 +308,85 @@ section header .votes .down {
   width: 318px;
   background-image: url(../img/sprites/logo.png);
 }
-/* line 305, sass/screen.scss */
+/* line 311, sass/screen.scss */
 .content header.global a.button {
   float: right;
   background: url(../img/concrete_bg.jpg) no-repeat center top #21a4b6;
   font-size: 1.125em;
   line-height: 1.27778em;
 }
-/* line 311, sass/screen.scss */
+/* line 317, sass/screen.scss */
 .content header.global nav li.sub {
   float: right;
   padding: 0;
   font-size: 1em;
 }
-/* line 317, sass/screen.scss */
+/* line 323, sass/screen.scss */
 .content header.global li {
   display: inline-block;
   padding: 0 1em 0 0;
   font-size: 20.8px;
 }
-/* line 321, sass/screen.scss */
+/* line 327, sass/screen.scss */
 .content header.global li a {
   color: black;
   text-decoration: none;
 }
-/* line 324, sass/screen.scss */
+/* line 330, sass/screen.scss */
 .content header.global li a span {
   font-weight: normal;
 }
-/* line 327, sass/screen.scss */
+/* line 333, sass/screen.scss */
 .content header.global li a:hover {
   color: #21a4b6;
 }
-/* line 333, sass/screen.scss */
+/* line 339, sass/screen.scss */
 .content header.global li:not(.sub) a {
   font-weight: bold;
 }
 
 /* -------------------------------------------------------------------------
    Universal Article Elements */
-/* line 343, sass/screen.scss */
+/* line 349, sass/screen.scss */
 article header {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 346, sass/screen.scss */
+/* line 352, sass/screen.scss */
 article h1 {
   font-size: 1.17em;
   margin: 0.85em 0 0;
   font-weight: bold;
 }
-/* line 348, sass/screen.scss */
+/* line 354, sass/screen.scss */
 article h1 a {
   color: black;
   text-decoration: none;
 }
-/* line 351, sass/screen.scss */
+/* line 357, sass/screen.scss */
 article h1 a:visited {
   color: black;
 }
-/* line 357, sass/screen.scss */
+/* line 363, sass/screen.scss */
 article aside a {
   display: inline-block;
   width: 26px;
   height: 28px;
   margin: 0 .5em 0 0;
 }
-/* line 365, sass/screen.scss */
+/* line 371, sass/screen.scss */
 article .share_comment {
   background: url(../img/sprites/share_comment_blue.png) no-repeat center 2px transparent;
 }
-/* line 367, sass/screen.scss */
+/* line 373, sass/screen.scss */
 article .share_comment:hover {
   background: url(../img/sprites/share_comment_grey.png) no-repeat center 2px transparent;
 }
-/* line 371, sass/screen.scss */
+/* line 377, sass/screen.scss */
 article .share_fb {
   background: url(../img/sprites/share_fb_blue.png) no-repeat center top transparent;
 }
-/* line 373, sass/screen.scss */
+/* line 379, sass/screen.scss */
 article .share_fb:hover {
   background: url(../img/sprites/share_fb_grey.png) no-repeat center top transparent;
 }
@@ -387,7 +394,7 @@ article .share_fb:hover {
 /* -------------------------------------------------------------------------
    Column Setups */
 /* Home */
-/* line 384, sass/screen.scss */
+/* line 390, sass/screen.scss */
 .news {
   width: 540px;
   float: left;
@@ -395,7 +402,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 387, sass/screen.scss */
+/* line 393, sass/screen.scss */
 .submissions.sidebar {
   width: 380px;
   float: right;
@@ -405,7 +412,7 @@ article .share_fb:hover {
 }
 
 /* Engage */
-/* line 392, sass/screen.scss */
+/* line 398, sass/screen.scss */
 .submissions.header {
   width: 540px;
   float: left;
@@ -413,7 +420,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 396, sass/screen.scss */
+/* line 402, sass/screen.scss */
 .submissions.main {
   width: 540px;
   float: left;
@@ -421,7 +428,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 399, sass/screen.scss */
+/* line 405, sass/screen.scss */
 .program {
   width: 380px;
   float: right;
@@ -431,7 +438,7 @@ article .share_fb:hover {
 }
 
 /* Submit */
-/* line 404, sass/screen.scss */
+/* line 410, sass/screen.scss */
 .submit-idea, .create-profile {
   width: 940px;
   float: right;
@@ -441,7 +448,7 @@ article .share_fb:hover {
 }
 
 /* Learn */
-/* line 409, sass/screen.scss */
+/* line 415, sass/screen.scss */
 .learn {
   width: 700px;
   float: left;
@@ -449,7 +456,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 412, sass/screen.scss */
+/* line 418, sass/screen.scss */
 .learn-more {
   width: 220px;
   float: right;
@@ -462,7 +469,7 @@ article .share_fb:hover {
 /*.what-is-hapi, .program-structure {
   @include span-columns(8,12);
 }*/
-/* line 420, sass/screen.scss */
+/* line 426, sass/screen.scss */
 .who-is {
   width: 300px;
   float: right;
@@ -472,7 +479,7 @@ article .share_fb:hover {
 }
 
 /* Contact */
-/* line 425, sass/screen.scss */
+/* line 431, sass/screen.scss */
 .contact-form {
   width: 620px;
   float: left;
@@ -480,7 +487,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 428, sass/screen.scss */
+/* line 434, sass/screen.scss */
 .direct-contact {
   width: 300px;
   float: right;
@@ -490,7 +497,7 @@ article .share_fb:hover {
 }
 
 /* Idea Page, View & Edit */
-/* line 433, sass/screen.scss */
+/* line 439, sass/screen.scss */
 .idea {
   width: 540px;
   float: left;
@@ -498,7 +505,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 437, sass/screen.scss */
+/* line 443, sass/screen.scss */
 .idea-comments {
   width: 540px;
   float: left;
@@ -506,7 +513,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 441, sass/screen.scss */
+/* line 447, sass/screen.scss */
 .references {
   width: 380px;
   float: left;
@@ -515,7 +522,7 @@ article .share_fb:hover {
 }
 
 /* Login, Profile */
-/* line 446, sass/screen.scss */
+/* line 452, sass/screen.scss */
 .users {
   width: 540px;
   float: left;
@@ -524,7 +531,7 @@ article .share_fb:hover {
 }
 
 /* Register */
-/* line 451, sass/screen.scss */
+/* line 457, sass/screen.scss */
 .what-is-hapi.sidebar {
   width: 380px;
   float: right;
@@ -534,7 +541,7 @@ article .share_fb:hover {
 }
 
 /* Posts (Croogo Nodes) Index Page */
-/* line 457, sass/screen.scss */
+/* line 463, sass/screen.scss */
 .nodes {
   width: 700px;
   float: left;
@@ -542,7 +549,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 461, sass/screen.scss */
+/* line 467, sass/screen.scss */
 .categories {
   width: 220px;
   float: right;
@@ -552,7 +559,7 @@ article .share_fb:hover {
 }
 
 /* Post (Croogo Node) View Page */
-/* line 467, sass/screen.scss */
+/* line 473, sass/screen.scss */
 .node-wrapper {
   width: 700px;
   float: left;
@@ -560,7 +567,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 471, sass/screen.scss */
+/* line 477, sass/screen.scss */
 .node-comments {
   width: 540px;
   float: left;
@@ -569,7 +576,7 @@ article .share_fb:hover {
 }
 
 /* Full-width miscellaneous text between main content and footer */
-/* line 477, sass/screen.scss */
+/* line 483, sass/screen.scss */
 aside.miscellaneous {
   width: 940px;
   float: right;
@@ -579,49 +586,49 @@ aside.miscellaneous {
   clear: both;
 }
 
-/* line 482, sass/screen.scss */
+/* line 488, sass/screen.scss */
 div.main {
   clear: both;
   /* Main Content Aside */
 }
-/* line 486, sass/screen.scss */
+/* line 492, sass/screen.scss */
 div.main > aside h3 {
   text-align: center;
 }
 
 /* Home elements */
-/* line 494, sass/screen.scss */
+/* line 500, sass/screen.scss */
 .slideshow {
   position: relative;
   height: 200px;
 }
-/* line 497, sass/screen.scss */
+/* line 503, sass/screen.scss */
 .slideshow ul.slides {
   z-index: 1;
 }
-/* line 499, sass/screen.scss */
+/* line 505, sass/screen.scss */
 .slideshow ul.slides li {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 503, sass/screen.scss */
+/* line 509, sass/screen.scss */
 .slideshow ul.slides li:nth-child(1) {
   z-index: 1;
 }
-/* line 506, sass/screen.scss */
+/* line 512, sass/screen.scss */
 .slideshow ul.slides li.selected {
   z-index: 2;
   pointer-events: auto;
 }
-/* line 512, sass/screen.scss */
+/* line 518, sass/screen.scss */
 .slideshow ul.toggles {
   z-index: 2;
   position: absolute;
   bottom: 0;
   right: 1em;
 }
-/* line 517, sass/screen.scss */
+/* line 523, sass/screen.scss */
 .slideshow ul.toggles li {
   width: 30px;
   height: 30px;
@@ -632,7 +639,7 @@ div.main > aside h3 {
   color: white;
 }
 
-/* line 533, sass/screen.scss */
+/* line 539, sass/screen.scss */
 .news article {
   width: 540px;
   float: right;
@@ -640,14 +647,14 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 535, sass/screen.scss */
+/* line 541, sass/screen.scss */
 .news article .image {
   width: 140px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 538, sass/screen.scss */
+/* line 544, sass/screen.scss */
 .news article .content {
   width: 380px;
   float: right;
@@ -657,24 +664,24 @@ div.main > aside h3 {
   font-size: 0.875em;
   line-height: 1.64286em;
 }
-/* line 541, sass/screen.scss */
+/* line 547, sass/screen.scss */
 .news article .content p {
   margin-top: 0;
 }
-/* line 545, sass/screen.scss */
+/* line 551, sass/screen.scss */
 .news article img {
   margin: 1.5em 0 1.5em 1em;
 }
-/* line 548, sass/screen.scss */
+/* line 554, sass/screen.scss */
 .news article p {
   float: left;
 }
-/* line 553, sass/screen.scss */
+/* line 559, sass/screen.scss */
 .news article time {
   padding: 0 .5em 0 0;
 }
 
-/* line 560, sass/screen.scss */
+/* line 566, sass/screen.scss */
 .submissions.sidebar .votes {
   width: 60px;
   float: right;
@@ -682,20 +689,20 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 562, sass/screen.scss */
+/* line 568, sass/screen.scss */
 .submissions.sidebar .votes ~ div {
   width: 300px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 564, sass/screen.scss */
+/* line 570, sass/screen.scss */
 .submissions.sidebar .votes ~ div p, .submissions.sidebar .votes ~ div aside {
   margin: 1em;
 }
 
 /* Engage elements - fixed height, unfortunately */
-/* line 576, sass/screen.scss */
+/* line 582, sass/screen.scss */
 .submissions.main div.fixed-height,
 .program div.fixed-height {
   height: 920px;
@@ -703,40 +710,40 @@ div.main > aside h3 {
 }
 
 /* Homepage Submissions */
-/* line 590, sass/screen.scss */
+/* line 596, sass/screen.scss */
 .submissions {
   /* Individual Submissions */
   /* Wider submissions */
 }
-/* line 591, sass/screen.scss */
+/* line 597, sass/screen.scss */
 .submissions ul.submission-sort {
   float: right;
 }
-/* line 594, sass/screen.scss */
+/* line 600, sass/screen.scss */
 .submissions ul.submission-sort a {
   color: white;
 }
-/* line 600, sass/screen.scss */
+/* line 606, sass/screen.scss */
 .submissions article {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 602, sass/screen.scss */
+/* line 608, sass/screen.scss */
 .submissions article h1 {
   float: left;
 }
-/* line 608, sass/screen.scss */
+/* line 614, sass/screen.scss */
 .submissions article time {
   padding: 0 0 0 .5em;
 }
-/* line 616, sass/screen.scss */
+/* line 622, sass/screen.scss */
 .submissions.main .votes {
   width: 60px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 619, sass/screen.scss */
+/* line 625, sass/screen.scss */
 .submissions.main p.description {
   width: 380px;
   float: left;
@@ -744,7 +751,7 @@ div.main > aside h3 {
   display: inline;
   margin-top: 0;
 }
-/* line 623, sass/screen.scss */
+/* line 629, sass/screen.scss */
 .submissions.main aside {
   width: 60px;
   float: right;
@@ -755,7 +762,7 @@ div.main > aside h3 {
 
 /* -------------------------------------------------------------------------
    Submit Idea & Create Profile Form & Page */
-/* line 640, sass/screen.scss */
+/* line 646, sass/screen.scss */
 .create-profile fieldset {
   margin-top: 1em;
   width: 460px;
@@ -768,7 +775,7 @@ div.main > aside h3 {
   float: right;
   margin-right: 0;
 }
-/* line 644, sass/screen.scss */
+/* line 650, sass/screen.scss */
 .create-profile fieldset label, .create-profile fieldset input {
   margin-left: 1em;
   margin-right: 1em;
@@ -776,14 +783,14 @@ div.main > aside h3 {
 
 /* -------------------------------------------------------------------------
    Learn Page */
-/* line 661, sass/screen.scss */
+/* line 667, sass/screen.scss */
 .learn header ul {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    About Page */
-/* line 679, sass/screen.scss */
+/* line 685, sass/screen.scss */
 .what-is-hapi h3, .what-is-hapi p, .program-structure h3, .program-structure p, .who-is h3, .who-is p {
   margin-left: 1em;
   margin-right: 1em;
@@ -793,14 +800,14 @@ div.main > aside h3 {
    Contact Page */
 /* -------------------------------------------------------------------------
    Idea Page */
-/* line 696, sass/screen.scss */
+/* line 702, sass/screen.scss */
 .idea .votes {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    Edit Idea Page */
-/* line 710, sass/screen.scss */
+/* line 716, sass/screen.scss */
 .idea.edit input[type="text"], .idea.edit input[type="password"], .idea.edit input[type="email"], .idea.edit textarea {
   min-width: 30em;
   max-width: 500px;
@@ -812,19 +819,19 @@ div.main > aside h3 {
    Profile Page */
 /* -------------------------------------------------------------------------
   Posts (Croogo Nodes) Index Page */
-/* line 742, sass/screen.scss */
+/* line 748, sass/screen.scss */
 .nodes .node:nth-child(n+3) {
   border-top: 1px solid #21a4b6;
   margin-top: 2em;
   padding-top: 1em;
 }
-/* line 748, sass/screen.scss */
+/* line 754, sass/screen.scss */
 .nodes .node h2 a {
   color: black;
 }
 
 /* Post (Croogo Node) View Page */
-/* line 763, sass/screen.scss */
+/* line 769, sass/screen.scss */
 .node-wrapper .node header {
   color: white;
   background: #21a4b6;
@@ -842,14 +849,14 @@ div.main > aside h3 {
 
 /* -------------------------------------------------------------------------
    Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
-/* line 779, sass/screen.scss */
+/* line 785, sass/screen.scss */
 div.organization-info {
   background-color: #d4edf1;
   color: #222222;
   margin-bottom: -1em;
   padding-bottom: 1em;
 }
-/* line 786, sass/screen.scss */
+/* line 792, sass/screen.scss */
 div.organization-info div section {
   width: 460px;
   float: left;
@@ -861,7 +868,7 @@ div.organization-info div section:nth-child(2n) {
   float: right;
   margin-right: 0;
 }
-/* line 791, sass/screen.scss */
+/* line 797, sass/screen.scss */
 div.organization-info h1 {
   font-size: 1.17em;
   margin: 0.85em 0 0;
@@ -871,16 +878,16 @@ div.organization-info h1 {
 
 /* -------------------------------------------------------------------------
    Full width 'People' Bar (breaks out of grid) */
-/* line 801, sass/screen.scss */
+/* line 807, sass/screen.scss */
 section.people {
   background: url(../img/suede_bg.png) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 804, sass/screen.scss */
+/* line 810, sass/screen.scss */
 section.people ul {
   margin-bottom: 0;
 }
-/* line 807, sass/screen.scss */
+/* line 813, sass/screen.scss */
 section.people ul li {
   width: 300px;
   float: left;
@@ -892,7 +899,7 @@ section.people ul li:nth-child(3n) {
   float: right;
   margin-right: 0;
 }
-/* line 812, sass/screen.scss */
+/* line 818, sass/screen.scss */
 section.people img {
   float: left;
   margin: 1em 1em 1em 0;
@@ -900,27 +907,27 @@ section.people img {
 
 /* -------------------------------------------------------------------------
    Footer */
-/* line 825, sass/screen.scss */
+/* line 831, sass/screen.scss */
 .content > footer {
   background: url(../img/concrete_bg.jpg) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 828, sass/screen.scss */
+/* line 834, sass/screen.scss */
 .content > footer a {
   color: white;
 }
-/* line 831, sass/screen.scss */
+/* line 837, sass/screen.scss */
 .content > footer h3 {
   text-transform: uppercase;
 }
-/* line 834, sass/screen.scss */
+/* line 840, sass/screen.scss */
 .content > footer .sitemap {
   width: 620px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 836, sass/screen.scss */
+/* line 842, sass/screen.scss */
 .content > footer .sitemap ul {
   float: left;
   width: 140px;
@@ -928,7 +935,7 @@ section.people img {
   margin-right: 20px;
   display: inline;
 }
-/* line 841, sass/screen.scss */
+/* line 847, sass/screen.scss */
 .content > footer .social {
   width: 300px;
   float: right;
@@ -937,7 +944,7 @@ section.people img {
   display: inline;
   text-align: right;
 }
-/* line 844, sass/screen.scss */
+/* line 850, sass/screen.scss */
 .content > footer .social li a {
   display: block;
   float: right;
@@ -948,25 +955,25 @@ section.people img {
   background-position: 0 0;
   background-repeat: no-repeat;
 }
-/* line 854, sass/screen.scss */
+/* line 860, sass/screen.scss */
 .content > footer .social li a.fb {
   background-position: 0 -1737px;
   height: 60px;
   width: 60px;
 }
-/* line 857, sass/screen.scss */
+/* line 863, sass/screen.scss */
 .content > footer .social li a.rss {
   background-image: url(../img/sprites/rss.png);
 }
-/* line 860, sass/screen.scss */
+/* line 866, sass/screen.scss */
 .content > footer .social li a.google {
   background-image: url(../img/sprites/google.png);
 }
-/* line 865, sass/screen.scss */
+/* line 871, sass/screen.scss */
 .content > footer ul {
   margin: 0;
 }
-/* line 868, sass/screen.scss */
+/* line 874, sass/screen.scss */
 .content > footer p {
   width: 940px;
   float: right;
@@ -979,7 +986,7 @@ section.people img {
 
 /* -------------------------------------------------------------------------
    Modal */
-/* line 878, sass/screen.scss */
+/* line 884, sass/screen.scss */
 .modal {
   position: fixed;
   top: 0;
@@ -995,12 +1002,12 @@ section.people img {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 890, sass/screen.scss */
+/* line 896, sass/screen.scss */
 .modal:target {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 895, sass/screen.scss */
+/* line 901, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -1013,7 +1020,7 @@ section.people img {
   border-radius: 3px;
   background: #fff;
 }
-/* line 903, sass/screen.scss */
+/* line 909, sass/screen.scss */
 .modal .modal-close {
   color: black;
   position: absolute;
@@ -1025,7 +1032,7 @@ section.people img {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 913, sass/screen.scss */
+/* line 919, sass/screen.scss */
 .modal .modal-close:hover {
   color: #21a4b6;
 }
