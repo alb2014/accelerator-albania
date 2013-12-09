@@ -45,3 +45,9 @@
     </div>
 
 </section>
+
+<?php
+    $this->start('footer_bar');
+        echo $this->element('Accelerator.mentors');
+    $this->end();
+?>
