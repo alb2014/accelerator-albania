@@ -68,12 +68,12 @@
 
                 <nav>
                     <ul class="main-toggles">
-                        <li><?php echo $this->Html->link('Submit',
+                        <li><?php echo $this->Html->link(__('Submit'),
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
-                        <li><?php echo $this->Html->link('Engage',
+                        <li><?php echo $this->Html->link(__('Engage'),
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
-                        <li><a href="/blog">Learn</a></li>
-                        <li class="sub"><a href="#faq">What is this?</a></li>
+                        <li><a href="/blog"><?php echo __('Learn') ?></a></li>
+                        <li class="sub"><a href="#faq"><?php echo __('What is this?') ?></a></li>
                     </ul>
             </header>
 
@@ -93,8 +93,10 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
                         <h3>Sitemap</h3>
                         <nav>
                             <ul>
-                                <li><a href="/accelerator/ideas/add">Submit</a></li>
-                                <li><a href="/accelerator/ideas">Engage</a></li>
+                                <li><?php echo $this->Html->link(__('Submit'),
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
+                                <li><?php echo $this->Html->link(__('Engage'),
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
                                 <li><a href="/blog">Learn</a></li>
                                 <li>
                                     <?php 
@@ -124,7 +126,8 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
 
                             <ul>
                                 <li><a href="/blog">News</a></li>
-                                <li><a href="/accelerator/ideas">Submissions</a></li>
+                                <li><?php echo $this->Html->link(__('Submissions'),
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
                                 <li><a href="/page/faq">What is this?</a></li>
                                 <li><a href="/about">About</a></li>
                             </ul>
