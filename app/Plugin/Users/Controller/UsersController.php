@@ -3,6 +3,7 @@
 App::uses('CakeEmail', 'Network/Email');
 App::uses('UsersAppController', 'Users.Controller');
 
+
 /**
  * Users Controller
  *
@@ -33,7 +34,16 @@ class UsersController extends UsersAppController {
 				'filterEmpty' => true,
 			),
 		),
+		'Facebook.Connect'
 	);
+
+	/**
+	 * Helpers
+	 *
+	 * @var array
+	 * @access public
+	 */
+	public $helpers = array('Facebook.Facebook');
 
 /**
  * Preset Variables Search
