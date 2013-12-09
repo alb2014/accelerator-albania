@@ -24,7 +24,7 @@ html {
 /* -------------------------------------------------------------------------
    Layout */
 /* line 56, sass/screen.scss */
-.container, .content header.global, .content > div.main, .content > footer > div, div.organization-info div, section.people ul {
+.container, .content header.global, .content > div.main, .content > footer > div, div.organization-info div, section.mentors ul {
   *zoom: 1;
   width: 940px;
   padding-left: 10px;
@@ -33,7 +33,7 @@ html {
   margin-right: auto;
 }
 /* line 38, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.container:after, .content header.global:after, .content > div.main:after, .content > footer > div:after, div.organization-info div:after, section.people ul:after {
+.container:after, .content header.global:after, .content > div.main:after, .content > footer > div:after, div.organization-info div:after, section.mentors ul:after {
   content: "";
   display: table;
   clear: both;
@@ -900,30 +900,30 @@ div.organization-info h1 {
 }
 
 /* -------------------------------------------------------------------------
-   Full width 'People' Bar (breaks out of grid) */
+   Full width 'Mentors' Bar (breaks out of grid) */
 /* line 823, sass/screen.scss */
-section.people {
+section.mentors {
   background: url(../img/suede_bg.png) repeat-x center top #21a4b6;
   color: white;
 }
 /* line 826, sass/screen.scss */
-section.people ul {
+section.mentors ul {
   margin-bottom: 0;
 }
 /* line 829, sass/screen.scss */
-section.people ul li {
+section.mentors ul li {
   width: 300px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
 /* line 184, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/susy-1.0.9/sass/susy/_grid.scss */
-section.people ul li:nth-child(3n) {
+section.mentors ul li:nth-child(3n) {
   float: right;
   margin-right: 0;
 }
 /* line 834, sass/screen.scss */
-section.people img {
+section.mentors img {
   float: left;
   margin: 1em 1em 1em 0;
 }
