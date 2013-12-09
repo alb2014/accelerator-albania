@@ -32,7 +32,6 @@
 
 <?php echo $this->element('categories'); ?>
 
-
 <?php
     // echo $layout->node('CustomFields.sidebar_content');
 ?>
