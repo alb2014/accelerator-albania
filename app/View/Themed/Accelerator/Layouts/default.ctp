@@ -150,8 +150,11 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
         <div id="faq" class="modal">
             <div>
                 <a href="#close" title="Close" class="modal-close">x</a>
-                <?php echo $this->fetch('faq'); ?>
-                <p>TBD</p>
+                <?php
+                    $this->Nodes->set($faq_node);
+                    echo $this->element('Nodes.node_title');
+                    echo $this->element('Nodes.node_body');
+                ?>
             </div>
         </div>
 

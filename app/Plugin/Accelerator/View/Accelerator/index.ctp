@@ -1,9 +1,9 @@
 <div class="slideshow">
 
     <ul class="slides">
-        <li><img width="940" height="175" src="" style="background-color: #21a4b6"></li>
-        <li><img width="940" height="175" src="" style="background-color: #80dbe8"></li>
-        <li><img width="940" height="175" src="" style="background-color: #333"></li>
+        <li><?php echo $this->Html->image('homepage.jpg'); ?></li>
+        <li><?php echo $this->Html->image('homepage2.jpg'); ?></li>
+        <li><?php echo $this->Html->image('homepage3.jpg'); ?></li>
     </ul>
 
     <ul class="toggles">
@@ -14,12 +14,12 @@
 
 </div>
 
+
 <h2><?php echo $title_for_layout; ?></h2>
 <p><?php echo __($acceleratorVariable); ?></p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi.</p>
-
+quis nostrud exercitation ullamco laboris nisi.</p>                
 
 <!-- Column Section -->
 <div class="columns-7-5">
@@ -32,6 +32,19 @@ quis nostrud exercitation ullamco laboris nisi.</p>
             </p>
             <h2><a href="learn.html">News</a></h2>
         </header>
+
+
+        <?php foreach ($nodes as $node): ?>
+
+            <article>
+                <header>
+                    <h1><?php echo $node['Node']['title']; ?></h1>
+                </header>
+            </article>
+
+
+        <?php endforeach; ?>
+        <?php unset($nodes); ?>
 
         <!-- Individual News Items -->
         <article>

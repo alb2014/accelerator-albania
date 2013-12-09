@@ -16,8 +16,6 @@ quis nostrud exercitation ullamco laboris nisi.</p>
         <?php
             echo $this->element('add_form');
         ?>
-    </div>
-
 <!--             <fieldset>
         <legend>Idea Category:</legend>
 
@@ -37,6 +35,7 @@ quis nostrud exercitation ullamco laboris nisi.</p>
 <!--             <input type="checkbox" name="social_business" id="social_business" value="1">
     <label for="social_business">Is this a social business?</label> -->
 
+    </div>
 </section>
 
 <!-- The Program Section -->
