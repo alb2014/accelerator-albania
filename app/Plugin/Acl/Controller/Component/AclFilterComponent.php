@@ -129,8 +129,8 @@ class AclFilterComponent extends Component {
 			'action' => 'login',
 		);
 		$this->_controller->Auth->loginRedirect = array(
-			'plugin' => 'accelerator',
-			'controller' => 'ideas',
+			'plugin' => 'users',
+			'controller' => 'users',
 			'action' => 'index',
 		);
 		$this->_controller->Auth->unauthorizedRedirect = array(
