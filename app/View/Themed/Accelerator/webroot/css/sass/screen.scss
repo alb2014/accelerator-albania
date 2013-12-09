@@ -674,9 +674,6 @@ div.main {
   .votes {
     float: right;
   }
-  h3, p {
-    @extend .inline-padding;
-  }
 }
 
 
