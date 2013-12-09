@@ -1,3 +1,8 @@
+<?php
+    echo $this->Html->image('homepage2.jpg');
+?>
+<p><?php echo $this->Layout->blocks('contact'); ?></p>
+
 <section id="contact-<?php echo $contact['Contact']['id']; ?>" class="contact-wrapper">
     <header>
         <h2><?php echo $contact['Contact']['title']; ?></h2>
