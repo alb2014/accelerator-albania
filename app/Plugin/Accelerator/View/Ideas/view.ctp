@@ -1,10 +1,7 @@
 <!-- Idea -->
 <section class="idea">
     <header>
-        <div class="votes">
-            <a href="" class="up" data-idea-id="<?php echo $idea['Idea']['id']; ?>">34</a>
-            <a href="" class="down" data-idea-id="<?php echo $idea['Idea']['id']; ?>">8</a>
-        </div>
+        <?php echo $this->element('Accelerator.votes', array("idea" => $idea)); ?>
         <h2>Idea Page</h2>
     </header>
 
