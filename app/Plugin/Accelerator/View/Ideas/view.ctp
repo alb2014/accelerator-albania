@@ -39,7 +39,7 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $i
     </section>
 
     <!-- Idea -->
-    <section class="comments">
+    <section class="idea-comments">
         <header>
             <h2><?php __('Comments'); ?></h2>
         </header>
