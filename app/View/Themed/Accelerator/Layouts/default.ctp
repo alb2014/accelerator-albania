@@ -90,7 +90,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
             <footer>
                 <div>
                     <div class="sitemap">
-                        <h3>Sitemap</h3>
+                        <h3><?php __('Sitemap')?></h3>
                         <nav>
                             <ul>
                                 <li><?php echo $this->Html->link(__('Submit'),
@@ -143,15 +143,15 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
                     </div>
 
                     <div class="social">
-                        <h3>Follow Us</h3>
+                        <h3><?php echo __('Follow Us')?></h3>
                         <ul>
-                            <li><a href="" class="fb">Facebook</a></li>
-                            <li><a href="" class="google">Google+</a></li>
-                            <li><a href="" class="rss">RSS</a></li>
+                            <li><a href="" class="fb"><?php echo __('Facebook')?></a></li>
+                            <li><a href="" class="google"><?php echo __('Google+')?></a></li>
+                            <li><a href="" class="rss"><?php echo __('RSS')?></a></li>
                         </ul>
                     </div>
 
-                    <p>&copy;2013 YUNUS Albania commissioned by UNPD</p>
+                    <p><?php echo __('&copy;2013 YUNUS Albania commissioned by UNPD')?></p>
                 </div>
 
             </footer>

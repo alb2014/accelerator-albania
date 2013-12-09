@@ -58,3 +58,18 @@
         echo $this->element('categories');
     }
 ?>
+
+<?php
+    if ($this->Layout->node('CustomFields.program_structure')) {
+?>
+    <section class="node-wrapper static">
+        <header>
+            <h2><?php echo __('Program Structure'); ?>
+        </header>
+
+        <div class="inner">
+            <?php echo $this->Layout->blocks('program-structure'); ?>
+        </div>
+    </section>
+
+<?php } ?>
