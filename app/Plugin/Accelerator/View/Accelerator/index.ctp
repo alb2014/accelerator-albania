@@ -83,7 +83,7 @@
 
         <!-- List of Submissions -->
         <?php
-            echo $this->element('submissions');
+            echo $this->element('submissions', array("full" => false));
         ?>
 
     </section>

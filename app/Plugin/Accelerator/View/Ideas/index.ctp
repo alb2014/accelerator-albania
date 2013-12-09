@@ -17,7 +17,7 @@
         <!-- Submissions -->
         <div class="fixed-height">
             <?php
-                echo $this->element('submissions');
+                echo $this->element('submissions', array("full" => true));
             ?>
         </div>
 

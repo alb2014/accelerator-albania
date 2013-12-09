@@ -18,7 +18,7 @@
 
     <!-- List of Submissions -->
     <?php
-        echo $this->element('Accelerator.submissions');
+        echo $this->element('Accelerator.submissions', array('full' => false));
     ?>
 
 </section>
