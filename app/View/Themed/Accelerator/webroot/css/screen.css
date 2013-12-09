@@ -43,13 +43,13 @@ html {
    Extensions : Individual Section Blocks */
 /* line 83, sass/screen.scss */
 .inline-padding, .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .static.sidebar > header, .program h3, .program .block-body, .submissions article header, .learn-more ul, .node-wrapper .node header {
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-wrapper > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .static.sidebar > header, .program h3, .program .block-body, .submissions article header, .learn-more ul, .node-wrapper .node header {
   padding: 0 1em;
 }
 
 /* line 87, sass/screen.scss */
 .full-spacing, .column-wrapper > .inner, .news > .inner, .submissions.sidebar > .inner, .submissions.main > .inner,
-.program > .inner, .submit-idea > .inner, .create-profile > .inner, .learn > .inner, .learn-more > .inner, .what-is-hapi > .inner, .program-structure > .inner, .who-is > .inner, .contact-form > .inner, .direct-contact > .inner, .idea > .inner, .idea-comments > .inner, .references > .inner, .users > .inner, .nodes > .inner, .categories > .inner, .node-wrapper > .inner, .static.sidebar > .inner, .users > div, .nodes .node, .node-wrapper header + div, .node-wrapper .node-comments {
+.program > .inner, .submit-idea > .inner, .create-profile > .inner, .learn > .inner, .learn-more > .inner, .what-is-hapi > .inner, .program-structure > .inner, .who-is > .inner, .contact-wrapper > .inner, .direct-contact > .inner, .idea > .inner, .idea-comments > .inner, .references > .inner, .users > .inner, .nodes > .inner, .categories > .inner, .node-wrapper > .inner, .static.sidebar > .inner, .users > div, .nodes .node, .node-wrapper header + div, .node-wrapper .node-comments {
   margin: 1em;
 }
 
@@ -81,14 +81,14 @@ html {
 
 /* line 113, sass/screen.scss */
 .column-wrapper, .news, .submissions.sidebar, .submissions.main,
-.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-form, .direct-contact, .idea, .idea-comments, .references, .users, .nodes, .categories, .node-wrapper, .static.sidebar {
+.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-wrapper, .direct-contact, .idea, .idea-comments, .references, .users, .nodes, .categories, .node-wrapper, .static.sidebar {
   background: #d4edf1;
   color: #222222;
   margin-bottom: 1em;
 }
 /* line 117, sass/screen.scss */
 .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-form > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .static.sidebar > header {
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-wrapper > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .static.sidebar > header {
   color: white;
   background: #21a4b6;
   overflow: hidden;
@@ -96,24 +96,24 @@ html {
 }
 /* line 75, sass/screen.scss */
 .column-wrapper > header a, .news > header a, .submissions.sidebar > header a, .submissions.main > header a,
-.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-form > header a, .direct-contact > header a, .idea > header a, .idea-comments > header a, .references > header a, .users > header a, .nodes > header a, .categories > header a, .node-wrapper > header a, .static.sidebar > header a {
+.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-wrapper > header a, .direct-contact > header a, .idea > header a, .idea-comments > header a, .references > header a, .users > header a, .nodes > header a, .categories > header a, .node-wrapper > header a, .static.sidebar > header a {
   color: white;
 }
 /* line 78, sass/screen.scss */
 .column-wrapper > header h2, .news > header h2, .submissions.sidebar > header h2, .submissions.main > header h2,
-.program > header h2, .submit-idea > header h2, .create-profile > header h2, .learn > header h2, .learn-more > header h2, .what-is-hapi > header h2, .program-structure > header h2, .who-is > header h2, .contact-form > header h2, .direct-contact > header h2, .idea > header h2, .idea-comments > header h2, .references > header h2, .users > header h2, .nodes > header h2, .categories > header h2, .node-wrapper > header h2, .static.sidebar > header h2 {
+.program > header h2, .submit-idea > header h2, .create-profile > header h2, .learn > header h2, .learn-more > header h2, .what-is-hapi > header h2, .program-structure > header h2, .who-is > header h2, .contact-wrapper > header h2, .direct-contact > header h2, .idea > header h2, .idea-comments > header h2, .references > header h2, .users > header h2, .nodes > header h2, .categories > header h2, .node-wrapper > header h2, .static.sidebar > header h2 {
   text-transform: uppercase;
 }
 /* line 123, sass/screen.scss */
 .column-wrapper .read-more, .news .read-more, .submissions.sidebar .read-more, .submissions.main .read-more,
-.program .read-more, .submit-idea .read-more, .create-profile .read-more, .learn .read-more, .learn-more .read-more, .what-is-hapi .read-more, .program-structure .read-more, .who-is .read-more, .contact-form .read-more, .direct-contact .read-more, .idea .read-more, .idea-comments .read-more, .references .read-more, .users .read-more, .nodes .read-more, .categories .read-more, .node-wrapper .read-more, .static.sidebar .read-more {
+.program .read-more, .submit-idea .read-more, .create-profile .read-more, .learn .read-more, .learn-more .read-more, .what-is-hapi .read-more, .program-structure .read-more, .who-is .read-more, .contact-wrapper .read-more, .direct-contact .read-more, .idea .read-more, .idea-comments .read-more, .references .read-more, .users .read-more, .nodes .read-more, .categories .read-more, .node-wrapper .read-more, .static.sidebar .read-more {
   float: right;
   line-height: 2em;
   margin-right: .5em;
 }
 /* line 127, sass/screen.scss */
 .column-wrapper .read-more a, .news .read-more a, .submissions.sidebar .read-more a, .submissions.main .read-more a,
-.program .read-more a, .submit-idea .read-more a, .create-profile .read-more a, .learn .read-more a, .learn-more .read-more a, .what-is-hapi .read-more a, .program-structure .read-more a, .who-is .read-more a, .contact-form .read-more a, .direct-contact .read-more a, .idea .read-more a, .idea-comments .read-more a, .references .read-more a, .users .read-more a, .nodes .read-more a, .categories .read-more a, .node-wrapper .read-more a, .static.sidebar .read-more a {
+.program .read-more a, .submit-idea .read-more a, .create-profile .read-more a, .learn .read-more a, .learn-more .read-more a, .what-is-hapi .read-more a, .program-structure .read-more a, .who-is .read-more a, .contact-wrapper .read-more a, .direct-contact .read-more a, .idea .read-more a, .idea-comments .read-more a, .references .read-more a, .users .read-more a, .nodes .read-more a, .categories .read-more a, .node-wrapper .read-more a, .static.sidebar .read-more a {
   padding-left: 2em;
   background: url(../img/sprites/read_more.png) no-repeat left center transparent;
 }
@@ -484,7 +484,7 @@ article .share_fb:hover {
 
 /* Contact */
 /* line 434, sass/screen.scss */
-.contact-form {
+.contact-wrapper {
   width: 620px;
   float: left;
   margin-right: 20px;

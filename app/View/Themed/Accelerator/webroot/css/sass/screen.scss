@@ -431,7 +431,7 @@ article {
 }
 
 /* Contact */
-.contact-form {
+.contact-wrapper {
   @include span-columns(8,12);
 }
 .direct-contact {
@@ -702,7 +702,7 @@ div.main {
 
 /* -------------------------------------------------------------------------
    Contact Page */
-.contact-form, .direct-contact {
+.contact-wrapper, .direct-contact {
   @extend .column-wrapper;
 }
 
