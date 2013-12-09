@@ -31,3 +31,10 @@
 </section>
 
 <?php echo $this->element('categories'); ?>
+
+<h1>
+    <?php 
+        echo $this->Layout->node('CustomFields.about_yunus')
+    ?>
+    xx
+</h1>
