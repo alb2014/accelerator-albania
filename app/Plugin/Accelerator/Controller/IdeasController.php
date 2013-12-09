@@ -12,12 +12,23 @@ class IdeasController extends AcceleratorAppController {
     );
 
     public function index($userId=false) {
+        $user = AuthComponent::user();
         $this->Paginator->settings = $this->paginate;
         $conditions = array();
         if ($userId){
             $this->Paginator->settings['conditions']['Idea.userId'] = $userId;
         }
-        $this->set('ideas', $this->Paginator->paginate('Idea'));
+        $ideas = $this->Paginator->paginate('Idea');
+        $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
+        foreach ($ideas as $idea){
+            foreach ($user_votes as $vote){
+                if ($idea['Idea']['id'] == $vote['Vote']['idea_id']){
+                    $idea['Idea']['vote.value'] = $vote['Vote']['value'];
+                }
+            }
+        }
+        Debugger::dump($ideas);
+        $this->set('ideas', $ideas);
         $this->set('faq_node', ClassRegistry::init('Node')->findBySlug('faq'));
     }
 	    
@@ -119,7 +130,7 @@ class IdeasController extends AcceleratorAppController {
     private function updateVotes($ideaId){
         $this->Idea->id = $ideaId;
         $voteHandle = new Vote();
-        $myVotes = $voteHandle->find('all', array('conditions' =>array('Vote.idea_id')));
+        $myVotes = $voteHandle->find('all', array('conditions' =>array('Vote.idea_id' => $ideaId)));
         $upvotes = 0;
         $downvotes = 0;
         //$this->log($myVotes);
