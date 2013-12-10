@@ -838,15 +838,14 @@ div.organization-info {
   color: $secondary_bg_text;
   margin-bottom: -1em;
   padding-bottom: 1em;
-  div {
+  > div {
     @extend .container;
-    section {
+    > div {
       @include span-columns(6,12);
       @include nth-omega(2n);
     }
   }
-  h1 {
-    @include h3;
+  h3 {
     text-align: center;
   }
 }
