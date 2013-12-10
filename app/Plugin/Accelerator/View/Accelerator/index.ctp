@@ -32,41 +32,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
         </header>
 
         <!-- Individual News Items -->
-        <?php foreach ($nodes as $node): ?>
-
-            <article>
-                <div class="image">
-                    <img src="" width="130" height="90" alt="">
-                    <?php
-                        //echo $node['Node']['CustomFields']['thumbnail'];
-                        if ($this->Layout->node('CustomFields.thumbnail')) {
-                            echo $this->Layout->node('CustomFields.thumbnail');
-                        }
-                    ?>
-                </div>
-                <header>
-                    <p>
-                        <time pubdate="pubdate">
-                            <?php echo $this->Time->format('d.m.Y', $node['Node']['created']); ?>
-                        </time>
-                    </p>
-                    <h1>
-                        <?php echo $this->Html->link($node['Node']['title'], $node['Node']['url']); ?>
-                    </h1>
-                </header>
-
-                <div class="content">
-                    <?php echo $this->Text->truncate($node['Node']['body'], 160,array(
-                        'ending' => '...', 
-                        'exact' => false,
-                        'remove' => true
-                    )) ?>
-                    <?php echo $this->Html->link('Read more', $node['Node']['url']); ?>
-                </div>
-            </article>
-
-        <?php endforeach; ?>
-        <?php unset($nodes); ?>
+        <?php echo $this->element('nodes', array("nodes" => $nodes)); ?>
 
     </section>
 
