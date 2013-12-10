@@ -27,6 +27,8 @@
         echo $this->Form->input('title', array('label' => 'Idea Title'));
         echo $this->Form->input('description', array('rows' => '3', 'label' => 'The Grab'));
         echo $this->Form->input('type', array('options'=> $typeOpts, 'label' => 'Type of Idea'));
+        // Needs to be added to the table structure
+        echo $this->Form->input('social_business', array('type' => 'checkbox', 'label' => 'Is this a social business?'));
         $user = AuthComponent::user();
         echo $this->Form->input('user_id', array('type' => 'hidden',
                             'value' => $user['id']));

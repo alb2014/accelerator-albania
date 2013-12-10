@@ -175,7 +175,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
                         <ul>
                             <li><a href="" class="fb"><?php echo __('Facebook')?></a></li>
                             <li><a href="" class="google"><?php echo __('Google+')?></a></li>
-                            <li><a href="" class="rss"><?php echo __('RSS')?></a></li>
+                            <li><a href="/promoted.rss" class="rss" target="_blank"><?php echo __('RSS')?></a></li>
                         </ul>
                     </div>
 
