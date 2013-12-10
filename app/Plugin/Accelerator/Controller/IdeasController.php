@@ -125,9 +125,7 @@ class IdeasController extends AcceleratorAppController {
                                       'user_id' => $user['id']));
         
         $vote->id = $ideaId.'-'.$user['id'];
-        $this->log('Logging some shitdata');
         $this->log($data);
-        $this->log('Logging some shitvote');
         $this->log($vote);
         if ($vote->save($data)) {
             $this->Session->setFlash(__('Vote cast!'));
