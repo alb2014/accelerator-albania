@@ -102,5 +102,17 @@ CroogoNav::add('settings', array(
 			'weight' => 70,
 		),
 
+		'accelerator' => array(
+			'title' => __d('croogo', 'Accelerator'),
+			'url' => array(
+				'admin' => true,
+				'plugin' => 'settings',
+				'controller' => 'settings',
+				'action' => 'prefix',
+				'Accelerator',
+			),
+			'weight' => 80,
+		),
+
 	),
 ));
