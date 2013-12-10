@@ -1,12 +1,12 @@
 <!-- Idea -->
 <section class="idea">
     <header>
-        <?php echo $this->element('Accelerator.votes', array("idea" => $idea)); ?>
         <h2>Idea Page</h2>
     </header>
 
-    <div class="inner">
+    <?php echo $this->element('Accelerator.votes', array("idea" => $idea)); ?>
 
+    <div class="info">
         <h3>Idea Name</h3>
         <p><?php echo $idea['Idea']['name']; ?></p>
 
@@ -14,11 +14,10 @@
         <p><?php echo $idea['Idea']['desc']; ?></p>
 
         <h3>Idea Category</h3>
-        <p><?php echo $idea['Idea']['type']; ?></p>
+        <p class="idea-type"><?php echo $idea['Idea']['type']; ?></p>
 
         <?php echo $this->Html->link('Edit my idea',
-array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); ?>
-
+    array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); ?>
     </div>
 
 </section>
@@ -66,7 +65,9 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $i
 
         <?php } else { ?>
 
-            <p>Login to add Comments</p>
+            <p>
+                <a href="#login" class="button"><?php echo __('Login to Comment'); ?></a> 
+            </p>
 
         <?php } ?>
 
