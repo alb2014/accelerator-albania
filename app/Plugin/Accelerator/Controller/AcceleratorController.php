@@ -47,7 +47,11 @@ class AcceleratorController extends AcceleratorAppController {
 	public function index() {
 
 
-		$this->set('nodes', ClassRegistry::init('Node')->find('all'));
+		$this->set('nodes', ClassRegistry::init('Node')->find('all', array(
+      'order' => array(
+        'Node.created' => 'desc')
+      )
+    ));
     	$this->set('ideas', ClassRegistry::init('Idea')->find('all', array(
     		'order' => array(
     			'total_votes' => 'desc',

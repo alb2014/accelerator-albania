@@ -25,10 +25,8 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
         <?php
             // if ($loggedIn) {
-
             //     echo "<h1>Hi USER</h1>";
             // }
         ?>
@@ -66,14 +64,35 @@
 
                 <h1><a href="/accelerator">HAPide</a></h1>
 
+                <!-- Help: is there a better way to set an active class? -->
+                <?php
+
+                    $options_submit = array('escape' => false);
+                    if($this->request->here == '/accelerator/ideas/add'){
+                      $options_submit = array_merge($options_submit, array('class'=>'active'));
+                    }
+                    $options_engage = array('escape' => false);
+                    if($this->request->here == '/accelerator/ideas'){
+                      $options_engage = array_merge($options_engage, array('class'=>'active'));
+                    }
+                    $options_learn = array('escape' => false);
+                    if($this->request->here == '/blog'){
+                      $options_learn = array_merge($options_learn, array('class'=>'active'));
+                    }
+                ?>
                 <nav>
                     <ul class="main-toggles">
-                        <li><?php echo $this->Html->link(__('Submit'),
-array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
-                        <li><?php echo $this->Html->link(__('Engage'),
-array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
-                        <li><a href="/blog"><?php echo __('Learn') ?></a></li>
-                        <li class="sub"><a href="#faq"><?php echo __('What is this?') ?></a></li>
+                        <li>
+                            <?php
+                                echo $this->Html->link(__('<span>HAP</span> Submit'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add'), $options_submit);
+                            ?>
+                        </li>
+                        <li><?php echo $this->Html->link(__('<span>HAP</span> Engage'),
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), $options_engage); ?></li>
+                        <li>
+                            <?php echo $this->Html->link(__('<span>HAP</span> Learn'),
+'/blog', $options_learn); ?>
+                        <li class="sub"><a href="/about">What is this?</a></li>
                     </ul>
             </header>
 
@@ -100,43 +119,51 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
                                 <li><a href="/blog">Learn</a></li>
                                 <li>
                                     <?php 
+                                    if($this->Session->check('Auth.User')) { 
                                         echo $this->Html->link(
-                                            'Login', 
-                                            array(
-                                                'plugin' => 'users', 
-                                                'controller' => 'users', 
-                                                'action' => 'login'
-                                            )
-                                        ); 
-                                    ?>
+                                                'Profile',
+                                                array(
+                                                    'plugin' => 'users',
+                                                    'controller' => 'users',
+                                                    'action' => 'index'
+                                                )
+                                                
+                                            );
+                                    } else { ?>
+                                        <a href="#login">Login</a> 
+                                            
+                                    <?php } ?> 
                                 </li>
-                                <li>
-                                    <?php 
-                                        echo $this->Html->link(
-                                            'Logout', 
-                                            array(
-                                                'plugin' => 'users', 
-                                                'controller' => 'users', 
-                                                'action' => 'logout'
-                                            )
-                                        ); 
-                                    ?>
-                                </li>
+                                <?php if($this->Session->check('Auth.User')) { ?>
+                                        <li>
+                                        <?php
+                                            echo $this->Html->link(
+                                                'Logout',
+                                                array(
+                                                    'plugin' => 'users',
+                                                    'controller' => 'users',
+                                                    'action' => 'logout'
+                                                )
+                                                
+                                            );
+                                        ?>
+                                        </li>
+                                <?php } ?>
                             </ul>
 
                             <ul>
                                 <li><a href="/blog">News</a></li>
                                 <li><?php echo $this->Html->link(__('Submissions'),
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
-                                <li><a href="/page/faq">What is this?</a></li>
+                                <li><a href="/about">What is this?</a></li>
                                 <li><a href="/about">About</a></li>
                             </ul>
 
                             <ul>
                                 <!-- <li><?php //echo $this->Html->link('Yunus SB', array()); ?></li> -->
-                                <li><a href="/page/yunus-sb"><?php echo __('Yunus SB'); ?></a></li>
-                                <li><a href="">UNDP</a></li>
-                                <li><a href="">Terms &amp; Conditions</a></li>
+                                <li><a href="http://www.yunussb.com/" target="_blank"><?php echo __('Yunus SB'); ?></a></li>
+                                <li><a href="http://www.undp.org/content/undp/en/home.html" target="_blank">UNDP</a></li>
+                                <li><a href="/page/terms-and-conditions">Terms &amp; Conditions</a></li>
                                 <li><a href="/contact">Contact</a></li>
                             </ul>
                         </nav>
