@@ -35,6 +35,7 @@
                 <div class="image">
                     <img src="" width="130" height="90" alt="">
                     <?php
+                        //echo $node['Node']['CustomFields']['thumbnail'];
                         if ($this->Layout->node('CustomFields.thumbnail')) {
                             echo $this->Layout->node('CustomFields.thumbnail');
                         }
