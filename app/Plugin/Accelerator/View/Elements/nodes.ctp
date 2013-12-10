@@ -21,12 +21,10 @@
         </header>
 
         <div class="content">
-            <?php echo $this->Text->truncate($node['Node']['body'], 160,array(
-                'ending' => '...', 
+            <?php echo strip_tags($this->Text->truncate($node['Node']['body'], 160,array(
                 'exact' => false,
-                'remove' => true,
-                'html' => false
-            )) ?>
+                'remove' => true
+            ))); ?>
             <?php echo $this->Html->link('Read more', $node['Node']['url']); ?>
         </div>
     </article>
