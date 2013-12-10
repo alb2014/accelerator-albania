@@ -271,7 +271,6 @@ class UsersController extends UsersAppController {
 	public function index() {
 
 		$user = AuthComponent::user();
-		$this->log($user);
 
 		$this->set('ideas', ClassRegistry::init('Idea')->find('all',
 			array(
