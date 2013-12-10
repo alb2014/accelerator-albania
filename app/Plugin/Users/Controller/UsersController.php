@@ -269,13 +269,22 @@ class UsersController extends UsersAppController {
  * @access public
  */
 	public function index() {
-		$this->set('ideas', ClassRegistry::init('Idea')->find('all',array(
-    		'order' => array(
-    			'total_votes' => 'desc',
-    			'up_votes' => 'desc') 
-    			)
-    		)
+
+		$user = AuthComponent::user();
+		$this->log($user);
+
+		$this->set('ideas', ClassRegistry::init('Idea')->find('all',
+			array(
+				'conditions' => array(
+					array('Idea.user_id' => $user['id'])
+					),
+	    		'order' => array(
+	    			'total_votes' => 'desc',
+	    			'up_votes' => 'desc') 
+	    			)
+	    		)
 		);
+
 		$this->set('title_for_layout', __d('croogo', 'Users'));
 	}
 
