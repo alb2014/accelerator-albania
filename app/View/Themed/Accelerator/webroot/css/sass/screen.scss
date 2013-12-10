@@ -81,7 +81,7 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
 }
 
 .inline-padding {
-  padding: 0 1em;
+  padding: 0 $base-font-size;
 }
 
 .full-spacing {
@@ -154,6 +154,10 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
 html, body {
   font-family: $base-font-family;
   color: $body_text;
+}
+
+h3 {
+  margin: 1.5em 0 .7em;
 }
 
 ul {
