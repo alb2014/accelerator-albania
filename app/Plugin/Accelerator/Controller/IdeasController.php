@@ -7,7 +7,8 @@ class IdeasController extends AcceleratorAppController {
     public $paginate = array(
         'limit' => 25,
         'order' => array(
-            'Idea.total_votes' => 'asc'
+            'Idea.total_votes' => 'desc',
+            'Idea.up_votes' => 'desc'
         )
     );
 
@@ -41,7 +42,7 @@ class IdeasController extends AcceleratorAppController {
         if ($this->request->is('post')) {
             $this->Idea->create();
             if ($this->Idea->save($this->request->data)) {
-                $this->Idea->setFlash(__('Your idea has been saved.'));
+                $this->Session->setFlash(__('Your idea has been saved.'));
                 return $this->redirect(array('action' => 'index'));
             }
             $this->Session->setFlash(__('Unable to add your idea.'));
@@ -72,6 +73,7 @@ class IdeasController extends AcceleratorAppController {
         if (!$idea) {
             throw new NotFoundException(__('Invalid idea'));
         }
+
         $this->set('idea', $idea);
         $this->set('ideas', ClassRegistry::init('Idea')->find('all'));
     }
@@ -121,24 +123,29 @@ class IdeasController extends AcceleratorAppController {
                                       'value' => $mod,
                                       'idea_id' => $ideaId,
                                       'user_id' => $user['id']));
+        
         $vote->id = $ideaId.'-'.$user['id'];
-        $this->log($data);
+
         if ($vote->save($data)) {
             $this->Session->setFlash(__('Vote cast!'));
             $this->updateVotes($ideaId);
             return $this->redirect(array('action' => 'index/'));
         }
+
         $this->Session->setFlash(__('Voting failed.'));
-        return $this->redirect(array('action' => 'index/'));
+        return $this->redirect(array('action' => 'index'));
     }
 
     private function updateVotes($ideaId){
+        
+        $idea =$this->Idea->findById($ideaId)['Idea'];
         $this->Idea->id = $ideaId;
+        
         $voteHandle = new Vote();
         $myVotes = $voteHandle->find('all', array('conditions' =>array('Vote.idea_id' => $ideaId)));
         $upvotes = 0;
         $downvotes = 0;
-        //$this->log($myVotes);
+
         foreach  ($myVotes as $vote){
             if ($vote['Vote']['value'] > 0){
                 $upvotes++;
@@ -147,9 +154,28 @@ class IdeasController extends AcceleratorAppController {
                 $downvotes++;
             }
         }
+
+        $total_votes =  $upvotes - $downvotes;
+
+        // Leveling up logic
+
+        $tier_2_votes_req = Configure::read('Accelerator.tier_2_votes'); 
+        $tier_3_votes_req = Configure::read('Accelerator.tier_3_votes');
+        $tier_level = $idea['tier_level'];
+
+        if($tier_level == 0 && $total_votes == $tier_2_votes_req) {
+            $tier_level++;
+        } else if($tier_level == 1 && $total_votes == $tier_3_votes_req) {
+            $tier_level++;
+        }
+
+        // End leveling up logic
+
         $data['Idea']['up_votes'] = $upvotes;
         $data['Idea']['down_votes'] = $downvotes;
-        $data['Idea']['total_votes'] = $upvotes - $downvotes;
+        $data['Idea']['total_votes'] = $total_votes;
+        $data['Idea']['tier_level'] = $tier_level;
+
         $this->Idea->save($data);
     }
 
