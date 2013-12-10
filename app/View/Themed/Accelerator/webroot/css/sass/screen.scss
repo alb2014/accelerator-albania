@@ -746,7 +746,15 @@ div.main {
 .idea {
   @extend .column-wrapper;
   .votes {
-    float: right;
+    @include span-columns(1, 7, 8px);
+    margin-top: 1.5em;
+  }
+  div.info {
+    @include span-columns(6 omega, 7);
+    margin-bottom: 1em;
+    .idea-type {
+      text-transform: capitalize;
+    }
   }
 }
 
