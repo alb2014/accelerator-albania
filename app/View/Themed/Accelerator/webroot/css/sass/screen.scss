@@ -823,8 +823,15 @@ div.main {
     }
     h2 {
       a {
-        color: black;
+        color: $body_text;
       }
+    }
+  }
+  .paging {
+    float: right;
+    line-height: 3.9em;
+    .current {
+      color: $body_text;
     }
   }
 }

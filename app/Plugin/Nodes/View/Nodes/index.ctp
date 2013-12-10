@@ -3,6 +3,7 @@
 
 <section class="nodes">
     <header>
+        <div class="paging"><?php echo $this->Paginator->numbers(); ?></div>
         <h2>Learn</h2>
     </header>
     <?php
@@ -26,8 +27,6 @@
     <?php
         endforeach;
     ?>
-
-    <div class="paging"><?php echo $this->Paginator->numbers(); ?></div>
 </section>
 
 <?php echo $this->element('categories'); ?>
