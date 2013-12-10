@@ -90,7 +90,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
             <footer>
                 <div>
                     <div class="sitemap">
-                        <h3><?php __('Sitemap')?></h3>
+                        <h3><?php echo __('Sitemap')?></h3>
                         <nav>
                             <ul>
                                 <li><?php echo $this->Html->link(__('Submit'),
