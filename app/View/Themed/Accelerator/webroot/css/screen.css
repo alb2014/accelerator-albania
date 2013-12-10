@@ -24,7 +24,7 @@ html {
 /* -------------------------------------------------------------------------
    Layout */
 /* line 56, sass/screen.scss */
-.container, .content header.global, .content > div.main, .content > footer > div, div.organization-info div, section.mentors ul {
+.container, .content header.global, .content > div.main, .content > footer > div, div.organization-info > div, section.mentors ul {
   *zoom: 1;
   width: 940px;
   padding-left: 10px;
@@ -33,7 +33,7 @@ html {
   margin-right: auto;
 }
 /* line 38, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.container:after, .content header.global:after, .content > div.main:after, .content > footer > div:after, div.organization-info div:after, section.mentors ul:after {
+.container:after, .content header.global:after, .content > div.main:after, .content > footer > div:after, div.organization-info > div:after, section.mentors ul:after {
   content: "";
   display: table;
   clear: both;
@@ -914,37 +914,34 @@ div.organization-info {
   padding-bottom: 1em;
 }
 /* line 843, sass/screen.scss */
-div.organization-info div section {
+div.organization-info > div > div {
   width: 460px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
 /* line 184, ../../../../../../../../../../../Users/jennscheer/.rvm/gems/ruby-1.9.3-p327/gems/susy-1.0.9/sass/susy/_grid.scss */
-div.organization-info div section:nth-child(2n) {
+div.organization-info > div > div:nth-child(2n) {
   float: right;
   margin-right: 0;
 }
 /* line 848, sass/screen.scss */
-div.organization-info h1 {
-  font-size: 1.17em;
-  margin: 0.85em 0 0;
-  font-weight: bold;
+div.organization-info h3 {
   text-align: center;
 }
 
 /* -------------------------------------------------------------------------
    Full width 'Mentors' Bar (breaks out of grid) */
-/* line 858, sass/screen.scss */
+/* line 857, sass/screen.scss */
 section.mentors {
   background: url(../img/suede_bg.png) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 861, sass/screen.scss */
+/* line 860, sass/screen.scss */
 section.mentors ul {
   margin-bottom: 0;
 }
-/* line 864, sass/screen.scss */
+/* line 863, sass/screen.scss */
 section.mentors ul li {
   width: 300px;
   float: left;
@@ -956,7 +953,7 @@ section.mentors ul li:nth-child(3n) {
   float: right;
   margin-right: 0;
 }
-/* line 869, sass/screen.scss */
+/* line 868, sass/screen.scss */
 section.mentors img {
   float: left;
   margin: 1em 1em 1em 0;
@@ -964,27 +961,27 @@ section.mentors img {
 
 /* -------------------------------------------------------------------------
    Footer */
-/* line 882, sass/screen.scss */
+/* line 881, sass/screen.scss */
 .content > footer {
   background: url(../img/concrete_bg.jpg) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 885, sass/screen.scss */
+/* line 884, sass/screen.scss */
 .content > footer a {
   color: white;
 }
-/* line 888, sass/screen.scss */
+/* line 887, sass/screen.scss */
 .content > footer h3 {
   text-transform: uppercase;
 }
-/* line 891, sass/screen.scss */
+/* line 890, sass/screen.scss */
 .content > footer .sitemap {
   width: 620px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 893, sass/screen.scss */
+/* line 892, sass/screen.scss */
 .content > footer .sitemap ul {
   float: left;
   width: 140px;
@@ -992,7 +989,7 @@ section.mentors img {
   margin-right: 20px;
   display: inline;
 }
-/* line 898, sass/screen.scss */
+/* line 897, sass/screen.scss */
 .content > footer .social {
   width: 300px;
   float: right;
@@ -1001,35 +998,35 @@ section.mentors img {
   display: inline;
   text-align: right;
 }
-/* line 901, sass/screen.scss */
+/* line 900, sass/screen.scss */
 .content > footer .social li a {
   display: block;
   float: right;
   margin: 0 0 0 1em;
 }
-/* line 906, sass/screen.scss */
+/* line 905, sass/screen.scss */
 .content > footer .social li a.fb {
   background-position: 0 -1737px;
   height: 60px;
   width: 60px;
 }
-/* line 909, sass/screen.scss */
+/* line 908, sass/screen.scss */
 .content > footer .social li a.rss {
   background-position: 0 -93px;
   height: 60px;
   width: 60px;
 }
-/* line 912, sass/screen.scss */
+/* line 911, sass/screen.scss */
 .content > footer .social li a.google {
   background-position: 0 -173px;
   height: 60px;
   width: 60px;
 }
-/* line 917, sass/screen.scss */
+/* line 916, sass/screen.scss */
 .content > footer ul {
   margin: 0;
 }
-/* line 920, sass/screen.scss */
+/* line 919, sass/screen.scss */
 .content > footer p {
   width: 940px;
   float: right;
@@ -1042,7 +1039,7 @@ section.mentors img {
 
 /* -------------------------------------------------------------------------
    Modal */
-/* line 930, sass/screen.scss */
+/* line 929, sass/screen.scss */
 .modal {
   position: fixed;
   top: 0;
@@ -1058,12 +1055,12 @@ section.mentors img {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 942, sass/screen.scss */
+/* line 941, sass/screen.scss */
 .modal:target {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 947, sass/screen.scss */
+/* line 946, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -1076,7 +1073,7 @@ section.mentors img {
   border-radius: 3px;
   background: #fff;
 }
-/* line 955, sass/screen.scss */
+/* line 954, sass/screen.scss */
 .modal .modal-close {
   color: black;
   position: absolute;
@@ -1088,7 +1085,7 @@ section.mentors img {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 965, sass/screen.scss */
+/* line 964, sass/screen.scss */
 .modal .modal-close:hover {
   color: #21a4b6;
 }

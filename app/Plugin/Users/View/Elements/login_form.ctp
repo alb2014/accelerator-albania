@@ -9,7 +9,7 @@
 <ul>
     <li>No account?
         <?php 
-            echo $this->Html->link('Register here', array('plugin' => 'users', 'controller' => 'users', 'action' => 'add')); 
+            echo $this->Html->link('Register here', array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); 
         ?>
     </li>
     <li>
