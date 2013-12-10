@@ -16,8 +16,6 @@
         <h3>Idea Category</h3>
         <p><?php echo $idea['Idea']['type']; ?></p>
 
-        <h3>Voted to round #2</h3>
-
         <?php echo $this->Html->link('Edit my idea',
 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); ?>
 
@@ -33,7 +31,7 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $i
 
     <!-- Submissions -->
     <?php
-        echo $this->element('submissions');
+        echo $this->element('submissions', array("full" => false));
     ?>
 
 </section>

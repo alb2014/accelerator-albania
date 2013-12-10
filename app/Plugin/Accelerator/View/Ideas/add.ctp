@@ -37,7 +37,6 @@
 
 <!-- The Program Section -->
 <!-- If no user -->
-<?php if(!$this->Session->check('Auth.User')) { ?>
     <section class="create-profile">
         <header>
             <h2>Create Profile</h2>
@@ -48,6 +47,9 @@
         ?>
 
     </section>
+
+
+<?php if(!$this->Session->check('Auth.User')) { ?>
 
 <?php } ?>
 
