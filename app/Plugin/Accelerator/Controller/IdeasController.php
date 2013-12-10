@@ -42,7 +42,7 @@ class IdeasController extends AcceleratorAppController {
         if ($this->request->is('post')) {
             $this->Idea->create();
             if ($this->Idea->save($this->request->data)) {
-                $this->Idea->setFlash(__('Your idea has been saved.'));
+                $this->Session->setFlash(__('Your idea has been saved.'));
                 return $this->redirect(array('action' => 'index'));
             }
             $this->Session->setFlash(__('Unable to add your idea.'));
@@ -73,6 +73,7 @@ class IdeasController extends AcceleratorAppController {
         if (!$idea) {
             throw new NotFoundException(__('Invalid idea'));
         }
+
         $this->set('idea', $idea);
         $this->set('ideas', ClassRegistry::init('Idea')->find('all'));
     }
