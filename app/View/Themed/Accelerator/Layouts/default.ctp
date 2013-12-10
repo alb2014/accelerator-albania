@@ -134,9 +134,9 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
 
                             <ul>
                                 <!-- <li><?php //echo $this->Html->link('Yunus SB', array()); ?></li> -->
-                                <li><a href="/page/yunus-sb">Yunus SB</a></li>
+                                <li><a href="/page/yunus-sb"><?php echo __('Yunus SB'); ?></a></li>
                                 <li><a href="">UNDP</a></li>
-                                <li><a href="">Albania</a></li>
+                                <li><a href="">Terms &amp; Conditions</a></li>
                                 <li><a href="/contact">Contact</a></li>
                             </ul>
                         </nav>
