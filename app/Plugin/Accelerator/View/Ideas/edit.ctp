@@ -1,7 +1,7 @@
 <!-- Idea -->
 <section class="idea edit">
     <header>
-        <h2>Edit My Idea</h2>
+        <h2><?php echo __('Edit My Idea'); ?></h2>
     </header>
 
     <div class="inner">
@@ -20,7 +20,7 @@
                                     );
         $typeOpts =  array('social'=>'Social',
                                     'tech' =>'Tech',
-                                    'scientific' => 'Scientfic',
+                                    'scientific' => 'Scientific',
                                     'other' => 'Other');
 
         echo $this->Form->create('Idea');
@@ -39,6 +39,8 @@
         echo $this->Form->input('competition', array('rows' => '5'));
         echo $this->Form->input('model', array('options'=> $modelOpts));
         echo $this->Form->input('promise', array('rows' => '5'));
+
+        echo $this->Form->input('private', array('type' => 'checkbox', 'label' => 'Keep this idea private'));
 
         echo $this->Form->end('Pitch');
         ?>
