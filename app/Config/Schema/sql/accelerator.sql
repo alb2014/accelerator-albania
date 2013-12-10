@@ -26,12 +26,15 @@ SET time_zone = "+00:00";
 -- Table structure for table `votes`
 --
 
-CREATE TABLE IF NOT EXISTS `votes` (
-  `id` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+CREATE TABLE `votes` (
+  `id` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `value` tinyint(4) NOT NULL DEFAULT '0',
   `idea_id` int(20) unsigned NOT NULL,
   `user_id` int(20) unsigned NOT NULL,
-  UNIQUE KEY `id` (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 
 --
 -- Table structure for table `ideas`
@@ -50,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `ideas` (
   `promise` varchar(240) COLLATE utf8_unicode_ci NOT NULL,
   `submitted` tinyint(1) NOT NULL DEFAULT '0',
   `user_id` int(20) NOT NULL, 
-  `tier_level` TINYINT UNSIGNED NULL COMMENT 'can be 0,1,2',
+  `tier_level` TINYINT UNSIGNED NULL COMMENT 'can be 0,1,2' DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;

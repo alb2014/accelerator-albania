@@ -7,7 +7,8 @@ class IdeasController extends AcceleratorAppController {
     public $paginate = array(
         'limit' => 25,
         'order' => array(
-            'Idea.total_votes' => 'asc'
+            'Idea.up_votes' => 'desc',
+            'Idea.down_votes' => 'desc'
         )
     );
 
@@ -121,10 +122,15 @@ class IdeasController extends AcceleratorAppController {
                                       'value' => $mod,
                                       'idea_id' => $ideaId,
                                       'user_id' => $user['id']));
+        
         $vote->id = $ideaId.'-'.$user['id'];
+        $this->log('Logging some shitdata');
         $this->log($data);
+        $this->log('Logging some shitvote');
+        $this->log($vote);
         if ($vote->save($data)) {
             $this->Session->setFlash(__('Vote cast!'));
+            $this->log('Logging some shit-2');
             $this->updateVotes($ideaId);
             return $this->redirect(array('action' => 'index/'));
         }
@@ -135,6 +141,7 @@ class IdeasController extends AcceleratorAppController {
     private function updateVotes($ideaId){
         $this->Idea->id = $ideaId;
         $voteHandle = new Vote();
+        $tier_2_votes = Configure::read('Accelerator.tier_2_votes');
         $myVotes = $voteHandle->find('all', array('conditions' =>array('Vote.idea_id' => $ideaId)));
         $upvotes = 0;
         $downvotes = 0;
