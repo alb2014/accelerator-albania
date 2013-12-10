@@ -339,97 +339,96 @@ section header .votes .down {
   background-position: 0 0;
   height: 73px;
   width: 318px;
-  background-image: url(../img/sprites/logo.png);
 }
-/* line 335, sass/screen.scss */
+/* line 334, sass/screen.scss */
 .content header.global a.button {
   float: right;
   background: url(../img/concrete_bg.jpg) no-repeat center top #21a4b6;
   font-size: 1.125em;
   line-height: 1.27778em;
 }
-/* line 341, sass/screen.scss */
+/* line 340, sass/screen.scss */
 .content header.global nav ul {
   margin-top: 2.5em;
   margin-bottom: 1em;
 }
-/* line 345, sass/screen.scss */
+/* line 344, sass/screen.scss */
 .content header.global nav li.sub {
   float: right;
   padding: 0;
   font-size: 1em;
 }
-/* line 351, sass/screen.scss */
+/* line 350, sass/screen.scss */
 .content header.global li {
   display: inline-block;
   padding: 0 2.5em 0 0;
   font-size: 24px;
 }
-/* line 355, sass/screen.scss */
+/* line 354, sass/screen.scss */
 .content header.global li a {
   color: black;
   text-decoration: none;
 }
-/* line 358, sass/screen.scss */
+/* line 357, sass/screen.scss */
 .content header.global li a span {
   font-weight: normal;
 }
-/* line 361, sass/screen.scss */
+/* line 360, sass/screen.scss */
 .content header.global li a:hover {
   color: #21a4b6;
 }
-/* line 366, sass/screen.scss */
+/* line 365, sass/screen.scss */
 .content header.global a.active {
   color: #21a4b6;
   cursor: default;
 }
-/* line 371, sass/screen.scss */
+/* line 370, sass/screen.scss */
 .content header.global li:not(.sub) a {
   font-weight: bold;
 }
 
 /* -------------------------------------------------------------------------
    Universal Article Elements */
-/* line 381, sass/screen.scss */
+/* line 380, sass/screen.scss */
 article header {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 384, sass/screen.scss */
+/* line 383, sass/screen.scss */
 article h1 {
   font-size: 1.17em;
   margin: 0.85em 0 0;
   font-weight: bold;
 }
-/* line 386, sass/screen.scss */
+/* line 385, sass/screen.scss */
 article h1 a {
   color: black;
   text-decoration: none;
 }
-/* line 389, sass/screen.scss */
+/* line 388, sass/screen.scss */
 article h1 a:visited {
   color: black;
 }
-/* line 395, sass/screen.scss */
+/* line 394, sass/screen.scss */
 article aside a {
   display: inline-block;
   width: 26px;
   height: 28px;
   margin: 0 .5em 0 0;
 }
-/* line 403, sass/screen.scss */
+/* line 402, sass/screen.scss */
 article .share_comment {
   background: url(../img/sprites/share_comment_blue.png) no-repeat center 2px transparent;
 }
-/* line 405, sass/screen.scss */
+/* line 404, sass/screen.scss */
 article .share_comment:hover {
   background: url(../img/sprites/share_comment_grey.png) no-repeat center 2px transparent;
 }
-/* line 409, sass/screen.scss */
+/* line 408, sass/screen.scss */
 article .share_fb {
   background: url(../img/sprites/share_fb_blue.png) no-repeat center top transparent;
 }
-/* line 411, sass/screen.scss */
+/* line 410, sass/screen.scss */
 article .share_fb:hover {
   background: url(../img/sprites/share_fb_grey.png) no-repeat center top transparent;
 }
@@ -437,7 +436,7 @@ article .share_fb:hover {
 /* -------------------------------------------------------------------------
    Column Setups */
 /* Home */
-/* line 422, sass/screen.scss */
+/* line 421, sass/screen.scss */
 .news {
   width: 540px;
   float: left;
@@ -445,7 +444,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 425, sass/screen.scss */
+/* line 424, sass/screen.scss */
 .submissions.sidebar {
   width: 380px;
   float: right;
@@ -455,7 +454,7 @@ article .share_fb:hover {
 }
 
 /* Engage */
-/* line 430, sass/screen.scss */
+/* line 429, sass/screen.scss */
 .submissions.header {
   width: 540px;
   float: left;
@@ -463,7 +462,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 434, sass/screen.scss */
+/* line 433, sass/screen.scss */
 .submissions.main {
   width: 540px;
   float: left;
@@ -471,7 +470,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 437, sass/screen.scss */
+/* line 436, sass/screen.scss */
 .program {
   width: 380px;
   float: right;
@@ -481,7 +480,7 @@ article .share_fb:hover {
 }
 
 /* Submit */
-/* line 442, sass/screen.scss */
+/* line 441, sass/screen.scss */
 .submit-idea, .create-profile {
   width: 940px;
   float: right;
@@ -491,7 +490,7 @@ article .share_fb:hover {
 }
 
 /* Learn */
-/* line 447, sass/screen.scss */
+/* line 446, sass/screen.scss */
 .learn {
   width: 700px;
   float: left;
@@ -499,7 +498,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 450, sass/screen.scss */
+/* line 449, sass/screen.scss */
 .learn-more {
   width: 220px;
   float: right;
@@ -512,7 +511,7 @@ article .share_fb:hover {
 /*.what-is-hapi, .program-structure {
   @include span-columns(8,12);
 }*/
-/* line 458, sass/screen.scss */
+/* line 457, sass/screen.scss */
 .who-is {
   width: 300px;
   float: right;
@@ -522,7 +521,7 @@ article .share_fb:hover {
 }
 
 /* Contact */
-/* line 463, sass/screen.scss */
+/* line 462, sass/screen.scss */
 .contact-wrapper {
   width: 620px;
   float: left;
@@ -530,7 +529,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 466, sass/screen.scss */
+/* line 465, sass/screen.scss */
 .direct-contact {
   width: 300px;
   float: right;
@@ -540,7 +539,7 @@ article .share_fb:hover {
 }
 
 /* Idea Page, View & Edit */
-/* line 471, sass/screen.scss */
+/* line 470, sass/screen.scss */
 .idea {
   width: 540px;
   float: left;
@@ -548,7 +547,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 475, sass/screen.scss */
+/* line 474, sass/screen.scss */
 .idea-comments {
   width: 540px;
   float: left;
@@ -556,7 +555,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 479, sass/screen.scss */
+/* line 478, sass/screen.scss */
 .references {
   width: 380px;
   float: right;
@@ -566,7 +565,7 @@ article .share_fb:hover {
 }
 
 /* Login, Profile */
-/* line 484, sass/screen.scss */
+/* line 483, sass/screen.scss */
 .users {
   width: 540px;
   float: left;
@@ -575,7 +574,7 @@ article .share_fb:hover {
 }
 
 /* Register */
-/* line 489, sass/screen.scss */
+/* line 488, sass/screen.scss */
 .what-is-hapi.sidebar {
   width: 380px;
   float: right;
@@ -585,7 +584,7 @@ article .share_fb:hover {
 }
 
 /* Posts (Croogo Nodes) Index Page */
-/* line 495, sass/screen.scss */
+/* line 494, sass/screen.scss */
 .nodes {
   width: 700px;
   float: left;
@@ -593,7 +592,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 499, sass/screen.scss */
+/* line 498, sass/screen.scss */
 .categories {
   width: 220px;
   float: right;
@@ -603,7 +602,7 @@ article .share_fb:hover {
 }
 
 /* Post (Croogo Node) View Page */
-/* line 505, sass/screen.scss */
+/* line 504, sass/screen.scss */
 .node-wrapper {
   width: 700px;
   float: left;
@@ -611,7 +610,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 509, sass/screen.scss */
+/* line 508, sass/screen.scss */
 .node-comments {
   width: 540px;
   float: left;
@@ -619,7 +618,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 513, sass/screen.scss */
+/* line 512, sass/screen.scss */
 .node-wrapper.static {
   width: 540px;
   float: left;
@@ -627,7 +626,7 @@ article .share_fb:hover {
   display: inline;
 }
 
-/* line 517, sass/screen.scss */
+/* line 516, sass/screen.scss */
 .static.sidebar {
   width: 380px;
   float: right;
@@ -637,7 +636,7 @@ article .share_fb:hover {
 }
 
 /* Full-width miscellaneous text between main content and footer */
-/* line 523, sass/screen.scss */
+/* line 522, sass/screen.scss */
 aside.miscellaneous {
   width: 940px;
   float: right;
@@ -647,50 +646,50 @@ aside.miscellaneous {
   clear: both;
 }
 
-/* line 528, sass/screen.scss */
+/* line 527, sass/screen.scss */
 div.main {
   clear: both;
   /* Main Content Aside */
 }
-/* line 532, sass/screen.scss */
+/* line 531, sass/screen.scss */
 div.main > aside h3 {
   text-align: center;
 }
 
 /* Home elements */
-/* line 540, sass/screen.scss */
+/* line 539, sass/screen.scss */
 .slideshow {
   position: relative;
   height: 200px;
 }
-/* line 543, sass/screen.scss */
+/* line 542, sass/screen.scss */
 .slideshow ul.slides {
   z-index: 1;
   margin: 0;
 }
-/* line 546, sass/screen.scss */
+/* line 545, sass/screen.scss */
 .slideshow ul.slides li {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 550, sass/screen.scss */
+/* line 549, sass/screen.scss */
 .slideshow ul.slides li:nth-child(1) {
   z-index: 1;
 }
-/* line 553, sass/screen.scss */
+/* line 552, sass/screen.scss */
 .slideshow ul.slides li.selected {
   z-index: 2;
   pointer-events: auto;
 }
-/* line 559, sass/screen.scss */
+/* line 558, sass/screen.scss */
 .slideshow ul.toggles {
   z-index: 2;
   position: absolute;
   bottom: 0;
   right: 1em;
 }
-/* line 564, sass/screen.scss */
+/* line 563, sass/screen.scss */
 .slideshow ul.toggles li {
   width: 30px;
   height: 30px;
@@ -701,7 +700,7 @@ div.main > aside h3 {
   color: white;
 }
 
-/* line 580, sass/screen.scss */
+/* line 579, sass/screen.scss */
 .news article {
   width: 540px;
   float: right;
@@ -709,7 +708,7 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 582, sass/screen.scss */
+/* line 581, sass/screen.scss */
 .news article .image {
   padding-left: 16px;
   padding-right: 0px;
@@ -718,7 +717,7 @@ div.main > aside h3 {
   margin-right: 20px;
   display: inline;
 }
-/* line 585, sass/screen.scss */
+/* line 584, sass/screen.scss */
 .news article header {
   width: 380px;
   float: right;
@@ -726,7 +725,7 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 588, sass/screen.scss */
+/* line 587, sass/screen.scss */
 .news article .content {
   width: 380px;
   float: right;
@@ -736,25 +735,25 @@ div.main > aside h3 {
   font-size: 0.875em;
   line-height: 1.64286em;
 }
-/* line 591, sass/screen.scss */
+/* line 590, sass/screen.scss */
 .news article .content p {
   margin-top: 0;
 }
-/* line 595, sass/screen.scss */
+/* line 594, sass/screen.scss */
 .news article img {
-  margin: 1.5em 0;
+  margin: 1.25em 0;
   max-width: 100%;
 }
-/* line 599, sass/screen.scss */
+/* line 598, sass/screen.scss */
 .news article p {
   float: left;
 }
-/* line 604, sass/screen.scss */
+/* line 603, sass/screen.scss */
 .news article time {
   padding: 0 .5em 0 0;
 }
 
-/* line 611, sass/screen.scss */
+/* line 610, sass/screen.scss */
 .submissions.sidebar .votes {
   width: 60px;
   float: right;
@@ -762,20 +761,20 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 613, sass/screen.scss */
+/* line 612, sass/screen.scss */
 .submissions.sidebar .votes ~ div {
   width: 300px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 615, sass/screen.scss */
+/* line 614, sass/screen.scss */
 .submissions.sidebar .votes ~ div p, .submissions.sidebar .votes ~ div aside {
   margin: 1em;
 }
 
 /* Engage elements - fixed height, unfortunately */
-/* line 627, sass/screen.scss */
+/* line 626, sass/screen.scss */
 .submissions.main div.fixed-height,
 .program div.fixed-height {
   height: 920px;
@@ -783,49 +782,49 @@ div.main > aside h3 {
 }
 
 /* Homepage Submissions */
-/* line 641, sass/screen.scss */
+/* line 640, sass/screen.scss */
 .submissions {
   /* Individual Submissions */
   /* Wider submissions */
 }
-/* line 642, sass/screen.scss */
+/* line 641, sass/screen.scss */
 .submissions ul.submission-sort {
   float: right;
 }
-/* line 645, sass/screen.scss */
+/* line 644, sass/screen.scss */
 .submissions ul.submission-sort a {
   color: white;
 }
-/* line 651, sass/screen.scss */
+/* line 650, sass/screen.scss */
 .submissions article {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 653, sass/screen.scss */
+/* line 652, sass/screen.scss */
 .submissions article h1 {
   float: left;
 }
-/* line 659, sass/screen.scss */
+/* line 658, sass/screen.scss */
 .submissions article time {
   padding: 0 0 0 .5em;
 }
-/* line 664, sass/screen.scss */
+/* line 663, sass/screen.scss */
 .submissions article.simplified header {
   float: left;
 }
-/* line 667, sass/screen.scss */
+/* line 666, sass/screen.scss */
 .submissions article.simplified .votes {
   margin-top: .5em;
   margin-bottom: .5em;
 }
-/* line 677, sass/screen.scss */
+/* line 676, sass/screen.scss */
 .submissions.main .votes {
   width: 60px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 680, sass/screen.scss */
+/* line 679, sass/screen.scss */
 .submissions.main p.description {
   width: 380px;
   float: left;
@@ -833,7 +832,7 @@ div.main > aside h3 {
   display: inline;
   margin-top: 0;
 }
-/* line 684, sass/screen.scss */
+/* line 683, sass/screen.scss */
 .submissions.main aside {
   width: 60px;
   float: right;
@@ -844,7 +843,7 @@ div.main > aside h3 {
 
 /* -------------------------------------------------------------------------
    Submit Idea & Create Profile Form & Page */
-/* line 701, sass/screen.scss */
+/* line 700, sass/screen.scss */
 .create-profile fieldset {
   margin-top: 1em;
   width: 460px;
@@ -857,26 +856,26 @@ div.main > aside h3 {
   float: right;
   margin-right: 0;
 }
-/* line 705, sass/screen.scss */
+/* line 704, sass/screen.scss */
 .create-profile fieldset label, .create-profile fieldset input {
   margin-left: 1em;
   margin-right: 1em;
 }
-/* line 714, sass/screen.scss */
+/* line 713, sass/screen.scss */
 .create-profile form input[type='submit'] {
   margin: 0 16px 1em;
 }
 
 /* -------------------------------------------------------------------------
    Learn Page */
-/* line 730, sass/screen.scss */
+/* line 729, sass/screen.scss */
 .learn header ul {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    About Page */
-/* line 748, sass/screen.scss */
+/* line 747, sass/screen.scss */
 .what-is-hapi h3, .what-is-hapi p, .program-structure h3, .program-structure p, .who-is h3, .who-is p {
   margin-left: 1em;
   margin-right: 1em;
@@ -886,7 +885,7 @@ div.main > aside h3 {
    Contact Page */
 /* -------------------------------------------------------------------------
    Idea Page */
-/* line 765, sass/screen.scss */
+/* line 764, sass/screen.scss */
 .idea .votes {
   padding-left: 8px;
   padding-right: 8px;
@@ -896,7 +895,7 @@ div.main > aside h3 {
   display: inline;
   margin-top: 1.5em;
 }
-/* line 769, sass/screen.scss */
+/* line 768, sass/screen.scss */
 .idea div.info {
   width: 460px;
   float: right;
@@ -905,14 +904,14 @@ div.main > aside h3 {
   display: inline;
   margin-bottom: 1em;
 }
-/* line 772, sass/screen.scss */
+/* line 771, sass/screen.scss */
 .idea div.info .idea-type {
   text-transform: capitalize;
 }
 
 /* -------------------------------------------------------------------------
    Edit Idea Page */
-/* line 787, sass/screen.scss */
+/* line 786, sass/screen.scss */
 .idea.edit input[type="text"], .idea.edit input[type="password"], .idea.edit input[type="email"], .idea.edit textarea {
   min-width: 30em;
   max-width: 500px;
@@ -924,28 +923,28 @@ div.main > aside h3 {
    Profile Page */
 /* -------------------------------------------------------------------------
   Posts (Croogo Nodes) Index Page */
-/* line 819, sass/screen.scss */
+/* line 818, sass/screen.scss */
 .nodes .node:nth-child(n+3) {
   border-top: 1px solid #21a4b6;
   margin-top: 2em;
   padding-top: 1em;
 }
-/* line 825, sass/screen.scss */
+/* line 824, sass/screen.scss */
 .nodes .node h2 a {
   color: #222222;
 }
-/* line 830, sass/screen.scss */
+/* line 829, sass/screen.scss */
 .nodes .paging {
   float: right;
   line-height: 3.9em;
 }
-/* line 833, sass/screen.scss */
+/* line 832, sass/screen.scss */
 .nodes .paging .current {
   color: #222222;
 }
 
 /* Post (Croogo Node) View Page */
-/* line 847, sass/screen.scss */
+/* line 846, sass/screen.scss */
 .node-wrapper .node header {
   color: white;
   background: #21a4b6;
@@ -964,14 +963,14 @@ div.main > aside h3 {
 /* 'Static' Pages - Pages w Custom Sidebar blocks */
 /* -------------------------------------------------------------------------
    Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
-/* line 868, sass/screen.scss */
+/* line 867, sass/screen.scss */
 div.organization-info {
   background-color: #d4edf1;
   color: #222222;
   margin-bottom: -1em;
   padding-bottom: 1em;
 }
-/* line 877, sass/screen.scss */
+/* line 876, sass/screen.scss */
 div.organization-info div.block {
   width: 460px;
   float: left;
@@ -983,23 +982,23 @@ div.organization-info div.block:nth-child(2n) {
   float: right;
   margin-right: 0;
 }
-/* line 881, sass/screen.scss */
+/* line 880, sass/screen.scss */
 div.organization-info h3 {
   text-align: center;
 }
 
 /* -------------------------------------------------------------------------
    Full width 'Mentors' Bar (breaks out of grid) */
-/* line 890, sass/screen.scss */
+/* line 889, sass/screen.scss */
 section.mentors {
   background: url(../img/suede_bg.png) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 893, sass/screen.scss */
+/* line 892, sass/screen.scss */
 section.mentors ul {
   margin-bottom: 0;
 }
-/* line 896, sass/screen.scss */
+/* line 895, sass/screen.scss */
 section.mentors ul li {
   width: 300px;
   float: left;
@@ -1011,7 +1010,7 @@ section.mentors ul li:nth-child(3n) {
   float: right;
   margin-right: 0;
 }
-/* line 901, sass/screen.scss */
+/* line 900, sass/screen.scss */
 section.mentors img {
   float: left;
   margin: 1em 1em 1em 0;
@@ -1019,27 +1018,27 @@ section.mentors img {
 
 /* -------------------------------------------------------------------------
    Footer */
-/* line 914, sass/screen.scss */
+/* line 913, sass/screen.scss */
 .content > footer {
   background: url(../img/concrete_bg.jpg) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 917, sass/screen.scss */
+/* line 916, sass/screen.scss */
 .content > footer a {
   color: white;
 }
-/* line 920, sass/screen.scss */
+/* line 919, sass/screen.scss */
 .content > footer h3 {
   text-transform: uppercase;
 }
-/* line 923, sass/screen.scss */
+/* line 922, sass/screen.scss */
 .content > footer .sitemap {
   width: 620px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 925, sass/screen.scss */
+/* line 924, sass/screen.scss */
 .content > footer .sitemap ul {
   float: left;
   width: 140px;
@@ -1047,11 +1046,11 @@ section.mentors img {
   margin-right: 20px;
   display: inline;
 }
-/* line 929, sass/screen.scss */
+/* line 928, sass/screen.scss */
 .content > footer .sitemap li:nth-child(4) {
   margin-top: 1em;
 }
-/* line 933, sass/screen.scss */
+/* line 932, sass/screen.scss */
 .content > footer .social {
   width: 300px;
   float: right;
@@ -1060,35 +1059,35 @@ section.mentors img {
   display: inline;
   text-align: right;
 }
-/* line 936, sass/screen.scss */
+/* line 935, sass/screen.scss */
 .content > footer .social li a {
   display: block;
   float: right;
   margin: 0 0 0 1em;
 }
-/* line 941, sass/screen.scss */
+/* line 940, sass/screen.scss */
 .content > footer .social li a.fb {
   background-position: 0 -1737px;
   height: 60px;
   width: 60px;
 }
-/* line 944, sass/screen.scss */
+/* line 943, sass/screen.scss */
 .content > footer .social li a.rss {
   background-position: 0 -93px;
   height: 60px;
   width: 60px;
 }
-/* line 947, sass/screen.scss */
+/* line 946, sass/screen.scss */
 .content > footer .social li a.google {
   background-position: 0 -173px;
   height: 60px;
   width: 60px;
 }
-/* line 952, sass/screen.scss */
+/* line 951, sass/screen.scss */
 .content > footer ul {
   margin: 0;
 }
-/* line 955, sass/screen.scss */
+/* line 954, sass/screen.scss */
 .content > footer p {
   width: 940px;
   float: right;
@@ -1101,7 +1100,7 @@ section.mentors img {
 
 /* -------------------------------------------------------------------------
    Modal */
-/* line 965, sass/screen.scss */
+/* line 964, sass/screen.scss */
 .modal {
   position: fixed;
   top: 0;
@@ -1117,12 +1116,12 @@ section.mentors img {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 977, sass/screen.scss */
+/* line 976, sass/screen.scss */
 .modal:target {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 982, sass/screen.scss */
+/* line 981, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -1135,7 +1134,7 @@ section.mentors img {
   border-radius: 3px;
   background: #fff;
 }
-/* line 990, sass/screen.scss */
+/* line 989, sass/screen.scss */
 .modal .modal-close {
   color: black;
   position: absolute;
@@ -1147,7 +1146,7 @@ section.mentors img {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 1000, sass/screen.scss */
+/* line 999, sass/screen.scss */
 .modal .modal-close:hover {
   color: #21a4b6;
 }
