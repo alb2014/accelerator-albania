@@ -125,26 +125,27 @@ class IdeasController extends AcceleratorAppController {
                                       'user_id' => $user['id']));
         
         $vote->id = $ideaId.'-'.$user['id'];
-        $this->log($data);
-        $this->log($vote);
+
         if ($vote->save($data)) {
             $this->Session->setFlash(__('Vote cast!'));
-            $this->log('Logging some shit-2');
             $this->updateVotes($ideaId);
             return $this->redirect(array('action' => 'index/'));
         }
+
         $this->Session->setFlash(__('Voting failed.'));
-        return $this->redirect(array('action' => 'index/'));
+        return $this->redirect(array('action' => 'index'));
     }
 
     private function updateVotes($ideaId){
+        
+        $idea =$this->Idea->findById($ideaId)['Idea'];
         $this->Idea->id = $ideaId;
+        
         $voteHandle = new Vote();
-        $tier_2_votes = Configure::read('Accelerator.tier_2_votes');
         $myVotes = $voteHandle->find('all', array('conditions' =>array('Vote.idea_id' => $ideaId)));
         $upvotes = 0;
         $downvotes = 0;
-        //$this->log($myVotes);
+
         foreach  ($myVotes as $vote){
             if ($vote['Vote']['value'] > 0){
                 $upvotes++;
@@ -153,9 +154,28 @@ class IdeasController extends AcceleratorAppController {
                 $downvotes++;
             }
         }
+
+        $total_votes =  $upvotes - $downvotes;
+
+        // Leveling up logic
+
+        $tier_2_votes_req = Configure::read('Accelerator.tier_2_votes'); 
+        $tier_3_votes_req = Configure::read('Accelerator.tier_3_votes');
+        $tier_level = $idea['tier_level'];
+
+        if($tier_level == 0 && $total_votes == $tier_2_votes_req) {
+            $tier_level++;
+        } else if($tier_level == 1 && $total_votes == $tier_3_votes_req) {
+            $tier_level++;
+        }
+
+        // End leveling up logic
+
         $data['Idea']['up_votes'] = $upvotes;
         $data['Idea']['down_votes'] = $downvotes;
-        $data['Idea']['total_votes'] = $upvotes - $downvotes;
+        $data['Idea']['total_votes'] = $total_votes;
+        $data['Idea']['tier_level'] = $tier_level;
+
         $this->Idea->save($data);
     }
 
