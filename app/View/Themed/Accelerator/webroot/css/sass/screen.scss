@@ -301,6 +301,15 @@ section {
     display: inline-block;
     padding: .5em;
   }
+
+  /* Rotation */
+  left: -1.2em;
+  @include transform(rotate(-90deg));
+  a {
+    padding: .5em 1em;
+    @include adjust-font-size-to(20px);
+    line-height: 1em;
+  }
 }
 
 /* Live within 12-column grid */
@@ -567,17 +576,21 @@ div.main {
   article {
     @include span-columns(7 omega,7);
     .image {
-      @include span-columns(2,7);
+      @include span-columns(2,7, $base-font-size 0px);
+    }
+    header {
+      @include span-columns(5 omega, 7);
     }
     .content {
       @include span-columns(5 omega, 7);
-        @include adjust-font-size-to(14px);
+      @include adjust-font-size-to(14px);
       p {
         margin-top: 0;
       }
     }
     img {
-      margin: 1.5em 0 1.5em 1em;
+      margin: 1.5em 0;
+      max-width: 100%;
     }
     p {
       float: left;
@@ -905,6 +918,9 @@ section.mentors {
     ul {
       float: left;
       @include span-columns(2,8);
+    }
+    li:nth-child(4) {
+      margin-top: 1em;
     }
   }
   .social {
