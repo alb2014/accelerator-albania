@@ -1,9 +1,12 @@
 <div class="slideshow">
 
     <ul class="slides">
-        <li><?php echo $this->Html->image('homepage.jpg'); ?></li>
-        <li><?php echo $this->Html->image('homepage2.jpg'); ?></li>
-        <li><?php echo $this->Html->image('homepage3.jpg'); ?></li>
+        <li>
+            <?php echo $this->Html->link($this->Html->image('homepage.jpg'),
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add'), array('escape' => false)); ?></li>
+        <li><?php echo $this->Html->link($this->Html->image('homepage2.jpg'),
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), array('escape' => false)); ?></li>
+        <li><a href="/blog"><?php echo $this->Html->image('homepage3.jpg'); ?></a></li>
     </ul>
 
     <ul class="toggles">
