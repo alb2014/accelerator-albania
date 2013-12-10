@@ -269,7 +269,13 @@ class UsersController extends UsersAppController {
  * @access public
  */
 	public function index() {
-		$this->set('ideas', ClassRegistry::init('Idea')->find('all'));
+		$this->set('ideas', ClassRegistry::init('Idea')->find('all',array(
+    		'order' => array(
+    			'total_votes' => 'desc',
+    			'up_votes' => 'desc') 
+    			)
+    		)
+		);
 		$this->set('title_for_layout', __d('croogo', 'Users'));
 	}
 
