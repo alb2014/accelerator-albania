@@ -690,6 +690,14 @@ div.main {
       margin-right: 1em;
     }
   }
+  form {
+    p {
+      @extend .inline-padding;
+    }
+    input[type='submit'] {
+      margin: 0 $base-font-size 1em;
+    }
+  }
 }
 
 
