@@ -205,6 +205,10 @@ input[type='submit'] {
   margin: 1em 0;
 }
 
+div.input.checkbox {
+  margin-bottom: 1em;
+}
+
 p {
   margin: 1em 0 .5em;
 }
@@ -783,10 +787,6 @@ div.main {
   input[type="text"], input[type="password"], input[type="email"], textarea {
     min-width: 30em;
     max-width: 500px;    
-  }
-
-  input[type="checkbox"] {
-    margin-bottom: 1em;
   }
 
 }

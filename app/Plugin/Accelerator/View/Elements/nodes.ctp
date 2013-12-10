@@ -24,7 +24,8 @@
             <?php echo $this->Text->truncate($node['Node']['body'], 160,array(
                 'ending' => '...', 
                 'exact' => false,
-                'remove' => true
+                'remove' => true,
+                'html' => false
             )) ?>
             <?php echo $this->Html->link('Read more', $node['Node']['url']); ?>
         </div>
