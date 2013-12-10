@@ -7,8 +7,8 @@ class IdeasController extends AcceleratorAppController {
     public $paginate = array(
         'limit' => 25,
         'order' => array(
-            'Idea.up_votes' => 'desc',
-            'Idea.down_votes' => 'desc'
+            'Idea.total_votes' => 'desc',
+            'Idea.up_votes' => 'desc'
         )
     );
 
