@@ -1143,7 +1143,7 @@ section.mentors img {
   left: 0;
   background: rgba(0, 0, 0, 0.8);
   z-index: 99999;
-  display: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
@@ -1151,13 +1151,13 @@ section.mentors img {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 995, sass/screen.scss */
+/* line 994, sass/screen.scss */
 .modal:target {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
-  display: block;
   pointer-events: auto;
 }
-/* line 1001, sass/screen.scss */
+/* line 999, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -1170,7 +1170,7 @@ section.mentors img {
   border-radius: 3px;
   background: #fff;
 }
-/* line 1009, sass/screen.scss */
+/* line 1007, sass/screen.scss */
 .modal .modal-close {
   color: black;
   position: absolute;
@@ -1182,7 +1182,7 @@ section.mentors img {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 1019, sass/screen.scss */
+/* line 1017, sass/screen.scss */
 .modal .modal-close:hover {
   color: #21a4b6;
 }

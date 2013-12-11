@@ -987,14 +987,12 @@ section.mentors {
   left: 0;
   background: rgba(0,0,0,0.8);
   z-index: 99999;
-  display: none;
-  opacity: 0;
+  @include opacity(0);
   @include transition(opacity 400ms ease-in);
   pointer-events: none;
 
   &:target {
-    opacity:1;
-    display: block;
+    @include opacity(1);
     pointer-events: auto;
   }
 
