@@ -9,6 +9,6 @@
   			echo $this->Form->input('username');
   		?>
   		</fieldset>
-  	<?php echo $this->Form->end('Submit');?>
+  	<?php echo $this->Form->end(__d('croogo', 'Submit'));?>
   </div>
 </section>

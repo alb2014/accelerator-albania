@@ -576,6 +576,7 @@ div.main {
 
 .news {
   @extend .column-wrapper;
+  padding-bottom: 1em;
   article {
     @include span-columns(7 omega,7);
     .image {

@@ -10,9 +10,9 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
     </ul>
 
     <ul class="toggles">
-        <li>Submit</li>
-        <li>Engage</li>
-        <li>Learn</li>
+        <li><?php echo __('Submit');?></li>
+        <li><?php echo __('Engage');?></li>
+        <li><?php echo __('Learn');?></li>
     </ul>
 
 </div>
@@ -26,9 +26,9 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
     <section class="news">
         <header>
             <p class="read-more">
-                <a href="/blog">read more</a>
+                <a href="/blog"><?php echo __('read more');?></a>
             </p>
-            <h2><a href="/blog">News</a></h2>
+            <h2><a href="/blog"><?php echo __('News');?></a></h2>
         </header>
 
         <!-- Individual News Items -->
@@ -41,7 +41,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
             <p class="read-more">
             <?php 
                 echo $this->Html->link(
-                    'read more', 
+                    __('read more'), 
                     array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')
                 ); 
             ?>
@@ -49,7 +49,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
             <h2>
                 <?php 
                 echo $this->Html->link(
-                    'Submissions', 
+                    __('Submissions'), 
                     array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')
                 ); 
             ?>

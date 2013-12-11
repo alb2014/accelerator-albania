@@ -5,16 +5,16 @@
         echo $this->Form->input('password');
     ?>
     </fieldset>
-<?php echo $this->Form->end('Submit');?>
+<?php echo $this->Form->end(__d('croogo', 'Submit'));?>
 <ul>
     <li>No account?
         <?php 
-            echo $this->Html->link('Register here', array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); 
+            echo $this->Html->link(__d('croogo', 'Register here'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); 
         ?>
     </li>
     <li>
         <?php
-            echo $this->Html->link('Forgot your password?', array('plugin' => 'users', 'controller' => 'users', 'action' => 'forgot')); 
+            echo $this->Html->link(__d('croogo', 'Forgot your password?'), array('plugin' => 'users', 'controller' => 'users', 'action' => 'forgot')); 
         ?>
     </li>
 </ul>

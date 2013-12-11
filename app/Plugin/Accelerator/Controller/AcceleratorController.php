@@ -48,16 +48,19 @@ class AcceleratorController extends AcceleratorAppController {
 
 
 		$this->set('nodes', ClassRegistry::init('Node')->find('all', array(
-      'order' => array(
-        'Node.created' => 'desc')
-      )
-    ));
-    	$this->set('ideas', ClassRegistry::init('Idea')->find('all', array(
-    		'order' => array(
-    			'total_votes' => 'desc',
-    			'up_votes' => 'desc') 
-    		)
-    	));
+		'conditions' => array('Node.type' => 'blog'),
+		'limit' => 5,
+		'order' => array(
+			'Node.created' => 'desc')
+	  	)
+	));
+		$this->set('ideas', ClassRegistry::init('Idea')->find('all', array(
+			'limit' => 5,
+			'order' => array(
+				'total_votes' => 'desc',
+				'up_votes' => 'desc') 
+			)
+		));
 		$this->set('title_for_layout', __('Accelerator'));
 	}
 

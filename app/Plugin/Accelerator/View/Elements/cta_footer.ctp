@@ -1,6 +1,6 @@
 <aside class="miscellaneous">
     <h3>
-        Have a business idea of your own? 
+        <?php echo __('Have a business idea of your own?');?> 
         <?php echo $this->Html->link(__('Click here!'),
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?>
     </h3>

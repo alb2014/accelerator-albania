@@ -1,7 +1,7 @@
 <!-- Idea -->
 <section class="idea">
     <header>
-        <h2>Idea Page</h2>
+        <h2><?php echo __('Idea Page');?></h2>
     </header>
 
     <?php echo $this->element('Accelerator.votes', array("idea" => $idea)); ?>
@@ -25,7 +25,7 @@
 <!-- Submissions Sidebar (module) -->
 <section class="submissions sidebar">
     <header>
-        <h2><a href="">Submissions</a></h2>
+        <h2><a href=""><?php echo __('Submissions');?></a></h2>
     </header>
 
     <!-- Submissions -->
@@ -43,11 +43,7 @@
 
     <div class="inner">
 
-        <?php 
-            if($this->Session->check('Auth.User')) { 
-        ?>
-            <p>DISQUS Comments Here (user is logged in)</p>
-
+        <?php if($this->Session->check('Auth.User')) { ?>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
