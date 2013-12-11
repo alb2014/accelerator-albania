@@ -7,9 +7,9 @@
         <header>
             <ul id="submission_sort" class="submission-sort">
                 <li>Order by:</li>
-                <li><a href="">Date</a></li>
-                <li><a href="">Popularity</a></li>
-                <li><a href="">Topic</a></li>
+                <li><a href=""><?php echo __('Date');?></a></li>
+                <li><a href=""><?php echo __('Popularity');?></a></li>
+                <!-- <li><a href=""><?php echo __('Topic');?></a></li> -->
             </ul>
             <h2>Submissions</h2>
         </header>

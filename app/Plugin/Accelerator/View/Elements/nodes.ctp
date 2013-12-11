@@ -25,7 +25,7 @@
                 'exact' => false,
                 'remove' => true
             ))); ?>
-            <?php echo $this->Html->link('Read more', $node['Node']['url']); ?>
+            <?php echo $this->Html->link(__('Read more'), $node['Node']['url']); ?>
         </div>
     </article>
 

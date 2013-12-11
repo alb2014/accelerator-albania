@@ -13,5 +13,5 @@
           echo $this->Form->input('website');
         ?>
     </fieldset>
-    <p><small><?php echo __('By submitting this form, you are agreeing to HAPide\'s <a href="/page/terms-and-conditions" target="_blank">Terms &amp; Conditions</a>'); ?>.</small></p>
+    <p><small><?php echo __d('croogo', 'By submitting this form, you are agreeing to HAPide\'s <a href="/page/terms-and-conditions" target="_blank">Terms &amp; Conditions</a>'); ?>.</small></p>
 <?php echo $this->Form->end('Submit');?>

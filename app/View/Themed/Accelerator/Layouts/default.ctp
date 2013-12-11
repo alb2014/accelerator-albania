@@ -33,7 +33,7 @@
         ?>
 
         <div class="faq-tab">
-            <a href="#faq">FAQ</a>
+            <a href="#faq"><?php echo __('FAQ');?></a>
         </div>
         <div class="content">
 
@@ -41,7 +41,7 @@
                 <?php 
                 if($this->Session->check('Auth.User')) { 
                     echo $this->Html->link(
-                            'Profile',
+                            __('Profile'),
                             array(
                                 'plugin' => 'users',
                                 'controller' => 'users',
@@ -51,7 +51,7 @@
                             
                         );
                 } else { ?>
-                    <a href="#login" class="button login">Login</a> 
+                    <a href="#login" class="button login"><?php echo __('Login');?></a> 
                         
                 <?php } ?> 
                     
@@ -63,7 +63,7 @@
                     // ); 
                 ?>
 
-                <h1><a href="/accelerator">HAPide</a></h1>
+                <h1><a href="/accelerator"><?php echo __('HAPide');?></a></h1>
 
                 <!-- Help: is there a better way to set an active class? -->
                 <?php
@@ -93,7 +93,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
                         <li>
                             <?php echo $this->Html->link(__('<span>HAP</span> Learn'),
 '/blog', $options_learn); ?>
-                        <li class="sub"><a href="/about">What is this?</a></li>
+                        <li class="sub"><a href="/about"><?php echo __('What is this?');?></a></li>
                     </ul>
             </header>
 
@@ -117,12 +117,12 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
                                 <li><?php echo $this->Html->link(__('Engage'),
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
-                                <li><a href="/blog">Learn</a></li>
+                                <li><a href="/blog"><?php echo __('Learn');?></a></li>
                                 <li>
                                     <?php 
                                     if($this->Session->check('Auth.User')) { 
                                         echo $this->Html->link(
-                                                'Profile',
+                                                __('Profile'),
                                                 array(
                                                     'plugin' => 'users',
                                                     'controller' => 'users',
@@ -131,7 +131,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
                                                 
                                             );
                                     } else { ?>
-                                        <a href="#login">Login</a> 
+                                        <a href="#login"><?php echo __('Login');?></a> 
                                             
                                     <?php } ?> 
                                 </li>
@@ -139,7 +139,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
                                         <li>
                                         <?php
                                             echo $this->Html->link(
-                                                'Logout',
+                                                __('Logout'),
                                                 array(
                                                     'plugin' => 'users',
                                                     'controller' => 'users',
@@ -156,16 +156,16 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
                                 <li><a href="/blog">News</a></li>
                                 <li><?php echo $this->Html->link(__('Submissions'),
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
-                                <li><a href="/about">What is this?</a></li>
-                                <li><a href="/about">About</a></li>
+                                <li><a href="/about"><?php echo __('What is this?');?></a></li>
+                                <li><a href="/about"><?php echo __('About');?></a></li>
                             </ul>
 
                             <ul>
                                 <!-- <li><?php //echo $this->Html->link('Yunus SB', array()); ?></li> -->
                                 <li><a href="http://www.yunussb.com/" target="_blank"><?php echo __('Yunus SB'); ?></a></li>
-                                <li><a href="http://www.undp.org/content/undp/en/home.html" target="_blank">UNDP</a></li>
-                                <li><a href="/page/terms-and-conditions">Terms &amp; Conditions</a></li>
-                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="http://www.undp.org/content/undp/en/home.html" target="_blank"><?php echo __('UNDP');?></a></li>
+                                <li><a href="/page/terms-and-conditions"><?php echo __('Terms &amp; Conditions');?></a></li>
+                                <li><a href="/contact"><?php echo __('Contact');?></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -198,7 +198,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
 
         <div id="faq" class="modal">
             <div>
-                <a href="#close" title="Close" class="modal-close">x</a>
+                <a href="#close" title="<?php echo __('Close');?>" class="modal-close">x</a>
                 <?php
                     echo $this->Layout->blocks('faq');
                 ?>

@@ -10,5 +10,5 @@
 </section>
 
 <?php
-    echo $this->element('hapide_description', array(), array('plugin' => 'Accelerator'));
+    echo $this->element('Accelerator.hapide_description');
 ?>

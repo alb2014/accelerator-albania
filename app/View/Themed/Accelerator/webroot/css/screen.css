@@ -700,7 +700,11 @@ div.main > aside h3 {
   color: white;
 }
 
-/* line 579, sass/screen.scss */
+/* line 577, sass/screen.scss */
+.news {
+  padding-bottom: 1em;
+}
+/* line 580, sass/screen.scss */
 .news article {
   width: 540px;
   float: right;
@@ -708,7 +712,7 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 581, sass/screen.scss */
+/* line 582, sass/screen.scss */
 .news article .image {
   padding-left: 16px;
   padding-right: 0px;
@@ -717,7 +721,7 @@ div.main > aside h3 {
   margin-right: 20px;
   display: inline;
 }
-/* line 584, sass/screen.scss */
+/* line 585, sass/screen.scss */
 .news article header {
   width: 380px;
   float: right;
@@ -725,7 +729,7 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 587, sass/screen.scss */
+/* line 588, sass/screen.scss */
 .news article .content {
   width: 380px;
   float: right;
@@ -735,25 +739,25 @@ div.main > aside h3 {
   font-size: 0.875em;
   line-height: 1.64286em;
 }
-/* line 590, sass/screen.scss */
+/* line 591, sass/screen.scss */
 .news article .content p {
   margin-top: 0;
 }
-/* line 594, sass/screen.scss */
+/* line 595, sass/screen.scss */
 .news article img {
   margin: 1.25em 0;
   max-width: 100%;
 }
-/* line 598, sass/screen.scss */
+/* line 599, sass/screen.scss */
 .news article p {
   float: left;
 }
-/* line 603, sass/screen.scss */
+/* line 604, sass/screen.scss */
 .news article time {
   padding: 0 .5em 0 0;
 }
 
-/* line 610, sass/screen.scss */
+/* line 611, sass/screen.scss */
 .submissions.sidebar .votes {
   width: 60px;
   float: right;
@@ -761,20 +765,20 @@ div.main > aside h3 {
   *margin-left: -20px;
   display: inline;
 }
-/* line 612, sass/screen.scss */
+/* line 613, sass/screen.scss */
 .submissions.sidebar .votes ~ div {
   width: 300px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 614, sass/screen.scss */
+/* line 615, sass/screen.scss */
 .submissions.sidebar .votes ~ div p, .submissions.sidebar .votes ~ div aside {
   margin: 1em;
 }
 
 /* Engage elements - fixed height, unfortunately */
-/* line 626, sass/screen.scss */
+/* line 627, sass/screen.scss */
 .submissions.main div.fixed-height,
 .program div.fixed-height {
   height: 920px;
@@ -782,49 +786,49 @@ div.main > aside h3 {
 }
 
 /* Homepage Submissions */
-/* line 640, sass/screen.scss */
+/* line 641, sass/screen.scss */
 .submissions {
   /* Individual Submissions */
   /* Wider submissions */
 }
-/* line 641, sass/screen.scss */
+/* line 642, sass/screen.scss */
 .submissions ul.submission-sort {
   float: right;
 }
-/* line 644, sass/screen.scss */
+/* line 645, sass/screen.scss */
 .submissions ul.submission-sort a {
   color: white;
 }
-/* line 650, sass/screen.scss */
+/* line 651, sass/screen.scss */
 .submissions article {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 652, sass/screen.scss */
+/* line 653, sass/screen.scss */
 .submissions article h1 {
   float: left;
 }
-/* line 658, sass/screen.scss */
+/* line 659, sass/screen.scss */
 .submissions article time {
   padding: 0 0 0 .5em;
 }
-/* line 663, sass/screen.scss */
+/* line 664, sass/screen.scss */
 .submissions article.simplified header {
   float: left;
 }
-/* line 666, sass/screen.scss */
+/* line 667, sass/screen.scss */
 .submissions article.simplified .votes {
   margin-top: .5em;
   margin-bottom: .5em;
 }
-/* line 676, sass/screen.scss */
+/* line 677, sass/screen.scss */
 .submissions.main .votes {
   width: 60px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 679, sass/screen.scss */
+/* line 680, sass/screen.scss */
 .submissions.main p.description {
   width: 380px;
   float: left;
@@ -832,7 +836,7 @@ div.main > aside h3 {
   display: inline;
   margin-top: 0;
 }
-/* line 683, sass/screen.scss */
+/* line 684, sass/screen.scss */
 .submissions.main aside {
   width: 60px;
   float: right;
@@ -843,7 +847,7 @@ div.main > aside h3 {
 
 /* -------------------------------------------------------------------------
    Submit Idea & Create Profile Form & Page */
-/* line 700, sass/screen.scss */
+/* line 701, sass/screen.scss */
 .create-profile fieldset {
   margin-top: 1em;
   width: 460px;
@@ -856,26 +860,26 @@ div.main > aside h3 {
   float: right;
   margin-right: 0;
 }
-/* line 704, sass/screen.scss */
+/* line 705, sass/screen.scss */
 .create-profile fieldset label, .create-profile fieldset input {
   margin-left: 1em;
   margin-right: 1em;
 }
-/* line 713, sass/screen.scss */
+/* line 714, sass/screen.scss */
 .create-profile form input[type='submit'] {
   margin: 0 16px 1em;
 }
 
 /* -------------------------------------------------------------------------
    Learn Page */
-/* line 729, sass/screen.scss */
+/* line 730, sass/screen.scss */
 .learn header ul {
   float: right;
 }
 
 /* -------------------------------------------------------------------------
    About Page */
-/* line 747, sass/screen.scss */
+/* line 748, sass/screen.scss */
 .what-is-hapi h3, .what-is-hapi p, .program-structure h3, .program-structure p, .who-is h3, .who-is p {
   margin-left: 1em;
   margin-right: 1em;
@@ -885,7 +889,7 @@ div.main > aside h3 {
    Contact Page */
 /* -------------------------------------------------------------------------
    Idea Page */
-/* line 764, sass/screen.scss */
+/* line 765, sass/screen.scss */
 .idea .votes {
   padding-left: 8px;
   padding-right: 8px;
@@ -895,7 +899,7 @@ div.main > aside h3 {
   display: inline;
   margin-top: 1.5em;
 }
-/* line 768, sass/screen.scss */
+/* line 769, sass/screen.scss */
 .idea div.info {
   width: 460px;
   float: right;
@@ -904,14 +908,14 @@ div.main > aside h3 {
   display: inline;
   margin-bottom: 1em;
 }
-/* line 771, sass/screen.scss */
+/* line 772, sass/screen.scss */
 .idea div.info .idea-type {
   text-transform: capitalize;
 }
 
 /* -------------------------------------------------------------------------
    Edit Idea Page */
-/* line 786, sass/screen.scss */
+/* line 787, sass/screen.scss */
 .idea.edit input[type="text"], .idea.edit input[type="password"], .idea.edit input[type="email"], .idea.edit textarea {
   min-width: 30em;
   max-width: 500px;
@@ -923,28 +927,28 @@ div.main > aside h3 {
    Profile Page */
 /* -------------------------------------------------------------------------
   Posts (Croogo Nodes) Index Page */
-/* line 818, sass/screen.scss */
+/* line 819, sass/screen.scss */
 .nodes .node:nth-child(n+3) {
   border-top: 1px solid #21a4b6;
   margin-top: 2em;
   padding-top: 1em;
 }
-/* line 824, sass/screen.scss */
+/* line 825, sass/screen.scss */
 .nodes .node h2 a {
   color: #222222;
 }
-/* line 829, sass/screen.scss */
+/* line 830, sass/screen.scss */
 .nodes .paging {
   float: right;
   line-height: 3.9em;
 }
-/* line 832, sass/screen.scss */
+/* line 833, sass/screen.scss */
 .nodes .paging .current {
   color: #222222;
 }
 
 /* Post (Croogo Node) View Page */
-/* line 846, sass/screen.scss */
+/* line 847, sass/screen.scss */
 .node-wrapper .node header {
   color: white;
   background: #21a4b6;
@@ -963,14 +967,14 @@ div.main > aside h3 {
 /* 'Static' Pages - Pages w Custom Sidebar blocks */
 /* -------------------------------------------------------------------------
    Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
-/* line 867, sass/screen.scss */
+/* line 868, sass/screen.scss */
 div.organization-info {
   background-color: #d4edf1;
   color: #222222;
   margin-bottom: -1em;
   padding-bottom: 1em;
 }
-/* line 876, sass/screen.scss */
+/* line 877, sass/screen.scss */
 div.organization-info div.block {
   width: 460px;
   float: left;
@@ -982,23 +986,23 @@ div.organization-info div.block:nth-child(2n) {
   float: right;
   margin-right: 0;
 }
-/* line 880, sass/screen.scss */
+/* line 881, sass/screen.scss */
 div.organization-info h3 {
   text-align: center;
 }
 
 /* -------------------------------------------------------------------------
    Full width 'Mentors' Bar (breaks out of grid) */
-/* line 889, sass/screen.scss */
+/* line 890, sass/screen.scss */
 section.mentors {
   background: url(../img/suede_bg.png) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 892, sass/screen.scss */
+/* line 893, sass/screen.scss */
 section.mentors ul {
   margin-bottom: 0;
 }
-/* line 895, sass/screen.scss */
+/* line 896, sass/screen.scss */
 section.mentors ul li {
   width: 300px;
   float: left;
@@ -1010,7 +1014,7 @@ section.mentors ul li:nth-child(3n) {
   float: right;
   margin-right: 0;
 }
-/* line 900, sass/screen.scss */
+/* line 901, sass/screen.scss */
 section.mentors img {
   float: left;
   margin: 1em 1em 1em 0;
@@ -1018,27 +1022,27 @@ section.mentors img {
 
 /* -------------------------------------------------------------------------
    Footer */
-/* line 913, sass/screen.scss */
+/* line 914, sass/screen.scss */
 .content > footer {
   background: url(../img/concrete_bg.jpg) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 916, sass/screen.scss */
+/* line 917, sass/screen.scss */
 .content > footer a {
   color: white;
 }
-/* line 919, sass/screen.scss */
+/* line 920, sass/screen.scss */
 .content > footer h3 {
   text-transform: uppercase;
 }
-/* line 922, sass/screen.scss */
+/* line 923, sass/screen.scss */
 .content > footer .sitemap {
   width: 620px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 924, sass/screen.scss */
+/* line 925, sass/screen.scss */
 .content > footer .sitemap ul {
   float: left;
   width: 140px;
@@ -1046,11 +1050,11 @@ section.mentors img {
   margin-right: 20px;
   display: inline;
 }
-/* line 928, sass/screen.scss */
+/* line 929, sass/screen.scss */
 .content > footer .sitemap li:nth-child(4) {
   margin-top: 1em;
 }
-/* line 932, sass/screen.scss */
+/* line 933, sass/screen.scss */
 .content > footer .social {
   width: 300px;
   float: right;
@@ -1059,35 +1063,35 @@ section.mentors img {
   display: inline;
   text-align: right;
 }
-/* line 935, sass/screen.scss */
+/* line 936, sass/screen.scss */
 .content > footer .social li a {
   display: block;
   float: right;
   margin: 0 0 0 1em;
 }
-/* line 940, sass/screen.scss */
+/* line 941, sass/screen.scss */
 .content > footer .social li a.fb {
   background-position: 0 -1737px;
   height: 60px;
   width: 60px;
 }
-/* line 943, sass/screen.scss */
+/* line 944, sass/screen.scss */
 .content > footer .social li a.rss {
   background-position: 0 -93px;
   height: 60px;
   width: 60px;
 }
-/* line 946, sass/screen.scss */
+/* line 947, sass/screen.scss */
 .content > footer .social li a.google {
   background-position: 0 -173px;
   height: 60px;
   width: 60px;
 }
-/* line 951, sass/screen.scss */
+/* line 952, sass/screen.scss */
 .content > footer ul {
   margin: 0;
 }
-/* line 954, sass/screen.scss */
+/* line 955, sass/screen.scss */
 .content > footer p {
   width: 940px;
   float: right;
@@ -1100,7 +1104,7 @@ section.mentors img {
 
 /* -------------------------------------------------------------------------
    Modal */
-/* line 964, sass/screen.scss */
+/* line 965, sass/screen.scss */
 .modal {
   position: fixed;
   top: 0;
@@ -1116,12 +1120,12 @@ section.mentors img {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 976, sass/screen.scss */
+/* line 977, sass/screen.scss */
 .modal:target {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 981, sass/screen.scss */
+/* line 982, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -1134,7 +1138,7 @@ section.mentors img {
   border-radius: 3px;
   background: #fff;
 }
-/* line 989, sass/screen.scss */
+/* line 990, sass/screen.scss */
 .modal .modal-close {
   color: black;
   position: absolute;
@@ -1146,7 +1150,7 @@ section.mentors img {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 999, sass/screen.scss */
+/* line 1000, sass/screen.scss */
 .modal .modal-close:hover {
   color: #21a4b6;
 }

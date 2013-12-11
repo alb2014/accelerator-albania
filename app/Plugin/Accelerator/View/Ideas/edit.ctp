@@ -47,7 +47,7 @@
 
         <?php /* echo $this->Html->link('Cancel',
 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id']),array('class' => 'button')); */ ?>
-        <a class="button" href="/accelerator/ideas">Cancel</a>
+        <a class="button" href="/accelerator/ideas"><?php echo __('Cancel');?></a>
     </div>
 </section>
 

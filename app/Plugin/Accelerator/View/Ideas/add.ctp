@@ -6,7 +6,7 @@
 <!-- Submission Section -->
 <section class="submit-idea">
     <header>
-        <h2>Submit Idea</h2>
+        <h2><?php echo __('Submit Idea');?></h2>
     </header>
 
     <div class="inner">
@@ -41,7 +41,7 @@
 <?php if(!$this->Session->check('Auth.User')) { ?>
     <section class="create-profile">
         <header>
-            <h2>Create Profile</h2>
+            <h2><?php echo __('Create Profile');?></h2>
         </header>
 
         <?php

@@ -3,6 +3,8 @@
         <h2><?php echo __('What is HAPIDE?'); ?></h2>
     </header>
 
-    <?php echo $this->Layout->blocks('what-is-hapide'); ?>
+    <div class="inner">
+        <?php echo $this->Layout->blocks('what-is-hapide'); ?>
+    </div>
 
 </section>
