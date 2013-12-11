@@ -7,6 +7,8 @@
 
 @import "compass/css3";
 
+@import "compass/support";
+
 /* Vars */
 $primary_bg:         #21a4b6;
 $primary_bg_text:    white;
@@ -38,6 +40,11 @@ $total-columns: 12;
 $column-width: 60px;
 $gutter-width: 20px;
 $grid-padding: 10px;
+
+/* Legacy Support */
+$legacy-support-for-ie  : true;
+$legacy-support-for-ie6 : $legacy-support-for-ie;
+$legacy-support-for-ie7 : $legacy-support-for-ie;
 
 /* Not Fluid */
 $container-style: static;
@@ -100,6 +107,8 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
 
 .action-button {
   display: inline-block;
+    zoom: 1;
+    *display: inline;
   padding: .5em 1em;
   background-color: $primary_bg;
   color: $primary_bg_text;
@@ -131,7 +140,7 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
     margin-right: .5em;
     a {
       padding-left: 2em;
-      background: url(../img/sprites/read_more.png) no-repeat left center transparent;
+      @include sprites-sprite(read_more, $offset_y: 5px);
     }
   }
 }
@@ -139,6 +148,8 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
 .horizontal-ul {
   li {
     display: inline-block;
+      zoom: 1;
+      *display: inline;
     padding: 0 .5em;
   }
 }
@@ -242,7 +253,7 @@ a {
   a {
     display: block;
     width: 38px;
-    height: 45px;
+    height: 45px !important;
     line-height: 38px;
     color: white;
     padding: .25em .5em;
@@ -251,23 +262,23 @@ a {
       text-decoration: none
     }
     &.up {
-      background: url(../img/sprites/vote_up_wide_blue.png) no-repeat center top transparent;  
+      @include sprites-sprite(vote_up_wide_blue, $offset_x: 8px);
       &:hover {
-        background: url(../img/sprites/vote_up_wide_darkgrey.png) no-repeat center top transparent;
+        @include sprites-sprite(vote_up_wide_darkgrey, $offset_x: 8px); 
       }
       &.voted {
-        background: url(../img/sprites/vote_up_wide_white.png) no-repeat center top transparent;
+        @include sprites-sprite(vote_up_wide_white, $offset_x: 8px); 
       }
     }
     &.down {
-      background: url(../img/sprites/vote_down_wide_blue.png) no-repeat center bottom transparent;
+      @include sprites-sprite(vote_down_wide_blue, $offset_x: 8px, $offset_y: -29px); 
       margin-top: -25px;
       line-height: 51px;
       &:hover {
-        background: url(../img/sprites/vote_down_wide_darkgrey.png) no-repeat center bottom transparent;
+        @include sprites-sprite(vote_down_wide_darkgrey, $offset_x: 8px, $offset_y: -29px); 
       }
       &.voted {
-        background: url(../img/sprites/vote_down_wide_white.png) no-repeat center bottom transparent;
+        @include sprites-sprite(vote_down_wide_white, $offset_x: 8px, $offset_y: -29px); 
       }
     }
 
@@ -282,10 +293,10 @@ section {
   header {
     .votes {
       .up {
-        background: url(../img/sprites/vote_up_wide_grey.png) no-repeat center top transparent;
+        @include sprites-sprite(vote_up_wide_grey, $offset_x: 8px); 
       }
       .down {
-        background: url(../img/sprites/vote_down_wide_grey.png) no-repeat center bottom transparent;
+        @include sprites-sprite(vote_down_wide_grey, $offset_x: 8px, $offset_y: -29px); 
       }
     }
   }  
@@ -303,6 +314,8 @@ section {
   a {
     color: white;
     display: inline-block;
+      zoom: 1;
+      *display: inline;
     padding: .5em;
   }
 
@@ -349,6 +362,8 @@ section {
     }
     li {
       display: inline-block;
+        zoom: 1;
+        *display: inline;
       padding: 0 2.5em 0 0;
       font-size: $base-font-size*1.5;
       a {
@@ -393,6 +408,8 @@ article {
   aside {
     a {
       display: inline-block;
+        zoom: 1;
+        *display: inline;
       width: 26px;
       height: 28px;
       @extend .hidden-text;
@@ -970,12 +987,14 @@ section.mentors {
   left: 0;
   background: rgba(0,0,0,0.8);
   z-index: 99999;
-  opacity:0;
+  display: none;
+  opacity: 0;
   @include transition(opacity 400ms ease-in);
   pointer-events: none;
 
   &:target {
     opacity:1;
+    display: block;
     pointer-events: auto;
   }
 
