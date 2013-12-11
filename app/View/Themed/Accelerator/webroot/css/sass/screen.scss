@@ -1017,3 +1017,15 @@ section.mentors {
     &:hover { color: $primary_bg; }
   }
 }
+
+
+
+.lt-ie9 {
+
+  .modal {
+    background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); 
+    zoom: 1;
+  }
+
+}
