@@ -65,8 +65,8 @@
 
                 <h1><a href="/accelerator"><?php echo __('HAPide');?></a></h1>
 
-                <!-- Help: is there a better way to set an active class? -->
                 <?php
+                    // Help: is there a better way to set an active class?
 
                     $options_submit = array('escape' => false);
                     if($this->request->here == '/accelerator/ideas/add'){
@@ -84,15 +84,11 @@
                 <nav>
                     <ul class="main-toggles">
                         <li>
-                            <?php
-                                echo $this->Html->link(__('<span>HAP</span> Submit'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add'), $options_submit);
-                            ?>
+                            <?php echo $this->Html->link(__('<span>HAP</span> Submit'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add'), $options_submit);?>
                         </li>
-                        <li><?php echo $this->Html->link(__('<span>HAP</span> Engage'),
-array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), $options_engage); ?></li>
+                        <li><?php echo $this->Html->link(__('<span>HAP</span> Engage'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), $options_engage); ?></li>
                         <li>
-                            <?php echo $this->Html->link(__('<span>HAP</span> Learn'),
-'/blog', $options_learn); ?></li>
+                            <?php echo $this->Html->link(__('<span>HAP</span> Learn'), '/blog', $options_learn); ?></li>
                         <li class="sub"><a href="/about"><?php echo __('What is this?');?></a></li>
                     </ul>
                 </nav>
@@ -114,10 +110,8 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
                         <h3><?php echo __('Sitemap')?></h3>
                         <nav>
                             <ul>
-                                <li><?php echo $this->Html->link(__('Submit'),
-array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
-                                <li><?php echo $this->Html->link(__('Engage'),
-array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
+                                <li><?php echo $this->Html->link(__('Submit'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
+                                <li><?php echo $this->Html->link(__('Engage'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
                                 <li><a href="/blog"><?php echo __('Learn');?></a></li>
                                 <li>
                                     <?php 
@@ -155,8 +149,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'));
 
                             <ul>
                                 <li><a href="/blog">News</a></li>
-                                <li><?php echo $this->Html->link(__('Submissions'),
-array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
+                                <li><?php echo $this->Html->link(__('Submissions'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
                                 <li><a href="/about"><?php echo __('What is this?');?></a></li>
                                 <li><a href="/about"><?php echo __('About');?></a></li>
                             </ul>
