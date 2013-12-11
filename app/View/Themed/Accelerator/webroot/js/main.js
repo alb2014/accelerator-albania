@@ -2,11 +2,26 @@
 
   $(document).ready(function() {
 
-    // Close modal window
+    // Close & open modal windows
+    $('#header_login, #footer_login').on('click', function(e) {
+      $('#login').addClass('open');
+      e.preventDefault();
+    });
+
+    $('#faq_tab').on('click', function(e) {
+      $('#faq').addClass('open');
+      e.preventDefault();
+    });
+
+    $('.modal-close').on('click', function(e) {
+      $('.modal.open').removeClass('open');
+      e.preventDefault();
+    });
+
     $(".modal").on('click', function(e) {
       if(e.target == this){ 
         // only if the target itself has been clicked
-        location.hash = 'close';
+        $('.modal.open').removeClass('open');
       }
     });
 

@@ -33,7 +33,7 @@
         ?>
 
         <div class="faq-tab">
-            <a href="#faq"><?php echo __('FAQ');?></a>
+            <a href="/page/faq" id="faq_tab"><?php echo __('FAQ');?></a>
         </div>
         <div class="content">
 
@@ -48,12 +48,20 @@
                                 'action' => 'index'
                             ),
                             array('class' => 'button login')
-                            
                         );
-                } else { ?>
-                    <a href="#login" class="button login"><?php echo __('Login');?></a> 
-                        
-                <?php } ?> 
+                } else { 
+
+                    echo $this->Html->link(
+                            __('Login'),
+                            array(
+                                'plugin' => 'users',
+                                'controller' => 'users',
+                                'action' => 'login'
+                            ),
+                            array('class' => 'button login','id' => 'header_login')
+                        );
+
+                } ?> 
                     
                 <?php 
                     // echo $this->Html->link(
@@ -125,10 +133,19 @@
                                                 )
                                                 
                                             );
-                                    } else { ?>
-                                        <a href="#login"><?php echo __('Login');?></a> 
-                                            
-                                    <?php } ?> 
+                                    } else { 
+
+                                        echo $this->Html->link(
+                                                __('Login'),
+                                                array(
+                                                    'plugin' => 'users',
+                                                    'controller' => 'users',
+                                                    'action' => 'login'
+                                                ),
+                                                array('id' => 'footer_login')
+                                            );
+
+                                    } ?> 
                                 </li>
                                 <?php if($this->Session->check('Auth.User')) { ?>
                                         <li>
@@ -183,7 +200,7 @@
         <div id="login" class="modal">
             <div>
                 <a href="#close" title="Close" class="modal-close">x</a>
-                <h2>Login</h2>
+                <h2><?php echo __('Login');?></h2>
                 <?php
                     echo $this->element('login_form', array(), array('plugin' => 'Users'));
                 ?>
@@ -192,7 +209,7 @@
 
         <div id="faq" class="modal">
             <div>
-                <a href="#close" title="<?php echo __('Close');?>" class="modal-close">x</a>
+                <a id="close" title="<?php echo __('Close');?>" class="modal-close">x</a>
                 <?php
                     echo $this->Layout->blocks('faq');
                 ?>

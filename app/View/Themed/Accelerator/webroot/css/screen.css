@@ -1152,7 +1152,7 @@ section.mentors img {
   pointer-events: none;
 }
 /* line 994, sass/screen.scss */
-.modal:target {
+.modal.open {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   pointer-events: auto;
