@@ -991,7 +991,7 @@ section.mentors {
   @include transition(opacity 400ms ease-in);
   pointer-events: none;
 
-  &:target {
+  &.open {
     @include opacity(1);
     pointer-events: auto;
   }
