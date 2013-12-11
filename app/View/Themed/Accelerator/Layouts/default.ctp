@@ -92,9 +92,10 @@
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), $options_engage); ?></li>
                         <li>
                             <?php echo $this->Html->link(__('<span>HAP</span> Learn'),
-'/blog', $options_learn); ?>
+'/blog', $options_learn); ?></li>
                         <li class="sub"><a href="/about"><?php echo __('What is this?');?></a></li>
                     </ul>
+                </nav>
             </header>
 
             <div class="main">
