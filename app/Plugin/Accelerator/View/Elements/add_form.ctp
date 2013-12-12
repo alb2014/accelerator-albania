@@ -6,7 +6,15 @@
 // 	echo __('You are not logged in');
 // }
 
-echo $this->Form->create('Idea');
+echo $this->Form->create('Accelerator.Idea', array(
+    'url' => array(
+    	'plugin' => 'accelerator',
+    	'controller' => 'ideas', 
+    	'action' => 'add'
+		)
+	)
+);
+
 echo $this->Form->input('name', array('label' => __('Idea Title')));
 echo $this->Form->input('desc', array('rows' => '7', 'label' => __('The Grab (240 Characters)')));
 echo $this->Form->input('type', array('options' =>
