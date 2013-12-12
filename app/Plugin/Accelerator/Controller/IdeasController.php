@@ -63,6 +63,13 @@ class IdeasController extends AcceleratorAppController {
                 $this->Session->setFlash(__('The idea with id: %s has been deleted.', h($id)));
                 return $this->redirect(array('action' => 'index'));
             }
+        } else {
+
+            $this->Session->setFlash(__('You are not authorized to delete this idea.'));
+            return $this->redirect(array(
+                    'action' => 'view',
+                    $id
+                ));
         }
     }
 
@@ -82,14 +89,24 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function edit($id = null) {
-        $user = AuthComponent::user();
         if (!$id) {
             throw new NotFoundException(__("We couldn't find that idea."));
         }
 
         $idea = $this->Idea->findById($id);
+
         if (!$idea) {
             throw new NotFoundException(__("We couldn't find that idea."));
+        }
+
+        $user = AuthComponent::user();
+        
+        if($user['id'] != $idea['Idea']['user_id']){
+            $this->Session->setFlash(__('You are not authorized to edit this idea.'));
+            return $this->redirect(array(
+                    'action' => 'view',
+                    $id
+                ));
         }
 
         if ($this->request->is(array('post', 'put'))) {
