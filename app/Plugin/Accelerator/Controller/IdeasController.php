@@ -202,15 +202,14 @@ class IdeasController extends AcceleratorAppController {
 
 
         $this->_sendEmail(
-                Configure::read('Site.title'), 
-                $ideaUser['email'],
-                __d('accelerator', 'Congratulations! [%s] has reached tier [%d]',$idea['name'], $tier_level),
+                'phillip.wilt@gmail.com',
+                __d('accelerator', 'Congratulations! %s has reached Tier %d',$idea['name'], $tier_level),
                 'Accelerator.tier_level',
-                null,
                 $this->theme,
                 array(
                     'user' => $ideaUser,
-                    'idea' => $idea
+                    'idea' => $idea,
+                    'tier_level' => $tier_level
                 )
         );
 
@@ -230,7 +229,7 @@ class IdeasController extends AcceleratorAppController {
  * @param string $emailType user activation, reset password, used in log message when failing.
  * @return boolean True if email was sent, False otherwise.
  */
-    protected function _sendEmail($to, $subject, $template, $emailType, $theme = null, $viewVars = null) {
+    protected function _sendEmail($to, $subject, $template, $theme = null, $viewVars = null) {
         if (is_null($theme)) {
             $theme = $this->theme;
         }
