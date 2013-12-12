@@ -91,17 +91,6 @@ class DATABASE_CONFIG {
       'encoding'   => 'utf8',
     );
   }
-    public $old_default = array(
-        'datasource' => 'Database/Mysql',
-        'persistent' => false,
-        'host' => 'us-cdbr-east-04.cleardb.com',
-        'login' => 'b18eb52c19c73e',
-        'password' => '89fc5c33',
-        'database' => 'heroku_b7b2e6080fc0ad9',
-        'prefix' => '',
-        'encoding' => 'UTF8',
-        'port' => '',
-    );
 
     public $test = array(
         'datasource' => 'Database/Mysql',
