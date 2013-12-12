@@ -16,8 +16,14 @@
         <h3>Idea Category</h3>
         <p class="idea-type"><?php echo $idea['Idea']['type']; ?></p>
 
-        <?php echo $this->Html->link('Edit my idea',
-    array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); ?>
+        <?php 
+        
+        if($isIdeaOwner):
+            echo $this->Html->link('Edit my idea',
+                array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); 
+        endif
+        
+        ?>
     </div>
 
 </section>
