@@ -24,21 +24,40 @@
                                     'other' => 'Other');
 
         echo $this->Form->create('Idea');
-        echo $this->Form->input('title', array('label' => 'Idea Title'));
-        echo $this->Form->input('description', array('rows' => '3', 'label' => 'The Grab'));
+        echo $this->Form->input('title', 
+            array(
+                'label' => 'Idea Title',
+                'value ' => $idea['name']
+                )
+            );
+        echo $this->Form->input('description', 
+            array(
+                'rows' => '3', 
+                'label' => 'The Grab',
+                'value' => $idea['desc']
+                ));
+
         echo $this->Form->input('type', array('options'=> $typeOpts, 'label' => 'Type of Idea'));
         // Needs to be added to the table structure
         echo $this->Form->input('social_business', array('type' => 'checkbox', 'label' => 'Is this a social business?'));
         $user = AuthComponent::user();
         echo $this->Form->input('user_id', array('type' => 'hidden',
                             'value' => $user['id']));
-        echo $this->Form->input('problem', array('rows' => '5',
-                            ));
-        echo $this->Form->input('solution', array('rows' => '5'));
-        echo $this->Form->input('market', array('rows' => '5'));
-        echo $this->Form->input('competition', array('rows' => '5'));
-        echo $this->Form->input('model', array('options'=> $modelOpts));
-        echo $this->Form->input('promise', array('rows' => '5'));
+        
+        if($idea['tier_level'] > 0): 
+
+            echo $this->Form->input('problem', 
+                array(
+                    'rows' => '5',
+                    'value' => $idea['problem']
+                ));
+            echo $this->Form->input('solution', array('rows' => '5'));
+            echo $this->Form->input('market', array('rows' => '5'));
+            echo $this->Form->input('competition', array('rows' => '5'));
+            echo $this->Form->input('model', array('options'=> $modelOpts));
+            echo $this->Form->input('promise', array('rows' => '5'));
+
+        endif;
 
         echo $this->Form->input('private', array('type' => 'checkbox', 'label' => 'Keep this idea private'));
 

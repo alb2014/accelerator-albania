@@ -135,8 +135,8 @@ class IdeasController extends AcceleratorAppController {
         if (!$this->request->data) {
             $this->request->data = $idea;
         }
-        
-        $this->set('ideas', ClassRegistry::init('Idea')->find('all'));
+        $this->log($idea);
+        $this->set('idea', $idea['Idea']);
     }
 
     public function vote($ideaId, $value, $async=false){
