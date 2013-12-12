@@ -74,6 +74,7 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function view($ideaId = null){
+        
         if (!$ideaId) {
             throw new NotFoundException(__('Invalid idea'));
         }
@@ -83,6 +84,16 @@ class IdeasController extends AcceleratorAppController {
         if (!$idea) {
             throw new NotFoundException(__('Invalid idea'));
         }
+
+        $user = AuthComponent::user();
+
+        $isIdeaOwner = false;
+
+        if($user['id'] == $idea['Idea']['user_id']) {
+            $isIdeaOwner = true;
+        }
+
+        $this->set('isIdeaOwner', $isIdeaOwner);
 
         $this->set('idea', $idea);
         $this->set('ideas', ClassRegistry::init('Idea')->find('all'));
@@ -98,6 +109,9 @@ class IdeasController extends AcceleratorAppController {
         if (!$idea) {
             throw new NotFoundException(__("We couldn't find that idea."));
         }
+
+
+        //check to see if user is the idea owner
 
         $user = AuthComponent::user();
         
