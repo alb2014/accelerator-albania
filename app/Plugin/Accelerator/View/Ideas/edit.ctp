@@ -70,6 +70,7 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
     </div>
 </section>
 
+<?php  if($idea['tier_level'] > 0): ?>
 <!-- References Sidebar (block in admin) -->
 <section class="references">
     <header>
@@ -81,6 +82,8 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
     </div>
 
 </section>
+
+<?php endif; ?>
 
 <?php
     $this->start('footer_bar');

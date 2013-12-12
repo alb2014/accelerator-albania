@@ -6,9 +6,9 @@ echo __d('accelerator', "Your idea %s has reached Tier %d \n",$idea['name'], $ti
 $url = Router::url(array(
 		'plugin' => 'accelerator',
 		'controller' => 'ideas',
-		'action' => 'view',
+		'action' => 'edit',
 		$idea['id']
 	), true);
 
-	echo __d('accelerator', "Take a look at your idea's progress %s \n", $url);
+	echo __d('accelerator', "You have new information to enter to your idea %s \n", $url);
 ?>
