@@ -33,7 +33,7 @@ class AcceleratorActivation {
 		$controller->Croogo->addAco('Accelerator'); // ExampleController
 		$controller->Croogo->addAco('Accelerator/admin_index'); // ExampleController::admin_index()
 		$controller->Croogo->addAco('Accelerator/index', array('registered', 'public')); // ExampleController::index()
-		$controller->Croogo->addAco('Accelerator/ideas/index', array('registered')); 
+		$controller->Croogo->addAco('Accelerator/ideas/index', array('registered', 'public')); 
 		$controller->Croogo->addAco('Accelerator/ideas/add', array('registered')); 
 		$controller->Croogo->addAco('Accelerator/ideas/edit', array('registered')); 
 		$controller->Croogo->addAco('Accelerator/ideas/vote', array('registered'));
