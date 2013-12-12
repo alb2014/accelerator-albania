@@ -1,11 +1,14 @@
 <?php
 App::uses('Vote', 'Accelerator.Model');
+App::uses('User', 'Users.Model');
+App::uses('CakeEmail', 'Network/Email');
+
 class IdeasController extends AcceleratorAppController {
         public $components = array('Paginator');
 
 
     public $paginate = array(
-        'limit' => 25,
+        'limit' => 10,
         'order' => array(
             'Idea.total_votes' => 'desc',
             'Idea.up_votes' => 'desc'
@@ -166,10 +169,13 @@ class IdeasController extends AcceleratorAppController {
 
         if($tier_level == 0 && $total_votes == $tier_2_votes_req) {
             $tier_level++;
+            $this->_alertUser($idea, $tier_level);
         } else if($tier_level == 1 && $total_votes == $tier_3_votes_req) {
             $tier_level++;
+            $this->_alertUser($idea, $tier_level);
         }
 
+        $this->_alertUser($idea, $tier_level);
         // End leveling up logic
 
         $data['Idea']['up_votes'] = $upvotes;
@@ -178,6 +184,74 @@ class IdeasController extends AcceleratorAppController {
         $data['Idea']['tier_level'] = $tier_level;
 
         $this->Idea->save($data);
+    }
+
+
+    private function _alertUser($idea, $tier_level){
+
+        $this->log('$idea');
+        $this->log($idea);
+
+        $userHandle = new User();
+        $ideaUser = $userHandle->find('first', array('conditions' =>array('User.id' => $idea['user_id'])));
+        $ideaUser = $ideaUser['User'];
+
+        
+        $this->log('$ideaUser');
+        $this->log($ideaUser);
+
+
+        $this->_sendEmail(
+                Configure::read('Site.title'), 
+                $ideaUser['email'],
+                __d('accelerator', 'Congratulations! [%s] has reached tier [%d]',$idea['name'], $tier_level),
+                'Accelerator.tier_level',
+                null,
+                $this->theme,
+                array(
+                    'user' => $ideaUser,
+                    'idea' => $idea
+                )
+        );
+
+    }
+
+
+
+    /**
+ * Convenience method to send email
+ *
+ * @param string $from Sender email
+ * @param string $to Receiver email
+ * @param string $subject Subject
+ * @param string $template Template to use
+ * @param string $theme Theme to use
+ * @param array  $viewVars Vars to use inside template
+ * @param string $emailType user activation, reset password, used in log message when failing.
+ * @return boolean True if email was sent, False otherwise.
+ */
+    protected function _sendEmail($to, $subject, $template, $emailType, $theme = null, $viewVars = null) {
+        if (is_null($theme)) {
+            $theme = $this->theme;
+        }
+        $success = false;
+
+        try {
+            // $this->log(func_get_args()); //for debugging
+            $email = new CakeEmail();
+            $email->config('default');
+            // $email->from($from[1], $from[0]);
+            $email->to($to);
+            $email->subject($subject);
+            $email->template($template);
+            $email->viewVars($viewVars);
+            $email->theme($theme);
+            $success = $email->send();
+        } catch (SocketException $e) {
+            $this->log(sprintf('Error sending %s notification : %s', $emailType, $e->getMessage()));
+        }
+
+        return $success;
     }
 
 
