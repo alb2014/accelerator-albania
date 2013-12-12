@@ -138,7 +138,7 @@ class IdeasController extends AcceleratorAppController {
 
     private function updateVotes($ideaId){
         
-        $idea =$this->Idea->findById($ideaId)['Idea'];
+        $idea = $this->Idea->findById($ideaId)['Idea'];
         $this->Idea->id = $ideaId;
         
         $voteHandle = new Vote();
