@@ -7,6 +7,12 @@
     }
 ?>
 
+<?php
+    if ($this->Layout->node('CustomFields.about_intro')) {
+        echo $this->Layout->node('CustomFields.about_intro');
+    };
+?>
+
 <section class="node-wrapper<?php if ($custom_sidebar) {?> static<?php } ?>">
 
     <div id="node-<?php echo $this->Nodes->field('id'); ?>" class="node node-type-<?php echo $this->Nodes->field('type'); ?>">
