@@ -115,6 +115,7 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
   border: 0;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
   &:hover {
     background-color: $primary_bg_hover;
     color: $primary_bg_text;
@@ -182,6 +183,35 @@ ul {
   padding: 0;
 }
 
+p {
+  margin: 1em 0 .5em;
+}
+
+time {
+  color: $primary_bg;
+  font-weight: bold;
+}
+
+a {
+  color: $link_color;
+  text-decoration: none;
+  &:hover {
+    color: $link_color_hover;
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $link_color;
+  }
+
+  /* Buttons */
+  &.button {
+    @extend .action-button;
+  }
+}
+
+
+/* Forms */
+
 label {
   font-weight: bold;
 }
@@ -220,31 +250,28 @@ div.input.checkbox {
   margin-bottom: 1em;
 }
 
-p {
-  margin: 1em 0 .5em;
-}
-
-time {
-  color: $primary_bg;
-  font-weight: bold;
-}
-
-a {
-  color: $link_color;
-  text-decoration: none;
-  &:hover {
-    color: $link_color_hover;
-    text-decoration: underline;
+.form-help {
+  float: right;
+  margin-right: 1em;
+  cursor: pointer;
+  position: relative;
+  a:hover {
+    text-decoration: none;
   }
-  &:visited {
-    color: $link_color;
-  }
-
-  /* Buttons */
-  &.button {
-    @extend .action-button;
+  div {
+    display: none;
+    position: absolute;
+    width: 250px;
+    top: -.3em;
+    left: 4em;
+    padding: .5em;
+    background: #f9f9f9;
+    &.show {
+      display: block;
+    }
   }
 }
+
 
 /* Vote Buttons */
 .votes {
@@ -1020,6 +1047,9 @@ section.mentors {
 
 .flash_message {
   text-align: center;
+  > div {
+    padding-bottom: 2em;
+  }
 }
 
 

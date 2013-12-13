@@ -46,15 +46,72 @@
         
         if($idea['tier_level'] > 0): 
 
+        ?> 
+
+        <span id="problem_help" class="form-help">
+            <a href="">[?]</a>
+            <div>
+                <?php echo __('Problem hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+            </div>
+        </span> 
+
+        <?php
             echo $this->Form->input('problem', 
                 array(
                     'rows' => '5',
                     'value' => $idea['problem']
                 ));
+
+        ?> 
+
+        <span id="solution_help" class="form-help">
+            <a href="">[?]</a>
+            <div>
+                <?php echo __('Solution hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+            </div>
+        </span> 
+
+        <?php
+
             echo $this->Form->input('solution', array('rows' => '5'));
+
+        ?> 
+
+        <span id="market_help" class="form-help">
+            <a href="">[?]</a>
+            <div>
+                <?php echo __('Market hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+            </div>
+        </span> 
+
+        <?php
             echo $this->Form->input('market', array('rows' => '5'));
+
+        ?> 
+
+        <span id="competition_help" class="form-help">
+            <a href="">[?]</a>
+            <div>
+                <?php echo __('Competition hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+            </div>
+        </span> 
+
+        <?php
+
             echo $this->Form->input('competition', array('rows' => '5'));
             echo $this->Form->input('model', array('options'=> $modelOpts));
+
+        ?> 
+
+        <span id="promise_help" class="form-help">
+            <a href="">[?]</a>
+            <div>
+                <?php echo __('Promise hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+            </div>
+        </span> 
+
+        <?php
+
             echo $this->Form->input('promise', array('rows' => '5'));
 
         endif;

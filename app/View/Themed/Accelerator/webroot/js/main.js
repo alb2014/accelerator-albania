@@ -33,9 +33,17 @@
       $('.slides li').removeClass('selected').eq($(this).parent().index()).addClass('selected');
     });
 
-    $('.voted').on('click', function(e) {
+    // Make sure some <a> tags don't click awayy
+    $('.voted, .form-help a').on('click', function(e) {
       e.preventDefault();
-    })
+    });
+
+    // Hover form helpers
+    $('.form-help').hover(function() {
+      $(this).children('div').addClass('show');
+    }, function() {
+      $(this).children('div').removeClass('show');
+    });
 
   })
 
