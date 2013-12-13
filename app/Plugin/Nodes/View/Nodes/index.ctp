@@ -35,3 +35,7 @@
 <?php
     // echo $layout->node('CustomFields.sidebar_content');
 ?>
+
+<aside class="miscellaneous">
+    <?php echo $this->Layout->blocks('blog-index-footer'); ?>
+</aside>
