@@ -1,4 +1,6 @@
-<?php echo $this->Layout->blocks('engage'); ?>
+<div class="header-block">
+    <?php echo $this->Layout->blocks('engage'); ?>
+</div>
 
 <!-- Submission Section -->
 <div class="columns-7-5">

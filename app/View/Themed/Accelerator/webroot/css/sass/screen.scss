@@ -119,6 +119,7 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
   &:hover {
     background-color: $primary_bg_hover;
     color: $primary_bg_text;
+    text-decoration: none;
   }
   &:visited {
     color: $primary_bg_text;
@@ -155,15 +156,13 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
   }
 }
 
-.header-image {
+.header-block {
   margin-bottom: 1.5em;
 }
 
-.block-body {
-  span {
-    color: $primary_bg;
-    font-weight: bold;
-  }
+span.emphasis {
+  color: $primary_bg;
+  font-weight: bold;
 }
 
 /* Could change depending on success or failure */
@@ -396,6 +395,10 @@ section {
         float: right;
         padding: 0;
         font-size: 1em;
+        a {
+          padding-bottom: 3px;
+        }
+
       }
     }
     li {
@@ -410,15 +413,23 @@ section {
         span {
           font-weight: normal;
         }
-        &:hover {
-          color: $link_color;
-        }
       }
     }
-    a.active {
-      color: $primary_bg;
-      cursor: default;
+    .main-toggles {
+      a.active {
+        color: $primary_bg;
+        cursor: default;
+        &:hover {
+          border-bottom-width: 0;
+          margin-bottom: 0;
+        }
+      }
+      a:hover {
+        border-bottom: 2px solid $body_text;
+        margin-bottom: -2px;
+      }
     }
+
     /* Not supported by IE */
     li:not(.sub) a {
       font-weight: bold;
@@ -579,6 +590,11 @@ aside.miscellaneous {
   @include span-columns(12 omega,12);
   clear: both;
   margin-bottom: 1em;
+  h3 {
+    @include adjust-font-size-to(24px);
+    text-align: center;
+    margin-top: 1em;
+  }
 }
 
 div.main {
@@ -927,7 +943,7 @@ div.organization-info {
   background-color: $secondary_bg;
   color: $secondary_bg_text;
   margin-bottom: -1em;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   > div {
     @extend .container;
 
@@ -937,7 +953,9 @@ div.organization-info {
     @include nth-omega(2n);
   }
   h3 {
+    @include adjust-font-size-to(24px);
     text-align: center;
+    margin-top: 1em;
   }
 }
 

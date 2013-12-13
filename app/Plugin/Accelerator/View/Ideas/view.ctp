@@ -1,4 +1,4 @@
-<div class="header-image">
+<div class="header-block">
     <?php echo $this->Layout->blocks('idea-intro'); ?>
 </div>
 

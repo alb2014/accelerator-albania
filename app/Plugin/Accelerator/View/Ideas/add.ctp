@@ -1,4 +1,6 @@
-<?php echo $this->Layout->blocks('submit'); ?>
+<div class="header-block">
+    <?php echo $this->Layout->blocks('submit'); ?>
+</div>
 
 <!-- Submission Section -->
 <section class="submit-idea">
