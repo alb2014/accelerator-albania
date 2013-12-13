@@ -1,4 +1,6 @@
-<?php echo $this->Layout->blocks('learn'); ?>
+<div class="header-block">
+    <?php echo $this->Layout->blocks('learn'); ?>
+</div>
 
 <section class="nodes">
     <header>

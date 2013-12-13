@@ -9,7 +9,9 @@
 
 <?php
     if ($this->Layout->node('CustomFields.about_intro')) {
-        echo $this->Layout->node('CustomFields.about_intro');
+        ?> <div class="header-block"> <?php
+            echo $this->Layout->node('CustomFields.about_intro');
+        ?> </div> <?php
     };
 ?>
 
