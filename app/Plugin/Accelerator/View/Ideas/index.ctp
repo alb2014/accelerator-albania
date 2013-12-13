@@ -1,5 +1,4 @@
-<img width="940" height="175" src="">
-<p><?php echo $this->Layout->blocks('engage'); ?></p>
+<?php echo $this->Layout->blocks('engage'); ?>
 
 <!-- Submission Section -->
 <div class="columns-7-5">

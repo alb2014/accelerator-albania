@@ -1,7 +1,4 @@
-<?php
-    echo $this->Html->image('homepage2.jpg');
-?>
-<p><?php echo $this->Layout->blocks('submit'); ?></p>
+<?php echo $this->Layout->blocks('submit'); ?>
 
 <!-- Submission Section -->
 <section class="submit-idea">

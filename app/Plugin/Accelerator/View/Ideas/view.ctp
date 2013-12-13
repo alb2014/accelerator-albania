@@ -1,3 +1,7 @@
+<div class="header-image">
+    <?php echo $this->Layout->blocks('idea-intro'); ?>
+</div>
+
 <!-- Idea -->
 <section class="idea">
     <header>

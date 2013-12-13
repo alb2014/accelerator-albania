@@ -155,14 +155,25 @@ $sprites: sprite-map("sprites/*.png", $spacing: 20px); /* sdknf */
   }
 }
 
+.header-image {
+  margin-bottom: 1.5em;
+}
+
+.block-body {
+  span {
+    color: $primary_bg;
+    font-weight: bold;
+  }
+}
+
 /* Could change depending on success or failure */
-#flashMessage {
+/*#flashMessage {
   padding: 1em;
   margin-bottom: 1em;
   &.message, &.success {
     background-color: #c2ebaa;
   }
-}
+}*/
 
 
 /* -------------------------------------------------------------------------
@@ -418,6 +429,7 @@ section {
 
 /* -------------------------------------------------------------------------
    Universal Article Elements */
+
 article {
   header {
     @include clearfix;
@@ -1009,6 +1021,7 @@ section.mentors {
 
 /* -------------------------------------------------------------------------
    Modal */
+
 .modal {
   position: fixed;
   top: 0;
