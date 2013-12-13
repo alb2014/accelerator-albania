@@ -19,7 +19,7 @@ html {
 /* sdknf */
 /* line 274, sprites/*.png */
 .sprites-sprite, .column-wrapper .read-more a, .news .read-more a, .submissions.sidebar .read-more a, .submissions.main .read-more a,
-.program .read-more a, .submit-idea .read-more a, .create-profile .read-more a, .learn .read-more a, .learn-more .read-more a, .what-is-hapi .read-more a, .program-structure .read-more a, .who-is .read-more a, .contact-wrapper .read-more a, .direct-contact .read-more a, .idea .read-more a, .idea-comments .read-more a, .references .read-more a, .users .read-more a, .nodes .read-more a, .categories .read-more a, .node-wrapper .read-more a, .static.sidebar .read-more a, .votes a.up, .votes a.up:hover, .votes a.up.voted, .votes a.down, .votes a.down:hover, .votes a.down.voted, section header .votes .up, section header .votes .down, .content header.global h1 a, .content > footer .social li a.fb, .content > footer .social li a.rss, .content > footer .social li a.google {
+.program .read-more a, .submit-idea .read-more a, .create-profile .read-more a, .learn .read-more a, .learn-more .read-more a, .what-is-hapi .read-more a, .program-structure .read-more a, .who-is .read-more a, .contact-wrapper .read-more a, .direct-contact .read-more a, .idea .read-more a, .idea-comments .read-more a, .references .read-more a, .users .read-more a, .nodes .read-more a, .categories .read-more a, .node-wrapper .read-more a, .node-comments .read-more a, .static.sidebar .read-more a, .votes a.up, .votes a.up:hover, .votes a.up.voted, .votes a.down, .votes a.down:hover, .votes a.down.voted, section header .votes .up, section header .votes .down, .content header.global h1 a, .content > footer .social li a.fb, .content > footer .social li a.rss, .content > footer .social li a.google {
   background: url('../img/sprites-sfc10671a2d.png') no-repeat;
 }
 
@@ -45,13 +45,13 @@ html {
    Extensions : Individual Section Blocks */
 /* line 90, sass/screen.scss */
 .inline-padding, .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-wrapper > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .static.sidebar > header, .program h3, .program .block-body, .submissions article header, .create-profile form p, .learn-more ul, .node-wrapper .node header {
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-wrapper > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .node-comments > header, .static.sidebar > header, .program h3, .program .block-body, .submissions article header, .create-profile form p, .learn-more ul, .node-wrapper .node header {
   padding: 0 16px;
 }
 
 /* line 94, sass/screen.scss */
 .full-spacing, .column-wrapper > .inner, .news > .inner, .submissions.sidebar > .inner, .submissions.main > .inner,
-.program > .inner, .submit-idea > .inner, .create-profile > .inner, .learn > .inner, .learn-more > .inner, .what-is-hapi > .inner, .program-structure > .inner, .who-is > .inner, .contact-wrapper > .inner, .direct-contact > .inner, .idea > .inner, .idea-comments > .inner, .references > .inner, .users > .inner, .nodes > .inner, .categories > .inner, .node-wrapper > .inner, .static.sidebar > .inner, .users > div, .nodes .node, .node-wrapper header + div, .node-wrapper .node-comments {
+.program > .inner, .submit-idea > .inner, .create-profile > .inner, .learn > .inner, .learn-more > .inner, .what-is-hapi > .inner, .program-structure > .inner, .who-is > .inner, .contact-wrapper > .inner, .direct-contact > .inner, .idea > .inner, .idea-comments > .inner, .references > .inner, .users > .inner, .nodes > .inner, .categories > .inner, .node-wrapper > .inner, .node-comments > .inner, .static.sidebar > .inner, .users > div, .nodes .node, .node-wrapper header + div {
   margin: 1em;
 }
 
@@ -92,14 +92,14 @@ html {
 
 /* line 128, sass/screen.scss */
 .column-wrapper, .news, .submissions.sidebar, .submissions.main,
-.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-wrapper, .direct-contact, .idea, .idea-comments, .references, .users, .nodes, .categories, .node-wrapper, .static.sidebar {
+.program, .submit-idea, .create-profile, .learn, .learn-more, .what-is-hapi, .program-structure, .who-is, .contact-wrapper, .direct-contact, .idea, .idea-comments, .references, .users, .nodes, .categories, .node-wrapper, .node-comments, .static.sidebar {
   background: #d4edf1;
   color: #222222;
   margin-bottom: 1em;
 }
 /* line 132, sass/screen.scss */
 .column-wrapper > header, .news > header, .submissions.sidebar > header, .submissions.main > header,
-.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-wrapper > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .static.sidebar > header {
+.program > header, .submit-idea > header, .create-profile > header, .learn > header, .learn-more > header, .what-is-hapi > header, .program-structure > header, .who-is > header, .contact-wrapper > header, .direct-contact > header, .idea > header, .idea-comments > header, .references > header, .users > header, .nodes > header, .categories > header, .node-wrapper > header, .node-comments > header, .static.sidebar > header {
   color: white;
   background: #21a4b6;
   overflow: hidden;
@@ -107,24 +107,24 @@ html {
 }
 /* line 82, sass/screen.scss */
 .column-wrapper > header a, .news > header a, .submissions.sidebar > header a, .submissions.main > header a,
-.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-wrapper > header a, .direct-contact > header a, .idea > header a, .idea-comments > header a, .references > header a, .users > header a, .nodes > header a, .categories > header a, .node-wrapper > header a, .static.sidebar > header a {
+.program > header a, .submit-idea > header a, .create-profile > header a, .learn > header a, .learn-more > header a, .what-is-hapi > header a, .program-structure > header a, .who-is > header a, .contact-wrapper > header a, .direct-contact > header a, .idea > header a, .idea-comments > header a, .references > header a, .users > header a, .nodes > header a, .categories > header a, .node-wrapper > header a, .node-comments > header a, .static.sidebar > header a {
   color: white;
 }
 /* line 85, sass/screen.scss */
 .column-wrapper > header h2, .news > header h2, .submissions.sidebar > header h2, .submissions.main > header h2,
-.program > header h2, .submit-idea > header h2, .create-profile > header h2, .learn > header h2, .learn-more > header h2, .what-is-hapi > header h2, .program-structure > header h2, .who-is > header h2, .contact-wrapper > header h2, .direct-contact > header h2, .idea > header h2, .idea-comments > header h2, .references > header h2, .users > header h2, .nodes > header h2, .categories > header h2, .node-wrapper > header h2, .static.sidebar > header h2 {
+.program > header h2, .submit-idea > header h2, .create-profile > header h2, .learn > header h2, .learn-more > header h2, .what-is-hapi > header h2, .program-structure > header h2, .who-is > header h2, .contact-wrapper > header h2, .direct-contact > header h2, .idea > header h2, .idea-comments > header h2, .references > header h2, .users > header h2, .nodes > header h2, .categories > header h2, .node-wrapper > header h2, .node-comments > header h2, .static.sidebar > header h2 {
   text-transform: uppercase;
 }
 /* line 138, sass/screen.scss */
 .column-wrapper .read-more, .news .read-more, .submissions.sidebar .read-more, .submissions.main .read-more,
-.program .read-more, .submit-idea .read-more, .create-profile .read-more, .learn .read-more, .learn-more .read-more, .what-is-hapi .read-more, .program-structure .read-more, .who-is .read-more, .contact-wrapper .read-more, .direct-contact .read-more, .idea .read-more, .idea-comments .read-more, .references .read-more, .users .read-more, .nodes .read-more, .categories .read-more, .node-wrapper .read-more, .static.sidebar .read-more {
+.program .read-more, .submit-idea .read-more, .create-profile .read-more, .learn .read-more, .learn-more .read-more, .what-is-hapi .read-more, .program-structure .read-more, .who-is .read-more, .contact-wrapper .read-more, .direct-contact .read-more, .idea .read-more, .idea-comments .read-more, .references .read-more, .users .read-more, .nodes .read-more, .categories .read-more, .node-wrapper .read-more, .node-comments .read-more, .static.sidebar .read-more {
   float: right;
   line-height: 2em;
   margin-right: .5em;
 }
 /* line 142, sass/screen.scss */
 .column-wrapper .read-more a, .news .read-more a, .submissions.sidebar .read-more a, .submissions.main .read-more a,
-.program .read-more a, .submit-idea .read-more a, .create-profile .read-more a, .learn .read-more a, .learn-more .read-more a, .what-is-hapi .read-more a, .program-structure .read-more a, .who-is .read-more a, .contact-wrapper .read-more a, .direct-contact .read-more a, .idea .read-more a, .idea-comments .read-more a, .references .read-more a, .users .read-more a, .nodes .read-more a, .categories .read-more a, .node-wrapper .read-more a, .static.sidebar .read-more a {
+.program .read-more a, .submit-idea .read-more a, .create-profile .read-more a, .learn .read-more a, .learn-more .read-more a, .what-is-hapi .read-more a, .program-structure .read-more a, .who-is .read-more a, .contact-wrapper .read-more a, .direct-contact .read-more a, .idea .read-more a, .idea-comments .read-more a, .references .read-more a, .users .read-more a, .nodes .read-more a, .categories .read-more a, .node-wrapper .read-more a, .node-comments .read-more a, .static.sidebar .read-more a {
   padding-left: 2em;
   background-position: 0 -1704px;
   height: 8px;
@@ -670,7 +670,7 @@ article .share_fb:hover {
 
 /* line 552, sass/screen.scss */
 .node-comments {
-  width: 540px;
+  width: 700px;
   float: left;
   margin-right: 20px;
   display: inline;
@@ -1025,14 +1025,14 @@ div.main > aside h3 {
 /* 'Static' Pages - Pages w Custom Sidebar blocks */
 /* -------------------------------------------------------------------------
    Full width 'About YUNUS/UNDP' Bar (breaks out of grid) */
-/* line 912, sass/screen.scss */
+/* line 913, sass/screen.scss */
 div.organization-info {
   background-color: #d4edf1;
   color: #222222;
   margin-bottom: -1em;
   padding-bottom: 1em;
 }
-/* line 921, sass/screen.scss */
+/* line 922, sass/screen.scss */
 div.organization-info div.block {
   width: 460px;
   float: left;
@@ -1044,23 +1044,23 @@ div.organization-info div.block:nth-child(2n) {
   float: right;
   margin-right: 0;
 }
-/* line 925, sass/screen.scss */
+/* line 926, sass/screen.scss */
 div.organization-info h3 {
   text-align: center;
 }
 
 /* -------------------------------------------------------------------------
    Full width 'Mentors' Bar (breaks out of grid) */
-/* line 934, sass/screen.scss */
+/* line 935, sass/screen.scss */
 section.mentors {
   background: url(../img/suede_bg.png) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 937, sass/screen.scss */
+/* line 938, sass/screen.scss */
 section.mentors ul {
   margin-bottom: 0;
 }
-/* line 940, sass/screen.scss */
+/* line 941, sass/screen.scss */
 section.mentors ul li {
   width: 300px;
   float: left;
@@ -1072,7 +1072,7 @@ section.mentors ul li:nth-child(3n) {
   float: right;
   margin-right: 0;
 }
-/* line 945, sass/screen.scss */
+/* line 946, sass/screen.scss */
 section.mentors img {
   float: left;
   margin: 1em 1em 1em 0;
@@ -1080,27 +1080,27 @@ section.mentors img {
 
 /* -------------------------------------------------------------------------
    Footer */
-/* line 958, sass/screen.scss */
+/* line 959, sass/screen.scss */
 .content > footer {
   background: url(../img/concrete_bg.jpg) repeat-x center top #21a4b6;
   color: white;
 }
-/* line 961, sass/screen.scss */
+/* line 962, sass/screen.scss */
 .content > footer a {
   color: white;
 }
-/* line 964, sass/screen.scss */
+/* line 965, sass/screen.scss */
 .content > footer h3 {
   text-transform: uppercase;
 }
-/* line 967, sass/screen.scss */
+/* line 968, sass/screen.scss */
 .content > footer .sitemap {
   width: 620px;
   float: left;
   margin-right: 20px;
   display: inline;
 }
-/* line 969, sass/screen.scss */
+/* line 970, sass/screen.scss */
 .content > footer .sitemap ul {
   float: left;
   width: 140px;
@@ -1108,11 +1108,11 @@ section.mentors img {
   margin-right: 20px;
   display: inline;
 }
-/* line 973, sass/screen.scss */
+/* line 974, sass/screen.scss */
 .content > footer .sitemap li:nth-child(4) {
   margin-top: 1em;
 }
-/* line 977, sass/screen.scss */
+/* line 978, sass/screen.scss */
 .content > footer .social {
   width: 300px;
   float: right;
@@ -1121,35 +1121,35 @@ section.mentors img {
   display: inline;
   text-align: right;
 }
-/* line 980, sass/screen.scss */
+/* line 981, sass/screen.scss */
 .content > footer .social li a {
   display: block;
   float: right;
   margin: 0 0 0 1em;
 }
-/* line 985, sass/screen.scss */
+/* line 986, sass/screen.scss */
 .content > footer .social li a.fb {
   background-position: 0 -1737px;
   height: 60px;
   width: 60px;
 }
-/* line 988, sass/screen.scss */
+/* line 989, sass/screen.scss */
 .content > footer .social li a.rss {
   background-position: 0 -93px;
   height: 60px;
   width: 60px;
 }
-/* line 991, sass/screen.scss */
+/* line 992, sass/screen.scss */
 .content > footer .social li a.google {
   background-position: 0 -173px;
   height: 60px;
   width: 60px;
 }
-/* line 996, sass/screen.scss */
+/* line 997, sass/screen.scss */
 .content > footer ul {
   margin: 0;
 }
-/* line 999, sass/screen.scss */
+/* line 1000, sass/screen.scss */
 .content > footer p {
   width: 940px;
   float: right;
@@ -1162,7 +1162,7 @@ section.mentors img {
 
 /* -------------------------------------------------------------------------
    Modal */
-/* line 1009, sass/screen.scss */
+/* line 1010, sass/screen.scss */
 .modal {
   position: fixed;
   top: 0;
@@ -1179,13 +1179,13 @@ section.mentors img {
   transition: opacity 400ms ease-in;
   pointer-events: none;
 }
-/* line 1021, sass/screen.scss */
+/* line 1022, sass/screen.scss */
 .modal.open {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   pointer-events: auto;
 }
-/* line 1026, sass/screen.scss */
+/* line 1027, sass/screen.scss */
 .modal > div {
   width: 400px;
   position: relative;
@@ -1198,7 +1198,7 @@ section.mentors img {
   border-radius: 3px;
   background: #fff;
 }
-/* line 1034, sass/screen.scss */
+/* line 1035, sass/screen.scss */
 .modal .modal-close {
   color: black;
   position: absolute;
@@ -1210,22 +1210,22 @@ section.mentors img {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 1044, sass/screen.scss */
+/* line 1045, sass/screen.scss */
 .modal .modal-close:hover {
   color: #21a4b6;
 }
 
-/* line 1048, sass/screen.scss */
+/* line 1049, sass/screen.scss */
 .flash_message {
   text-align: center;
 }
-/* line 1050, sass/screen.scss */
+/* line 1051, sass/screen.scss */
 .flash_message > div {
   padding-bottom: 2em;
 }
 
 /* IE Fallbacks */
-/* line 1061, sass/screen.scss */
+/* line 1062, sass/screen.scss */
 .lt-ie9 .modal {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
