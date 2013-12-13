@@ -96,7 +96,13 @@ class IdeasController extends AcceleratorAppController {
         $this->set('isIdeaOwner', $isIdeaOwner);
 
         $this->set('idea', $idea);
-        $this->set('ideas', ClassRegistry::init('Idea')->find('all'));
+        $this->set('ideas', ClassRegistry::init('Idea')->find('all', array(
+            'limit' => 4,
+            'order' => array(
+                'Idea.total_votes' => 'desc',
+                'Idea.up_votes' => 'desc') 
+            )
+        ));
     }
 
     public function edit($id = null) {
