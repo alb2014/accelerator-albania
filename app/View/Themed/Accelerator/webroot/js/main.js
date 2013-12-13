@@ -13,7 +13,7 @@
       e.preventDefault();
     });
 
-    $('.modal-close').on('click', function(e) {
+    $('.modal-close, .modal-button-close').on('click', function(e) {
       $('.modal.open').removeClass('open');
       e.preventDefault();
     });
