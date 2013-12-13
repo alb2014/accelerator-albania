@@ -49,29 +49,23 @@
 
     <div class="inner">
 
-        <?php if($this->Session->check('Auth.User')) { ?>
-            <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                var disqus_shortname = 'hapide'; // required: replace example with your forum shortname
+        <?php if($this->Session->check('Auth.User')) { 
 
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            echo $this->element('disqus_comments'); 
 
-        <?php } else { ?>
+        } else { 
 
-            <p>
-                <a href="#login" class="button"><?php echo __('Login to Comment'); ?></a> 
-            </p>
+            echo $this->Html->link(
+                    __('Login to Comment'),
+                    array(
+                        'plugin' => 'users',
+                        'controller' => 'users',
+                        'action' => 'login'
+                    ),
+                    array('class' => 'button','id' => 'idea_login')
+                );
 
-        <?php } ?>
+        } ?>
 
     </div>
 
