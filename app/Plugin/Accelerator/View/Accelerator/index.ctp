@@ -36,7 +36,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
 
     </section>
 
-    <section class="submissions sidebar">
+    <section class="submissions sidebar homepage">
         <header>
             <p class="read-more">
             <?php 

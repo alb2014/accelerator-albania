@@ -589,7 +589,7 @@ article {
 aside.miscellaneous {
   @include span-columns(12 omega,12);
   clear: both;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   h3 {
     @include adjust-font-size-to(24px);
     text-align: center;
@@ -647,9 +647,14 @@ div.main {
   }
 }
 
+.news,
+.submissions.sidebar.homepage {
+  min-height: 900px;
+  padding-bottom: 1em;
+}
+
 .news {
   @extend .column-wrapper;
-  padding-bottom: 1em;
   article {
     @include span-columns(7 omega,7);
     .image {
@@ -981,6 +986,11 @@ section.mentors {
   }
   a {
     //color: $primary_bg_text;
+  }
+  span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
   }
 }
 
