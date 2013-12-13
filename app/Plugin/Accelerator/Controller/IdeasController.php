@@ -8,8 +8,9 @@ class IdeasController extends AcceleratorAppController {
 
 
     public $paginate = array(
-        'limit' => 10,
+        'limit' => 7,
         'order' => array(
+            'Idea.date_created' => 'desc',
             'Idea.total_votes' => 'desc',
             'Idea.up_votes' => 'desc'
         )
@@ -99,6 +100,7 @@ class IdeasController extends AcceleratorAppController {
         $this->set('ideas', ClassRegistry::init('Idea')->find('all', array(
             'limit' => 4,
             'order' => array(
+                'Idea.date_created' => 'desc',
                 'Idea.total_votes' => 'desc',
                 'Idea.up_votes' => 'desc') 
             )

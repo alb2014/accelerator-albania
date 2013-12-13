@@ -278,6 +278,7 @@ class UsersController extends UsersAppController {
 					array('Idea.user_id' => $user['id'])
 					),
 	    		'order' => array(
+						'Idea.date_created' => 'desc',
 	    			'total_votes' => 'desc',
 	    			'up_votes' => 'desc') 
 	    			)

@@ -282,6 +282,16 @@ div.input.checkbox {
   }
 }
 
+/* Submissions Pagination */
+.pagination {
+  @extend .full-spacing;
+  border-top: 1px solid $primary_bg;
+  padding-top: 1em;
+  .next {
+    float: right;
+  }
+}
+
 
 /* Vote Buttons */
 .votes {

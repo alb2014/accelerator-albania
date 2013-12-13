@@ -5,7 +5,11 @@
         <header>
             <h1><?php echo $this->Html->link($idea['Idea']['name'],
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id'])); ?></h1>
-            <?php if ($full) {?><p><time pubdate="pubdate">24.12.2013</time></p><?php } ?>
+            <?php if ($full) {?>
+                <p><time pubdate="pubdate">
+                    <?php echo $this->Time->format('d.m.Y', $idea['Idea']['date_created']); ?>
+                </time></p>
+            <?php } ?>
         </header>
 
         <?php echo $this->element('Accelerator.votes', array("idea" => $idea)); ?>

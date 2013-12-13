@@ -57,6 +57,7 @@ class AcceleratorController extends AcceleratorAppController {
 		$this->set('ideas', ClassRegistry::init('Idea')->find('all', array(
 			'limit' => 4,
 			'order' => array(
+				'Idea.date_created' => 'desc',
 				'total_votes' => 'desc',
 				'up_votes' => 'desc') 
 			)
