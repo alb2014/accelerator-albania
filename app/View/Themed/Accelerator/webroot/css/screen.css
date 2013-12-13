@@ -1187,7 +1187,13 @@ section.mentors img {
   color: #21a4b6;
 }
 
-/* line 1025, sass/screen.scss */
+/* line 1021, sass/screen.scss */
+.flash_message {
+  text-align: center;
+}
+
+/* IE Fallbacks */
+/* line 1031, sass/screen.scss */
 .lt-ie9 .modal {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);

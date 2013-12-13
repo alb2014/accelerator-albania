@@ -104,7 +104,7 @@
 
             <div class="main">
 
-                <?php echo $this->Session->flash(); ?>
+                <?php echo $this->Session->flash('flash', array('element' => 'flash_message')); ?>
 
                 <?php echo $content_for_layout; ?>
 

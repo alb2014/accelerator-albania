@@ -3,7 +3,7 @@
   $(document).ready(function() {
 
     // Close & open modal windows
-    $('#header_login, #footer_login').on('click', function(e) {
+    $('#header_login, #footer_login, #idea_login').on('click', function(e) {
       $('#login').addClass('open');
       e.preventDefault();
     });
