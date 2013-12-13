@@ -1,5 +1,4 @@
-<img width="940" height="175" src="">
-<p><?php echo $this->Layout->blocks('learn'); ?></p>
+<?php echo $this->Layout->blocks('learn'); ?>
 
 <section class="nodes">
     <header>
