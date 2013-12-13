@@ -24,15 +24,17 @@
 			echo ' | ';
 		}
 
-		$commentCount = '';
-		if ($this->Nodes->field('comment_count') == 0) {
-			$commentCount = __d('croogo', 'Leave a comment');
-		} elseif ($this->Nodes->field('comment_count') == 1) {
-			$commentCount = $this->Nodes->field('comment_count') . ' ' . __d('croogo', 'Comment');
-		} else {
-			$commentCount = $this->Nodes->field('comment_count') . ' ' . __d('croogo', 'Comments');
-		}
-		echo $this->Html->link($commentCount, $this->Html->url($this->Nodes->field('url'), true) . '#comments');
+		echo $this->Html->link(__d('croogo', 'Leave a comment'), $this->Html->url($this->Nodes->field('url'), true) . '#comments');
+
+		// $commentCount = '';
+		// if ($this->Nodes->field('comment_count') == 0) {
+		// 	$commentCount = __d('croogo', 'Leave a comment');
+		// } elseif ($this->Nodes->field('comment_count') == 1) {
+		// 	$commentCount = $this->Nodes->field('comment_count') . ' ' . __d('croogo', 'Comment');
+		// } else {
+		// 	$commentCount = $this->Nodes->field('comment_count') . ' ' . __d('croogo', 'Comments');
+		// }
+		// echo $this->Html->link($commentCount, $this->Html->url($this->Nodes->field('url'), true) . '#comments');
 	}
 ?>
 </div>

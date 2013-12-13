@@ -550,7 +550,7 @@ article {
 }
 
 .node-comments {
-  @include span-columns(7,12);
+  @include span-columns(9,12);
 }
 
 .node-wrapper.static {
@@ -894,9 +894,10 @@ div.main {
   header + div {
     @extend .full-spacing;
   }
-  .node-comments {
-    @extend .full-spacing;
-  }
+}
+
+.node-comments {
+  @extend .column-wrapper;
 }
 
 /* 'Static' Pages - Pages w Custom Sidebar blocks */

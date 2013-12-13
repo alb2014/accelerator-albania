@@ -22,21 +22,8 @@
         </div>
     </div>
 
-    <div id="comments" class="node-comments">
-    <?php
-        $type = $types_for_layout[$this->Nodes->field('type')];
-
-        if ($type['Type']['comment_status'] > 0 && $this->Nodes->field('comment_status') > 0) {
-            echo $this->element('Comments.comments');
-        }
-
-        if ($type['Type']['comment_status'] == 2 && $this->Nodes->field('comment_status') == 2) {
-            echo $this->element('Comments.comments_form');
-        }
-    ?>
-    </div>
-
 </section>
+
 
 <!-- Sidebar (modules) -->
 
@@ -68,8 +55,31 @@
         </header>
 
         <div class="inner">
-            <?php echo $this->Layout->blocks('program-structure'); ?>
+            <?php echo $this->Layout->node('CustomFields.program_structure'); ?>
         </div>
     </section>
 
 <?php } ?>
+
+
+<?php
+    $type = $types_for_layout[$this->Nodes->field('type')];
+
+    if ($type['Type']['alias'] == 'blog') {
+?>
+
+    <!-- Comments -->
+
+    <section id="comments" class="node-comments">
+        <header>
+            <h2><?php echo __('Comments');?></h2>
+        </header>
+
+        <div class="inner">
+            <?php echo $this->element('Accelerator.disqus_comments'); ?>
+        </div>
+    </section>
+
+<?php
+    }
+?>
