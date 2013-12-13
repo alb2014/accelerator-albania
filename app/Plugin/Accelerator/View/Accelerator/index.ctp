@@ -66,7 +66,7 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), 
 </div>
 
 <!-- Main Content Aside - Varies on Pages -->
-<?php echo $this->element('cta_footer'); ?>
+<?php echo $this->element('homepage_footer'); ?>
 
 <?php
     $this->start('footer_bar');
