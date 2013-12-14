@@ -24,7 +24,7 @@ class IdeasController extends AcceleratorAppController {
             $this->Paginator->settings['conditions']['Idea.userId'] = $userId;
         }
         $ideas = $this->Paginator->paginate('Idea');
-        $votes = new Vote();
+        $votes = ClassRegistry::init('Vote');
         if ($user){
             $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
             for($i = 0; $i < count($ideas); ++$i) {
@@ -45,6 +45,7 @@ class IdeasController extends AcceleratorAppController {
     public function add() {
         if ($this->request->is('post')) {
             $this->Idea->create();
+            $this->request->data['Idea']['date_created'] = null;
             if ($this->Idea->save($this->request->data)) {
                 $this->Session->setFlash(__('Your idea has been saved.'));
                 return $this->redirect(array('action' => 'index'));
@@ -206,10 +207,10 @@ class IdeasController extends AcceleratorAppController {
         $tier_3_votes_req = Configure::read('Accelerator.tier_3_votes');
         $tier_level = $idea['tier_level'];
 
-        if($tier_level == 0 && $total_votes == $tier_2_votes_req) {
+        if($tier_level == 0 && $upvotes == $tier_2_votes_req) {
             $tier_level++;
             $this->_alertUser($idea, $tier_level);
-        } else if($tier_level == 1 && $total_votes == $tier_3_votes_req) {
+        } else if($tier_level == 1 && $upvotes == $tier_3_votes_req) {
             $tier_level++;
             $this->_alertUser($idea, $tier_level);
         }
@@ -242,7 +243,7 @@ class IdeasController extends AcceleratorAppController {
 
         $this->_sendEmail(
                 'phillip.wilt@gmail.com',
-                __d('accelerator', 'Congratulations! %s has reached Tier %d',$idea['name'], $tier_level),
+                __('accelerator', 'Congratulations! %s has reached Tier %d',$idea['name'], $tier_level),
                 'Accelerator.tier_level',
                 $this->theme,
                 array(
