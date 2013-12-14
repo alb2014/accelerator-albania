@@ -32,11 +32,11 @@ AA_CIPHER_SEED  - Choose a random string of digits
 Pushing to Heroku
 -----------------
 
-heroku git:remote -a infinite-brushlands-4936
+heroku git:remote -a heroku-app
 
 git push heroku master
 
-The site will be deployed [here.](http://infinite-brushlands-4936.herokuapp.com)
+The site will be deployed [here.](http://heroku-app.herokuapp.com)
 
 Creating an Admin User
 ----------------------
