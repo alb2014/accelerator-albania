@@ -13,6 +13,22 @@
  */
 App::uses('AcceleratorAppModel', 'Accelerator.Model');
 
-class Idea extends AcceleratorAppModel {
+class  Idea extends AcceleratorAppModel {
+	public $hasMany = array(
+        'Vote' => array(
+            'className' => 'Vote',
+            'foreignKey' => 'idea_id',
+           // 'conditions' => array('Comment.status' => '1'),
+            //'order' => 'Comment.created DESC',
+            //'limit' => '5',
+            'dependent' => true
+        )
+    );
+	public $belongsTo = array(
+        'User' => array(
+            'className' => 'Users.User',
+            'foreignKey' => 'user_id'
+        )
+    );
 
 }

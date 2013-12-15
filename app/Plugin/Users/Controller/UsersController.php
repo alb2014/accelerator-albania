@@ -330,7 +330,10 @@ class UsersController extends UsersAppController {
  * @return void
  * @access public
  */
-	public function add() {
+	public function add($includeIdea=false) {
+
+		$this->log($this->request->data);
+		$this->log('running again');
 		$this->set('title_for_layout', __d('croogo', 'Register'));
 		if (!empty($this->request->data)) {
 			$this->User->create();
@@ -340,10 +343,24 @@ class UsersController extends UsersAppController {
 			$this->request->data['User']['username'] = htmlspecialchars($this->request->data['User']['username']);
 			$this->request->data['User']['website'] = htmlspecialchars($this->request->data['User']['website']);
 			$this->request->data['User']['name'] = htmlspecialchars($this->request->data['User']['name']);
-			if ($this->User->save($this->request->data)) {
+			$user = $this->User->save($this->request->data);
+			if ($user) {
+
+
 				Croogo::dispatchEvent('Controller.Users.registrationSuccessful', $this);
 				$this->request->data['User']['password'] = null;
+				$this->log("Include Idea: ");
 
+				if (isset($this->request->data['Idea'])){
+					$this->log('Including Idea!');
+					$idea = ClassRegistry::init('Idea');
+					$idea->create();
+					$this->request->data['Idea']['user_id'] = $user['User']['id'];
+                	$this->request->data['Idea']['date_created'] = null;
+                	$this->request->data['Idea']['private'] = 1;
+                	$this->log($idea->save($this->request->data));
+                }
+                $this->Session->setFlash(__('Unable to add your idea.'));
 				$this->_sendEmail(
 					array(Configure::read('Site.title'), $this->_getSenderEmail()),
 					$this->request->data['User']['email'],
@@ -354,14 +371,20 @@ class UsersController extends UsersAppController {
 					array('user' => $this->request->data)
 				);
 
+				
+
 				$this->Session->setFlash(__d('croogo', 'You have successfully registered an account. An email has been sent with further instructions.'), 'default', array('class' => 'success'));
 				$this->redirect(array('action' => 'login'));
+
 			} else {
 				Croogo::dispatchEvent('Controller.Users.registrationFailure', $this);
 				$this->Session->setFlash(__d('croogo', 'The User could not be saved. Please, try again.'), 'default', array('class' => 'error'));
 			}
 		}
 	}
+	
+
+
 
 
 

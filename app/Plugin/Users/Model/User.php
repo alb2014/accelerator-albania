@@ -47,6 +47,13 @@ class User extends UsersAppModel {
 		'Search.Searchable',
 	);
 
+	public $hasMany = array(
+        'Idea' => array(
+            'className' => 'Accelerator.Idea',
+            'foreignKey' => 'user_id'
+        )
+    );
+
 /**
  * Model associations: belongsTo
  *

@@ -80,3 +80,14 @@
         echo $this->element('mentors');
     $this->end();
 ?>
+
+<?php
+    $this->start('facebook_meta'); 
+?>
+    <meta property="og:image" content="/theme/Accelerator/img/sprites/logo.png">
+    <meta property="og:title" content="<?php echo $idea['Idea']['name']; ?>">
+    <meta property="og:url" content="<?php echo Router::url( $this->here, true ); ?>">
+    <meta property="og:description" content="<?php echo $idea['Idea']['desc']; ?>">
+<?php
+    $this->end();
+?>
