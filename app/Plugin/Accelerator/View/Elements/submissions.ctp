@@ -24,7 +24,6 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
                 <a class="share_fb" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($this->Html->url( array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id']), true )); ?>" target="_blank">
                     Share on Facebook
                 </a>
-                <div class="fb-share-button" data-href="<?php echo $this->Html->url( array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id']), true ); ?>" data-type="link"></div>
             </aside>
         <?php } ?>
 

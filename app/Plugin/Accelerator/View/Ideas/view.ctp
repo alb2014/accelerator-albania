@@ -73,6 +73,22 @@
 
     </div>
 
+    <?php echo $this->Html->image('sprites/logo.png'); ?>
+xx
+    <?php echo $this->webroot; ?>img/sprites/logo.png
+yy
+    <?php echo $this->Html->url('img/sprites/logo.png'); 
+
+?>zz
+<br>
+
+    <?php echo Router::url( $this->here, true ); ?>
+
+    /theme/Accelerator/img/sprites/logo.png
+
+    <?php echo $this->Html->link('Comment',
+array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id'], '#' => 'share'), array('class' => 'share_fb')); ?>
+
 </section>
 
 <?php

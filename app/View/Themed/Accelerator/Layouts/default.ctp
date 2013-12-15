@@ -12,7 +12,7 @@
         <title><?php echo $title_for_layout . ' | ' . Configure::read('Site.title'); ?></title>
     
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="<?php echo __('accelerator', 'HAPide');?>">
+        <meta property="og:site_name" content="<?php echo __d('accelerator', 'HAPide');?>">
 
         <?php 
             echo $this->Layout->meta();
@@ -242,13 +242,5 @@
             // ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=239655156201853";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
     </body>
 </html>
