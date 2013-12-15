@@ -730,8 +730,19 @@ div.main {
   ul.submission-sort {
     @extend .horizontal-ul;
     float: right;
+    padding-top: 5px;
     a {
       color: $primary_bg_text;
+      padding-right: 15px;
+      &.desc {
+        @include sprites-sprite(down_arrow, $offset_x: 35px, $offset_y: 5px);
+      }
+      &.asc {
+        @include sprites-sprite(up_arrow, $offset_x: 35px, $offset_y: 5px);
+      }
+      &.popularity {
+        background-position-x: 75px;
+      }
     }
   }
 

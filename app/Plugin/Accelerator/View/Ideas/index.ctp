@@ -12,7 +12,7 @@
                     <?php echo $this->Paginator->sort('date_created', 'Date', array('direction' => 'desc')); ?>
                 </li>
                 <li>
-                    <?php echo $this->Paginator->sort('total_votes', 'Popularity', array('direction' => 'desc')); ?>
+                    <?php echo $this->Paginator->sort('total_votes', 'Popularity', array('direction' => 'desc', 'class' => 'popularity')); ?>
                 </li>
                 <!-- <li><a href=""><?php echo __('Topic');?></a></li> -->
             </ul>
