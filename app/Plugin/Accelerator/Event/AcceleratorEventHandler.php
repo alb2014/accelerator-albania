@@ -89,12 +89,8 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
 	 */
 	public function _alertUser($event){
 
-        $this->log($event->data);
-
         $idea = $event->data['idea'];
         $tier_level = $event->data['tier_level'];
-        $this->log('$idea');
-        $this->log($idea);
 
         $ideaUser = ClassRegistry::init('User')->find('first', array(
             'conditions' =>array('User.id' => $idea['user_id'])
@@ -102,11 +98,6 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
         );
 
         $ideaUser = $ideaUser['User'];
-
-        
-        $this->log('$ideaUser');
-        $this->log($ideaUser);
-
 
         $this->_sendEmail(
                 $ideaUser['email'],

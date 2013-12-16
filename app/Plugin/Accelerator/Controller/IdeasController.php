@@ -239,11 +239,8 @@ class IdeasController extends AcceleratorAppController {
             'idea' => $idea,
             'tier_level' => $tier_level
         ));
-
-        // $this->log($event);
         
         $this->getEventManager()->dispatch($event);
-
         
     }
 
