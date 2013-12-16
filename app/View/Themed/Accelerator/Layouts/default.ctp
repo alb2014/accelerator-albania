@@ -8,11 +8,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <title><?php echo $title_for_layout . ' | ' . Configure::read('Site.title'); ?></title>
     
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="<?php echo __d('accelerator', 'HAPide');?>">
+        <meta property="og:image" content="<?php echo $this->Html->url('/theme/Accelerator/img/sprites/logo.png', true); ?>">
 
         <?php 
             echo $this->Layout->meta();
@@ -26,16 +26,9 @@
     </head>
 
     <body>
-        <!-- <h1><?php echo $this->request->here; ?></h1> -->
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <?php
-            // if ($loggedIn) {
-            //     echo "<h1>Hi USER</h1>";
-            // }
-        ?>
 
         <div class="faq-tab">
             <a href="/page/faq" id="faq_tab"><?php echo __('FAQ');?></a>
@@ -67,19 +60,11 @@
                         );
 
                 } ?> 
-                    
-                <?php 
-                    // echo $this->Html->link(
-                    //     'Profile', 
-                    //     array('plugin' => 'users', 'controller' => 'users', 'action' => 'index'), 
-                    //     array('class' => 'button')
-                    // ); 
-                ?>
 
                 <h1><a href="/accelerator"><?php echo __('HAPide');?></a></h1>
 
                 <?php
-                    // Help: is there a better way to set an active class?
+                    // Is there a better way to set an active class?
 
                     $options_submit = array('escape' => false);
                     if($this->request->here == '/accelerator/ideas/add'){
@@ -177,7 +162,6 @@
                             </ul>
 
                             <ul>
-                                <!-- <li><?php //echo $this->Html->link('Yunus SB', array()); ?></li> -->
                                 <li><a href="http://www.yunussb.com/" target="_blank"><?php echo __('Yunus SB'); ?></a></li>
                                 <li><a href="http://www.undp.org/content/undp/en/home.html" target="_blank"><?php echo __('UNDP');?></a></li>
                                 <li><a href="/page/terms-and-conditions"><?php echo __('Terms &amp; Conditions');?></a></li>
