@@ -2,6 +2,8 @@
 App::uses('Vote', 'Accelerator.Model');
 App::uses('User', 'Users.Model');
 App::uses('CakeEmail', 'Network/Email');
+App::uses('CakeEvent', 'Event');
+
 
 class IdeasController extends AcceleratorAppController {
         public $components = array('Paginator');
@@ -213,10 +215,10 @@ class IdeasController extends AcceleratorAppController {
 
         if($tier_level == 0 && $upvotes == $tier_2_votes_req) {
             $tier_level++;
-            $this->_alertUser($idea, $tier_level);
+            // $this->_alertUser($idea, $tier_level);
         } else if($tier_level == 1 && $upvotes == $tier_3_votes_req) {
             $tier_level++;
-            $this->_alertUser($idea, $tier_level);
+            // $this->_alertUser($idea, $tier_level);
         }
 
         $this->_alertUser($idea, $tier_level);
@@ -233,30 +235,16 @@ class IdeasController extends AcceleratorAppController {
 
     private function _alertUser($idea, $tier_level){
 
-        $this->log('$idea');
-        $this->log($idea);
+        $event = new CakeEvent('Accelerator.Idea.Tier_Level_Up', $this, array(
+            'idea' => $idea,
+            'tier_level' => $tier_level
+        ));
 
-        $userHandle = new User();
-        $ideaUser = $userHandle->find('first', array('conditions' =>array('User.id' => $idea['user_id'])));
-        $ideaUser = $ideaUser['User'];
+        $this->log('i fix');
+        
+        $this->getEventManager()->dispatch($event);
 
         
-        $this->log('$ideaUser');
-        $this->log($ideaUser);
-
-
-        $this->_sendEmail(
-                'phillip.wilt@gmail.com',
-                __('accelerator', 'Congratulations! %s has reached Tier %d',$idea['name'], $tier_level),
-                'Accelerator.tier_level',
-                $this->theme,
-                array(
-                    'user' => $ideaUser,
-                    'idea' => $idea,
-                    'tier_level' => $tier_level
-                )
-        );
-
     }
 
 
@@ -273,29 +261,29 @@ class IdeasController extends AcceleratorAppController {
  * @param string $emailType user activation, reset password, used in log message when failing.
  * @return boolean True if email was sent, False otherwise.
  */
-    protected function _sendEmail($to, $subject, $template, $theme = null, $viewVars = null) {
-        if (is_null($theme)) {
-            $theme = $this->theme;
-        }
-        $success = false;
+    // protected function _sendEmail($to, $subject, $template, $theme = null, $viewVars = null) {
+    //     if (is_null($theme)) {
+    //         $theme = $this->theme;
+    //     }
+    //     $success = false;
 
-        try {
-            // $this->log(func_get_args()); //for debugging
-            $email = new CakeEmail();
-            $email->config('default');
-            // $email->from($from[1], $from[0]);
-            $email->to($to);
-            $email->subject($subject);
-            $email->template($template);
-            $email->viewVars($viewVars);
-            $email->theme($theme);
-            $success = $email->send();
-        } catch (SocketException $e) {
-            $this->log(sprintf('Error sending %s notification : %s', $emailType, $e->getMessage()));
-        }
+    //     try {
+    //         // $this->log(func_get_args()); //for debugging
+    //         $email = new CakeEmail();
+    //         $email->config('default');
+    //         // $email->from($from[1], $from[0]);
+    //         $email->to($to);
+    //         $email->subject($subject);
+    //         $email->template($template);
+    //         $email->viewVars($viewVars);
+    //         $email->theme($theme);
+    //         $success = $email->send();
+    //     } catch (SocketException $e) {
+    //         $this->log(sprintf('Error sending %s notification : %s', $emailType, $e->getMessage()));
+    //     }
 
-        return $success;
-    }
+    //     return $success;
+    // }
 
 
 }
