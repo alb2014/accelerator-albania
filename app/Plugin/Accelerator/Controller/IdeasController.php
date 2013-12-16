@@ -215,13 +215,13 @@ class IdeasController extends AcceleratorAppController {
 
         if($tier_level == 0 && $upvotes == $tier_2_votes_req) {
             $tier_level++;
-            // $this->_alertUser($idea, $tier_level);
+            $this->_alertUser($idea, $tier_level);
         } else if($tier_level == 1 && $upvotes == $tier_3_votes_req) {
             $tier_level++;
-            // $this->_alertUser($idea, $tier_level);
+            $this->_alertUser($idea, $tier_level);
         }
 
-        $this->_alertUser($idea, $tier_level);
+        // $this->_alertUser($idea, $tier_level); //testing code
         // End leveling up logic
 
         $data['Idea']['up_votes'] = $upvotes;
@@ -240,51 +240,12 @@ class IdeasController extends AcceleratorAppController {
             'tier_level' => $tier_level
         ));
 
-        $this->log('i fix');
+        // $this->log($event);
         
         $this->getEventManager()->dispatch($event);
 
         
     }
-
-
-
-    /**
- * Convenience method to send email
- *
- * @param string $from Sender email
- * @param string $to Receiver email
- * @param string $subject Subject
- * @param string $template Template to use
- * @param string $theme Theme to use
- * @param array  $viewVars Vars to use inside template
- * @param string $emailType user activation, reset password, used in log message when failing.
- * @return boolean True if email was sent, False otherwise.
- */
-    // protected function _sendEmail($to, $subject, $template, $theme = null, $viewVars = null) {
-    //     if (is_null($theme)) {
-    //         $theme = $this->theme;
-    //     }
-    //     $success = false;
-
-    //     try {
-    //         // $this->log(func_get_args()); //for debugging
-    //         $email = new CakeEmail();
-    //         $email->config('default');
-    //         // $email->from($from[1], $from[0]);
-    //         $email->to($to);
-    //         $email->subject($subject);
-    //         $email->template($template);
-    //         $email->viewVars($viewVars);
-    //         $email->theme($theme);
-    //         $success = $email->send();
-    //     } catch (SocketException $e) {
-    //         $this->log(sprintf('Error sending %s notification : %s', $emailType, $e->getMessage()));
-    //     }
-
-    //     return $success;
-    // }
-
 
 }
 
