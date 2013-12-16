@@ -278,6 +278,7 @@ class UsersController extends UsersAppController {
 					array('Idea.user_id' => $user['id'])
 					),
 	    		'order' => array(
+
 						'Idea.date_created' => 'desc',
 	    			'total_votes' => 'desc',
 	    			'up_votes' => 'desc') 
@@ -331,9 +332,7 @@ class UsersController extends UsersAppController {
  * @access public
  */
 	public function add($includeIdea=false) {
-
-		$this->log($this->request->data);
-		$this->log('running again');
+		$this->set('includeIdea', $includeIdea);
 		$this->set('title_for_layout', __d('croogo', 'Register'));
 		if (!empty($this->request->data)) {
 			$this->User->create();
@@ -381,14 +380,10 @@ class UsersController extends UsersAppController {
 				$this->Session->setFlash(__d('croogo', 'The User could not be saved. Please, try again.'), 'default', array('class' => 'error'));
 			}
 		}
+
 	}
 	
-
-
-
-
-
-
+	
 /**
  * Activate
  *
