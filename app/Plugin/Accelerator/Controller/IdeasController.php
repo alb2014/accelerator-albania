@@ -221,7 +221,7 @@ class IdeasController extends AcceleratorAppController {
             $this->_alertUser($idea, $tier_level);
         }
 
-        // $this->_alertUser($idea, $tier_level); //testing code
+        $this->_alertUser($idea, $tier_level); //testing code
         // End leveling up logic
 
         $data['Idea']['up_votes'] = $upvotes;

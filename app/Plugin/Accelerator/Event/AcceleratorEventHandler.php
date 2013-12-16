@@ -125,18 +125,21 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
  * @param string $emailType user activation, reset password, used in log message when failing.
  * @return boolean True if email was sent, False otherwise.
  */
-    protected function _sendEmail($to, $subject, $template, $viewVars = null) {
+    public function _sendEmail($to, $subject, $template, $viewVars = null) {
         $success = false;
 
         try {
-            // $this->log(func_get_args()); //for debugging
+            $this->log(func_get_args()); //for debugging
             $email = new CakeEmail();
             $email->config('default');
             // $email->from($from[1], $from[0]);
             $email->to($to);
             $email->subject($subject);
+            $email->emailFormat('text');
             $email->template($template);
             $email->viewVars($viewVars);
+
+            // $this->log($email);
             $success = $email->send();
         } catch (SocketException $e) {
             $this->log(sprintf('Error sending %s notification : %s', $emailType, $e->getMessage()));
