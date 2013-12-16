@@ -2,7 +2,7 @@
 
   $(document).ready(function() {
 
-    // Close & open modal windows
+    /* Close & open modal windows */
     $('#header_login, #footer_login, #idea_login').on('click', function(e) {
       $('#login').addClass('open');
       e.preventDefault();
@@ -25,6 +25,7 @@
       }
     });
 
+    /* Slideshow */
     $('.toggles').on('click','li', function() {
       $('.slides li').removeClass('selected').eq($(this).index()).addClass('selected');
     });
@@ -33,16 +34,22 @@
       $('.slides li').removeClass('selected').eq($(this).parent().index()).addClass('selected');
     });
 
-    // Make sure some <a> tags don't click awayy
+    /* Make sure some <a> tags don't click awayy */
     $('.voted, .form-help a').on('click', function(e) {
       e.preventDefault();
     });
 
-    // Hover form helpers
+    /* Hover tier 2 form helpers */
     $('.form-help').hover(function() {
       $(this).children('div').addClass('show');
     }, function() {
       $(this).children('div').removeClass('show');
+    });
+
+    $('#UserViewForm input').keydown(function(e) {
+      if (e.keyCode == 13) {
+        $('#UserViewForm').submit();
+      }
     });
 
   })
