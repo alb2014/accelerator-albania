@@ -2,11 +2,11 @@
 
     <ul class="slides">
         <li>
-            <?php echo $this->Html->link($this->Html->image('homepage.jpg'),
+            <?php echo $this->Html->link($this->Layout->blocks('slide-1'),
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add'), array('escape' => false)); ?></li>
-        <li><?php echo $this->Html->link($this->Html->image('homepage2.jpg'),
+        <li><?php echo $this->Html->link($this->Layout->blocks('slide-2'),
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), array('escape' => false)); ?></li>
-        <li><a href="/blog"><?php echo $this->Html->image('homepage3.jpg'); ?></a></li>
+        <li><a href="/blog"><?php echo $this->Layout->blocks('slide-3'); ?></a></li>
     </ul>
 
     <ul class="toggles">
