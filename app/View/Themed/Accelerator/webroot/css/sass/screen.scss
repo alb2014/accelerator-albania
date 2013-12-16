@@ -477,15 +477,15 @@ article {
     }
   }
   .share_comment {
-    background: url(../img/sprites/share_comment_blue.png) no-repeat center 2px transparent;
+    @include sprites-sprite(share_comment_inactive);
     &:hover {
-      background: url(../img/sprites/share_comment_grey.png) no-repeat center 2px transparent;
+      @include sprites-sprite(share_comment_active);
     }
   }
   .share_fb {
-    background: url(../img/sprites/share_fb_blue.png) no-repeat center top transparent;
+    @include sprites-sprite(share_fb_inactive);
     &:hover {
-      background: url(../img/sprites/share_fb_grey.png) no-repeat center top transparent;
+      @include sprites-sprite(share_fb_active);
     }
   }
 }
@@ -644,12 +644,9 @@ div.main {
     bottom: 0;
     right: 1em;
     li {
-      //@include sprites-sprite(toggle);
-      width: 30px;
-      height: 30px;
       float: left;
       @extend .hidden-text;
-      background: url(../img/sprites/toggle.png) no-repeat left top transparent;
+      @include sprites-sprite(toggle);
       z-index: 10;
       cursor: pointer;
       color: white;
