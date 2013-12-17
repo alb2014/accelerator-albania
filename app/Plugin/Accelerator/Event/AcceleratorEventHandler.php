@@ -33,9 +33,16 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
 			'Helper.Layout.afterFilter' => array(
 				'callable' => 'onLayoutAfterFilter',
 			),
-			'Accelerator.Idea.Tier_Level_Up' => '_alertUser',
+			//'Accelerator.Idea.Tier_Level_Up' => '_alertUser',
+			'Accelerator.Idea.Tier_Level_Up' => 'fakehandle',
 
 		);
+	}
+
+
+	public function fakehandle($event){
+		$this->log('LEVEL UP BITCHES');
+		$this->log('event');
 	}
 
 /**

@@ -232,6 +232,16 @@ class IdeasController extends AcceleratorAppController {
         $this->Idea->save($data);
     }
 
+    public function eventTest(){
+        $this->log('event test');
+        $event = new CakeEvent('Accelerator.Idea.Tier_Level_Up', $this, array(
+            'idea' => 'ant farm keyboard',
+            'tier_level' => 99
+        ));
+        $this->getEventManager()->dispatch($event);
+        $this->redirect('/');
+    }
+
 
     private function _alertUser($idea, $tier_level){
 
