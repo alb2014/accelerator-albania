@@ -213,11 +213,11 @@ class IdeasController extends AcceleratorAppController {
         $tier_3_votes_req = Configure::read('Accelerator.tier_3_votes');
         $tier_level = $idea['tier_level'];
 
-        if($tier_level == 0 && $upvotes == $tier_2_votes_req) {
-            $tier_level++;
+        if($tier_level == 0 && $upvotes >= $tier_2_votes_req) {
+            $tier_level = 1;
             $this->_alertUser($idea, $tier_level);
-        } else if($tier_level == 1 && $upvotes == $tier_3_votes_req) {
-            $tier_level++;
+        } else if($tier_level == 1 && $upvotes >= $tier_3_votes_req) {
+            $tier_level = 2;
             $this->_alertUser($idea, $tier_level);
         }
 
@@ -232,11 +232,11 @@ class IdeasController extends AcceleratorAppController {
         $this->Idea->save($data);
     }
 
-    public function eventTest(){
+    public function eventTest($tierLevel=2){
         $this->log('event test');
         $event = new CakeEvent('Accelerator.Idea.Tier_Level_Up', $this, array(
             'idea' => 'ant farm keyboard',
-            'tier_level' => 99
+            'tier_level' => $tierLevel
         ));
         $this->getEventManager()->dispatch($event);
         $this->redirect('/');
