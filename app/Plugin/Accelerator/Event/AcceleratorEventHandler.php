@@ -34,16 +34,13 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
 				'callable' => 'onLayoutAfterFilter',
 			),
 			//'Accelerator.Idea.Tier_Level_Up' => '_alertUser',
-			'Accelerator.Idea.Tier_Level_Up' => 'fakehandle',
+			'Accelerator.Idea.Tier_Level_Up' => 'alertUser',
 
 		);
 	}
 
 
-	public function fakehandle($event){
-		$this->log('LEVEL UP BITCHES');
-		$this->log('event');
-	}
+
 
 /**
  * onAdminLoginSuccessful
@@ -94,7 +91,7 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
 	/**
 	 * alers a users their tier has leveled up
 	 */
-	public function _alertUser($event){
+	public function alertUser($event){
 
         $idea = $event->data['idea'];
         $tier_level = $event->data['tier_level'];
@@ -108,7 +105,7 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
 
         $this->_sendEmail(
                 $ideaUser['email'],
-                __('accelerator', 'Congratulations! %s has reached Tier %d',$idea['name'], $tier_level),
+                __d('accelerator', 'Congratulations! %s has reached Tier %d',$idea['name'], $tier_level),
                 'Accelerator.tier_level',
                 array(
                     'user' => $ideaUser,
@@ -118,7 +115,6 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
         );
 
     }
-
 
 /**
  * Convenience method to send email
