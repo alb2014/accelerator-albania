@@ -11,8 +11,8 @@
         <title><?php echo $title_for_layout . ' | ' . Configure::read('Site.title'); ?></title>
     
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="<?php echo __d('accelerator', 'HAPide');?>">
-        <meta property="og:image" content="<?php echo $this->Html->url('/theme/Accelerator/img/sprites/logo.png', true); ?>">
+        <meta property="og:site_name" content="<?php echo __('accelerator', 'HAPide');?>">
+        <meta property="og:image" content="<?php echo $this->Html->url('/theme/Accelerator/img/hapide_square.png', true); ?>">
 
         <?php 
             echo $this->Layout->meta();
