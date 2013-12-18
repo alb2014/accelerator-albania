@@ -3,7 +3,9 @@
   $(document).ready(function() {
 
     /* Close & open modal windows */
-    $('#header_login, #footer_login, #idea_login').on('click', function(e) {
+
+    // Only open login form in non-IE
+    $('html:not(.lt-ie9)').on('click', '#header_login, #footer_login, #idea_login', function(e) {
       $('#login').addClass('open');
       e.preventDefault();
     });
