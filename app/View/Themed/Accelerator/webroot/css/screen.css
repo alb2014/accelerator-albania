@@ -1325,4 +1325,7 @@ section.mentors span {
 .lt-ie9 .modal.open {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
+  zoom: 1;
 }
