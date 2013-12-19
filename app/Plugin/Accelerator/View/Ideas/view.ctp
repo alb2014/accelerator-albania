@@ -14,7 +14,7 @@
         <h3><?php echo __d('accelerator','Idea Name');?></h3>
         <p><?php echo $idea['Idea']['name']; ?></p>
 
-        <h3><?php echo __d('accelerator','Idea Description';?></h3>
+        <h3><?php echo __d('accelerator','Idea Description');?></h3>
         <p><?php echo $idea['Idea']['desc']; ?></p>
 
         <h3>Idea Category</h3>
@@ -53,9 +53,21 @@
 
     <div class="inner">
 
-        <?php if($this->Session->check('Auth.User')) { 
+        <?php 
 
-            echo $this->element('disqus_comments'); 
+        if($this->Session->check('Auth.User')) { 
+
+
+            $user = AuthComponent::user();
+
+            $disqus_sso = $this->Disqus->single_sign_on($user);
+            $disqus_pubkey = $this->Disqus->get_public_key();
+
+            echo $this->element('disqus_comments', array(
+                'disqus_sso' => $disqus_sso,
+                'disqus_pubkey' => $disqus_pubkey
+                )
+            ); 
 
         } else { 
 

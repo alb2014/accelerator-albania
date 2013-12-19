@@ -1,3 +1,20 @@
+ <?php
+	    	
+	$disqus_auth_str =  $disqus_sso['message'] . ' ' . 
+	$disqus_sso['hmac'] . ' ' . 
+	$disqus_sso['timestamp'];
+
+	$this->log('authstring');
+?>
+<script type="text/javascript">
+    var disqus_config = function () {
+        //This is required before using comments
+        // The generated payload which authenticates users with Disqus
+        this.page.remote_auth_s3 = '<?php echo $disqus_auth_str ?>';
+        this.page.api_key = '<?php echo $disqus_pubkey ?>'; 
+    }
+</script>
+
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

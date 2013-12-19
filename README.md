@@ -44,3 +44,12 @@ Creating an Admin User
 Once the site is live you can create an admin user by going to the url /users/users/add and creating a user.  This will create a normal user which you can modify to create an admin by changing the database so that that user's role is 1 and their status is also set to 1.  Here's the SQL
 
 UPDATE `DATABASENAME`.`users` SET `role_id`='1', `status`='1' WHERE `id`='THE USER'S ID.  PROBABLY 1';
+
+Setting up Disqus Comments
+---–-----------------------
+
+You must configure the environmental variables
+
+DISQUS_PRIVKEY - the private key provided by Disqus API
+
+DISQUS_PUBKEY - the public key provided by Disqus API
