@@ -46,7 +46,7 @@ class  Idea extends AcceleratorAppModel {
            'Gastronomy' => __d('accelerator', 'Gastronomy'),
            'PersonalCareAndServices' => __d('accelerator', 'Personal Care and Services'),
            'Entertainment' => __d('accelerator', 'Entertainment'),
-           'Other' => __d('accelerator', 'Other')
+           'Other' => __d('accelerator', 'Other'));
     }
 
 }

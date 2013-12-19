@@ -1,0 +1,314 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-12-19 17:01+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Plugin/Accelerator/Config/bootstrap.php:34
+#: Plugin/Accelerator/Controller/AcceleratorController.php:39;65
+msgid "Accelerator"
+msgstr ""
+
+#: Plugin/Accelerator/Config/bootstrap.php:38
+msgid "Example 1"
+msgstr ""
+
+#: Plugin/Accelerator/Config/bootstrap.php:42
+msgid "Example 2"
+msgstr ""
+
+#: Plugin/Accelerator/Event/AcceleratorEventHandler.php:53
+msgid "Welcome %s.  Have a nice day"
+msgstr ""
+
+#: Plugin/Contacts/View/Contacts/view.ctp:39
+msgid "Direct Contact"
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:116
+msgid "Plugin name to be used"
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:120
+msgid "Precheck migrations"
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:124
+msgid "Force 'generate' to compare all tables."
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:128
+msgid "Set db config <config>. Uses 'default' if none is specified."
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:133
+msgid "Disables automatic creation of migrations table and running any internal plugin migrations"
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:135
+msgid "Displays a status of all plugin and app migrations."
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:137
+msgid "Run a migration to given direction or version."
+msgstr ""
+
+#: Plugin/Migrations/Console/Command/MigrationShell.php:139
+msgid "Generates a migration file."
+msgstr ""
+
+#: Plugin/Nodes/View/Nodes/view.ctp:62
+msgid "Program Structure"
+msgstr ""
+
+#: Plugin/Nodes/View/Nodes/view.ctp:83
+msgid "Comments"
+msgstr ""
+
+#: Plugin/Users/Controller/UsersController.php:362
+msgid "Unable to add your idea."
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:6
+msgid "Idea Title"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:7
+msgid "The Grab (240 Characters)"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:9
+msgid "Social"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:10
+msgid "Tech"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:11
+msgid "Scientific"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:12
+msgid "Other"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:13
+msgid "Type of Idea"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:15
+msgid "Is this a social business?"
+msgstr ""
+
+#: View/Themed/Accelerator/Elements/flash_message.ctp:3;5
+#: View/Themed/Accelerator/Layouts/default.ctp:201
+msgid "Close"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:14
+msgid "accelerator"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:34
+msgid "FAQ"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:42;118
+msgid "Profile"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:53;129;192
+msgid "Login"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:64
+msgid "HAPide"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:85
+msgid "<span>HAP</span> Submit"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:87
+msgid "<span>HAP</span> Engage"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:89
+msgid "<span>HAP</span> Learn"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:90;160
+msgid "What is this?"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:108
+msgid "Sitemap"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:111
+msgid "Submit"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:112
+msgid "Engage"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:113
+msgid "Learn"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:144
+msgid "Logout"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:159
+msgid "Submissions"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:161
+msgid "About"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:165
+msgid "Yunus SB"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:166
+msgid "UNDP"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:167
+msgid "Terms &amp; Conditions"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:168
+msgid "Contact"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:174
+msgid "Follow Us"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:176
+msgid "Facebook"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:177
+msgid "Google+"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:178
+msgid "RSS"
+msgstr ""
+
+#: View/Themed/Accelerator/Layouts/default.ctp:182
+msgid "&copy;2013 YUNUS Albania commissioned by UNPD"
+msgstr ""
+
+#: Plugin/Blocks/Model/Block.php:validation for field title
+#: Plugin/Blocks/Model/Region.php:validation for field title
+#: Plugin/Menus/Model/Link.php:validation for field title
+#: Plugin/Menus/Model/Menu.php:validation for field title
+#: Plugin/Settings/Model/Language.php:validation for field title
+#: Plugin/Taxonomy/Model/Type.php:validation for field title
+#: Plugin/Taxonomy/Model/Vocabulary.php:validation for field title
+msgid "Title cannot be empty."
+msgstr ""
+
+#: Plugin/Blocks/Model/Block.php:validation for field alias
+#: Plugin/Blocks/Model/Region.php:validation for field alias
+#: Plugin/Contacts/Model/Contact.php:validation for field alias
+#: Plugin/Menus/Model/Menu.php:validation for field alias
+#: Plugin/Settings/Model/Language.php:validation for field alias
+#: Plugin/Taxonomy/Model/Type.php:validation for field alias
+#: Plugin/Taxonomy/Model/Vocabulary.php:validation for field alias
+#: Plugin/Users/Model/Role.php:validation for field alias
+msgid "This alias has already been taken."
+msgstr ""
+
+#: Plugin/Blocks/Model/Block.php:validation for field alias
+#: Plugin/Blocks/Model/Region.php:validation for field alias
+#: Plugin/Contacts/Model/Contact.php:validation for field alias
+#: Plugin/Menus/Model/Menu.php:validation for field alias
+#: Plugin/Settings/Model/Language.php:validation for field alias
+#: Plugin/Taxonomy/Model/Type.php:validation for field alias
+#: Plugin/Taxonomy/Model/Vocabulary.php:validation for field alias
+#: Plugin/Users/Model/Role.php:validation for field title;validation for field alias
+msgid "Alias cannot be empty."
+msgstr ""
+
+#: Plugin/Comments/Model/Comment.php:validation for field body;validation for field name
+#: Plugin/Contacts/Model/Contact.php:validation for field title
+#: Plugin/Contacts/Model/Message.php:validation for field name;validation for field title;validation for field body
+#: Plugin/FileManager/Model/Attachment.php:validation for field title
+#: Plugin/Nodes/Model/Node.php:validation for field title
+#: Plugin/Users/Model/User.php:validation for field username;validation for field name
+msgid "This field cannot be left blank."
+msgstr ""
+
+#: Plugin/Comments/Model/Comment.php:validation for field email
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: Plugin/Contacts/Model/Contact.php:validation for field email
+#: Plugin/Contacts/Model/Message.php:validation for field email
+#: Plugin/Users/Model/User.php:validation for field email
+msgid "Please provide a valid email address."
+msgstr ""
+
+#: Plugin/FileManager/Model/Attachment.php:validation for field slug
+#: Plugin/Nodes/Model/Node.php:validation for field slug
+#: Plugin/Taxonomy/Model/Term.php:validation for field slug
+msgid "This slug has already been taken."
+msgstr ""
+
+#: Plugin/FileManager/Model/Attachment.php:validation for field slug
+#: Plugin/Nodes/Model/Node.php:validation for field slug
+#: Plugin/Taxonomy/Model/Term.php:validation for field slug
+msgid "Slug cannot be empty."
+msgstr ""
+
+#: Plugin/Menus/Model/Link.php:validation for field link
+msgid "Link cannot be empty."
+msgstr ""
+
+#: Plugin/Settings/Model/Setting.php:validation for field key
+msgid "This key has already been taken."
+msgstr ""
+
+#: Plugin/Settings/Model/Setting.php:validation for field key
+msgid "Key cannot be empty."
+msgstr ""
+
+#: Plugin/Users/Model/Role.php:validation for field title;validation for field alias
+#: Plugin/Users/Model/User.php:validation for field username;validation for field name
+msgid "This field must be alphanumeric"
+msgstr ""
+
+#: Plugin/Users/Model/User.php:validation for field username
+msgid "The username has already been taken."
+msgstr ""
+
+#: Plugin/Users/Model/User.php:validation for field email
+msgid "Email address already in use."
+msgstr ""
+
+#: Plugin/Users/Model/User.php:validation for field password
+msgid "Passwords must be at least 6 characters long."
+msgstr ""
+
+#: Plugin/Users/Model/User.php:validation for field website
+msgid "This field must be a valid URL"
+msgstr ""
+

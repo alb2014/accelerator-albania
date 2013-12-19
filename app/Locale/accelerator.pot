@@ -1,0 +1,376 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-12-19 17:01+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Plugin/Accelerator/Controller/IdeasController.php:60
+msgid "Your idea has been saved."
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:63
+msgid "Unable to add your idea."
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:78
+msgid "The idea with id: %s has been deleted."
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:83
+msgid "You are not authorized to delete this idea."
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:94;100
+msgid "Invalid idea"
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:126;132
+msgid "We couldn't find that idea."
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:139
+msgid "You are not authorized to edit this idea."
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:149
+msgid "Your idea has been updated."
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:152
+msgid "Unable to update your idea."
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:194
+msgid "Vote cast!"
+msgstr ""
+
+#: Plugin/Accelerator/Controller/IdeasController.php:199
+msgid "Voting failed."
+msgstr ""
+
+#: Plugin/Accelerator/Event/AcceleratorEventHandler.php:108
+msgid "Congratulations! %s has reached Tier %d"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:34
+msgid "Agriculture"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:35
+msgid "Communications and Media"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:36
+msgid "Education and Training"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:37
+msgid "Energy"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:38
+msgid "Environment"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:39
+msgid "Fashion and Lifestyle"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:40
+msgid "Health"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:41
+msgid "Tourism"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:42
+msgid "Mobility and Transport"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:43
+msgid "Housing and Construction"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:44
+msgid "Financial Services"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:45
+msgid "Technology"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:46
+msgid "Gastronomy"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:47
+msgid "Personal Care and Services"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:48
+msgid "Entertainment"
+msgstr ""
+
+#: Plugin/Accelerator/Model/Idea.php:49
+#: Plugin/Accelerator/View/Ideas/edit.ctp:19
+msgid "Other"
+msgstr ""
+
+#: Plugin/Accelerator/View/Accelerator/admin_index.ctp:4
+msgid "New Tab"
+msgstr ""
+
+#: Plugin/Accelerator/View/Accelerator/admin_index.ctp:7
+msgid "content here"
+msgstr ""
+
+#: Plugin/Accelerator/View/Accelerator/index.ctp:13
+msgid "Submit"
+msgstr ""
+
+#: Plugin/Accelerator/View/Accelerator/index.ctp:14
+msgid "Engage"
+msgstr ""
+
+#: Plugin/Accelerator/View/Accelerator/index.ctp:15
+msgid "Learn"
+msgstr ""
+
+#: Plugin/Accelerator/View/Accelerator/index.ctp:29;44
+msgid "read more"
+msgstr ""
+
+#: Plugin/Accelerator/View/Accelerator/index.ctp:31
+msgid "News"
+msgstr ""
+
+#: Plugin/Accelerator/View/Accelerator/index.ctp:52
+#: Plugin/Accelerator/View/Ideas/index.ctp:19
+#: Plugin/Accelerator/View/Ideas/view.ctp:38
+msgid "Submissions"
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/add_form.ctp:18
+#: Plugin/Accelerator/View/Ideas/edit.ctp:24
+msgid "Idea Title"
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/add_form.ctp:19
+msgid "The Grab (240 Characters)"
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/add_form.ctp:21
+#: Plugin/Accelerator/View/Ideas/edit.ctp:35
+msgid "Type of Idea"
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/add_form.ctp:28
+#: Plugin/Accelerator/View/Ideas/edit.ctp:43
+msgid "Social hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/add_form.ctp:33
+#: Plugin/Accelerator/View/Ideas/edit.ctp:49
+msgid "Is this a social business?"
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/add_form.ctp:38
+#: Plugin/Accelerator/View/Ideas/edit.ctp:133
+msgid "Pitch"
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/hapide_description.ctp:3
+msgid "What is HAPIDE?"
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/nodes.ctp:28
+msgid "Read more"
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/submissions.ctp:22
+msgid "Comment"
+msgstr ""
+
+#: Plugin/Accelerator/View/Elements/submissions.ctp:25
+msgid "Share on Facebook"
+msgstr ""
+
+#: Plugin/Accelerator/View/Emails/text/tier_level.ctp:3
+msgid "Congratulations %s!\n"
+msgstr ""
+
+#: Plugin/Accelerator/View/Emails/text/tier_level.ctp:4
+msgid "Your idea %s has reached Tier %d \n"
+msgstr ""
+
+#: Plugin/Accelerator/View/Emails/text/tier_level.ctp:13
+msgid "You have new information to enter to your idea %s \n"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/add.ctp:8
+msgid "Submit Idea"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/add.ctp:43
+msgid "Create Profile"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:4
+msgid "Edit My Idea"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:9
+msgid "Not For Profit"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:10
+msgid "Nonprofit"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:11
+msgid "Enterprise/B2B"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:13
+msgid "Subscription"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:14
+msgid "Freemium"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:15
+msgid "Retail"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:16
+msgid "ecommerce"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:17
+msgid "Community"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:18
+msgid "Advocacy"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:31
+msgid "The Grab"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:62
+msgid "Problem hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:78
+msgid "Solution hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:85
+msgid "The Solution"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:92
+msgid "Market hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:98
+msgid "The Market"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:105
+msgid "Competition hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:112
+msgid "The Competition"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:120
+msgid "Promise hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:127
+msgid "Our Promise"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:131
+msgid "Keep this idea private"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:138
+msgid "Cancel"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/edit.ctp:146
+msgid "References"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/index.ctp:10
+msgid "Order by:"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/index.ctp:12
+msgid "Date"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/index.ctp:15
+msgid "Popularity"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/index.ctp:17
+msgid "Topic"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/index.ctp:31
+msgid "Previous"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/index.ctp:38
+msgid "Next"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/index.ctp:52
+msgid "The Program"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/view.ctp:8
+msgid "Idea Page"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/view.ctp:14
+msgid "Idea Name"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/view.ctp:17
+msgid "Idea Description"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/view.ctp:20
+msgid "Idea Category"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/view.ctp:26
+msgid "Edit my idea"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/view.ctp:51
+msgid "Comments"
+msgstr ""
+
+#: Plugin/Accelerator/View/Ideas/view.ctp:75
+msgid "Login to Comment"
+msgstr ""
+
