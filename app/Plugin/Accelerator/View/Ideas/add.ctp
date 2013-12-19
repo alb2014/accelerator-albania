@@ -5,7 +5,7 @@
 <!-- Submission Section -->
 <section class="submit-idea">
     <header>
-        <h2><?php echo __('Submit Idea');?></h2>
+        <h2><?php echo __d('accelerator','Submit Idea');?></h2>
     </header>
 
     <div class="inner">

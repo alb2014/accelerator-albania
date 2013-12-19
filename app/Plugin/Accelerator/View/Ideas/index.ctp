@@ -7,16 +7,16 @@
     <section class="submissions main">
         <header>
             <ul id="submission_sort" class="submission-sort">
-                <li>Order by:</li>
+                <li><?php echo __d('accelerator', 'Order by:');?></li>
                 <li>
-                    <?php echo $this->Paginator->sort('date_created', 'Date', array('direction' => 'desc')); ?>
+                    <?php echo $this->Paginator->sort('date_created', __d('accelerator', 'Date'), array('direction' => 'desc')); ?>
                 </li>
                 <li>
-                    <?php echo $this->Paginator->sort('total_votes', 'Popularity', array('direction' => 'desc', 'class' => 'popularity')); ?>
+                    <?php echo $this->Paginator->sort('total_votes', __d('accelerator', 'Popularity'), array('direction' => 'desc', 'class' => 'popularity')); ?>
                 </li>
-                <!-- <li><a href=""><?php echo __('Topic');?></a></li> -->
+                <!-- <li><a href=""><?php echo __d('accelerator','Topic');?></a></li> -->
             </ul>
-            <h2>Submissions</h2>
+            <h2><?php echo __d('accelerator','Submissions');</h2>
         </header>
 
         <!-- Submissions -->
@@ -28,14 +28,14 @@
             <?php
 
                 echo $this->Paginator->prev(
-                    ' << ' . __('Previous'),
+                    ' << ' . __d('accelerator','Previous'),
                     array(),
                     null,
                     array('class' => 'prev disabled')
                 );
 
                 echo $this->Paginator->next(
-                    __('Next') . ' >> ',
+                    __d('accelerator', 'Next') . ' >> ',
                     array(),
                     null,
                     array('class' => 'next disabled')
@@ -49,7 +49,7 @@
     <!-- The Program Section -->
     <section class="program">
         <header>
-            <h2><?php echo __('The Program'); ?></h2>
+            <h2><?php echo __d('accelerator','The Program'); ?></h2>
         </header>
 
         <!-- Individual Infos -->

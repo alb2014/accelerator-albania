@@ -19,10 +19,10 @@ array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
 
         <?php if ($full) {?>
             <aside>
-                <?php echo $this->Html->link('Comment',
+                <?php echo $this->Html->link(__d('accelerator', 'Comment'),
 array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id'], '#' => 'comments'), array('class' => 'share_comment')); ?>
                 <a class="share_fb" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($this->Html->url( array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id']), true )); ?>" target="_blank">
-                    Share on Facebook
+                    <?php echo __d('accelerator','Share on Facebook';?>
                 </a>
             </aside>
         <?php } ?>

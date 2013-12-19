@@ -1,7 +1,7 @@
 <!-- Idea -->
 <section class="idea edit">
     <header>
-        <h2><?php echo __('Edit My Idea'); ?></h2>
+        <h2><?php echo __d('accelerator','Edit My Idea'); ?></h2>
     </header>
 
     <div class="inner">
@@ -21,18 +21,18 @@
         echo $this->Form->create('Idea');
         echo $this->Form->input('title', 
             array(
-                'label' => __('Idea Title'),
+                'label' => __d('accelerator','Idea Title'),
                 'value ' => $idea['name']
                 )
             );
         echo $this->Form->input('description', 
             array(
                 'rows' => '3', 
-                'label' => __('The Grab'),
+                'label' => __d('accelerator','The Grab'),
                 'value' => $idea['desc']
                 ));
 
-        echo $this->Form->input('type', array('options'=> $ideaTypes, 'label' => __('Type of Idea')));
+        echo $this->Form->input('type', array('options'=> $ideaTypes, 'label' => __d('accelerator','Type of Idea')));
         // Needs to be added to the table structure
 
         ?> 
@@ -40,13 +40,13 @@
         <span id="social_help" class="form-help">
             <a href="">[?]</a>
             <div>
-                <?php echo __('Social hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+                <?php echo __d('accelerator','Social hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
             </div>
         </span> 
 
         <?php
 
-        echo $this->Form->input('social_business', array('type' => 'checkbox', 'label' => __('Is this a social business?')));
+        echo $this->Form->input('social_business', array('type' => 'checkbox', 'label' => __d('accelerator','Is this a social business?')));
 
         $user = AuthComponent::user();
         echo $this->Form->input('user_id', array('type' => 'hidden',
@@ -59,7 +59,7 @@
         <span id="problem_help" class="form-help">
             <a href="">[?]</a>
             <div>
-                <?php echo __('Problem hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+                <?php echo __d('accelerator','Problem hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
             </div>
         </span> 
 
@@ -75,7 +75,7 @@
         <span id="solution_help" class="form-help">
             <a href="">[?]</a>
             <div>
-                <?php echo __('Solution hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+                <?php echo __d('accelerator','Solution hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
             </div>
         </span> 
 
@@ -88,7 +88,7 @@
         <span id="market_help" class="form-help">
             <a href="">[?]</a>
             <div>
-                <?php echo __('Market hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+                <?php echo __d('accelerator','Market hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
             </div>
         </span> 
 
@@ -100,7 +100,7 @@
         <span id="competition_help" class="form-help">
             <a href="">[?]</a>
             <div>
-                <?php echo __('Competition hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+                <?php echo __d('accelerator','Competition hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
             </div>
         </span> 
 
@@ -114,7 +114,7 @@
         <span id="promise_help" class="form-help">
             <a href="">[?]</a>
             <div>
-                <?php echo __('Promise hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+                <?php echo __d('accelerator','Promise hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
             </div>
         </span> 
 
@@ -131,7 +131,7 @@
 
         <?php /* echo $this->Html->link('Cancel',
 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id']),array('class' => 'button')); */ ?>
-        <a class="button" href="/accelerator/ideas"><?php echo __('Cancel');?></a>
+        <a class="button" href="/accelerator/ideas"><?php echo __d('accelerator','Cancel');?></a>
     </div>
 </section>
 
@@ -139,7 +139,7 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
 <!-- References Sidebar (block in admin) -->
 <section class="references">
     <header>
-        <h2><?php echo __('References'); ?></h2>
+        <h2><?php echo __d('accelerator','References'); ?></h2>
     </header>
 
     <div class="inner">

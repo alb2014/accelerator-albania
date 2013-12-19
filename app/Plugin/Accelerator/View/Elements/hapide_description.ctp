@@ -1,6 +1,6 @@
 <section class="what-is-hapi sidebar">
     <header>
-        <h2><?php echo __('What is HAPIDE?'); ?></h2>
+        <h2><?php echo __d('accelerator','What is HAPIDE?'); ?></h2>
     </header>
 
     <div class="inner">
