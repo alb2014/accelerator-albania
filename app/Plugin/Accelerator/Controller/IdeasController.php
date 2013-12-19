@@ -6,7 +6,10 @@ App::uses('CakeEvent', 'Event');
 
 
 class IdeasController extends AcceleratorAppController {
-        public $components = array('Paginator');
+    
+    public $components = array('Paginator');
+
+    public $helpers = array('Disqus');
 
 
     public $paginate = array(
