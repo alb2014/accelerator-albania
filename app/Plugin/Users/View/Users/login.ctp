@@ -35,7 +35,7 @@
         if (response.status == "connected"){
             alert('redirecting you to auto facebook login');
                 //here is out default place for login
-            window.location.href = "http://"+window.location.hostname + "/facebook/login";
+            window.location.href = "http://"+window.location.hostname + "/facebook/facebook/login";
         }
     });
   };
@@ -49,4 +49,4 @@
      ref.parentNode.insertBefore(js, ref);
    }(document));
 </script>
-<?php echo($this->Facebook->login(array('registration-url'=>'http://aa-fb-test.herokuapp.com/facebook/signup'))); ?>
+<?php echo($this->Facebook->login(array('registration-url'=>'http://aa-fb-test.herokuapp.com/face/bookfacebook/signup'))); ?>
