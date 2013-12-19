@@ -2,15 +2,13 @@
 
 $this->extend('/Common/admin_index');
 			
-				echo $this->Croogo->adminAction(
-					__d('croogo', 'Text List of Emails'),
-					array('action' => 'email_list',
-						'plugin' => 'Users',
-						'controller' => 'users'),
-					array('button' => 'success')
-				);
-			
 $this->Html
 	->addCrumb('', '/admin', array('icon' => 'home'))
 	->addCrumb(__d('croogo', 'Users'), '/' . $this->request->url);
+
+echo $this->Html->link(
+    'Export Text Email List',
+    '/Users/users/email_list',
+    array('class' => 'button', 'target' => '_blank')
+);
 ?>
