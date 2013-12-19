@@ -2,6 +2,7 @@
 
 App::uses('CakeEmail', 'Network/Email');
 App::uses('UsersAppController', 'Users.Controller');
+// App::uses('Facebook', 'Facebook');
 
 
 /**
@@ -34,7 +35,10 @@ class UsersController extends UsersAppController {
 				'filterEmpty' => true,
 			),
 		),
-		// 'Facebook.Connect'
+		'Facebook.Connect' => array(
+			'createUser'=>false, 
+			'noauth'=>true
+			)
 	);
 
 	/**
@@ -43,7 +47,7 @@ class UsersController extends UsersAppController {
 	 * @var array
 	 * @access public
 	 */
-	// public $helpers = array('Facebook.Facebook');
+	public $helpers = array('Facebook.Facebook');
 
 /**
  * Preset Variables Search

@@ -1,9 +1,9 @@
 <?php //app/Config/facebook.php
 	$config = array(
 		'Facebook' => array(
-			'appId'  => '239655156201853',
-			'apiKey' => '239655156201853',
-			'secret' => '042b44a1834cdb2e9ae58433e1c52edc',
+			'appId'  => str_replace("'", '', getenv('FB_APPID')),
+			'apiKey' => str_replace("'", '', getenv('FB_APPKEY')),
+			'secret' => str_replace("'", '', getenv('FB_SECRET')),
 			'cookie' => true,
 			'locale' => 'en_US',
 		)
