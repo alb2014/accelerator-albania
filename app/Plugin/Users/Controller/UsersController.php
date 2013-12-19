@@ -569,4 +569,9 @@ class UsersController extends UsersAppController {
 		return 'croogo@' . preg_replace('#^www\.#', '', strtolower($_SERVER['SERVER_NAME']));
 	}
 
+	public function email_list(){
+		$this->layout = '';
+		$this->set('users', $this->User->find('all'));
+	}
+
 }
