@@ -51,6 +51,7 @@ class IdeasController extends AcceleratorAppController {
     }
 	    
     public function add() {
+        $this->set('ideaTypes' => $this->Idea->getIdeaTypes());
         if (AuthComponent::user()){
             if ($this->request->is('post')) {
                 $this->Idea->create();
@@ -130,10 +131,8 @@ class IdeasController extends AcceleratorAppController {
         if (!$idea) {
             throw new NotFoundException(__d('accelerator',"We couldn't find that idea."));
         }
-
-
+        $this->set('ideaTypes' => $this->Idea->getIdeaTypes());
         //check to see if user is the idea owner
-
         $user = AuthComponent::user();
         
         if($user['id'] != $idea['Idea']['user_id']){
@@ -177,15 +176,17 @@ class IdeasController extends AcceleratorAppController {
         if ($user){
             $id = $ideaId.'-'.$user['id'];
             $userId = $user['id'];
+            $ipAddress = null;
         } else {
             $id = $ideaId.'-'.RequestHandlerComponent::getClientIp();
             $user['id'] = null;
+            $ipAddress = RequestHandlerComponent::getClientIp());
         }
         $data = array('Vote' => array('id' => $id,
                                       'value' => $mod,
                                       'idea_id' => $ideaId,
                                       'user_id' => $userId,
-                                      'ip_address' => RequestHandlerComponent::getClientIp()));
+                                      'ip_address' => $ipAddress);
         
         $vote->id = $ideaId.'-'.$user['id'];
 

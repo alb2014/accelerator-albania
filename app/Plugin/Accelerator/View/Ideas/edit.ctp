@@ -18,11 +18,6 @@
                                     'advocacy' => 'Advocacy',
                                     'other' => 'Other'
                                     );
-        $typeOpts =  array('social'=>'Social',
-                                    'tech' =>'Tech',
-                                    'scientific' => 'Scientific',
-                                    'other' => 'Other');
-
         echo $this->Form->create('Idea');
         echo $this->Form->input('title', 
             array(
@@ -37,7 +32,7 @@
                 'value' => $idea['desc']
                 ));
 
-        echo $this->Form->input('type', array('options'=> $typeOpts, 'label' => __('Type of Idea')));
+        echo $this->Form->input('type', array('options'=> $ideaTypes, 'label' => __('Type of Idea')));
         // Needs to be added to the table structure
 
         ?> 

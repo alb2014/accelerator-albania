@@ -17,11 +17,7 @@ echo $this->Form->create('Accelerator.Idea', array(
 
 echo $this->Form->input('name', array('label' => __('Idea Title')));
 echo $this->Form->input('desc', array('rows' => '7', 'label' => __('The Grab (240 Characters)')));
-echo $this->Form->input('type', array('options' =>
-                        array('social'=>__('Social'),
-                              'tech' =>__('Tech'),
-                              'scientific' => __('Scientific'),
-                              'other' => __('Other'))),
+echo $this->Form->input('type', array('options' =>$ideaTypes,
                         array('label' => __('Type of Idea')));
 // Needs to be added to the table structure
 ?> 

@@ -40,7 +40,7 @@
 <?php if(!$this->Session->check('Auth.User')) { ?>
     <section class="create-profile">
         <header>
-            <h2><?php echo __('Create Profile');?></h2>
+            <h2><?php echo __d('accelerator','Create Profile');?></h2>
         </header>
 
         <?php
