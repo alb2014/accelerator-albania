@@ -6,17 +6,17 @@
 
     <div class="inner">
         <?php
-        $modelOpts = array('notforprofit'=>'Not For Profit',
-                                    'nonprofit' =>'Nonprofit',
-                                    'enterpriseb2b' => 'Enterprise/B2B',
+        $modelOpts = array('notforprofit'=>__d('accelerator', 'Not For Profit'),
+                                    'nonprofit' =>__d('accelerator', 'Nonprofit'),
+                                    'enterpriseb2b' => __d('accelerator', 'Enterprise/B2B'),
                                     'b2c' => 'B2C',
-                                    'subscription' => 'Subscription',
-                                    'freemium' => 'Freemium',
-                                    'retail' => 'Retail',
-                                    'ecommerce' => 'ecommerce',
-                                    'community' => 'Community',
-                                    'advocacy' => 'Advocacy',
-                                    'other' => 'Other'
+                                    'subscription' => __d('accelerator', 'Subscription'),
+                                    'freemium' => __d('accelerator', 'Freemium'),
+                                    'retail' => __d('accelerator', 'Retail'),
+                                    'ecommerce' => __d('accelerator', 'ecommerce'),
+                                    'community' => __d('accelerator', 'Community'),
+                                    'advocacy' => __d('accelerator', 'Advocacy'),
+                                    'other' => __d('accelerator', 'Other')
                                     );
         echo $this->Form->create('Idea');
         echo $this->Form->input('title', 
@@ -81,7 +81,8 @@
 
         <?php
 
-            echo $this->Form->input('solution', array('rows' => '5'));
+            echo $this->Form->input('solution', array('rows' => '5',
+                                                      'label' => __d('accelerator', 'The Solution')));
 
         ?> 
 
@@ -93,7 +94,8 @@
         </span> 
 
         <?php
-            echo $this->Form->input('market', array('rows' => '5'));
+            echo $this->Form->input('market', array('rows' => '5'
+                                                    'label' => __d('accelerator', 'The Market')));
 
         ?> 
 
@@ -106,7 +108,8 @@
 
         <?php
 
-            echo $this->Form->input('competition', array('rows' => '5'));
+            echo $this->Form->input('competition', array('rows' => '5'
+                                                        'label' => __d('accelerator', 'The Competition')));
             echo $this->Form->input('model', array('options'=> $modelOpts));
 
         ?> 
@@ -120,13 +123,14 @@
 
         <?php
 
-            echo $this->Form->input('promise', array('rows' => '5'));
+            echo $this->Form->input('promise', array('rows' => '5'
+                                                    'label' => __d('accelerator', 'Our Promise')));
 
         endif;
 
-        echo $this->Form->input('private', array('type' => 'checkbox', 'label' => 'Keep this idea private'));
+        echo $this->Form->input('private', array('type' => 'checkbox', 'label' => __d('accelerator', 'Keep this idea private')));
 
-        echo $this->Form->end('Pitch');
+        echo $this->Form->end(__d('accelerator', 'Pitch'));
         ?>
 
         <?php /* echo $this->Html->link('Cancel',

@@ -31,6 +31,7 @@ CREATE TABLE `votes` (
   `value` tinyint(4) NOT NULL DEFAULT '0',
   `idea_id` int(20) unsigned NOT NULL,
   `user_id` int(20) unsigned NOT NULL,
+  `ip_address` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -40,10 +41,11 @@ CREATE TABLE `votes` (
 -- Table structure for table `ideas`
 --
 
+
 CREATE TABLE IF NOT EXISTS `ideas` (
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL COMMENT 'idea name',
   `desc` varchar(240) COLLATE utf8_unicode_ci NOT NULL COMMENT 'the grab',
-  `type` enum('social','tech','scientific','other') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'other' COMMENT 'type of biz',
+  `type` enum('Agriculture','CommunicationsAndMedia','EducationAndTraining','Energy','Environment','FashionAndLifestyle','Health','Tourism','MobilityAndTransport','HousingAndConstruction','FinancialServices','Technology','Gastronomy','PersonalCareAndServices','Entertainment','Other') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'other' COMMENT 'type of biz',
   `id` int(20) NOT NULL AUTO_INCREMENT,
   `problem` varchar(240) COLLATE utf8_unicode_ci DEFAULT NULL,
   `solution` varchar(240) COLLATE utf8_unicode_ci NOT NULL,

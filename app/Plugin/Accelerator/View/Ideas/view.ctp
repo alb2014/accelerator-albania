@@ -17,7 +17,7 @@
         <h3><?php echo __d('accelerator','Idea Description');?></h3>
         <p><?php echo $idea['Idea']['desc']; ?></p>
 
-        <h3>Idea Category</h3>
+        <h3><?php echo __d('accelerator', 'Idea Category');?></h3>
         <p class="idea-type"><?php echo $idea['Idea']['type']; ?></p>
 
         <?php 
