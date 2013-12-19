@@ -180,7 +180,7 @@ class IdeasController extends AcceleratorAppController {
         } else {
             $id = $ideaId.'-'.RequestHandlerComponent::getClientIp();
             $user['id'] = null;
-            $ipAddress = RequestHandlerComponent::getClientIp());
+            $ipAddress = RequestHandlerComponent::getClientIp();
         }
         $data = array('Vote' => array('id' => $id,
                                       'value' => $mod,
