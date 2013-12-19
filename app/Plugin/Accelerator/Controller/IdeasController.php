@@ -181,10 +181,10 @@ class IdeasController extends AcceleratorAppController {
             $id = $ideaId.'-'.RequestHandlerComponent::getClientIp();
             $user['id'] = null;
         }
-        $data = array('Vote' => array('id' => $ideaId.'-'.$user['id'],
+        $data = array('Vote' => array('id' => $id,
                                       'value' => $mod,
                                       'idea_id' => $ideaId,
-                                      'user_id' => $user['id'],
+                                      'user_id' => $userId,
                                       'ip_address' => RequestHandlerComponent::getClientIp()));
         
         $vote->id = $ideaId.'-'.$user['id'];
