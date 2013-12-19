@@ -4,7 +4,9 @@ $this->extend('/Common/admin_index');
 			
 				echo $this->Croogo->adminAction(
 					__d('croogo', 'Text List of Emails'),
-					array('action' => 'email_list'),
+					array('action' => 'email_list',
+						'plugin' => 'Users',
+						'controller' => 'users'),
 					array('button' => 'success')
 				);
 			
