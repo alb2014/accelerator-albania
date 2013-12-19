@@ -29,6 +29,9 @@ class IdeasController extends AcceleratorAppController {
         $votes = ClassRegistry::init('Vote');
         if ($user){
             $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
+        } else {
+            $user_votes = $votes->find('all', array('conditions' =>array('Vote.ip_address' => RequestHandlerComponent::getClientIp())));
+        }
             for($i = 0; $i < count($ideas); ++$i) {
                 foreach ($user_votes as $vote){
                     if ($ideas[$i]['Idea']['id'] == $vote['Vote']['idea_id']){
@@ -50,10 +53,10 @@ class IdeasController extends AcceleratorAppController {
                 $this->Idea->create();
                 $this->request->data['Idea']['date_created'] = null;
                 if ($this->Idea->save($this->request->data)) {
-                    $this->Session->setFlash(__('Your idea has been saved.'));
+                    $this->Session->setFlash(__d('accelerator','Your idea has been saved.'));
                     return $this->redirect(array('action' => 'index'));
                 }
-                $this->Session->setFlash(__('Unable to add your idea.'));
+                $this->Session->setFlash(__d('accelerator','Unable to add your idea.'));
             }
         } else {
             $this->redirect('/users/users/add/1');
@@ -68,12 +71,12 @@ class IdeasController extends AcceleratorAppController {
         $user = AuthComponent::user();
         if ($idea['userID'] == $user['id']){
             if ($this->Idea->delete($id)) {
-                $this->Session->setFlash(__('The idea with id: %s has been deleted.', h($id)));
+                $this->Session->setFlash(__d('accelerator','The idea with id: %s has been deleted.', h($id)));
                 return $this->redirect(array('action' => 'index'));
             }
         } else {
 
-            $this->Session->setFlash(__('You are not authorized to delete this idea.'));
+            $this->Session->setFlash(__d('accelerator','You are not authorized to delete this idea.'));
             return $this->redirect(array(
                     'action' => 'view',
                     $id
@@ -84,13 +87,13 @@ class IdeasController extends AcceleratorAppController {
     public function view($ideaId = null){
         
         if (!$ideaId) {
-            throw new NotFoundException(__('Invalid idea'));
+            throw new NotFoundException(__d('accelerator','Invalid idea'));
         }
 
         $idea = $this->Idea->findById($ideaId);
 
         if (!$idea) {
-            throw new NotFoundException(__('Invalid idea'));
+            throw new NotFoundException(__d('accelerator','Invalid idea'));
         }
 
         $user = AuthComponent::user();
@@ -116,13 +119,13 @@ class IdeasController extends AcceleratorAppController {
 
     public function edit($id = null) {
         if (!$id) {
-            throw new NotFoundException(__("We couldn't find that idea."));
+            throw new NotFoundException(__d('accelerator',"We couldn't find that idea."));
         }
 
         $idea = $this->Idea->findById($id);
 
         if (!$idea) {
-            throw new NotFoundException(__("We couldn't find that idea."));
+            throw new NotFoundException(__d('accelerator',"We couldn't find that idea."));
         }
 
 
@@ -131,7 +134,7 @@ class IdeasController extends AcceleratorAppController {
         $user = AuthComponent::user();
         
         if($user['id'] != $idea['Idea']['user_id']){
-            $this->Session->setFlash(__('You are not authorized to edit this idea.'));
+            $this->Session->setFlash(__d('accelerator','You are not authorized to edit this idea.'));
             return $this->redirect(array(
                     'action' => 'view',
                     $id
@@ -141,10 +144,10 @@ class IdeasController extends AcceleratorAppController {
         if ($this->request->is(array('post', 'put'))) {
             $this->Idea->id = $id;
             if ($this->Idea->save($this->request->data)) {
-                $this->Session->setFlash(__('Your idea has been updated.'));
+                $this->Session->setFlash(__d('accelerator','Your idea has been updated.'));
                 return $this->redirect(array('action' => 'index/'.$user['id']));
             }
-            $this->Session->setFlash(__('Unable to update your idea.'));
+            $this->Session->setFlash(__d('accelerator','Unable to update your idea.'));
         }
 
         if (!$this->request->data) {
@@ -168,20 +171,28 @@ class IdeasController extends AcceleratorAppController {
         }
         $vote = new Vote();
         $user = AuthComponent::user();
+        if ($user){
+            $id = $ideaId.'-'.$user['id'];
+            $userId = $user['id'];
+        } else {
+            $id = $ideaId.'-'.RequestHandlerComponent::getClientIp();
+            $user['id'] = null;
+        }
         $data = array('Vote' => array('id' => $ideaId.'-'.$user['id'],
                                       'value' => $mod,
                                       'idea_id' => $ideaId,
-                                      'user_id' => $user['id']));
+                                      'user_id' => $user['id'],
+                                      'ip_address' => RequestHandlerComponent::getClientIp()));
         
         $vote->id = $ideaId.'-'.$user['id'];
 
         if ($vote->save($data)) {
-            $this->Session->setFlash(__('Vote cast!'));
+            $this->Session->setFlash(__d('accelerator','Vote cast!'));
             $this->updateVotes($ideaId);
             return $this->redirect(array('action' => 'index/'));
         }
 
-        $this->Session->setFlash(__('Voting failed.'));
+        $this->Session->setFlash(__d('accelerator','Voting failed.'));
         return $this->redirect(array('action' => 'index'));
     }
 
