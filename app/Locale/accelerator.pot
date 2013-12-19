@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-12-19 17:01+0100\n"
+"POT-Creation-Date: 2013-12-19 17:13+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -19,6 +19,7 @@ msgid "Your idea has been saved."
 msgstr ""
 
 #: Plugin/Accelerator/Controller/IdeasController.php:63
+#: Plugin/Users/Controller/UsersController.php:363
 msgid "Unable to add your idea."
 msgstr ""
 
@@ -136,6 +137,10 @@ msgid "content here"
 msgstr ""
 
 #: Plugin/Accelerator/View/Accelerator/index.ctp:13
+#: Plugin/Users/View/Elements/add_form.ctp:32
+#: Plugin/Users/View/Elements/login_form.ctp:8
+#: Plugin/Users/View/Users/forgot.ctp:12
+#: Plugin/Users/View/Users/reset.ctp:10
 msgid "Submit"
 msgstr ""
 
@@ -163,15 +168,18 @@ msgstr ""
 
 #: Plugin/Accelerator/View/Elements/add_form.ctp:18
 #: Plugin/Accelerator/View/Ideas/edit.ctp:24
+#: Plugin/Users/View/Elements/add_form.ctp:6
 msgid "Idea Title"
 msgstr ""
 
 #: Plugin/Accelerator/View/Elements/add_form.ctp:19
+#: Plugin/Users/View/Elements/add_form.ctp:7
 msgid "The Grab (240 Characters)"
 msgstr ""
 
 #: Plugin/Accelerator/View/Elements/add_form.ctp:21
 #: Plugin/Accelerator/View/Ideas/edit.ctp:35
+#: Plugin/Users/View/Elements/add_form.ctp:9
 msgid "Type of Idea"
 msgstr ""
 
@@ -182,6 +190,7 @@ msgstr ""
 
 #: Plugin/Accelerator/View/Elements/add_form.ctp:33
 #: Plugin/Accelerator/View/Ideas/edit.ctp:49
+#: Plugin/Users/View/Elements/add_form.ctp:11
 msgid "Is this a social business?"
 msgstr ""
 
@@ -372,5 +381,75 @@ msgstr ""
 
 #: Plugin/Accelerator/View/Ideas/view.ctp:75
 msgid "Login to Comment"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:19
+#: Plugin/Users/View/Users/forgot.ctp:9
+msgid "Username"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:21
+msgid "password"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:22
+#: Plugin/Users/View/Users/reset.ctp:7
+msgid "Verify Password"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:27
+msgid "Name"
+msgstr ""
+
+#: Plugin/Users/View/Elements/add_form.ctp:28
+msgid "Email"
+msgstr ""
+
+#: Plugin/Users/View/Elements/login_form.ctp:12
+msgid "Register here"
+msgstr ""
+
+#: Plugin/Users/View/Elements/login_form.ctp:17
+msgid "Forgot your password?"
+msgstr ""
+
+#: Plugin/Users/View/Emails/text/forgot_password.ctp:10
+msgid "Please visit this link to reset your password: %s"
+msgstr ""
+
+#: Plugin/Users/View/Emails/text/forgot_password.ctp:14
+msgid "If you did not request a password reset, then please ignore this email."
+msgstr ""
+
+#: Plugin/Users/View/Emails/text/register.ctp:10
+msgid "Please visit this link to activate your account: %s"
+msgstr ""
+
+#: Plugin/Users/View/Users/index.ctp:4
+msgid "New Idea?"
+msgstr ""
+
+#: Plugin/Users/View/Users/index.ctp:16
+msgid "My Past Submissions"
+msgstr ""
+
+#: Plugin/Users/View/Users/index.ctp:29
+msgid "Edit My Account"
+msgstr ""
+
+#: Plugin/Users/View/Users/index.ctp:35
+msgid "Logout"
+msgstr ""
+
+#: Plugin/Users/View/Users/index.ctp:42
+msgid "Delete Account"
+msgstr ""
+
+#: Plugin/Users/View/Users/login.ctp:3
+msgid "Login"
+msgstr ""
+
+#: Plugin/Users/View/Users/reset.ctp:6
+msgid "New password"
 msgstr ""
 

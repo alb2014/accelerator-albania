@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-12-19 17:01+0100\n"
+"POT-Creation-Date: 2013-12-19 17:13+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -73,42 +73,6 @@ msgstr ""
 
 #: Plugin/Nodes/View/Nodes/view.ctp:83
 msgid "Comments"
-msgstr ""
-
-#: Plugin/Users/Controller/UsersController.php:362
-msgid "Unable to add your idea."
-msgstr ""
-
-#: Plugin/Users/View/Elements/add_form.ctp:6
-msgid "Idea Title"
-msgstr ""
-
-#: Plugin/Users/View/Elements/add_form.ctp:7
-msgid "The Grab (240 Characters)"
-msgstr ""
-
-#: Plugin/Users/View/Elements/add_form.ctp:9
-msgid "Social"
-msgstr ""
-
-#: Plugin/Users/View/Elements/add_form.ctp:10
-msgid "Tech"
-msgstr ""
-
-#: Plugin/Users/View/Elements/add_form.ctp:11
-msgid "Scientific"
-msgstr ""
-
-#: Plugin/Users/View/Elements/add_form.ctp:12
-msgid "Other"
-msgstr ""
-
-#: Plugin/Users/View/Elements/add_form.ctp:13
-msgid "Type of Idea"
-msgstr ""
-
-#: Plugin/Users/View/Elements/add_form.ctp:15
-msgid "Is this a social business?"
 msgstr ""
 
 #: View/Themed/Accelerator/Elements/flash_message.ctp:3;5

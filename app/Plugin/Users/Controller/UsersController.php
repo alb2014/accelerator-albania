@@ -333,6 +333,8 @@ class UsersController extends UsersAppController {
  */
 	public function add($includeIdea=false) {
 		$this->set('includeIdea', $includeIdea);
+		$idea = ClassRegistry::init('Idea');
+		$this->set('ideaTypes', $idea->getIdeaTypes);
 		$this->set('title_for_layout', __d('croogo', 'Register'));
 		if (!empty($this->request->data)) {
 			$this->User->create();
@@ -352,14 +354,13 @@ class UsersController extends UsersAppController {
 
 				if (isset($this->request->data['Idea'])){
 					$this->log('Including Idea!');
-					$idea = ClassRegistry::init('Idea');
 					$idea->create();
 					$this->request->data['Idea']['user_id'] = $user['User']['id'];
                 	$this->request->data['Idea']['date_created'] = null;
                 	$this->request->data['Idea']['private'] = 1;
                 	$this->log($idea->save($this->request->data));
                 }
-                $this->Session->setFlash(__('Unable to add your idea.'));
+                $this->Session->setFlash(__d('accelerator','Unable to add your idea.'));
 				$this->_sendEmail(
 					array(Configure::read('Site.title'), $this->_getSenderEmail()),
 					$this->request->data['User']['email'],

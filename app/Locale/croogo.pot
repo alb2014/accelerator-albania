@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-12-19 17:01+0100\n"
+"POT-Creation-Date: 2013-12-19 17:13+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -323,8 +323,6 @@ msgstr ""
 #: Plugin/Contacts/View/Messages/admin_index.ctp:134
 #: Plugin/Menus/View/Links/admin_index.ctp:112
 #: Plugin/Nodes/View/Nodes/admin_index.ctp:126
-#: Plugin/Users/View/Elements/login_form.ctp:8
-#: Plugin/Users/View/Users/forgot.ctp:12
 msgid "Submit"
 msgstr ""
 
@@ -617,7 +615,7 @@ msgstr ""
 #: Plugin/Extensions/Controller/ExtensionsThemesController.php:158
 #: Plugin/Menus/Controller/LinksController.php:372
 #: Plugin/Nodes/Controller/NodesController.php:337
-#: Plugin/Users/Controller/UsersController.php:413;480;491
+#: Plugin/Users/Controller/UsersController.php:414;481;492
 msgid "An error occurred."
 msgstr ""
 
@@ -2183,7 +2181,6 @@ msgstr ""
 
 #: Plugin/Install/Console/Command/InstallShell.php:67
 #: Plugin/Install/View/Install/database.ctp:39
-#: Plugin/Users/View/Users/login.ctp:3
 msgid "Login"
 msgstr ""
 
@@ -2217,7 +2214,6 @@ msgstr ""
 #: Plugin/Install/Console/Command/InstallShell.php:99
 #: Plugin/Install/View/Install/adminuser.ctp:25
 #: Plugin/Users/View/Users/admin_reset_password.ctp:26
-#: Plugin/Users/View/Users/reset.ctp:7
 msgid "Verify Password"
 msgstr ""
 
@@ -3289,7 +3285,7 @@ msgstr ""
 msgid "The User has been saved"
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:151;174;380
+#: Plugin/Users/Controller/UsersController.php:151;174;381
 msgid "The User could not be saved. Please, try again."
 msgstr ""
 
@@ -3325,60 +3321,60 @@ msgstr ""
 msgid "Incorrect username or password"
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:261;541
+#: Plugin/Users/Controller/UsersController.php:261;542
 msgid "Log out successful."
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:336
+#: Plugin/Users/Controller/UsersController.php:338
 msgid "Register"
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:366
+#: Plugin/Users/Controller/UsersController.php:367
 msgid "[%s] Please activate your account"
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:375
+#: Plugin/Users/Controller/UsersController.php:376
 msgid "You have successfully registered an account. An email has been sent with further instructions."
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:410
+#: Plugin/Users/Controller/UsersController.php:411
 msgid "Account activated successfully."
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:435
+#: Plugin/Users/Controller/UsersController.php:436
 msgid "Forgot Password"
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:440
+#: Plugin/Users/Controller/UsersController.php:441
 msgid "Invalid username."
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:452
+#: Plugin/Users/Controller/UsersController.php:453
 msgid "[%s] Reset Password"
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:460
+#: Plugin/Users/Controller/UsersController.php:461
 msgid "An email has been sent with instructions for resetting your password."
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:463;505
+#: Plugin/Users/Controller/UsersController.php:464;506
 msgid "An error occurred. Please try again."
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:477
+#: Plugin/Users/Controller/UsersController.php:478
 #: Plugin/Users/View/Users/admin_reset_password.ctp:9;16
 msgid "Reset Password"
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:502
+#: Plugin/Users/Controller/UsersController.php:503
 msgid "Your password has been reset successfully."
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:519
+#: Plugin/Users/Controller/UsersController.php:520
 msgid "Log in"
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:559
+#: Plugin/Users/Controller/UsersController.php:560
 msgid "Invalid User."
 msgstr ""
 
@@ -3386,33 +3382,13 @@ msgstr ""
 msgid "Passwords do not match. Please, try again."
 msgstr ""
 
-#: Plugin/Users/View/Elements/add_form.ctp:34
+#: Plugin/Users/View/Elements/add_form.ctp:31
 msgid "By submitting this form, you are agreeing to HAPide's <a href=\"/page/terms-and-conditions\" target=\"_blank\">Terms &amp; Conditions</a>"
-msgstr ""
-
-#: Plugin/Users/View/Elements/login_form.ctp:12
-msgid "Register here"
-msgstr ""
-
-#: Plugin/Users/View/Elements/login_form.ctp:17
-msgid "Forgot your password?"
 msgstr ""
 
 #: Plugin/Users/View/Emails/text/forgot_password.ctp:1
 #: Plugin/Users/View/Emails/text/register.ctp:1
 msgid "Hello %s"
-msgstr ""
-
-#: Plugin/Users/View/Emails/text/forgot_password.ctp:10
-msgid "Please visit this link to reset your password: %s"
-msgstr ""
-
-#: Plugin/Users/View/Emails/text/forgot_password.ctp:14
-msgid "If you did not request a password reset, then please ignore this email."
-msgstr ""
-
-#: Plugin/Users/View/Emails/text/register.ctp:10
-msgid "Please visit this link to activate your account: %s"
 msgstr ""
 
 #: Plugin/Users/View/Roles/admin_form.ctp:23
@@ -3439,29 +3415,5 @@ msgstr ""
 
 #: Plugin/Users/View/Users/admin_reset_password.ctp:36
 msgid "Reset"
-msgstr ""
-
-#: Plugin/Users/View/Users/index.ctp:4
-msgid "New Idea?"
-msgstr ""
-
-#: Plugin/Users/View/Users/index.ctp:16
-msgid "My Past Submissions"
-msgstr ""
-
-#: Plugin/Users/View/Users/index.ctp:29
-msgid "Edit My Account"
-msgstr ""
-
-#: Plugin/Users/View/Users/index.ctp:35
-msgid "Logout"
-msgstr ""
-
-#: Plugin/Users/View/Users/index.ctp:42
-msgid "Delete Account"
-msgstr ""
-
-#: Plugin/Users/View/Users/reset.ctp:6
-msgid "New password"
 msgstr ""
 
