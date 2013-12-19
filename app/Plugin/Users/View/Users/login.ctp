@@ -49,4 +49,4 @@
      ref.parentNode.insertBefore(js, ref);
    }(document));
 </script>
-<?php echo($this->Facebook->login(array('registration-url'=>'http://aa-fb-test.herokuapp.com/face/bookfacebook/signup'))); ?>
+<?php echo($this->Facebook->login(array('registration-url'=>'http://aa-fb-test.herokuapp.com/facebook/facebook/signup'))); ?>
