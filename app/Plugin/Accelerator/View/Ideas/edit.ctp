@@ -26,20 +26,33 @@
         echo $this->Form->create('Idea');
         echo $this->Form->input('title', 
             array(
-                'label' => 'Idea Title',
+                'label' => __('Idea Title'),
                 'value ' => $idea['name']
                 )
             );
         echo $this->Form->input('description', 
             array(
                 'rows' => '3', 
-                'label' => 'The Grab',
+                'label' => __('The Grab'),
                 'value' => $idea['desc']
                 ));
 
-        echo $this->Form->input('type', array('options'=> $typeOpts, 'label' => 'Type of Idea'));
+        echo $this->Form->input('type', array('options'=> $typeOpts, 'label' => __('Type of Idea')));
         // Needs to be added to the table structure
-        echo $this->Form->input('social_business', array('type' => 'checkbox', 'label' => 'Is this a social business?'));
+
+        ?> 
+
+        <span id="social_help" class="form-help">
+            <a href="">[?]</a>
+            <div>
+                <?php echo __('Social hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.');?>
+            </div>
+        </span> 
+
+        <?php
+
+        echo $this->Form->input('social_business', array('type' => 'checkbox', 'label' => __('Is this a social business?')));
+
         $user = AuthComponent::user();
         echo $this->Form->input('user_id', array('type' => 'hidden',
                             'value' => $user['id']));

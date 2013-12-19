@@ -605,6 +605,14 @@ aside.miscellaneous {
     text-align: center;
     margin-top: 1em;
   }
+  h4 {
+    @include adjust-font-size-to(22px);
+    text-align: center;
+    font-weight: 500;
+    span {
+      font-style: italic;
+    }
+  }
 }
 
 div.main {
@@ -790,6 +798,9 @@ div.main {
 
 .submit-idea {
   @extend .column-wrapper;
+  span.form-help.inline {
+    right: 660px;
+  }
 }
 
 .create-profile {
@@ -904,6 +915,12 @@ div.main {
 
 /* -------------------------------------------------------------------------
    Profile Page */
+
+.users.profile, .idea.edit {
+  #social_help {
+    right: 250px;
+  }
+}
 
 
 /* -------------------------------------------------------------------------
@@ -1124,6 +1141,13 @@ section.mentors {
     background:transparent;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); 
     zoom: 1;
+    @include opacity(0);
+    &.open {
+      @include opacity(1);
+      background:transparent;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); 
+      zoom: 1;
+    }
   }
 
 }
