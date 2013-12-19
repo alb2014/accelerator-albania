@@ -51,7 +51,7 @@ class IdeasController extends AcceleratorAppController {
     }
 	    
     public function add() {
-        $this->set('ideaTypes' => $this->Idea->getIdeaTypes());
+        $this->set('ideaTypes', $this->Idea->getIdeaTypes());
         if (AuthComponent::user()){
             if ($this->request->is('post')) {
                 $this->Idea->create();
@@ -131,7 +131,7 @@ class IdeasController extends AcceleratorAppController {
         if (!$idea) {
             throw new NotFoundException(__d('accelerator',"We couldn't find that idea."));
         }
-        $this->set('ideaTypes' => $this->Idea->getIdeaTypes());
+        $this->set('ideaTypes', $this->Idea->getIdeaTypes());
         //check to see if user is the idea owner
         $user = AuthComponent::user();
         
@@ -246,17 +246,6 @@ class IdeasController extends AcceleratorAppController {
 
         $this->Idea->save($data);
     }
-
-    public function eventTest($tierLevel=2){
-        $this->log('event test');
-        $event = new CakeEvent('Accelerator.Idea.Tier_Level_Up', $this, array(
-            'idea' => 'ant farm keyboard',
-            'tier_level' => $tierLevel
-        ));
-        $this->getEventManager()->dispatch($event);
-        $this->redirect('/');
-    }
-
 
     private function _alertUser($idea, $tier_level){
 
