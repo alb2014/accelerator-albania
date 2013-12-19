@@ -5,16 +5,16 @@
 <!-- Idea -->
 <section class="idea">
     <header>
-        <h2><?php echo __('Idea Page');?></h2>
+        <h2><?php echo __d('accelerator','Idea Page');?></h2>
     </header>
 
     <?php echo $this->element('Accelerator.votes', array("idea" => $idea)); ?>
 
     <div class="info">
-        <h3>Idea Name</h3>
+        <h3><?php echo __d('accelerator','Idea Name');?></h3>
         <p><?php echo $idea['Idea']['name']; ?></p>
 
-        <h3>Idea Description</h3>
+        <h3><?php echo __d('accelerator','Idea Description';?></h3>
         <p><?php echo $idea['Idea']['desc']; ?></p>
 
         <h3>Idea Category</h3>
@@ -23,7 +23,7 @@
         <?php 
         
         if($isIdeaOwner):
-            echo $this->Html->link('Edit my idea',
+            echo $this->Html->link(__d('accelerator', 'Edit my idea'),
                 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); 
         endif
         
@@ -35,7 +35,7 @@
 <!-- Submissions Sidebar (module) -->
 <section class="submissions sidebar">
     <header>
-        <h2><a href=""><?php echo __('Submissions');?></a></h2>
+        <h2><a href=""><?php echo __d('accelerator','Submissions');?></a></h2>
     </header>
 
     <!-- Submissions -->
@@ -48,7 +48,7 @@
 <!-- Idea Comments -->
 <section class="idea-comments" id="comments">
     <header>
-        <h2><?php __('Comments'); ?></h2>
+        <h2><?php __d('accelerator','Comments'); ?></h2>
     </header>
 
     <div class="inner">
@@ -60,7 +60,7 @@
         } else { 
 
             echo $this->Html->link(
-                    __('Login to Comment'),
+                    __d('accelerator','Login to Comment'),
                     array(
                         'plugin' => 'users',
                         'controller' => 'users',
