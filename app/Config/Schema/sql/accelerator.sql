@@ -69,6 +69,8 @@ INSERT IGNORE INTO `settings` (`id`, `key`, `value`, `title`, `description`, `in
 (NULL, 'Accelerator.tier_2_votes', 20, 'Tier 2 Total Vote Requirements', 'Required amount of votes to reach tier 2', '', 1, 1, ''),
 (NULL, 'Accelerator.tier_3_votes', 20, 'Tier 3 Total Vote Requirements', 'Required amount of votes to reach tier 3', '', 1, 1, '');
 
+INSERT INTO `acos` (`parent_id`, `alias`, `lft`, `rght`) VALUES ('171', 'email_list', '410', '411');
+
 -- ALTER TABLE IF EXISTS `users` 
 -- ADD COLUMN `facebook_id` BIGINT UNSIGNED NOT NULL AFTER `created`;
 
