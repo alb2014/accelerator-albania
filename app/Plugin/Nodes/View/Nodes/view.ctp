@@ -45,7 +45,7 @@
             <h2><?php echo __d('croogo', 'Who Is...') ?></h2>
         </header>
         <div class="inner">
-            <?php $this->Layout->blocks('about-sidebar'); ?>
+            <?php echo $this->Layout->blocks('about-sidebar'); ?>
         </div>
     </section>
 <?php
