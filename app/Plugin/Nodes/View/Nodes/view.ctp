@@ -10,7 +10,7 @@
 <?php
     if ($this->Layout->node('CustomFields.about_intro')) {
         ?> <div class="header-block"> <?php
-            echo $this->Layout->node('CustomFields.about_intro');
+            echo $this->Layout->blocks('about-intro');
         ?> </div> <?php
     };
 ?>
@@ -42,10 +42,10 @@
 ?>
     <section class="static sidebar">
         <header>
-            <h2><?php echo $this->Layout->node('CustomFields.sidebar_title'); ?></h2>
+            <h2><?php echo __d('croogo', 'Who Is...') ?></h2>
         </header>
         <div class="inner">
-            <?php echo $this->Layout->node('CustomFields.sidebar_content'); ?>
+            <?php $this->Layout->blocks('about-sidebar'); ?>
         </div>
     </section>
 <?php
@@ -59,11 +59,11 @@
 ?>
     <section class="node-wrapper static">
         <header>
-            <h2><?php echo __('Program Structure'); ?>
+            <h2><?php echo __d('croogo', 'Program Structure'); ?>
         </header>
 
         <div class="inner">
-            <?php echo $this->Layout->node('CustomFields.program_structure'); ?>
+            <?php echo $this->Layout->blocks('program-structure'); ?>
         </div>
     </section>
 
