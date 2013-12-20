@@ -1154,3 +1154,13 @@ section.mentors {
   }
 
 }
+
+/* Slight Responsive Abilities */
+
+@media screen and (max-width: 1035px) {
+
+  .faq-tab {
+    display: none;
+  }
+
+}

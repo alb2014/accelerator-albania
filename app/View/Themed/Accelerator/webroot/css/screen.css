@@ -1342,3 +1342,11 @@ section.mentors span {
   zoom: 1;
   display: block;
 }
+
+/* Slight Responsive Abilities */
+@media screen and (max-width: 1035px) {
+  /* line 1162, sass/screen.scss */
+  .faq-tab {
+    display: none;
+  }
+}
