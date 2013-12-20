@@ -186,24 +186,6 @@
 
         </div>
 
-        <div id="login" class="modal">
-            <div>
-                <a href="#close" title="Close" class="modal-close">x</a>
-                <h2><?php echo __('Login');?></h2>
-                <?php
-                    echo $this->element('login_form', array(), array('plugin' => 'Users'));
-                ?>
-            </div>
-        </div>
-
-        <div id="faq" class="modal">
-            <div>
-                <a id="close" title="<?php echo __('Close');?>" class="modal-close">x</a>
-                <?php
-                    echo $this->Layout->blocks('faq');
-                ?>
-            </div>
-        </div>
 
         <?php
             echo $this->Layout->js();
