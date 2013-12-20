@@ -3,9 +3,15 @@
     <header>
         <h2><?php echo __d('accelerator','Edit My Idea'); ?></h2>
     </header>
-
+    
     <div class="inner">
         <?php
+        /// This is used to make fields uneditable once a voting threshold has been passed
+        if ($idea['tier_level'] > 0){
+            $tierConfig = array('readonly' => 'readonly');
+        } else {
+            $tierConfig = array();
+        }
         $modelOpts = array('notforprofit'=>__d('accelerator', 'Not For Profit'),
                                     'nonprofit' =>__d('accelerator', 'Nonprofit'),
                                     'enterpriseb2b' => __d('accelerator', 'Enterprise/B2B'),
@@ -20,19 +26,23 @@
                                     );
         echo $this->Form->create('Idea');
         echo $this->Form->input('title', 
-            array(
-                'label' => __d('accelerator','Idea Title'),
-                'value ' => $idea['name']
-                )
+            array_merge(
+                $tierConfig,
+                array(
+                    'label' => __d('accelerator','Idea Title'),
+                    'value ' => $idea['name']
+                ))
             );
         echo $this->Form->input('description', 
+            array_merge(
+            $tierConfig,
             array(
                 'rows' => '3', 
                 'label' => __d('accelerator','The Grab'),
                 'value' => $idea['desc']
-                ));
+                )));
 
-        echo $this->Form->input('type', array('options'=> $ideaTypes, 'label' => __d('accelerator','Type of Idea')));
+        echo $this->Form->input('type',array_merge($tierConfig, array('options'=> $ideaTypes, 'label' => __d('accelerator','Type of Idea'))));
         // Needs to be added to the table structure
 
         ?> 
@@ -46,7 +56,7 @@
 
         <?php
 
-        echo $this->Form->input('social_business', array('type' => 'checkbox', 'label' => __d('accelerator','Is this a social business?')));
+        echo $this->Form->input('social_business', array_merge($tier_config, array('type' => 'checkbox', 'label' => __d('accelerator','Is this a social business?'))));
 
         $user = AuthComponent::user();
         echo $this->Form->input('user_id', array('type' => 'hidden',
