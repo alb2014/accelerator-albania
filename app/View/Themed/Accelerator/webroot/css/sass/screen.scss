@@ -607,6 +607,7 @@ aside.miscellaneous {
   }
   h4 {
     @include adjust-font-size-to(22px);
+    line-height: 1.5em;
     text-align: center;
     font-weight: 500;
     span {
