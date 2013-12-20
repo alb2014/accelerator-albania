@@ -16,7 +16,7 @@
                 </li>
                 <!-- <li><a href=""><?php echo __d('accelerator','Topic');?></a></li> -->
             </ul>
-            <h2><?php echo __d('accelerator','Submissions');</h2>
+            <h2><?php echo __d('accelerator','Submissions'); ?></h2>
         </header>
 
         <!-- Submissions -->

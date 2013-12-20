@@ -186,7 +186,7 @@ class IdeasController extends AcceleratorAppController {
                                       'value' => $mod,
                                       'idea_id' => $ideaId,
                                       'user_id' => $userId,
-                                      'ip_address' => $ipAddress);
+                                      'ip_address' => $ipAddress));
         
         $vote->id = $ideaId.'-'.$user['id'];
 

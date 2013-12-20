@@ -607,6 +607,7 @@ aside.miscellaneous {
   }
   h4 {
     @include adjust-font-size-to(22px);
+    line-height: 1.5em;
     text-align: center;
     font-weight: 500;
     span {
@@ -1142,12 +1143,24 @@ section.mentors {
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); 
     zoom: 1;
     @include opacity(0);
+    display: none;
     &.open {
       @include opacity(1);
       background:transparent;
       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); 
       zoom: 1;
+      display: block;
     }
+  }
+
+}
+
+/* Slight Responsive Abilities */
+
+@media screen and (max-width: 1035px) {
+
+  .faq-tab {
+    display: none;
   }
 
 }
