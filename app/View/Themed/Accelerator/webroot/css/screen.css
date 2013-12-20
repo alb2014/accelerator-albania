@@ -1331,12 +1331,14 @@ section.mentors span {
   zoom: 1;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+  display: none;
 }
-/* line 1146, sass/screen.scss */
+/* line 1147, sass/screen.scss */
 .lt-ie9 .modal.open {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
   zoom: 1;
+  display: block;
 }

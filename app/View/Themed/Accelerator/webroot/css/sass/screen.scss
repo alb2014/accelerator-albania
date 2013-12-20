@@ -1143,11 +1143,13 @@ section.mentors {
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); 
     zoom: 1;
     @include opacity(0);
+    display: none;
     &.open {
       @include opacity(1);
       background:transparent;
       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); 
       zoom: 1;
+      display: block;
     }
   }
 
