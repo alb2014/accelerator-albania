@@ -11,7 +11,7 @@ App::uses('CroogoAppController', 'Croogo.Controller');
 class AppController extends CroogoAppController {
 
 	public function beforeFilter() {
-		if (getenv('TRANSLATION_LANG')){
+		if (!empty(getenv('TRANSLATION_LANG'))){
 			
 			$lang = getenv('TRANSLATION_LANG');
 
