@@ -73,7 +73,7 @@ class IdeasController extends AcceleratorAppController {
         }
         $idea = $this->Idea->findById($id);
         $user = AuthComponent::user();
-        if ($idea['userID'] == $user['id']){
+        if (($idea['userID'] == $user['id']) or ($user['role'] == 1)){
             if ($this->Idea->delete($id)) {
                 $this->Session->setFlash(__d('accelerator','The idea with id: %s has been deleted.', h($id)));
                 return $this->redirect(array('action' => 'index'));
@@ -103,12 +103,17 @@ class IdeasController extends AcceleratorAppController {
         $user = AuthComponent::user();
 
         $isIdeaOwner = false;
-
+        $isAdmin = false;
         if($user['id'] == $idea['Idea']['user_id']) {
             $isIdeaOwner = true;
         }
 
+        if($user['role_id'] == 1) {
+            $isAdmin = true;
+        }
+
         $this->set('isIdeaOwner', $isIdeaOwner);
+        $this->set('isAdmin', $isAdmin);
 
         $this->set('idea', $idea);
         $this->set('ideas', ClassRegistry::init('Idea')->find('all', array(
@@ -135,7 +140,7 @@ class IdeasController extends AcceleratorAppController {
         //check to see if user is the idea owner
         $user = AuthComponent::user();
         
-        if($user['id'] != $idea['Idea']['user_id']){
+        if($user['id'] != $idea['Idea']['user_id'] and $user['role_id'] != 1){
             $this->Session->setFlash(__d('accelerator','You are not authorized to edit this idea.'));
             return $this->redirect(array(
                     'action' => 'view',
