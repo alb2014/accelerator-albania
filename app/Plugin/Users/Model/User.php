@@ -226,7 +226,7 @@ class User extends UsersAppModel {
 	public function validIdentical($check) {
 		if (isset($this->data['User']['password'])) {
 			if ($this->data['User']['password'] != $check['verify_password']) {
-				return __d('croogo', 'Passwords do not match. Please, try again.');
+				return __d('accelerator', 'Passwords do not match. Please, try again.');
 			}
 		}
 		return true;

@@ -1,4 +1,4 @@
-<?php echo __d('croogo', 'Hello %s', $user['User']['name']); ?>,
+<?php echo __d('accelerator', 'Hello %s', $user['User']['name']); ?>,
 
 <?php
 	$url = Router::url(array(
