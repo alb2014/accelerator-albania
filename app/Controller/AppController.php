@@ -10,4 +10,9 @@ App::uses('CroogoAppController', 'Croogo.Controller');
  */
 class AppController extends CroogoAppController {
 
+	public function beforeFilter() {
+		Configure::write('Config.language', 'alb');
+    }
+    
+
 }
