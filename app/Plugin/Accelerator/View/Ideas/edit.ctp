@@ -15,7 +15,7 @@
         $modelOpts = array('notforprofit'=>__d('accelerator', 'Not For Profit'),
                                     'nonprofit' =>__d('accelerator', 'Nonprofit'),
                                     'enterpriseb2b' => __d('accelerator', 'Enterprise/B2B'),
-                                    'b2c' => 'B2C',
+                                    'b2c' => __d('accelerator','B2C'),
                                     'subscription' => __d('accelerator', 'Subscription'),
                                     'freemium' => __d('accelerator', 'Freemium'),
                                     'retail' => __d('accelerator', 'Retail'),
@@ -104,7 +104,7 @@
         </span> 
 
         <?php
-            echo $this->Form->input('market', array('rows' => '5'
+            echo $this->Form->input('market', array('rows' => '5',
                                                     'label' => __d('accelerator', 'The Market')));
 
         ?> 
