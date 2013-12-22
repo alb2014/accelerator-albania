@@ -272,6 +272,8 @@ class UsersController extends UsersAppController {
 
 		$user = AuthComponent::user();
 
+		$this->set('ideaTypes', $this->User->Idea->getIdeaTypes());
+
 		$this->set('ideas', ClassRegistry::init('Idea')->find('all',
 			array(
 				'conditions' => array(
@@ -279,7 +281,7 @@ class UsersController extends UsersAppController {
 					),
 	    		'order' => array(
 
-						'Idea.date_created' => 'desc',
+					'Idea.date_created' => 'desc',
 	    			'total_votes' => 'desc',
 	    			'up_votes' => 'desc') 
 	    			)

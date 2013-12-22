@@ -33,7 +33,7 @@ class IdeasController extends AcceleratorAppController {
         if ($user){
             $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
         } else {
-            $user_votes = $votes->find('all', array('conditions' =>array('Vote.ip_address' => RequestHandlerComponent::getClientIp())));
+            $user_votes = $votes->find('all', array('conditions' =>array('Vote.ip_address' => $this->request->clientIp())));
         }
         for($i = 0; $i < count($ideas); ++$i) {
             foreach ($user_votes as $vote){

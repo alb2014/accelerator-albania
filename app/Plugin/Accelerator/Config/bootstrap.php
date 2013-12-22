@@ -30,20 +30,20 @@
 /**
  * Admin menu (navigation)
  */
-	CroogoNav::add('extensions.children.accelerator', array(
-		'title' => __('Accelerator'),
-		'url' => '#',
-		'children' => array(
-			'example1' => array(
-				'title' => __('Example 1'),
-				'url' => '#',
-			),
-			'example2' => array(
-				'title' => __('Example 2'),
-				'url' => '#',
-			),
-		),
-	));
+	// CroogoNav::add('extensions.children.accelerator', array(
+	// 	'title' => __('Accelerator'),
+	// 	'url' => '#',
+	// 	'children' => array(
+	// 		'example1' => array(
+	// 			'title' => __('Example 1'),
+	// 			'url' => '#',
+	// 		),
+	// 		'example2' => array(
+	// 			'title' => __('Example 2'),
+	// 			'url' => '#',
+	// 		),
+	// 	),
+	// ));
 
 /**
  * Admin row action

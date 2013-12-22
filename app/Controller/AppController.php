@@ -11,12 +11,20 @@ App::uses('CroogoAppController', 'Croogo.Controller');
 class AppController extends CroogoAppController {
 
 	public function beforeFilter() {
-		if (getenv('TRANSLATION_ON')){
+
+		$lang = getenv('TRANSLATION_LANG');
+
+		if (!empty($lang)){
+			
 			parent::beforeFilter();
-			Configure::write('Config.language', 'sq');
-			$this->Session->write('Config.language', 'sq');
+			
+			Configure::write('Config.language', $lang);
+			$this->Session->write('Config.language', $lang);
+
+    	} else {
+    		parent::beforeFilter();
+    		Configure::write('Config.language', 'en');
+			$this->Session->write('Config.language', 'en');
     	}
 	}
-    
-
 }
