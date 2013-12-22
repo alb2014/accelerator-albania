@@ -613,8 +613,6 @@ if (!function_exists('__d')) {
 		}
 		App::uses('I18n', 'I18n');
 		$translated = I18n::translate($msg, null, $domain);
-		var_dump($translated);
-		var_dump($domain);
 		if ($args === null) {
 			return $translated;
 		} elseif (!is_array($args)) {

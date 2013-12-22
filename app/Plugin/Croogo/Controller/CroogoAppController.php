@@ -131,6 +131,7 @@ class CroogoAppController extends Controller {
  * @throws MissingComponentException
  */
 	public function beforeFilter() {
+		
 		parent::beforeFilter();
 		$aclFilterComponent = Configure::read('Site.acl_plugin') . 'Filter';
 		if (empty($this->{$aclFilterComponent})) {

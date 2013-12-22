@@ -160,20 +160,20 @@ class I18n {
 			$lang = $_this->l10n->get($language);
 			$_this->_lang = $lang;
 		}
-
 		if ($domain === null) {
+		
 			$domain = self::$defaultDomain;
 		}
 		if ($domain === '') {
 			throw new CakeException(__d('cake_dev', 'You cannot use "" as a domain.'));
 		}
-
+		
 		$_this->domain = $domain . '_' . $_this->l10n->lang;
 
 		if (!isset($_this->_domains[$domain][$_this->_lang])) {
 			$_this->_domains[$domain][$_this->_lang] = Cache::read($_this->domain, '_cake_core_');
 		}
-
+		
 		if (!isset($_this->_domains[$domain][$_this->_lang][$_this->category])) {
 			$_this->_bindTextDomain($domain);
 			Cache::write($_this->domain, $_this->_domains[$domain][$_this->_lang], '_cake_core_');
@@ -195,7 +195,6 @@ class I18n {
 				$plurals = 0;
 			}
 		}
-
 		if (!empty($_this->_domains[$domain][$_this->_lang][$_this->category][$singular])) {
 			if (($trans = $_this->_domains[$domain][$_this->_lang][$_this->category][$singular]) || ($plurals) && ($trans = $_this->_domains[$domain][$_this->_lang][$_this->category][$plural])) {
 				if (is_array($trans)) {
