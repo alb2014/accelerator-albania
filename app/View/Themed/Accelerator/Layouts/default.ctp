@@ -162,8 +162,8 @@
                             </ul>
 
                             <ul>
-                                <li><a href="http://www.yunussb.com/" target="_blank"><?php echo __d('accelerator','Yunus SB'); ?></a></li>
-                                <li><a href="http://www.undp.org/content/undp/en/home.html" target="_blank"><?php echo __d('accelerator','UNDP');?></a></li>
+                                <li><a href="http://www.yunussb.al/index.php/sq/" target="_blank"><?php echo __d('accelerator','Yunus SB'); ?></a></li>
+                                <li><a href="http://www.al.undp.org/albania/en/home.html" target="_blank"><?php echo __d('accelerator','UNDP');?></a></li>
                                 <li><a href="/page/terms-and-conditions"><?php echo __d('accelerator','Terms &amp; Conditions');?></a></li>
                                 <li><a href="/contact"><?php echo __d('accelerator','Contact');?></a></li>
                             </ul>
@@ -173,8 +173,8 @@
                     <div class="social">
                         <h3><?php echo __d('accelerator','Follow Us')?></h3>
                         <ul>
-                            <li><a href="" class="fb"><?php echo __d('accelerator','Facebook')?></a></li>
-                            <li><a href="" class="google"><?php echo __d('accelerator','Google+')?></a></li>
+                            <li><a href="https://www.facebook.com/ysbalbania" class="fb" target="_blank"><?php echo __d('accelerator','Facebook')?></a></li>
+                            <li><a href="https://plus.google.com/+Yunussb/posts" class="google" target="_blank"><?php echo __d('accelerator','Google+')?></a></li>
                             <li><a href="/promoted.rss" class="rss" target="_blank"><?php echo __d('accelerator','RSS')?></a></li>
                         </ul>
                     </div>
