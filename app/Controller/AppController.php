@@ -15,8 +15,10 @@ class AppController extends CroogoAppController {
 			parent::beforeFilter();
 			Configure::write('Config.language', 'sq');
 			$this->Session->write('Config.language', 'sq');
+    	} else {
+    		parent::beforeFilter();
+    		Configure::write('Config.language', 'en');
+			$this->Session->write('Config.language', 'en');
     	}
 	}
-    
-
 }
