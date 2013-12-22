@@ -73,7 +73,7 @@ class IdeasController extends AcceleratorAppController {
         }
         $idea = $this->Idea->findById($id);
         $user = AuthComponent::user();
-        if (($idea['userID'] == $user['id']) or ($user['role'] == 1){
+        if (($idea['userID'] == $user['id']) or ($user['role'] == 1)){
             if ($this->Idea->delete($id)) {
                 $this->Session->setFlash(__d('accelerator','The idea with id: %s has been deleted.', h($id)));
                 return $this->redirect(array('action' => 'index'));
