@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-12-19 17:13+0100\n"
+"POT-Creation-Date: 2013-12-22 20:48+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -67,117 +67,8 @@ msgstr ""
 msgid "Generates a migration file."
 msgstr ""
 
-#: Plugin/Nodes/View/Nodes/view.ctp:62
-msgid "Program Structure"
-msgstr ""
-
 #: Plugin/Nodes/View/Nodes/view.ctp:83
 msgid "Comments"
-msgstr ""
-
-#: View/Themed/Accelerator/Elements/flash_message.ctp:3;5
-#: View/Themed/Accelerator/Layouts/default.ctp:201
-msgid "Close"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:14
-msgid "accelerator"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:34
-msgid "FAQ"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:42;118
-msgid "Profile"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:53;129;192
-msgid "Login"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:64
-msgid "HAPide"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:85
-msgid "<span>HAP</span> Submit"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:87
-msgid "<span>HAP</span> Engage"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:89
-msgid "<span>HAP</span> Learn"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:90;160
-msgid "What is this?"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:108
-msgid "Sitemap"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:111
-msgid "Submit"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:112
-msgid "Engage"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:113
-msgid "Learn"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:144
-msgid "Logout"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:159
-msgid "Submissions"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:161
-msgid "About"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:165
-msgid "Yunus SB"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:166
-msgid "UNDP"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:167
-msgid "Terms &amp; Conditions"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:168
-msgid "Contact"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:174
-msgid "Follow Us"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:176
-msgid "Facebook"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:177
-msgid "Google+"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:178
-msgid "RSS"
-msgstr ""
-
-#: View/Themed/Accelerator/Layouts/default.ctp:182
-msgid "&copy;2013 YUNUS Albania commissioned by UNPD"
 msgstr ""
 
 #: Plugin/Blocks/Model/Block.php:validation for field title
