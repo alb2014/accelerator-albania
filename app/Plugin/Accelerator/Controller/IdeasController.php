@@ -107,6 +107,7 @@ class IdeasController extends AcceleratorAppController {
         if($user['id'] == $idea['Idea']['user_id']) {
             $isIdeaOwner = true;
         }
+        Debugger::dump($user);
         if($user['role'] == 1) {
             $isAdmin = true;
         }
