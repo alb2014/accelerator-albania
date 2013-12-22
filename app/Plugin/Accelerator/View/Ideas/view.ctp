@@ -22,11 +22,16 @@
 
         <?php 
         
-        if($isIdeaOwner):
+        if($isIdeaOwner){
             echo $this->Html->link(__d('accelerator', 'Edit my idea'),
                 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); 
-        endif
-        
+        }
+        if($isAdmin){
+            echo $this->Html->link(__d('accelerator', 'Edit this idea'),
+                array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); 
+            echo $this->Html->link(__d('accelerator', 'Edit this idea'),
+                array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'delete', $idea['Idea']['id']), array('class' => 'button')); 
+       }
         ?>
     </div>
 
