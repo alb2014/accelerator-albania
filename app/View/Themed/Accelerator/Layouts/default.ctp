@@ -11,7 +11,7 @@
         <title><?php echo $title_for_layout . ' | ' . Configure::read('Site.title'); ?></title>
     
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="<?php echo __('accelerator', 'HAPide');?>">
+        <meta property="og:site_name" content="<?php echo __d('accelerator','accelerator', 'HAPide');?>">
         <meta property="og:image" content="<?php echo $this->Html->url('/theme/Accelerator/img/hapide_square.png', true); ?>">
 
         <?php 
@@ -31,7 +31,7 @@
         <![endif]-->
 
         <div class="faq-tab">
-            <a href="/page/faq" id="faq_tab"><?php echo __('FAQ');?></a>
+            <a href="/page/faq" id="faq_tab"><?php echo __d('accelerator','FAQ');?></a>
         </div>
         <div class="content">
 
@@ -39,7 +39,7 @@
                 <?php 
                 if($this->Session->check('Auth.User')) { 
                     echo $this->Html->link(
-                            __('Profile'),
+                            __d('accelerator','Profile'),
                             array(
                                 'plugin' => 'users',
                                 'controller' => 'users',
@@ -50,7 +50,7 @@
                 } else { 
 
                     echo $this->Html->link(
-                            __('Login'),
+                            __d('accelerator','Login'),
                             array(
                                 'plugin' => 'users',
                                 'controller' => 'users',
@@ -61,7 +61,7 @@
 
                 } ?> 
 
-                <h1><a href="/accelerator"><?php echo __('HAPide');?></a></h1>
+                <h1><a href="/accelerator"><?php echo __d('accelerator','HAPide');?></a></h1>
 
                 <?php
                     // Is there a better way to set an active class?
@@ -82,12 +82,12 @@
                 <nav>
                     <ul class="main-toggles">
                         <li>
-                            <?php echo $this->Html->link(__('<span>HAP</span> Submit'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add'), $options_submit);?>
+                            <?php echo $this->Html->link(__d('accelerator','<span>HAP</span> Submit'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add'), $options_submit);?>
                         </li>
-                        <li><?php echo $this->Html->link(__('<span>HAP</span> Engage'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), $options_engage); ?></li>
+                        <li><?php echo $this->Html->link(__d('accelerator','<span>HAP</span> Engage'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index'), $options_engage); ?></li>
                         <li>
-                            <?php echo $this->Html->link(__('<span>HAP</span> Learn'), '/blog', $options_learn); ?></li>
-                        <li class="sub"><a href="/about"><?php echo __('What is this?');?></a></li>
+                            <?php echo $this->Html->link(__d('accelerator','<span>HAP</span> Learn'), '/blog', $options_learn); ?></li>
+                        <li class="sub"><a href="/about"><?php echo __d('accelerator','What is this?');?></a></li>
                     </ul>
                 </nav>
             </header>
@@ -105,17 +105,17 @@
             <footer>
                 <div>
                     <div class="sitemap">
-                        <h3><?php echo __('Sitemap')?></h3>
+                        <h3><?php echo __d('accelerator','Sitemap')?></h3>
                         <nav>
                             <ul>
-                                <li><?php echo $this->Html->link(__('Submit'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
-                                <li><?php echo $this->Html->link(__('Engage'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
-                                <li><a href="/blog"><?php echo __('Learn');?></a></li>
+                                <li><?php echo $this->Html->link(__d('accelerator','Submit'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'add')); ?></li>
+                                <li><?php echo $this->Html->link(__d('accelerator','Engage'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
+                                <li><a href="/blog"><?php echo __d('accelerator','Learn');?></a></li>
                                 <li>
                                     <?php 
                                     if($this->Session->check('Auth.User')) { 
                                         echo $this->Html->link(
-                                                __('Profile'),
+                                                __d('accelerator','Profile'),
                                                 array(
                                                     'plugin' => 'users',
                                                     'controller' => 'users',
@@ -126,7 +126,7 @@
                                     } else { 
 
                                         echo $this->Html->link(
-                                                __('Login'),
+                                                __d('accelerator','Login'),
                                                 array(
                                                     'plugin' => 'users',
                                                     'controller' => 'users',
@@ -141,7 +141,7 @@
                                         <li>
                                         <?php
                                             echo $this->Html->link(
-                                                __('Logout'),
+                                                __d('accelerator','Logout'),
                                                 array(
                                                     'plugin' => 'users',
                                                     'controller' => 'users',
@@ -156,30 +156,30 @@
 
                             <ul>
                                 <li><a href="/blog">News</a></li>
-                                <li><?php echo $this->Html->link(__('Submissions'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
-                                <li><a href="/about"><?php echo __('What is this?');?></a></li>
-                                <li><a href="/about"><?php echo __('About');?></a></li>
+                                <li><?php echo $this->Html->link(__d('accelerator','Submissions'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
+                                <li><a href="/about"><?php echo __d('accelerator','What is this?');?></a></li>
+                                <li><a href="/about"><?php echo __d('accelerator','About');?></a></li>
                             </ul>
 
                             <ul>
-                                <li><a href="http://www.yunussb.com/" target="_blank"><?php echo __('Yunus SB'); ?></a></li>
-                                <li><a href="http://www.undp.org/content/undp/en/home.html" target="_blank"><?php echo __('UNDP');?></a></li>
-                                <li><a href="/page/terms-and-conditions"><?php echo __('Terms &amp; Conditions');?></a></li>
-                                <li><a href="/contact"><?php echo __('Contact');?></a></li>
+                                <li><a href="http://www.yunussb.com/" target="_blank"><?php echo __d('accelerator','Yunus SB'); ?></a></li>
+                                <li><a href="http://www.undp.org/content/undp/en/home.html" target="_blank"><?php echo __d('accelerator','UNDP');?></a></li>
+                                <li><a href="/page/terms-and-conditions"><?php echo __d('accelerator','Terms &amp; Conditions');?></a></li>
+                                <li><a href="/contact"><?php echo __d('accelerator','Contact');?></a></li>
                             </ul>
                         </nav>
                     </div>
 
                     <div class="social">
-                        <h3><?php echo __('Follow Us')?></h3>
+                        <h3><?php echo __d('accelerator','Follow Us')?></h3>
                         <ul>
-                            <li><a href="" class="fb"><?php echo __('Facebook')?></a></li>
-                            <li><a href="" class="google"><?php echo __('Google+')?></a></li>
-                            <li><a href="/promoted.rss" class="rss" target="_blank"><?php echo __('RSS')?></a></li>
+                            <li><a href="" class="fb"><?php echo __d('accelerator','Facebook')?></a></li>
+                            <li><a href="" class="google"><?php echo __d('accelerator','Google+')?></a></li>
+                            <li><a href="/promoted.rss" class="rss" target="_blank"><?php echo __d('accelerator','RSS')?></a></li>
                         </ul>
                     </div>
 
-                    <p><?php echo __('&copy;2013 YUNUS Albania commissioned by UNPD')?></p>
+                    <p><?php echo __d('accelerator','&copy;2013 YUNUS Albania commissioned by UNPD')?></p>
                 </div>
 
             </footer>
@@ -189,7 +189,7 @@
         <div id="login" class="modal">
             <div>
                 <a href="#close" title="Close" class="modal-close">x</a>
-                <h2><?php echo __('Login');?></h2>
+                <h2><?php echo __d('accelerator','Login');?></h2>
                 <?php
                     echo $this->element('login_form', array(), array('plugin' => 'Users'));
                 ?>
@@ -198,7 +198,7 @@
 
         <div id="faq" class="modal">
             <div>
-                <a id="close" title="<?php echo __('Close');?>" class="modal-close">x</a>
+                <a id="close" title="<?php echo __d('accelerator','Close');?>" class="modal-close">x</a>
                 <?php
                     echo $this->Layout->blocks('faq');
                 ?>
