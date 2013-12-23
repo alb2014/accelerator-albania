@@ -107,7 +107,8 @@ class IdeasController extends AcceleratorAppController {
         if($user['id'] == $idea['Idea']['user_id']) {
             $isIdeaOwner = true;
         }
-        if($user['role'] == 1) {
+
+        if($user['role_id'] == 1) {
             $isAdmin = true;
         }
 
@@ -139,7 +140,7 @@ class IdeasController extends AcceleratorAppController {
         //check to see if user is the idea owner
         $user = AuthComponent::user();
         
-        if($user['id'] != $idea['Idea']['user_id'] and $user['role'] != 1){
+        if($user['id'] != $idea['Idea']['user_id'] and $user['role_id'] != 1){
             $this->Session->setFlash(__d('accelerator','You are not authorized to edit this idea.'));
             return $this->redirect(array(
                     'action' => 'view',
