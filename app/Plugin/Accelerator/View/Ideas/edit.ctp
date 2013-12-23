@@ -59,7 +59,7 @@
         echo $this->Form->input('social_business', array_merge($tierConfig, array('type' => 'checkbox', 'label' => __d('accelerator','Is this a social business?'))));
 
         $user = AuthComponent::user();
-        echo $this->Form->input('user_id', array('type' => 'hidden'));
+        //echo $this->Form->input('user_id', array('type' => 'hidden'));
         
         if($idea['tier_level'] > 0): 
 
