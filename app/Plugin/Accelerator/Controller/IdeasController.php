@@ -119,13 +119,15 @@ class IdeasController extends AcceleratorAppController {
         } else {
             $user_votes = $votes->find('all', array('conditions' =>array('Vote.ip_address' => $this->request->clientIp())));
         }
-        if ($idea['Idea']['id'] == $vote['Vote']['idea_id']){         
-                $ideas[$i]['Idea']['vote.value'] = $vote['Vote']['value'];
-              }
-         }
-                if (!isset($idea['Idea']['vote.value'])){
-                    $ideas[$i]['Idea']['vote.value'] = 0;
+        foreach ($user_votes as $vote){
+            if ($idea['Idea']['id'] == $vote['Vote']['idea_id']){         
+                    $ideas[$i]['Idea']['vote.value'] = $vote['Vote']['value'];
                 }
+         
+            if (!isset($idea['Idea']['vote.value'])){
+                        $ideas[$i]['Idea']['vote.value'] = 0;
+                 }
+            }
 
         $this->set('idea', $idea);
         $ideas =  ClassRegistry::init('Idea')->find('all', array(
