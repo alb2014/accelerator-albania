@@ -63,6 +63,7 @@ class AcceleratorController extends AcceleratorAppController {
 			)
 		);
         $votes = ClassRegistry::init('Vote');
+        $user = AuthComponent::user();
         if ($user){
             $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
         } else {
