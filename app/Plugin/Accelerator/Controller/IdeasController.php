@@ -122,11 +122,11 @@ class IdeasController extends AcceleratorAppController {
         }
         foreach ($user_votes as $vote){
             if ($idea['Idea']['id'] == $vote['Vote']['idea_id']){         
-                    $ideas[$i]['Idea']['vote.value'] = $vote['Vote']['value'];
+                    $idea['Idea']['vote.value'] = $vote['Vote']['value'];
                 }
          }
-        if (!isset($idea['Idea']['vote.value'])){
-               $ideas[$i]['Idea']['vote.value'] = 0;
+         if (!isset($idea['Idea']['vote.value'])){
+               $idea['Idea']['vote.value'] = 0;
          }
             
 
