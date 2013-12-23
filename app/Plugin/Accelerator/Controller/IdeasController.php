@@ -153,7 +153,7 @@ class IdeasController extends AcceleratorAppController {
         }
 
 
-        $this->set('ideas',$idea);
+        $this->set('ideas',$ideas);
     }
 
     public function edit($id = null) {
