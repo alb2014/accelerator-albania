@@ -17,8 +17,8 @@ class DisqusHelper extends Helper {
 
     function __construct() {
 
-        $this->disqus_private_key = str_replace("'", '', getenv('DISQUS_PUBKEY'));
-        $this->disqus_public_key = str_replace("'", '', getenv('DISQUS_PRIVKEY'));
+        $this->disqus_private_key = str_replace("'", '', getenv('DISQUS_PRIVKEY'));
+        $this->disqus_public_key = str_replace("'", '', getenv('DISQUS_PUBKEY'));
 
         if(empty($this->disqus_private_key) || empty($this->disqus_public_key)) {
             throw new Exception("You must configure the environmental vars DISQUS_PRIVKEY and DISQUS_PUBKEY", 1);
