@@ -118,7 +118,7 @@
 
         <?php
 
-            echo $this->Form->input('competition', array('rows' => '5'
+            echo $this->Form->input('competition', array('rows' => '5',
                                                         'label' => __d('accelerator', 'The Competition')));
             echo $this->Form->input('model', array('options'=> $modelOpts));
 
@@ -133,7 +133,7 @@
 
         <?php
 
-            echo $this->Form->input('promise', array('rows' => '5'
+            echo $this->Form->input('promise', array('rows' => '5',
                                                     'label' => __d('accelerator', 'Our Promise')));
 
         endif;
