@@ -137,7 +137,7 @@ class IdeasController extends AcceleratorAppController {
                 'Idea.total_votes' => 'desc',
                 'Idea.up_votes' => 'desc') 
             )
-        )
+        );
 
         for($i = 0; $i < count($ideas); ++$i) {
             foreach ($user_votes as $vote){
