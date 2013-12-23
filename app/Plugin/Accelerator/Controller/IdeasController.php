@@ -46,7 +46,6 @@ class IdeasController extends AcceleratorAppController {
             }
             
         }
-        Debugger::dump($ideas);
         $this->set('ideas', $ideas);
         $this->set('faq_node', ClassRegistry::init('Node')->findBySlug('faq'));
     }
