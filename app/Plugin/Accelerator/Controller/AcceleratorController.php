@@ -61,7 +61,7 @@ class AcceleratorController extends AcceleratorAppController {
 				'total_votes' => 'desc',
 				'up_votes' => 'desc') 
 			)
-		)
+		);
         $votes = ClassRegistry::init('Vote');
         if ($user){
             $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
