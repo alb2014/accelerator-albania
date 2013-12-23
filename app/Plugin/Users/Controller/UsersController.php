@@ -274,19 +274,34 @@ class UsersController extends UsersAppController {
 
 		$this->set('ideaTypes', $this->User->Idea->getIdeaTypes());
 
-		$this->set('ideas', ClassRegistry::init('Idea')->find('all',
-			array(
-				'conditions' => array(
-					array('Idea.user_id' => $user['id'])
-					),
-	    		'order' => array(
-
-					'Idea.date_created' => 'desc',
-	    			'total_votes' => 'desc',
-	    			'up_votes' => 'desc') 
-	    			)
-	    		)
+		$ideas = ClassRegistry::init('Idea')->find('all', array(
+			'limit' => 4,
+			'order' => array(
+				'Idea.date_created' => 'desc',
+				'total_votes' => 'desc',
+				'up_votes' => 'desc') 
+			)
 		);
+        $votes = ClassRegistry::init('Vote');
+        $user = AuthComponent::user();
+        if ($user){
+            $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
+        } else {
+            $user_votes = $votes->find('all', array('conditions' =>array('Vote.ip_address' => $this->request->clientIp())));
+        }
+        for($i = 0; $i < count($ideas); ++$i) {
+            foreach ($user_votes as $vote){
+                if ($ideas[$i]['Idea']['id'] == $vote['Vote']['idea_id']){         
+                        $ideas[$i]['Idea']['vote.value'] = $vote['Vote']['value'];
+                    }
+            }
+            if (!isset($ideas[$i]['Idea']['vote.value'])){
+                $ideas[$i]['Idea']['vote.value'] = 0;
+            }
+            
+        }
+
+		$this->set('ideas', $ideas);
 
 		$this->set('title_for_layout', __d('accelerator', 'Users'));
 	}
