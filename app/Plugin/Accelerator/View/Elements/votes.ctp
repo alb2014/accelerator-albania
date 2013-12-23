@@ -5,7 +5,7 @@
     <?php 
 
         $vote_class = 'up';
-        Debugger::dump($idea);
+
         $vote_val = $idea['Idea']['vote.value'];
 
         if($vote_val > 0) {
