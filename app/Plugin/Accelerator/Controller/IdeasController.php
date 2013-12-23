@@ -151,7 +151,6 @@ class IdeasController extends AcceleratorAppController {
             }
             
         }
-        Debugger::dump($ideas);
 
         $this->set('ideas',$ideas);
     }
