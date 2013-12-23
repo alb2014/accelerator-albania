@@ -114,16 +114,43 @@ class IdeasController extends AcceleratorAppController {
 
         $this->set('isIdeaOwner', $isIdeaOwner);
         $this->set('isAdmin', $isAdmin);
+        if ($user){
+            $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
+        } else {
+            $user_votes = $votes->find('all', array('conditions' =>array('Vote.ip_address' => $this->request->clientIp())));
+        }
+        if ($idea['Idea']['id'] == $vote['Vote']['idea_id']){         
+                $ideas[$i]['Idea']['vote.value'] = $vote['Vote']['value'];
+              }
+         }
+                if (!isset($idea['Idea']['vote.value'])){
+                    $ideas[$i]['Idea']['vote.value'] = 0;
+                }
 
         $this->set('idea', $idea);
-        $this->set('ideas', ClassRegistry::init('Idea')->find('all', array(
+        $ideas =  ClassRegistry::init('Idea')->find('all', array(
             'limit' => 4,
             'order' => array(
                 'Idea.date_created' => 'desc',
                 'Idea.total_votes' => 'desc',
                 'Idea.up_votes' => 'desc') 
             )
-        ));
+        )
+
+        for($i = 0; $i < count($ideas); ++$i) {
+            foreach ($user_votes as $vote){
+                if ($ideas[$i]['Idea']['id'] == $vote['Vote']['idea_id']){         
+                        $ideas[$i]['Idea']['vote.value'] = $vote['Vote']['value'];
+                    }
+                }
+                if (!isset($ideas[$i]['Idea']['vote.value'])){
+                    $ideas[$i]['Idea']['vote.value'] = 0;
+                }
+            
+        }
+
+
+        $this->set('ideas',$idea);
     }
 
     public function edit($id = null) {
