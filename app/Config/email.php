@@ -1,8 +1,10 @@
 <?php 
-class EmailConfig {    
+
+class EmailConfig { 
+
     public $default = array(    
         'transport' => 'Smtp',    
-        'from' => array('app19805266@heroku.com' => 'Albania Accel'),    
+        'from' => array(getenv("SENDGRID_USERNAME") => 'Albania Accel'),    
         'host' => 'smtp.sendgrid.net',    
         'port' => 587,    
         'username' => 'app19805266@heroku.com',    
@@ -11,7 +13,7 @@ class EmailConfig {
 
         public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('app19805266@heroku.com' => 'Albania Accel'),    
+		'from' => array(getenv("SENDGRID_USERNAME") => 'Albania Accel'),    
         'host' => 'smtp.sendgrid.net',    
         'port' => 587,    
         'username' => 'app19805266@heroku.com',    

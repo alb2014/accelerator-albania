@@ -8,8 +8,8 @@
     var disqus_config = function () {
         //This is required before using comments
         // The generated payload which authenticates users with Disqus
-        this.page.remote_auth_s3 = '<?php echo $disqus_auth_str ?>';
-        this.page.api_key = '<?php echo $disqus_pubkey ?>'; 
+        this.page.remote_auth_s3 = "<?php echo $disqus_auth_str ?>";
+        this.page.api_key = "<?php echo $disqus_pubkey ?>"; 
     }
 </script>
 
