@@ -15,7 +15,7 @@
         $modelOpts = array('notforprofit'=>__d('accelerator', 'Not For Profit'),
                                     'nonprofit' =>__d('accelerator', 'Nonprofit'),
                                     'enterpriseb2b' => __d('accelerator', 'Enterprise/B2B'),
-                                    'b2c' => 'B2C',
+                                    'b2c' => __d('accelerator','B2C'),
                                     'subscription' => __d('accelerator', 'Subscription'),
                                     'freemium' => __d('accelerator', 'Freemium'),
                                     'retail' => __d('accelerator', 'Retail'),
@@ -56,11 +56,10 @@
 
         <?php
 
-        echo $this->Form->input('social_business', array_merge($tier_config, array('type' => 'checkbox', 'label' => __d('accelerator','Is this a social business?'))));
+        echo $this->Form->input('social_business', array_merge($tierConfig, array('type' => 'checkbox', 'label' => __d('accelerator','Is this a social business?'))));
 
         $user = AuthComponent::user();
-        echo $this->Form->input('user_id', array('type' => 'hidden',
-                            'value' => $user['id']));
+        echo $this->Form->input('user_id', array('type' => 'hidden'));
         
         if($idea['tier_level'] > 0): 
 
@@ -104,7 +103,7 @@
         </span> 
 
         <?php
-            echo $this->Form->input('market', array('rows' => '5'
+            echo $this->Form->input('market', array('rows' => '5',
                                                     'label' => __d('accelerator', 'The Market')));
 
         ?> 
@@ -118,7 +117,7 @@
 
         <?php
 
-            echo $this->Form->input('competition', array('rows' => '5'
+            echo $this->Form->input('competition', array('rows' => '5',
                                                         'label' => __d('accelerator', 'The Competition')));
             echo $this->Form->input('model', array('options'=> $modelOpts));
 
@@ -133,7 +132,7 @@
 
         <?php
 
-            echo $this->Form->input('promise', array('rows' => '5'
+            echo $this->Form->input('promise', array('rows' => '5',
                                                     'label' => __d('accelerator', 'Our Promise')));
 
         endif;

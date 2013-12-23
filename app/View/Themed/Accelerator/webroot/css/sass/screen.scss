@@ -913,6 +913,23 @@ div.main {
   }
 }
 
+/* Submit Page */
+
+.users.register {
+  .idea-submit {
+    border-bottom: 1px solid $primary_bg;
+    margin-bottom: 1em;
+  }
+  div.input.checkbox {
+    margin: 1em 0;
+  }
+  label {
+    span {
+      color: $primary_bg;
+    }
+  }
+}
+
 
 /* -------------------------------------------------------------------------
    Profile Page */

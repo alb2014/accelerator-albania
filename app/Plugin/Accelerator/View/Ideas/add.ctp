@@ -9,35 +9,13 @@
     </header>
 
     <div class="inner">
-        <?php
-            echo $this->element('add_form');
-        ?>
-<!--             <fieldset>
-        <legend>Idea Category:</legend>
-
-        <input type="radio" name="category" id="category1" value="social">
-        <label for="category1">Social Business</label>
-
-        <input type="radio" name="category" id="category2" value="tech">
-        <label for="category1">Tech Business</label>
-
-        <input type="radio" name="category" id="category2" value="science">
-        <label for="category1">Scientific Development</label>
-
-        <input type="radio" name="category" id="category2" value="other">
-        <label for="category1">Other</label>
-    </fieldset> -->
-
-<!--             <input type="checkbox" name="social_business" id="social_business" value="1">
-    <label for="social_business">Is this a social business?</label> -->
-
+        <?php echo $this->element('add_form');?>
     </div>
 </section>
 
 <!-- The Program Section -->
-<!-- If no user -->
-
 <?php if(!$this->Session->check('Auth.User')) { ?>
+    <!-- If no user -->
     <section class="create-profile">
         <header>
             <h2><?php echo __d('accelerator','Create Profile');?></h2>
