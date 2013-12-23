@@ -27,6 +27,11 @@
       }
     });
 
+    // Escape closes modal
+    $(document).keyup(function(e) {
+      if (e.keyCode == 27) { $('.modal.open').removeClass('open'); }   // esc
+    });
+
     /* Slideshow */
     $('.toggles').on('click','li', function() {
       $('.slides li').removeClass('selected').eq($(this).index()).addClass('selected');
