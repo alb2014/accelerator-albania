@@ -21,6 +21,23 @@ class IdeasController extends AcceleratorAppController {
         )
     );
 
+    public function stats(){
+        $votes = ClassRegistry::init('Vote');
+        $upvotes = count($votes->find('all', array('conditions' =>array('Vote.value' => 1))));
+        $total_ideas = count($this->Idea->find('all'));
+        $tier_one_ideas = count($this->Idea->find('all', array('conditions' =>array('Idea.tier_level' => 1))));
+        $tier_two_ideas = count($this->Idea->find('all', array('conditions' =>array('Idea.tier_level' => 2))));
+        $unsubmitted = count($this->Idea->find('all', array('conditions' =>array('Idea.tier_level' => 2,
+                                                                                'submitted' => 0
+                                                                          ))));
+        $this->set('total_ideas', $total_ideas);
+        $this->set('tier_one_ideas', $tier_one_ideas);
+        $this->set('tier_two_ideas', $tier_two_ideas);
+        $this->set('unsubmitted', $unsubmitted);
+        $this->set('total_upvotes', $upvotes);;
+    }
+
+
     public function index($userId=false) {
         $user = AuthComponent::user();
         $this->Paginator->settings = $this->paginate;
@@ -270,7 +287,6 @@ class IdeasController extends AcceleratorAppController {
             $this->_alertUser($idea, $tier_level);
         }
 
-        $this->_alertUser($idea, $tier_level); //testing code
         // End leveling up logic
 
         $data['Idea']['up_votes'] = $upvotes;
