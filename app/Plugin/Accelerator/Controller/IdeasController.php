@@ -114,6 +114,7 @@ class IdeasController extends AcceleratorAppController {
 
         $this->set('isIdeaOwner', $isIdeaOwner);
         $this->set('isAdmin', $isAdmin);
+        $votes = ClassRegistry::init('Vote');
         if ($user){
             $user_votes = $votes->find('all', array('conditions' =>array('Vote.user_id' => $user['id'])));
         } else {
