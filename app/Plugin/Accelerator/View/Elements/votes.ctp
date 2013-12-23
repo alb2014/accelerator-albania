@@ -5,7 +5,14 @@
     <?php 
 
         $vote_class = 'up';
-        $vote_val = $idea['Idea']['vote.value'];
+        
+
+        if(array_key_exists('vote.value',$idea['Idea'])) {
+            $vote_val = $idea['Idea']['vote.value'];
+        } else {
+            $vote_val = 0;
+        }
+            
 
         if($vote_val > 0) {
             $vote_class = $vote_class . ' voted';            
