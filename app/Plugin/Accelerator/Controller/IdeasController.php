@@ -26,7 +26,7 @@ class IdeasController extends AcceleratorAppController {
         $this->Paginator->settings = $this->paginate;
         $conditions = array();
         if ($userId){
-            $this->Paginator->settings['conditions']['Idea.userId'] = $userId;
+            $this->Paginator->settings['conditions']['Idea.user_id'] = $userId;
         }
         $ideas = $this->Paginator->paginate('Idea');
         $votes = ClassRegistry::init('Vote');
@@ -152,7 +152,7 @@ class IdeasController extends AcceleratorAppController {
             $this->Idea->id = $id;
             if ($this->Idea->save($this->request->data)) {
                 $this->Session->setFlash(__d('accelerator','Your idea has been updated.'));
-                return $this->redirect(array('action' => 'index/'.$user['id']));
+                return $this->redirect(array('action' => 'view/'.$user['id']));
             }
             $this->Session->setFlash(__d('accelerator','Unable to update your idea.'));
         }
