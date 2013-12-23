@@ -124,11 +124,11 @@ class IdeasController extends AcceleratorAppController {
             if ($idea['Idea']['id'] == $vote['Vote']['idea_id']){         
                     $ideas[$i]['Idea']['vote.value'] = $vote['Vote']['value'];
                 }
-         
-            if (!isset($idea['Idea']['vote.value'])){
-                        $ideas[$i]['Idea']['vote.value'] = 0;
-                 }
-            }
+         }
+        if (!isset($idea['Idea']['vote.value'])){
+               $ideas[$i]['Idea']['vote.value'] = 0;
+         }
+            
 
         $this->set('idea', $idea);
         $ideas =  ClassRegistry::init('Idea')->find('all', array(
