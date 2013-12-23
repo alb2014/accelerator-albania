@@ -40,12 +40,13 @@ class IdeasController extends AcceleratorAppController {
                 if ($ideas[$i]['Idea']['id'] == $vote['Vote']['idea_id']){         
                         $ideas[$i]['Idea']['vote.value'] = $vote['Vote']['value'];
                     }
-                }
-                if (!isset($ideas[$i]['Idea']['vote.value'])){
-                    $ideas[$i]['Idea']['vote.value'] = 0;
-                }
+            }
+            if (!isset($ideas[$i]['Idea']['vote.value'])){
+                $ideas[$i]['Idea']['vote.value'] = 0;
+            }
             
         }
+        Debugger::dump($ideas);
         $this->set('ideas', $ideas);
         $this->set('faq_node', ClassRegistry::init('Node')->findBySlug('faq'));
     }
