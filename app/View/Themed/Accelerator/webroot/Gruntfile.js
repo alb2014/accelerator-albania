@@ -20,6 +20,16 @@ module.exports = function(grunt) {
                 src: 'js/build/production.js',
                 dest: 'js/build/production.min.js'
             }
+        },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'img/build/'
+                }]
+            }
         }
 
     });
@@ -30,8 +40,11 @@ module.exports = function(grunt) {
     // Minify Javascript
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
+    // Minify/optimize images
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify']);
+    grunt.registerTask('default', ['concat', 'uglify', 'imagemin']);
 
 };
 
