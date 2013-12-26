@@ -53,7 +53,7 @@
 <!-- Idea Comments -->
 <section class="idea-comments" id="comments">
     <header>
-        <h2><?php __d('accelerator','Comments'); ?></h2>
+        <h2><?php echo __d('accelerator','Comments'); ?></h2>
     </header>
 
     <div class="inner">

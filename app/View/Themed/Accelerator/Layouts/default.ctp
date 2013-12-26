@@ -18,8 +18,6 @@
             echo $this->Layout->meta();
             echo $this->fetch('facebook_meta');
             echo $this->Layout->feed();
-            echo $this->Html->css(array('normalize'));
-            echo $this->Html->css(array('main'));
             echo $this->Html->css(array('screen'));
             echo $this->Html->script(array('vendor/modernizr-2.6.2.min'));
         ?>
