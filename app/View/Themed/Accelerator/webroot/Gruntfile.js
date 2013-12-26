@@ -30,6 +30,15 @@ module.exports = function(grunt) {
                     dest: 'img/build/'
                 }]
             }
+        },
+        watch: {
+            scripts: {
+                files: ['js/*.js'],
+                tasks: ['concat', 'uglify'],
+                options: {
+                    spawn: false,
+                },
+            } 
         }
 
     });
@@ -43,8 +52,11 @@ module.exports = function(grunt) {
     // Minify/optimize images
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
+    // Watch files for changes
+    grunt.loadNpmTasks('grunt-contrib-watch');
+
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'imagemin']);
+    grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'watch']);
 
 };
 
