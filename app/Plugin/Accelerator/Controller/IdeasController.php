@@ -39,6 +39,7 @@ class IdeasController extends AcceleratorAppController {
 
 
     public function index($userId=false) {
+
         $user = AuthComponent::user();
         $this->Paginator->settings = $this->paginate;
         $conditions = array();
@@ -85,9 +86,6 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function delete($id) {
-        if ($this->request->is('get')) {
-            throw new MethodNotAllowedException();
-        }
         $idea = $this->Idea->findById($id);
         $user = AuthComponent::user();
         if (($idea['userID'] == $user['id']) or ($user['role'] == 1)){
