@@ -359,7 +359,7 @@ class UsersController extends UsersAppController {
 			$this->request->data['User']['activation_key'] = md5(uniqid());
 			$this->request->data['User']['status'] = 0;
 			$this->request->data['User']['username'] = htmlspecialchars($this->request->data['User']['username']);
-			$this->request->data['User']['website'] = htmlspecialchars($this->request->data['User']['website']);
+			// $this->request->data['User']['website'] = htmlspecialchars($this->request->data['User']['website']);
 			$this->request->data['User']['name'] = htmlspecialchars($this->request->data['User']['name']);
 			$user = $this->User->save($this->request->data);
 			if ($user) {
