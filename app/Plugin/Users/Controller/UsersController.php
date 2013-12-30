@@ -377,7 +377,6 @@ class UsersController extends UsersAppController {
                 	$this->request->data['Idea']['private'] = 1;
                 	$this->log($idea->save($this->request->data));
                 }
-                $this->Session->setFlash(__d('accelerator','Unable to add your idea.'));
 				$this->_sendEmail(
 					array(Configure::read('Site.title'), $this->_getSenderEmail()),
 					$this->request->data['User']['email'],
