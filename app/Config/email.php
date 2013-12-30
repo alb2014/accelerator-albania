@@ -19,5 +19,4 @@ class EmailConfig {
         'username' => 'app20466457@heroku.com',    
         'password' => 'yokrz3fb',
         'log' => true);
-	);    
 }

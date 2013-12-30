@@ -367,10 +367,8 @@ class UsersController extends UsersAppController {
 
 				Croogo::dispatchEvent('Controller.Users.registrationSuccessful', $this);
 				$this->request->data['User']['password'] = null;
-				$this->log("Include Idea: ");
 
 				if (isset($this->request->data['Idea'])){
-					$this->log('Including Idea!');
 					$idea->create();
 					$this->request->data['Idea']['user_id'] = $user['User']['id'];
                 	$this->request->data['Idea']['date_created'] = null;
@@ -386,8 +384,6 @@ class UsersController extends UsersAppController {
 					$this->theme,
 					array('user' => $this->request->data)
 				);
-
-				
 
 				$this->Session->setFlash(__d('accelerator', 'You have successfully registered an account. An email has been sent with further instructions.'), 'default', array('class' => 'success'));
 				$this->redirect(array('action' => 'login'));
