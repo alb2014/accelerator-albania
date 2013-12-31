@@ -25,4 +25,5 @@ class EmailConfig {
             'password' => str_replace("'", '', getenv('SENDGRID_PASSWORD')),
             'log' => true
         );
+    }
 }
