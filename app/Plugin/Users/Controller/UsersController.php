@@ -351,7 +351,7 @@ class UsersController extends UsersAppController {
 	public function add($includeIdea=false) {
 		$this->set('includeIdea', $includeIdea);
 		$idea = ClassRegistry::init('Idea');
-		$this->set('ideaTypes', $idea->getIdeaTypes);
+		// $this->set('ideaTypes', $idea->getIdeaTypes());
 		$this->set('title_for_layout', __d('accelerator', 'Register'));
 		if (!empty($this->request->data)) {
 			$this->User->create();

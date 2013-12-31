@@ -30,7 +30,7 @@ class  Idea extends AcceleratorAppModel {
             'foreignKey' => 'user_id'
         )
     );
-    public function getIdeaTypes(){
+    public static function getIdeaTypes(){
     return array('Agriculture' => __d('accelerator','Agriculture'),
            'CommunicationsAndMedia' => __d('accelerator', 'Communications and Media'),
            'EducationAndTraining' => __d('accelerator', 'Education and Training'),

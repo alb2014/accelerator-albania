@@ -15,10 +15,10 @@ echo $this->Form->create('Accelerator.Idea', array(
 	)
 );
 
-echo $this->Form->input('name', array('label' => __d('accelerator','Idea Title')));
-echo $this->Form->input('desc', array('rows' => '7', 'label' => __d('accelerator','The Grab (240 Characters)')));
+echo $this->Form->input('name', array('label' => __d('accelerator','Idea Title <span>*</span>')));
+echo $this->Form->input('desc', array('rows' => '7', 'label' => __d('accelerator','The Grab (240 Characters) <span>*</span>')));
 echo $this->Form->input('type', array('options' =>$ideaTypes,
-                        array('label' => __d('accelerator','Type of Idea'))));
+                        array('label' => __d('accelerator','Type of Idea <span>*</span>'))));
 // Needs to be added to the table structure
 ?> 
 
