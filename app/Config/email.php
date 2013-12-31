@@ -2,21 +2,27 @@
 
 class EmailConfig {
 
-    public $default = array(    
-        'transport' => 'Smtp',    
-        'from' => array('app20466457@heroku.com' => 'Albania Accel'),    
-        'host' => 'smtp.sendgrid.net',    
-        'port' => 587,    
-        'username' => 'app20466457@heroku.com',    
-        'password' => 'yokrz3fb',
-        'log' => true);
+    public $default;
+    public $smtp;
 
-        public $smtp = array(    
-        'transport' => 'Smtp',    
-        'from' => array('app20466457@heroku.com' => 'Albania Accel'),    
-        'host' => 'smtp.sendgrid.net',    
-        'port' => 587,    
-        'username' => 'app20466457@heroku.com',    
-        'password' => 'yokrz3fb',
-        'log' => true);
+      function __construct() {
+            $this->default = array(
+            'transport' => 'Smtp',    
+            'from' => array(str_replace("'", '', getenv('SENDGRID_USERNAME')) => 'Albania Accel'),    
+            'host' => 'smtp.sendgrid.net',    
+            'port' => 587,    
+            'username' => str_replace("'", '', getenv('SENDGRID_USERNAME')),    
+            'password' => str_replace("'", '', getenv('SENDGRID_PASSWORD')),
+            'log' => true
+        );
+
+            $this->smtp = array(
+            'transport' => 'Smtp',    
+            'from' => array(str_replace("'", '', getenv('SENDGRID_USERNAME')) => 'Albania Accel'),    
+            'host' => 'smtp.sendgrid.net',    
+            'port' => 587,    
+            'username' => str_replace("'", '', getenv('SENDGRID_USERNAME')),    
+            'password' => str_replace("'", '', getenv('SENDGRID_PASSWORD')),
+            'log' => true
+        );
 }
