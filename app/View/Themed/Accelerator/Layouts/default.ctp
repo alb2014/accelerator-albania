@@ -169,7 +169,7 @@
                             </ul>
 
                             <ul>
-                                <li><a href="/blog">News</a></li>
+                                <li><a href="/blog"><?php echo __d('accelerator','News');?></a></li>
                                 <li><?php echo $this->Html->link(__d('accelerator','Submissions'), array('plugin' => 'accelerator', 'controller' => 'ideas', 'action' => 'index')); ?></li>
                                 <li><a href="/about"><?php echo __d('accelerator','What is this?');?></a></li>
                                 <li><a href="/about"><?php echo __d('accelerator','About');?></a></li>
