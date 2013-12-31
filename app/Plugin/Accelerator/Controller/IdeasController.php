@@ -81,7 +81,7 @@ class IdeasController extends AcceleratorAppController {
                 $this->Session->setFlash(__d('accelerator','Unable to add your idea.'));
             }
         } else {
-            $this->redirect('/users/users/add/1');
+            $this->redirect('/users/users/add');
         }
     }
 
