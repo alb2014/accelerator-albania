@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2013-12-22 20:48+0100\n"
-"PO-Revision-Date: 2013-12-22 13:50-0800\n"
+"PO-Revision-Date: 2013-12-30 19:13-0600\n"
 "Last-Translator: Shkelzen Marku <shkelzen.marku@yunussb.com>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: sq_AL\n"
@@ -34,7 +34,7 @@ msgstr "Nuk jeni i autorizuar që të fshini këtë ide"
 
 #: Plugin/Accelerator/Controller/IdeasController.php:94;100
 msgid "Invalid idea"
-msgstr "Ide e pavlefshme"
+msgstr "Ide e papërputhshme"
 
 #: Plugin/Accelerator/Controller/IdeasController.php:126;132
 msgid "We couldn't find that idea."
@@ -46,11 +46,11 @@ msgstr "Nuk jeni i autorizuar që të modifikoni këtë ide"
 
 #: Plugin/Accelerator/Controller/IdeasController.php:149
 msgid "Your idea has been updated."
-msgstr "Ideja juaj u përditësua"
+msgstr "Ideja juaj u përditësua."
 
 #: Plugin/Accelerator/Controller/IdeasController.php:152
 msgid "Unable to update your idea."
-msgstr "Ideja juaj është e pamundur të përditësohet"
+msgstr "Ideja juaj nuk mund të përditësohet."
 
 #: Plugin/Accelerator/Controller/IdeasController.php:194
 msgid "Vote cast!"
@@ -70,7 +70,7 @@ msgstr "Bujqësi"
 
 #: Plugin/Accelerator/Model/Idea.php:35
 msgid "Communications and Media"
-msgstr "Media dhe Komunikim"
+msgstr "Komunikim dhe Media "
 
 #: Plugin/Accelerator/Model/Idea.php:36
 msgid "Education and Training"
@@ -233,7 +233,7 @@ msgstr "Urime %s!\n"
 
 #: Plugin/Accelerator/View/Emails/text/tier_level.ctp:4
 msgid "Your idea %s has reached Tier %d \n"
-msgstr "Idea juaj %s ka arritur fazën %d \n"
+msgstr "Ideja juaj %s ka arritur fazën %d \n"
 
 #: Plugin/Accelerator/View/Emails/text/tier_level.ctp:13
 msgid "You have new information to enter to your idea %s \n"
@@ -241,7 +241,7 @@ msgstr "Ju keni informacion të ri për t'i shtuar idesë tuaj %s \n"
 
 #: Plugin/Accelerator/View/Ideas/add.ctp:8
 msgid "Submit Idea"
-msgstr "Paraqit idenë"
+msgstr "Hidh ide"
 
 #: Plugin/Accelerator/View/Ideas/add.ctp:43
 msgid "Create Profile"
@@ -267,16 +267,14 @@ msgstr "Sipërmarrje/ B2B"
 msgid "Subscription"
 msgstr "Abonim"
 
-# There is right word for "freemium" in Albanian. can you replace it with another word?
 #: Plugin/Accelerator/View/Ideas/edit.ctp:20
 msgid "Freemium"
-msgstr "Falas"
+msgstr "Freemium"
 
 #: Plugin/Accelerator/View/Ideas/edit.ctp:21
 msgid "Retail"
 msgstr "Shitje me pakicë"
 
-# E-Commerce, mbase me mire eshte ne anglisht.
 #: Plugin/Accelerator/View/Ideas/edit.ctp:22
 msgid "ecommerce"
 msgstr "Tregti Elektronike"
@@ -422,84 +420,81 @@ msgid ""
 "You have reached maximum limit for failed login attempts. Please try again "
 "after a few minutes."
 msgstr ""
+"Ju keni arritur maksimum të tentativave për të hyrë. Lutemi provojeni "
+"përsëri pas disa minutave. "
 
 #: Plugin/Users/Controller/UsersController.php:289
-#, fuzzy
 msgid "Users"
-msgstr "Përdoruesi"
+msgstr "Përdoruesit"
 
 #: Plugin/Users/Controller/UsersController.php:338
-#, fuzzy
 msgid "Register"
-msgstr "Regjistrohu këtu"
+msgstr "Regjistrohu"
 
 #: Plugin/Users/Controller/UsersController.php:367
-#, fuzzy
 msgid "[%s] Please activate your account"
-msgstr "Ju lutem, hyni në këtë link që të aktivizoni llogarinë tuaj: %s"
+msgstr "[%s] Lutem aktivizoni llogarinë tuaj"
 
 #: Plugin/Users/Controller/UsersController.php:376
 msgid ""
 "You have successfully registered an account. An email has been sent with "
 "further instructions."
 msgstr ""
+"Llogaria juaj u regjistrua me sukses. Një email ju është dërguar me udhëzime "
+"të mëtejshme."
 
 #: Plugin/Users/Controller/UsersController.php:381
 msgid "The User could not be saved. Please, try again."
-msgstr ""
+msgstr "Emri i përdoruesit nuk u ruajt. Lutem provoni përsëri."
 
 #: Plugin/Users/Controller/UsersController.php:411
 msgid "Account activated successfully."
-msgstr ""
+msgstr "Llogaria juaj u aktivizua me sukses."
 
 #: Plugin/Users/Controller/UsersController.php:414;481;492
 msgid "An error occurred."
-msgstr ""
+msgstr "Ka ndodhur një gabim."
 
 #: Plugin/Users/Controller/UsersController.php:436
-#, fuzzy
 msgid "Forgot Password"
 msgstr "Keni harruar fjalëkalimin?"
 
 #: Plugin/Users/Controller/UsersController.php:441
-#, fuzzy
 msgid "Invalid username."
-msgstr "Ide e pavlefshme"
+msgstr "Emër përdoruesi i papërputhshëm."
 
 #: Plugin/Users/Controller/UsersController.php:461
-#, fuzzy
 msgid "An email has been sent with instructions for resetting your password."
-msgstr "Ju lutem, hyni në këtë link që të ndryshoni fjalëkalimin tuaj %s"
+msgstr ""
+"Një email ju është dërguar me udhëzime për ndryshimin e fjalëkalimit tuaj."
 
 #: Plugin/Users/Controller/UsersController.php:464;506
 msgid "An error occurred. Please try again."
-msgstr ""
+msgstr "Ka ndodhur një gabim. Lutem provoni përsëri"
 
 #: Plugin/Users/Controller/UsersController.php:478
-#, fuzzy
 msgid "Reset Password"
-msgstr "Fjalëkalim i ri"
+msgstr "Ndrysho fjalëkalimin"
 
 #: Plugin/Users/Controller/UsersController.php:503
 msgid "Your password has been reset successfully."
-msgstr ""
+msgstr "Fjalëkalimi juaj u ndryshua me sukses."
 
 #: Plugin/Users/Controller/UsersController.php:521
 msgid "Log in"
-msgstr ""
+msgstr "Hyr"
 
 #: Plugin/Users/Controller/UsersController.php:543
 msgid "Log out successful."
-msgstr ""
+msgstr "Dajla u realizua me sukses"
 
 #: Plugin/Users/Controller/UsersController.php:561
-#, fuzzy
 msgid "Invalid User."
-msgstr "Ide e pavlefshme"
+msgstr "Përdorues i papërputhshëm"
 
 #: Plugin/Users/Model/User.php:229
 msgid "Passwords do not match. Please, try again."
-msgstr ""
+msgstr "Fjalëkalimet nuk përputhen. Lutem provoni përsëri."
 
 #: Plugin/Users/View/Elements/add_form.ctp:19
 #: Plugin/Users/View/Users/forgot.ctp:9
@@ -507,7 +502,6 @@ msgid "Username"
 msgstr "Përdoruesi"
 
 #: Plugin/Users/View/Elements/add_form.ctp:21
-#, fuzzy
 msgid "Password"
 msgstr "Fjalëkalimi"
 
@@ -529,6 +523,9 @@ msgid ""
 "By submitting this form, you are agreeing to HAPide's <a href=\"/page/terms-"
 "and-conditions\" target=\"_blank\">Terms &amp; Conditions</a>"
 msgstr ""
+"Duke dërguar këtë formular, ju po pranoni kushtet dhe rregullat e HAPiDE: <a "
+"href=\"/page/terms-and-conditions\" target=\"_blank\">Terms &amp; "
+"Conditions</a>"
 
 #: Plugin/Users/View/Elements/login_form.ctp:12
 msgid "Register here"
@@ -550,7 +547,7 @@ msgstr ""
 
 #: Plugin/Users/View/Emails/text/register.ctp:1
 msgid "Hello %s"
-msgstr ""
+msgstr "Përshëndetje %s"
 
 #: Plugin/Users/View/Emails/text/register.ctp:10
 msgid "Please visit this link to activate your account: %s"
@@ -589,83 +586,80 @@ msgstr "Fjalëkalim i ri"
 #: View/Themed/Accelerator/Elements/flash_message.ctp:3;5
 #: View/Themed/Accelerator/Layouts/default.ctp:201
 msgid "Close"
-msgstr ""
+msgstr "Mbyll"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:14
 msgid "accelerator"
-msgstr ""
+msgstr "përshpejtues"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:34
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:42;118
-#, fuzzy
 msgid "Profile"
-msgstr "Krijo Profilin"
+msgstr "Profili"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:64
 msgid "HAPide"
-msgstr ""
+msgstr "HAPiDE"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:85
 msgid "<span>HAP</span> Submit"
-msgstr ""
+msgstr "<span>HAP</span> Apliko"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:87
 msgid "<span>HAP</span> Engage"
-msgstr ""
+msgstr "<span>HAP</span> Përshihu"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:89
 msgid "<span>HAP</span> Learn"
-msgstr ""
+msgstr "<span>HAP</span> Mëso"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:90;160
-#, fuzzy
 msgid "What is this?"
-msgstr "Çfarë është HAPiDE?"
+msgstr "Ç'farë është kjo?"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:108
 msgid "Sitemap"
-msgstr ""
+msgstr "Harta e faqes"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:161
 msgid "About"
-msgstr ""
+msgstr "Rreth nesh"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:165
 msgid "Yunus SB"
-msgstr ""
+msgstr "YSB Albania"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:166
 msgid "UNDP"
-msgstr ""
+msgstr "UNDP"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:167
 msgid "Terms &amp; Conditions"
-msgstr ""
+msgstr "Kushtet &amp; Rregullat"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:168
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:174
 msgid "Follow Us"
-msgstr ""
+msgstr "Na ndiqni"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:176
-#, fuzzy
 msgid "Facebook"
-msgstr "Ndaje në Facebook"
+msgstr "Facebook"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:177
 msgid "Google+"
-msgstr ""
+msgstr "Google+"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:178
 msgid "RSS"
-msgstr ""
+msgstr "RSS"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:182
 msgid "&copy;2013 YUNUS Albania commissioned by UNPD"
-msgstr ""
+msgstr "&copy;2013 YSB Albania në bashkëpunim me UNPD"
