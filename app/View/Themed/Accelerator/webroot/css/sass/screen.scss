@@ -745,13 +745,13 @@ div.main {
       color: $primary_bg_text;
       padding-right: 15px;
       &.desc {
-        @include sprites-sprite(down_arrow, $offset_x: 35px, $offset_y: 5px);
+        @include sprites-sprite(down_arrow, $offset_x: 41px, $offset_y: 5px);
       }
       &.asc {
-        @include sprites-sprite(up_arrow, $offset_x: 35px, $offset_y: 5px);
+        @include sprites-sprite(up_arrow, $offset_x: 41px, $offset_y: 5px);
       }
       &.popularity {
-        background-position-x: 75px;
+        background-position-x: 95px;
       }
     }
   }
@@ -804,7 +804,7 @@ div.main {
 .submit-idea {
   @extend .column-wrapper;
   span.form-help.inline {
-    right: 660px;
+    right: 640px;
   }
 }
 
@@ -940,7 +940,7 @@ div.main {
 
 .users.profile, .idea.edit {
   #social_help {
-    right: 250px;
+    right: 240px;
   }
 }
 
