@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-01-03 00:14-0500\n"
+"POT-Creation-Date: 2014-01-15 21:07+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,656 +14,656 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:78
+#: Plugin/Accelerator/Controller/IdeasController.php:78
 msgid "Your idea has been saved."
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:81
+#: Plugin/Accelerator/Controller/IdeasController.php:81
 msgid "Unable to add your idea."
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:93
+#: Plugin/Accelerator/Controller/IdeasController.php:93
 msgid "The idea with id: %s has been deleted."
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:98
+#: Plugin/Accelerator/Controller/IdeasController.php:98
 msgid "You are not authorized to delete this idea."
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:109;115
+#: Plugin/Accelerator/Controller/IdeasController.php:109;115
 msgid "Invalid idea"
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:175;181
+#: Plugin/Accelerator/Controller/IdeasController.php:175;181
 msgid "We couldn't find that idea."
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:188
+#: Plugin/Accelerator/Controller/IdeasController.php:188
 msgid "You are not authorized to edit this idea."
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:198
+#: Plugin/Accelerator/Controller/IdeasController.php:198
 msgid "Your idea has been updated."
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:201
+#: Plugin/Accelerator/Controller/IdeasController.php:201
 msgid "Unable to update your idea."
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:243
+#: Plugin/Accelerator/Controller/IdeasController.php:243
 msgid "Vote cast!"
 msgstr ""
 
-#: app/Plugin/Accelerator/Controller/IdeasController.php:248
+#: Plugin/Accelerator/Controller/IdeasController.php:248
 msgid "Voting failed."
 msgstr ""
 
-#: app/Plugin/Accelerator/Event/AcceleratorEventHandler.php:108
+#: Plugin/Accelerator/Event/AcceleratorEventHandler.php:108
 msgid "Congratulations! %s has reached Tier %d"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:34
-#: app/Plugin/Users/View/Elements/add_form.ctp:10
+#: Plugin/Accelerator/Model/Idea.php:34
+#: Plugin/Users/View/Elements/add_form.ctp:10
 msgid "Agriculture"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:35
-#: app/Plugin/Users/View/Elements/add_form.ctp:11
+#: Plugin/Accelerator/Model/Idea.php:35
+#: Plugin/Users/View/Elements/add_form.ctp:11
 msgid "Communications and Media"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:36
-#: app/Plugin/Users/View/Elements/add_form.ctp:12
+#: Plugin/Accelerator/Model/Idea.php:36
+#: Plugin/Users/View/Elements/add_form.ctp:12
 msgid "Education and Training"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:37
-#: app/Plugin/Users/View/Elements/add_form.ctp:13
+#: Plugin/Accelerator/Model/Idea.php:37
+#: Plugin/Users/View/Elements/add_form.ctp:13
 msgid "Energy"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:38
-#: app/Plugin/Users/View/Elements/add_form.ctp:14
+#: Plugin/Accelerator/Model/Idea.php:38
+#: Plugin/Users/View/Elements/add_form.ctp:14
 msgid "Environment"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:39
-#: app/Plugin/Users/View/Elements/add_form.ctp:15
+#: Plugin/Accelerator/Model/Idea.php:39
+#: Plugin/Users/View/Elements/add_form.ctp:15
 msgid "Fashion and Lifestyle"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:40
-#: app/Plugin/Users/View/Elements/add_form.ctp:16
+#: Plugin/Accelerator/Model/Idea.php:40
+#: Plugin/Users/View/Elements/add_form.ctp:16
 msgid "Health"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:41
-#: app/Plugin/Users/View/Elements/add_form.ctp:17
+#: Plugin/Accelerator/Model/Idea.php:41
+#: Plugin/Users/View/Elements/add_form.ctp:17
 msgid "Tourism"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:42
-#: app/Plugin/Users/View/Elements/add_form.ctp:18
+#: Plugin/Accelerator/Model/Idea.php:42
+#: Plugin/Users/View/Elements/add_form.ctp:18
 msgid "Mobility and Transport"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:43
-#: app/Plugin/Users/View/Elements/add_form.ctp:19
+#: Plugin/Accelerator/Model/Idea.php:43
+#: Plugin/Users/View/Elements/add_form.ctp:19
 msgid "Housing and Construction"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:44
-#: app/Plugin/Users/View/Elements/add_form.ctp:20
+#: Plugin/Accelerator/Model/Idea.php:44
+#: Plugin/Users/View/Elements/add_form.ctp:20
 msgid "Financial Services"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:45
-#: app/Plugin/Users/View/Elements/add_form.ctp:21
+#: Plugin/Accelerator/Model/Idea.php:45
+#: Plugin/Users/View/Elements/add_form.ctp:21
 msgid "Technology"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:46
-#: app/Plugin/Users/View/Elements/add_form.ctp:22
+#: Plugin/Accelerator/Model/Idea.php:46
+#: Plugin/Users/View/Elements/add_form.ctp:22
 msgid "Gastronomy"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:47
-#: app/Plugin/Users/View/Elements/add_form.ctp:23
+#: Plugin/Accelerator/Model/Idea.php:47
+#: Plugin/Users/View/Elements/add_form.ctp:23
 msgid "Personal Care and Services"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:48
-#: app/Plugin/Users/View/Elements/add_form.ctp:24
+#: Plugin/Accelerator/Model/Idea.php:48
+#: Plugin/Users/View/Elements/add_form.ctp:24
 msgid "Entertainment"
 msgstr ""
 
-#: app/Plugin/Accelerator/Model/Idea.php:49
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:25
-#: app/Plugin/Users/View/Elements/add_form.ctp:25
+#: Plugin/Accelerator/Model/Idea.php:49
+#: Plugin/Accelerator/View/Ideas/edit.ctp:25
+#: Plugin/Users/View/Elements/add_form.ctp:25
 msgid "Other"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Accelerator/admin_index.ctp:4
+#: Plugin/Accelerator/View/Accelerator/admin_index.ctp:4
 msgid "New Tab"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Accelerator/admin_index.ctp:7
+#: Plugin/Accelerator/View/Accelerator/admin_index.ctp:7
 msgid "content here"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Accelerator/index.ctp:13
-#: app/Plugin/Users/View/Elements/add_form.ctp:53
-#: app/Plugin/Users/View/Elements/login_form.ctp:8
-#: app/Plugin/Users/View/Users/forgot.ctp:12
-#: app/Plugin/Users/View/Users/reset.ctp:13
-#: app/View/Themed/Accelerator/Layouts/default.ctp:125
+#: Plugin/Accelerator/View/Accelerator/index.ctp:13
+#: Plugin/Users/View/Elements/add_form.ctp:53
+#: Plugin/Users/View/Elements/login_form.ctp:8
+#: Plugin/Users/View/Users/forgot.ctp:12
+#: Plugin/Users/View/Users/reset.ctp:13
+#: View/Themed/Accelerator/Layouts/default.ctp:125
 msgid "Submit"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Accelerator/index.ctp:14
-#: app/View/Themed/Accelerator/Layouts/default.ctp:126
+#: Plugin/Accelerator/View/Accelerator/index.ctp:14
+#: View/Themed/Accelerator/Layouts/default.ctp:126
 msgid "Engage"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Accelerator/index.ctp:15
-#: app/View/Themed/Accelerator/Layouts/default.ctp:127
+#: Plugin/Accelerator/View/Accelerator/index.ctp:15
+#: View/Themed/Accelerator/Layouts/default.ctp:127
 msgid "Learn"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Accelerator/index.ctp:29;44
+#: Plugin/Accelerator/View/Accelerator/index.ctp:29;44
 msgid "read more"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Accelerator/index.ctp:31
-#: app/View/Themed/Accelerator/Layouts/default.ctp:172
+#: Plugin/Accelerator/View/Accelerator/index.ctp:31
+#: View/Themed/Accelerator/Layouts/default.ctp:172
 msgid "News"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Accelerator/index.ctp:52
-#: app/Plugin/Accelerator/View/Ideas/index.ctp:19
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:43
-#: app/View/Themed/Accelerator/Layouts/default.ctp:173
+#: Plugin/Accelerator/View/Accelerator/index.ctp:52
+#: Plugin/Accelerator/View/Ideas/index.ctp:19
+#: Plugin/Accelerator/View/Ideas/view.ctp:43
+#: View/Themed/Accelerator/Layouts/default.ctp:173
 msgid "Submissions"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/add_form.ctp:18
-#: app/Plugin/Users/View/Elements/add_form.ctp:6
+#: Plugin/Accelerator/View/Elements/add_form.ctp:18
+#: Plugin/Users/View/Elements/add_form.ctp:6
 msgid "Idea Title <span>*</span>"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/add_form.ctp:19
-#: app/Plugin/Users/View/Elements/add_form.ctp:7
+#: Plugin/Accelerator/View/Elements/add_form.ctp:19
+#: Plugin/Users/View/Elements/add_form.ctp:7
 msgid "The Grab (240 Characters) <span>*</span>"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/add_form.ctp:21
-#: app/Plugin/Users/View/Elements/add_form.ctp:27
+#: Plugin/Accelerator/View/Elements/add_form.ctp:21
+#: Plugin/Users/View/Elements/add_form.ctp:27
 msgid "Type of Idea <span>*</span>"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/add_form.ctp:28
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:53
+#: Plugin/Accelerator/View/Elements/add_form.ctp:28
+#: Plugin/Accelerator/View/Ideas/edit.ctp:53
 msgid "Social hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/add_form.ctp:33
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:59
+#: Plugin/Accelerator/View/Elements/add_form.ctp:33
+#: Plugin/Accelerator/View/Ideas/edit.ctp:59
 msgid "Is this a social business?"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/add_form.ctp:38
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:142
+#: Plugin/Accelerator/View/Elements/add_form.ctp:38
+#: Plugin/Accelerator/View/Ideas/edit.ctp:142
 msgid "Pitch"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/hapide_description.ctp:3
+#: Plugin/Accelerator/View/Elements/hapide_description.ctp:3
 msgid "What is HAPIDE?"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/nodes.ctp:28
+#: Plugin/Accelerator/View/Elements/nodes.ctp:28
 msgid "Read more"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/submissions.ctp:22
+#: Plugin/Accelerator/View/Elements/submissions.ctp:22
 msgid "Comment"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Elements/submissions.ctp:25
+#: Plugin/Accelerator/View/Elements/submissions.ctp:25
 msgid "Share on Facebook"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Emails/text/tier_level.ctp:3
+#: Plugin/Accelerator/View/Emails/text/tier_level.ctp:3
 msgid "Congratulations %s!\n"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Emails/text/tier_level.ctp:4
+#: Plugin/Accelerator/View/Emails/text/tier_level.ctp:4
 msgid "Your idea %s has reached Tier %d \n"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Emails/text/tier_level.ctp:15
+#: Plugin/Accelerator/View/Emails/text/tier_level.ctp:15
 msgid "You have new information to enter to your idea %s \n"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/add.ctp:8
+#: Plugin/Accelerator/View/Ideas/add.ctp:8
 msgid "Submit Idea"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/add.ctp:21
+#: Plugin/Accelerator/View/Ideas/add.ctp:21
 msgid "Create Profile"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:4
+#: Plugin/Accelerator/View/Ideas/edit.ctp:4
 msgid "Edit My Idea"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:15
+#: Plugin/Accelerator/View/Ideas/edit.ctp:15
 msgid "Not For Profit"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:16
+#: Plugin/Accelerator/View/Ideas/edit.ctp:16
 msgid "Nonprofit"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:17
+#: Plugin/Accelerator/View/Ideas/edit.ctp:17
 msgid "Enterprise/B2B"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:18
+#: Plugin/Accelerator/View/Ideas/edit.ctp:18
 msgid "B2C"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:19
+#: Plugin/Accelerator/View/Ideas/edit.ctp:19
 msgid "Subscription"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:20
+#: Plugin/Accelerator/View/Ideas/edit.ctp:20
 msgid "Freemium"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:21
+#: Plugin/Accelerator/View/Ideas/edit.ctp:21
 msgid "Retail"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:22
+#: Plugin/Accelerator/View/Ideas/edit.ctp:22
 msgid "ecommerce"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:23
+#: Plugin/Accelerator/View/Ideas/edit.ctp:23
 msgid "Community"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:24
+#: Plugin/Accelerator/View/Ideas/edit.ctp:24
 msgid "Advocacy"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:32
+#: Plugin/Accelerator/View/Ideas/edit.ctp:32
 msgid "Idea Title"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:41
+#: Plugin/Accelerator/View/Ideas/edit.ctp:41
 msgid "The Grab"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:45
+#: Plugin/Accelerator/View/Ideas/edit.ctp:45
 msgid "Type of Idea"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:71
+#: Plugin/Accelerator/View/Ideas/edit.ctp:71
 msgid "Problem hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:87
+#: Plugin/Accelerator/View/Ideas/edit.ctp:87
 msgid "Solution hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:94
+#: Plugin/Accelerator/View/Ideas/edit.ctp:94
 msgid "The Solution"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:101
+#: Plugin/Accelerator/View/Ideas/edit.ctp:101
 msgid "Market hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:107
+#: Plugin/Accelerator/View/Ideas/edit.ctp:107
 msgid "The Market"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:114
+#: Plugin/Accelerator/View/Ideas/edit.ctp:114
 msgid "Competition hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:121
+#: Plugin/Accelerator/View/Ideas/edit.ctp:121
 msgid "The Competition"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:129
+#: Plugin/Accelerator/View/Ideas/edit.ctp:129
 msgid "Promise hint: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:136
+#: Plugin/Accelerator/View/Ideas/edit.ctp:136
 msgid "Our Promise"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:140
+#: Plugin/Accelerator/View/Ideas/edit.ctp:140
 msgid "Keep this idea private"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:147
+#: Plugin/Accelerator/View/Ideas/edit.ctp:147
 msgid "Cancel"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/edit.ctp:155
+#: Plugin/Accelerator/View/Ideas/edit.ctp:155
 msgid "References"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/index.ctp:10
+#: Plugin/Accelerator/View/Ideas/index.ctp:10
 msgid "Order by:"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/index.ctp:12
+#: Plugin/Accelerator/View/Ideas/index.ctp:12
 msgid "Date"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/index.ctp:15
+#: Plugin/Accelerator/View/Ideas/index.ctp:15
 msgid "Popularity"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/index.ctp:17
+#: Plugin/Accelerator/View/Ideas/index.ctp:17
 msgid "Topic"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/index.ctp:31
+#: Plugin/Accelerator/View/Ideas/index.ctp:31
 msgid "Previous"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/index.ctp:38
+#: Plugin/Accelerator/View/Ideas/index.ctp:38
 msgid "Next"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/index.ctp:52
+#: Plugin/Accelerator/View/Ideas/index.ctp:52
 msgid "The Program"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:8
+#: Plugin/Accelerator/View/Ideas/view.ctp:8
 msgid "Idea Page"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:14
+#: Plugin/Accelerator/View/Ideas/view.ctp:14
 msgid "Idea Name"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:17
+#: Plugin/Accelerator/View/Ideas/view.ctp:17
 msgid "Idea Description"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:20
+#: Plugin/Accelerator/View/Ideas/view.ctp:20
 msgid "Idea Category"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:26
+#: Plugin/Accelerator/View/Ideas/view.ctp:26
 msgid "Edit my idea"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:30
+#: Plugin/Accelerator/View/Ideas/view.ctp:30
 msgid "Edit this idea"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:32
+#: Plugin/Accelerator/View/Ideas/view.ctp:32
 msgid "Delete this idea"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:56
+#: Plugin/Accelerator/View/Ideas/view.ctp:56
 msgid "Comments"
 msgstr ""
 
-#: app/Plugin/Accelerator/View/Ideas/view.ctp:80
+#: Plugin/Accelerator/View/Ideas/view.ctp:80
 msgid "Login to Comment"
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:89
+#: Plugin/Users/Controller/UsersController.php:89
 msgid "You have reached maximum limit for failed login attempts. Please try again after a few minutes."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:306
+#: Plugin/Users/Controller/UsersController.php:306
 msgid "Users"
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:355
+#: Plugin/Users/Controller/UsersController.php:355
 msgid "Register"
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:381
+#: Plugin/Users/Controller/UsersController.php:381
 msgid "[%s] Please activate your account"
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:388
+#: Plugin/Users/Controller/UsersController.php:388
 msgid "You have successfully registered an account. An email has been sent with further instructions."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:393
+#: Plugin/Users/Controller/UsersController.php:393
 msgid "The User could not be saved. Please, try again."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:423
+#: Plugin/Users/Controller/UsersController.php:423
 msgid "Account activated successfully."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:426;493;504
+#: Plugin/Users/Controller/UsersController.php:426;493;504
 msgid "An error occurred."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:448
+#: Plugin/Users/Controller/UsersController.php:448
 msgid "Forgot Password"
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:453
+#: Plugin/Users/Controller/UsersController.php:453
 msgid "Invalid username."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:473
+#: Plugin/Users/Controller/UsersController.php:473
 msgid "An email has been sent with instructions for resetting your password."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:476;518
+#: Plugin/Users/Controller/UsersController.php:476;518
 msgid "An error occurred. Please try again."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:490
+#: Plugin/Users/Controller/UsersController.php:490
 msgid "Reset Password"
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:515
+#: Plugin/Users/Controller/UsersController.php:515
 msgid "Your password has been reset successfully."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:533
+#: Plugin/Users/Controller/UsersController.php:533
 msgid "Log in"
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:555
+#: Plugin/Users/Controller/UsersController.php:555
 msgid "Log out successful."
 msgstr ""
 
-#: app/Plugin/Users/Controller/UsersController.php:573
+#: Plugin/Users/Controller/UsersController.php:573
 msgid "Invalid User."
 msgstr ""
 
-#: app/Plugin/Users/Model/User.php:229
+#: Plugin/Users/Model/User.php:229
 msgid "Passwords do not match. Please, try again."
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/add_form.ctp:31
+#: Plugin/Users/View/Elements/add_form.ctp:31
 msgid "Is this a social business? <span>*</span>"
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/add_form.ctp:39
+#: Plugin/Users/View/Elements/add_form.ctp:39
 msgid "Username <span>*</span>"
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/add_form.ctp:41
+#: Plugin/Users/View/Elements/add_form.ctp:41
 msgid "Password <span>*</span>"
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/add_form.ctp:42
+#: Plugin/Users/View/Elements/add_form.ctp:42
 msgid "Verify Password <span>*</span>"
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/add_form.ctp:47
+#: Plugin/Users/View/Elements/add_form.ctp:47
 msgid "Name <span>*</span>"
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/add_form.ctp:48
+#: Plugin/Users/View/Elements/add_form.ctp:48
 msgid "Email <span>*</span>"
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/add_form.ctp:51
+#: Plugin/Users/View/Elements/add_form.ctp:51
 msgid "By submitting this form, you are agreeing to HAPide's <a href=\"/page/terms-and-conditions\" target=\"_blank\">Terms &amp; Conditions</a>"
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/add_form.ctp:52
+#: Plugin/Users/View/Elements/add_form.ctp:52
 msgid "* Required Field"
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/login_form.ctp:12
+#: Plugin/Users/View/Elements/login_form.ctp:12
 msgid "Register here"
 msgstr ""
 
-#: app/Plugin/Users/View/Elements/login_form.ctp:17
+#: Plugin/Users/View/Elements/login_form.ctp:17
 msgid "Forgot your password?"
 msgstr ""
 
-#: app/Plugin/Users/View/Emails/text/forgot_password.ctp:10
+#: Plugin/Users/View/Emails/text/forgot_password.ctp:10
 msgid "Please visit this link to reset your password: %s"
 msgstr ""
 
-#: app/Plugin/Users/View/Emails/text/forgot_password.ctp:14
+#: Plugin/Users/View/Emails/text/forgot_password.ctp:14
 msgid "If you did not request a password reset, then please ignore this email."
 msgstr ""
 
-#: app/Plugin/Users/View/Emails/text/register.ctp:1
+#: Plugin/Users/View/Emails/text/register.ctp:1
 msgid "Hello %s"
 msgstr ""
 
-#: app/Plugin/Users/View/Emails/text/register.ctp:10
+#: Plugin/Users/View/Emails/text/register.ctp:10
 msgid "Please visit this link to activate your account: %s"
 msgstr ""
 
-#: app/Plugin/Users/View/Users/forgot.ctp:9
+#: Plugin/Users/View/Users/forgot.ctp:9
 msgid "Username"
 msgstr ""
 
-#: app/Plugin/Users/View/Users/index.ctp:4
+#: Plugin/Users/View/Users/index.ctp:4
 msgid "New Idea?"
 msgstr ""
 
-#: app/Plugin/Users/View/Users/index.ctp:16
+#: Plugin/Users/View/Users/index.ctp:16
 msgid "My Past Submissions"
 msgstr ""
 
-#: app/Plugin/Users/View/Users/index.ctp:29
+#: Plugin/Users/View/Users/index.ctp:29
 msgid "Edit My Account"
 msgstr ""
 
-#: app/Plugin/Users/View/Users/index.ctp:35
-#: app/View/Themed/Accelerator/Layouts/default.ctp:158
+#: Plugin/Users/View/Users/index.ctp:35
+#: View/Themed/Accelerator/Layouts/default.ctp:158
 msgid "Logout"
 msgstr ""
 
-#: app/Plugin/Users/View/Users/index.ctp:42
+#: Plugin/Users/View/Users/index.ctp:42
 msgid "Delete Account"
 msgstr ""
 
-#: app/Plugin/Users/View/Users/login.ctp:3
-#: app/View/Themed/Accelerator/Layouts/default.ctp:67;143;206
+#: Plugin/Users/View/Users/login.ctp:3
+#: View/Themed/Accelerator/Layouts/default.ctp:67;143;206
 msgid "Login"
 msgstr ""
 
-#: app/Plugin/Users/View/Users/reset.ctp:9
+#: Plugin/Users/View/Users/reset.ctp:9
 msgid "New password"
 msgstr ""
 
-#: app/Plugin/Users/View/Users/reset.ctp:10
+#: Plugin/Users/View/Users/reset.ctp:10
 msgid "Verify Password"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Elements/flash_message.ctp:3;5
-#: app/View/Themed/Accelerator/Layouts/default.ctp:215
+#: View/Themed/Accelerator/Elements/flash_message.ctp:3;5
+#: View/Themed/Accelerator/Layouts/default.ctp:215
 msgid "Close"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:14
+#: View/Themed/Accelerator/Layouts/default.ctp:14
 msgid "accelerator"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:48
+#: View/Themed/Accelerator/Layouts/default.ctp:48
 msgid "FAQ"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:56;132
+#: View/Themed/Accelerator/Layouts/default.ctp:56;132
 msgid "Profile"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:78
+#: View/Themed/Accelerator/Layouts/default.ctp:78
 msgid "HAPide"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:99
+#: View/Themed/Accelerator/Layouts/default.ctp:99
 msgid "<span>HAP</span> Submit"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:101
+#: View/Themed/Accelerator/Layouts/default.ctp:101
 msgid "<span>HAP</span> Engage"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:103
+#: View/Themed/Accelerator/Layouts/default.ctp:103
 msgid "<span>HAP</span> Learn"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:104;174
+#: View/Themed/Accelerator/Layouts/default.ctp:104;174
 msgid "What is this?"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:122
+#: View/Themed/Accelerator/Layouts/default.ctp:122
 msgid "Sitemap"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:175
+#: View/Themed/Accelerator/Layouts/default.ctp:175
 msgid "About"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:179
+#: View/Themed/Accelerator/Layouts/default.ctp:179
 msgid "Yunus SB"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:180
+#: View/Themed/Accelerator/Layouts/default.ctp:180
 msgid "UNDP"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:181
+#: View/Themed/Accelerator/Layouts/default.ctp:181
 msgid "Terms &amp; Conditions"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:182
+#: View/Themed/Accelerator/Layouts/default.ctp:182
 msgid "Contact"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:188
+#: View/Themed/Accelerator/Layouts/default.ctp:188
 msgid "Follow Us"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:190
+#: View/Themed/Accelerator/Layouts/default.ctp:190
 msgid "Facebook"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:191
+#: View/Themed/Accelerator/Layouts/default.ctp:191
 msgid "Google+"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:192
+#: View/Themed/Accelerator/Layouts/default.ctp:192
 msgid "RSS"
 msgstr ""
 
-#: app/View/Themed/Accelerator/Layouts/default.ctp:196
+#: View/Themed/Accelerator/Layouts/default.ctp:196
 msgid "&copy;2013 YUNUS Albania commissioned by UNPD"
 msgstr ""
 
