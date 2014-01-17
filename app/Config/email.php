@@ -8,7 +8,7 @@ class EmailConfig {
       function __construct() {
             $this->default = array(
             'transport' => 'Smtp',    
-            'from' => array(str_replace("'", '', getenv('SENDGRID_USERNAME')) => 'Albania Accel'),    
+            'from' => array(str_replace("'", '', getenv('SENDGRID_USERNAME')) => 'HAPiDE'),    
             'host' => 'smtp.sendgrid.net',    
             'port' => 587,    
             'username' => str_replace("'", '', getenv('SENDGRID_USERNAME')),    
