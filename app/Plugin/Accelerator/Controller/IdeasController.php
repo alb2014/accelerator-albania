@@ -228,7 +228,7 @@ class IdeasController extends AcceleratorAppController {
             $ipAddress = null;
         } else {
             $id = $ideaId.'-'.RequestHandlerComponent::getClientIp();
-            $user['id'] = null;
+            $userId = null;
             $ipAddress = RequestHandlerComponent::getClientIp();
         }
         $data = array('Vote' => array('id' => $id,
@@ -237,7 +237,7 @@ class IdeasController extends AcceleratorAppController {
                                       'user_id' => $userId,
                                       'ip_address' => $ipAddress));
         
-        $vote->id = $ideaId.'-'.$user['id'];
+        $vote->id = $id;
 
         if ($vote->save($data)) {
             $this->Session->setFlash(__d('accelerator','Vote cast!'));

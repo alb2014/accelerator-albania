@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-01-03 00:14-0500\n"
+"POT-Creation-Date: 2014-01-15 21:07+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,212 +14,212 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: app/Plugin/Migrations/Config/Migration/002_convert_version_to_class_names.php:61
+#: Plugin/Migrations/Config/Migration/002_convert_version_to_class_names.php:61
 msgid "Sorry, I can't downgrade. Why would you want that anyways?"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:73
+#: Plugin/Migrations/Console/Command/MigrationShell.php:73
 msgid "Cake Migration Shell"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:92
+#: Plugin/Migrations/Console/Command/MigrationShell.php:92
 msgid "Creating table :table."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:93
+#: Plugin/Migrations/Console/Command/MigrationShell.php:93
 msgid "Dropping table :table."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:94
+#: Plugin/Migrations/Console/Command/MigrationShell.php:94
 msgid "Renaming table :old_name to :new_name."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:95
+#: Plugin/Migrations/Console/Command/MigrationShell.php:95
 msgid "Adding field :field to :table."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:96
+#: Plugin/Migrations/Console/Command/MigrationShell.php:96
 msgid "Dropping field :field from :table."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:97
+#: Plugin/Migrations/Console/Command/MigrationShell.php:97
 msgid "Changing field :field from :table."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:98
+#: Plugin/Migrations/Console/Command/MigrationShell.php:98
 msgid "Renaming field :old_name to :new_name on :table."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:99
+#: Plugin/Migrations/Console/Command/MigrationShell.php:99
 msgid "Adding index :index to :table."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:100
+#: Plugin/Migrations/Console/Command/MigrationShell.php:100
 msgid "Dropping index :index from :table."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:165
+#: Plugin/Migrations/Console/Command/MigrationShell.php:165
 msgid "No migrations available."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:191
+#: Plugin/Migrations/Console/Command/MigrationShell.php:191
 msgid "Running migrations:"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:204
+#: Plugin/Migrations/Console/Command/MigrationShell.php:204
 msgid "All migrations have completed."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:214
+#: Plugin/Migrations/Console/Command/MigrationShell.php:214
 msgid "An error occurred when processing the migration:"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:215
+#: Plugin/Migrations/Console/Command/MigrationShell.php:215
 msgid "Migration: %s"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:216
+#: Plugin/Migrations/Console/Command/MigrationShell.php:216
 msgid "Error: %s"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:220
+#: Plugin/Migrations/Console/Command/MigrationShell.php:220
 msgid "Do you want to mark the migration as successful?. [y]es or [a]bort."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:246;259;286
+#: Plugin/Migrations/Console/Command/MigrationShell.php:246;259;286
 msgid "Not a valid migration version."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:267
+#: Plugin/Migrations/Console/Command/MigrationShell.php:267
 msgid "Please, choose what version you want to migrate to. [q]uit or [c]lean."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:306
+#: Plugin/Migrations/Console/Command/MigrationShell.php:306
 msgid "Do you want compare the schema.php file to the database?"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:309
+#: Plugin/Migrations/Console/Command/MigrationShell.php:309
 msgid "Comparing schema.php to the database..."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:321
+#: Plugin/Migrations/Console/Command/MigrationShell.php:321
 msgid "Do you want generate a dump from current database?"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:324
+#: Plugin/Migrations/Console/Command/MigrationShell.php:324
 msgid "Generating dump from current database..."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:338
+#: Plugin/Migrations/Console/Command/MigrationShell.php:338
 msgid "Do you want to preview the file before generation?"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:344
+#: Plugin/Migrations/Console/Command/MigrationShell.php:344
 msgid "Please enter the descriptive name of the migration to generate:"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:347
+#: Plugin/Migrations/Console/Command/MigrationShell.php:347
 msgid "Migration name (%s) is invalid. It must only contain alphanumeric characters and start with a letter."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:350
+#: Plugin/Migrations/Console/Command/MigrationShell.php:350
 msgid "Migration name (%s) is invalid. It cannot be longer than 255 characters."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:357
+#: Plugin/Migrations/Console/Command/MigrationShell.php:357
 msgid "Generating Migration..."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:366
+#: Plugin/Migrations/Console/Command/MigrationShell.php:366
 msgid "Done."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:369
+#: Plugin/Migrations/Console/Command/MigrationShell.php:369
 msgid "Do you want update the schema.php file?"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:403
+#: Plugin/Migrations/Console/Command/MigrationShell.php:403
 msgid "Current version:"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:408
+#: Plugin/Migrations/Console/Command/MigrationShell.php:408
 msgid "None applied."
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:411
+#: Plugin/Migrations/Console/Command/MigrationShell.php:411
 msgid "Latest version:"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:435
+#: Plugin/Migrations/Console/Command/MigrationShell.php:435
 msgid "Current migration version:"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:440
+#: Plugin/Migrations/Console/Command/MigrationShell.php:440
 msgid "Available migrations:"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:446
+#: Plugin/Migrations/Console/Command/MigrationShell.php:446
 msgid "applied"
 msgstr ""
 
-#: app/Plugin/Migrations/Console/Command/MigrationShell.php:448
+#: Plugin/Migrations/Console/Command/MigrationShell.php:448
 msgid "not applied"
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/CakeMigration.php:167
+#: Plugin/Migrations/Lib/CakeMigration.php:167
 msgid "Migration precheck class (%s) could not be loaded."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/CakeMigration.php:175
+#: Plugin/Migrations/Lib/CakeMigration.php:175
 msgid "Migration precheck class (%s) is not a valid precheck class."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/CakeMigration.php:191
+#: Plugin/Migrations/Lib/CakeMigration.php:191
 msgid "Migration direction (%s) is not one of valid directions."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/CakeMigration.php:257
-#: app/Plugin/Migrations/Lib/Migration/PrecheckBase.php:123
+#: Plugin/Migrations/Lib/CakeMigration.php:257
+#: Plugin/Migrations/Lib/Migration/PrecheckBase.php:123
 msgid "Migration action type (%s) is not one of valid actions type."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/CakeMigration.php:264
+#: Plugin/Migrations/Lib/CakeMigration.php:264
 msgid "%s"
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/CakeMigration.php:299;322;344;424;459
+#: Plugin/Migrations/Lib/CakeMigration.php:299;322;344;424;459
 msgid "SQL Error: %s"
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/CakeMigration.php:493
+#: Plugin/Migrations/Lib/CakeMigration.php:493
 msgid "Interrupted when running \"%s\" callback."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/MigrationVersion.php:237
+#: Plugin/Migrations/Lib/MigrationVersion.php:237
 msgid "Class `%1$s` not found on file `%2$s` for %3$s."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/MigrationVersion.php:386
+#: Plugin/Migrations/Lib/MigrationVersion.php:386
 msgid "File `%1$s` not found in the %2$s."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/Migration/PrecheckException.php:31
+#: Plugin/Migrations/Lib/Migration/PrecheckException.php:31
 msgid "Table \"%s\" does not exists in database."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/Migration/PrecheckException.php:47
+#: Plugin/Migrations/Lib/Migration/PrecheckException.php:47
 msgid "Table \"%s\" already exists in database."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/Migration/PrecheckException.php:64
+#: Plugin/Migrations/Lib/Migration/PrecheckException.php:64
 msgid "Field \"%s\" does not exists in \"%s\"."
 msgstr ""
 
-#: app/Plugin/Migrations/Lib/Migration/PrecheckException.php:81
+#: Plugin/Migrations/Lib/Migration/PrecheckException.php:81
 msgid "Field \"%s\" already exists in \"%s\"."
 msgstr ""
 
-#: app/Plugin/Migrations/View/Elements/migrations_panel.ctp:13
+#: Plugin/Migrations/View/Elements/migrations_panel.ctp:13
 msgid "Migration Status"
 msgstr ""
 
