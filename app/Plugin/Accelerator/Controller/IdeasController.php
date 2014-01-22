@@ -233,6 +233,7 @@ class IdeasController extends AcceleratorAppController {
             $ipAddress = RequestHandlerComponent::getClientIp();
         }
         $existingVote = $vote->findById($id);
+        Debugger::dump($existingVote);
         $changedVote = true;
         if($existingVote){
             if($existingVote['Vote']['value'] == $mod){
@@ -248,8 +249,10 @@ class IdeasController extends AcceleratorAppController {
         
         $vote->id = $id;
         $voteResult = $vote->save($data);
+        Debugger::dump($changedVote);
         if ($voteResult) {
             if ($changedVote && $mod != 0){
+
                 $this->Session->setFlash(__d('accelerator','Vote cast!'));
             }
             $this->updateVotes($ideaId);
