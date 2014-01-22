@@ -6,6 +6,10 @@ App::uses('CakeEvent', 'Event');
 
 
 class IdeasController extends AcceleratorAppController {
+    public function beforeRender() {
+        $this->response->disableCache();
+        $this->parent->beforeRender();
+    }
     
     public $components = array('Paginator');
 
@@ -253,7 +257,6 @@ class IdeasController extends AcceleratorAppController {
         Debugger::dump($changedVote);
         if ($voteResult) {
             if ($changedVote && $mod != 0){
-
                 $this->Session->setFlash(__d('accelerator','Vote cast!'));
             }
             $this->updateVotes($ideaId);
