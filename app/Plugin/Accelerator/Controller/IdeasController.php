@@ -233,10 +233,10 @@ class IdeasController extends AcceleratorAppController {
             $ipAddress = RequestHandlerComponent::getClientIp();
         }
         $existingVote = $vote->findById($id);
-        $changed_vote = true;
+        $changedVote = true;
         if($existingVote){
             if($existingVote['Vote']['value'] == $mod){
-                $changed_vote = false;
+                $changedVote = false;
             }
         }
 
