@@ -236,15 +236,6 @@ class IdeasController extends AcceleratorAppController {
             $userId = null;
             $ipAddress = RequestHandlerComponent::getClientIp();
         }
-        $existingVote = $vote->findById($id);
-        Debugger::dump('looking for existing vote for '.$id);
-        Debugger::dump($existingVote);
-        $changedVote = true;
-        if($existingVote){
-            if($existingVote['Vote']['value'] == $mod){
-                $changedVote = false;
-            }
-        }
 
         $data = array('Vote' => array('id' => $id,
                                       'value' => $mod,
@@ -256,7 +247,7 @@ class IdeasController extends AcceleratorAppController {
         $voteResult = $vote->save($data);
         Debugger::dump($changedVote);
         if ($voteResult) {
-            if ($changedVote && $mod != 0){
+            if ($mod != 0){
                 $this->Session->setFlash(__d('accelerator','Vote cast!'));
             }
             $this->updateVotes($ideaId);
