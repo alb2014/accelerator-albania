@@ -8,7 +8,7 @@ App::uses('CakeEvent', 'Event');
 class IdeasController extends AcceleratorAppController {
     public function beforeRender() {
         $this->response->disableCache();
-        $this->parent->beforeRender();
+        parent::beforeRender();
     }
     
     public $components = array('Paginator');
