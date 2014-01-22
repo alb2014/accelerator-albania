@@ -535,6 +535,7 @@ class UsersController extends UsersAppController {
 			Croogo::dispatchEvent('Controller.Users.beforeLogin', $this);
 			if ($this->Auth->login()) {
 				Croogo::dispatchEvent('Controller.Users.loginSuccessful', $this);
+				Debugger::dump($this->Auth->redirectUrl());
 				$this->redirect($this->Auth->redirectUrl());
 			} else {
 				Croogo::dispatchEvent('Controller.Users.loginFailure', $this);
