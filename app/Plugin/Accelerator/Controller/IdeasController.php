@@ -245,7 +245,6 @@ class IdeasController extends AcceleratorAppController {
         
         $vote->id = $id;
         $voteResult = $vote->save($data);
-        Debugger::dump($changedVote);
         if ($voteResult) {
             if ($mod != 0){
                 $this->Session->setFlash(__d('accelerator','Vote cast!'));
