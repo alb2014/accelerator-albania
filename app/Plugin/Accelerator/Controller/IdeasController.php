@@ -233,6 +233,7 @@ class IdeasController extends AcceleratorAppController {
             $ipAddress = RequestHandlerComponent::getClientIp();
         }
         $existingVote = $vote->findById($id);
+        Debugger::dump('looking for existing vote for '.$id);
         Debugger::dump($existingVote);
         $changedVote = true;
         if($existingVote){
