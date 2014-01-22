@@ -221,6 +221,7 @@ class IdeasController extends AcceleratorAppController {
                 break;
         }
         $vote = new Vote();
+
         $user = AuthComponent::user();
         if ($user){
             $id = $ideaId.'-'.$user['id'];
@@ -231,6 +232,14 @@ class IdeasController extends AcceleratorAppController {
             $userId = null;
             $ipAddress = RequestHandlerComponent::getClientIp();
         }
+        $existingVote = $vote->findById($id);
+        $changed_vote = true;
+        if($existingVote){
+            if($existingVote['Vote']['value'] == $mod){
+                $changed_vote = false;
+            }
+        }
+
         $data = array('Vote' => array('id' => $id,
                                       'value' => $mod,
                                       'idea_id' => $ideaId,
@@ -238,9 +247,11 @@ class IdeasController extends AcceleratorAppController {
                                       'ip_address' => $ipAddress));
         
         $vote->id = $id;
-
-        if ($vote->save($data)) {
-            $this->Session->setFlash(__d('accelerator','Vote cast!'));
+        $voteResult = $vote->save($data);
+        if ($voteResult) {
+            if ($changedVote && $mod != 0){
+                $this->Session->setFlash(__d('accelerator','Vote cast!'));
+            }
             $this->updateVotes($ideaId);
             return $this->redirect(array('action' => 'index/'));
         }
