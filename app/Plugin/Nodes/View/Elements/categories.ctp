@@ -1,6 +1,6 @@
 <section class="categories">
     <header>
-        <h2><?php echo __d('croogo', 'More...');?></h2>
+        <h2><?php echo __d('accelerator', 'More...');?></h2>
     </header>
 
     <ul class="inner">

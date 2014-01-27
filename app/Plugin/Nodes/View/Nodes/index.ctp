@@ -5,7 +5,7 @@
 <section class="nodes">
     <header>
         <div class="paging"><?php echo $this->Paginator->numbers(); ?></div>
-        <h2><?php echo __d('croogo', 'Learn');?></h2>
+        <h2><?php echo __d('accelerator', 'Learn');?></h2>
     </header>
     <?php
         if (count($nodes) == 0) {

@@ -1,8 +1,12 @@
 <?php echo $this->Form->create('User', array('url' => array('plugin' => 'users', 'controller' => 'users', 'action' => 'login')));?>
     <fieldset>
     <?php
-        echo $this->Form->input('username');
-        echo $this->Form->input('password');
+        echo $this->Form->input('username',
+            array('label' => __d('accelerator', 'Username'))
+            );
+        echo $this->Form->input('password',
+            array('label' => __d('accelerator', 'Password'))
+            );
     ?>
     </fieldset>
 <?php echo $this->Form->end(__d('accelerator', 'Submit'));?>

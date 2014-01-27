@@ -42,7 +42,7 @@
 ?>
     <section class="static sidebar">
         <header>
-            <h2><?php echo __d('croogo', 'Who Is...') ?></h2>
+            <h2><?php echo __d('accelerator', 'Who Is...') ?></h2>
         </header>
         <div class="inner">
             <?php echo $this->Layout->blocks('about-sidebar'); ?>
@@ -59,7 +59,7 @@
 ?>
     <section class="node-wrapper static">
         <header>
-            <h2><?php echo __d('croogo', 'Program Structure'); ?>
+            <h2><?php echo __d('accelerator', 'Program Structure'); ?>
         </header>
 
         <div class="inner">

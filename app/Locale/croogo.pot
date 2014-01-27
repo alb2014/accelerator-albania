@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-01-15 21:07+0100\n"
+"POT-Creation-Date: 2014-01-27 12:05-0800\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -2641,10 +2641,6 @@ msgstr ""
 msgid "Invalid Content Type"
 msgstr ""
 
-#: Plugin/Nodes/View/Elements/categories.ctp:3
-msgid "More..."
-msgstr ""
-
 #: Plugin/Nodes/View/Elements/node_info.ctp:6
 msgid "Posted"
 msgstr ""
@@ -2752,23 +2748,11 @@ msgstr ""
 msgid "No translations available."
 msgstr ""
 
-#: Plugin/Nodes/View/Nodes/index.ctp:8
-msgid "Learn"
-msgstr ""
-
 #: Plugin/Nodes/View/Nodes/index.ctp:12
 #: Plugin/Nodes/View/Nodes/promoted.ctp:4
 #: Plugin/Nodes/View/Nodes/search.ctp:8
 #: Plugin/Nodes/View/Nodes/term.ctp:8
 msgid "No items found."
-msgstr ""
-
-#: Plugin/Nodes/View/Nodes/view.ctp:45
-msgid "Who Is..."
-msgstr ""
-
-#: Plugin/Nodes/View/Nodes/view.ctp:62
-msgid "Program Structure"
 msgstr ""
 
 #: Plugin/Settings/Config/bootstrap.php:12

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-01-15 21:07+0100\n"
+"POT-Creation-Date: 2014-01-27 12:05-0800\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,47 +14,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Plugin/Accelerator/Controller/IdeasController.php:78
+#: Plugin/Accelerator/Controller/IdeasController.php:82
 msgid "Your idea has been saved."
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:81
+#: Plugin/Accelerator/Controller/IdeasController.php:85
 msgid "Unable to add your idea."
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:93
+#: Plugin/Accelerator/Controller/IdeasController.php:97
 msgid "The idea with id: %s has been deleted."
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:98
+#: Plugin/Accelerator/Controller/IdeasController.php:102
 msgid "You are not authorized to delete this idea."
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:109;115
+#: Plugin/Accelerator/Controller/IdeasController.php:113;119
 msgid "Invalid idea"
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:175;181
+#: Plugin/Accelerator/Controller/IdeasController.php:179;185
 msgid "We couldn't find that idea."
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:188
+#: Plugin/Accelerator/Controller/IdeasController.php:192
 msgid "You are not authorized to edit this idea."
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:198
+#: Plugin/Accelerator/Controller/IdeasController.php:202
 msgid "Your idea has been updated."
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:201
+#: Plugin/Accelerator/Controller/IdeasController.php:205
 msgid "Unable to update your idea."
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:243
+#: Plugin/Accelerator/Controller/IdeasController.php:250
 msgid "Vote cast!"
 msgstr ""
 
-#: Plugin/Accelerator/Controller/IdeasController.php:248
+#: Plugin/Accelerator/Controller/IdeasController.php:256
 msgid "Voting failed."
 msgstr ""
 
@@ -153,7 +153,7 @@ msgstr ""
 
 #: Plugin/Accelerator/View/Accelerator/index.ctp:13
 #: Plugin/Users/View/Elements/add_form.ctp:53
-#: Plugin/Users/View/Elements/login_form.ctp:8
+#: Plugin/Users/View/Elements/login_form.ctp:12
 #: Plugin/Users/View/Users/forgot.ctp:12
 #: Plugin/Users/View/Users/reset.ctp:13
 #: View/Themed/Accelerator/Layouts/default.ctp:125
@@ -166,6 +166,7 @@ msgid "Engage"
 msgstr ""
 
 #: Plugin/Accelerator/View/Accelerator/index.ctp:15
+#: Plugin/Nodes/View/Nodes/index.ctp:8
 #: View/Themed/Accelerator/Layouts/default.ctp:127
 msgid "Learn"
 msgstr ""
@@ -420,6 +421,18 @@ msgstr ""
 msgid "Login to Comment"
 msgstr ""
 
+#: Plugin/Nodes/View/Elements/categories.ctp:3
+msgid "More..."
+msgstr ""
+
+#: Plugin/Nodes/View/Nodes/view.ctp:45
+msgid "Who Is..."
+msgstr ""
+
+#: Plugin/Nodes/View/Nodes/view.ctp:62
+msgid "Program Structure"
+msgstr ""
+
 #: Plugin/Users/Controller/UsersController.php:89
 msgid "You have reached maximum limit for failed login attempts. Please try again after a few minutes."
 msgstr ""
@@ -480,11 +493,11 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:555
+#: Plugin/Users/Controller/UsersController.php:556
 msgid "Log out successful."
 msgstr ""
 
-#: Plugin/Users/Controller/UsersController.php:573
+#: Plugin/Users/Controller/UsersController.php:574
 msgid "Invalid User."
 msgstr ""
 
@@ -524,11 +537,20 @@ msgstr ""
 msgid "* Required Field"
 msgstr ""
 
-#: Plugin/Users/View/Elements/login_form.ctp:12
+#: Plugin/Users/View/Elements/login_form.ctp:5
+#: Plugin/Users/View/Users/forgot.ctp:9
+msgid "Username"
+msgstr ""
+
+#: Plugin/Users/View/Elements/login_form.ctp:8
+msgid "Password"
+msgstr ""
+
+#: Plugin/Users/View/Elements/login_form.ctp:16
 msgid "Register here"
 msgstr ""
 
-#: Plugin/Users/View/Elements/login_form.ctp:17
+#: Plugin/Users/View/Elements/login_form.ctp:21
 msgid "Forgot your password?"
 msgstr ""
 
@@ -546,10 +568,6 @@ msgstr ""
 
 #: Plugin/Users/View/Emails/text/register.ctp:10
 msgid "Please visit this link to activate your account: %s"
-msgstr ""
-
-#: Plugin/Users/View/Users/forgot.ctp:9
-msgid "Username"
 msgstr ""
 
 #: Plugin/Users/View/Users/index.ctp:4
