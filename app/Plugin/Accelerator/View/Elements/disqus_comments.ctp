@@ -1,8 +1,8 @@
  <?php
 	    	
-	$disqus_auth_str =  $disqus_sso['message'] . ' ' . 
-	$disqus_sso['hmac'] . ' ' . 
-	$disqus_sso['timestamp'];
+	// $disqus_auth_str =  $disqus_sso['message'] . ' ' . 
+	// $disqus_sso['hmac'] . ' ' . 
+	// $disqus_sso['timestamp'];
 ?>
 <script type="text/javascript">
     var disqus_config = function () {

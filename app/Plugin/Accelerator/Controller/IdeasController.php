@@ -282,16 +282,17 @@ class IdeasController extends AcceleratorAppController {
         // Leveling up logic
 
         $tier_2_votes_req = Configure::read('Accelerator.tier_2_votes'); 
-        $tier_3_votes_req = Configure::read('Accelerator.tier_3_votes');
+        // $tier_3_votes_req = Configure::read('Accelerator.tier_3_votes');
         $tier_level = $idea['tier_level'];
 
-        if($tier_level == 0 && $upvotes >= $tier_2_votes_req) {
+        if($tier_level == 0 && $upvotes == $tier_2_votes_req) {
             $tier_level = 1;
             $this->_alertUser($idea, $tier_level);
-        } else if($tier_level == 1 && $upvotes >= $tier_3_votes_req) {
-            $tier_level = 2;
-            $this->_alertUser($idea, $tier_level);
-        }
+        } 
+        // else if($tier_level == 1 && $upvotes == $tier_3_votes_req) {
+        //     $tier_level = 2;
+        //     $this->_alertUser($idea, $tier_level);
+        // }
 
         // End leveling up logic
 

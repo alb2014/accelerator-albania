@@ -145,6 +145,20 @@
         <?php /* echo $this->Html->link('Cancel',
 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $idea['Idea']['id']),array('class' => 'button')); */ ?>
         <a class="button" href="/accelerator/ideas"><?php echo __d('accelerator','Cancel');?></a>
+
+        <?php  if($idea['tier_level'] > 0): 
+
+            echo $this->Html->link(
+            'Dashboard',
+            array(
+                'action' => 'submit_jury',
+                'full_base' => true,
+                'label' => __d('accelerator','Submit to Jury')
+            )
+        );
+
+        endif; ?>
+
     </div>
 </section>
 
