@@ -363,8 +363,6 @@ class UsersController extends UsersAppController {
 			$this->request->data['User']['name'] = htmlspecialchars($this->request->data['User']['name']);
 			$user = $this->User->save($this->request->data);
 			if ($user) {
-
-
 				Croogo::dispatchEvent('Controller.Users.registrationSuccessful', $this);
 				$this->request->data['User']['password'] = null;
 
@@ -535,11 +533,11 @@ class UsersController extends UsersAppController {
 			Croogo::dispatchEvent('Controller.Users.beforeLogin', $this);
 			if ($this->Auth->login()) {
 				Croogo::dispatchEvent('Controller.Users.loginSuccessful', $this);
-				Debugger::dump($this->Auth->redirectUrl());
 				$this->redirect($this->Auth->redirectUrl());
 			} else {
 				Croogo::dispatchEvent('Controller.Users.loginFailure', $this);
-				$this->Session->setFlash($this->Auth->authError, 'default', array('class' => 'error'), 'auth');
+				//$this->Session->setFlash($this->Auth->authError, 'default', array('class' => 'error'), 'auth');
+				//$this->Session->setFlash($this->Auth->authError, 'default', array('class' => 'error'), 'auth');
 				$this->redirect($this->Auth->loginAction);
 			}
 		}

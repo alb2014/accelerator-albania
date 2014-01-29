@@ -304,6 +304,15 @@ class IdeasController extends AcceleratorAppController {
         $this->Idea->save($data);
     }
 
+    public function submitIdea($ideaId){
+        $idea = $this->Idea->findById($ideaId);
+        if ($idea['Idea']['up_votes'] > 25 && !$idea['Idea']['toJury']){
+            $idea['Idea']['toJury'] = 1;
+            // Send Notification Code
+            $this->Idea->save($idea);
+        }
+    }
+
     private function _alertUser($idea, $tier_level){
 
         $event = new CakeEvent('Accelerator.Idea.Tier_Level_Up', $this, array(
