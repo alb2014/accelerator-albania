@@ -320,6 +320,12 @@ class IdeasController extends AcceleratorAppController {
             $this->autoRender = false;
 
             if ($saved_idea) {
+                    $event = new CakeEvent('Accelerator.Idea.juryAlert', $this, array(
+                        'idea' => $idea
+                    ));
+                    
+                    $this->getEventManager()->dispatch($event);
+
                     $this->Session->setFlash(__d('accelerator','Your idea has been submitted to the jury.'));
                     return $this->redirect(array('action' => 'index'));
                 }

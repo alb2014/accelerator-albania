@@ -35,6 +35,7 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
 			),
 			//'Accelerator.Idea.Tier_Level_Up' => '_alertUser',
 			'Accelerator.Idea.Tier_Level_Up' => 'alertUser',
+			'Accelerator.Idea.juryAlert' => 'jury_alert',
 
 		);
 	}
@@ -111,6 +112,35 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
                     'user' => $ideaUser,
                     'idea' => $idea,
                     'tier_level' => $tier_level
+                )
+        );
+
+    }
+
+    /**
+	 * alers a jury member an idea has been submitted
+	 */
+	public function juryAlert($event){
+
+		$idea = $event->data['idea'];
+
+        $ideaUser = ClassRegistry::init('User')->find('first', array(
+            'conditions' =>array('User.id' => $idea['user_id'])
+            )
+        );
+
+        $ideaUser = $ideaUser['User'];
+
+        $idea = $event->data['idea'];
+        $email = Configure::read('Accelerator.jury_email');
+
+        $this->_sendEmail(
+                $email,
+                __d('accelerator', 'A new idea, %s, has been submitted for review',$idea['name']),
+                'Accelerator.jury_alert',
+                array(
+                	'user' => $ideaUser,
+                    'idea' => $idea
                 )
         );
 
