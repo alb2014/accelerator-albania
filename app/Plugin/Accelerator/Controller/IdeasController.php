@@ -307,7 +307,7 @@ class IdeasController extends AcceleratorAppController {
     public function submitIdea($ideaId){
         
         $idea = $this->Idea->findById($ideaId);
-        if ($idea['Idea']['up_votes'] > 25 && !$idea['Idea']['toJury']){
+        if ($idea['Idea']['up_votes'] > Configure::read('Accelerator.tier_2_votes') && !$idea['Idea']['toJury']){
             $idea['Idea']['toJury'] = 1;
             // Send Notification Email
             $saved_idea = $this->Idea->save($idea);
