@@ -305,6 +305,7 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function submitIdea($ideaId){
+        $this->autoRender = false;
         $idea = $this->Idea->findById($ideaId);
         if ($idea['Idea']['up_votes'] > 25 && !$idea['Idea']['toJury']){
             $idea['Idea']['toJury'] = 1;
