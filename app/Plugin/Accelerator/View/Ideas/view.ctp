@@ -26,7 +26,7 @@
             echo $this->Html->link(__d('accelerator', 'Edit my idea'),
                 array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button'));
              
-            if($idea['tier_level'] > 0): 
+            if($idea['Idea']['tier_level'] > 0): 
 
                 echo $this->Html->link(
                 __d('accelerator', 'Submit to Jury'),
