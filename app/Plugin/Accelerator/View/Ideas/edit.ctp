@@ -151,7 +151,8 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
             echo $this->Html->link(
             'Dashboard',
             array(
-                'action' => 'submit_jury',
+                'action' => 'submitIdea',
+                'id' => $idea['id'],
                 'full_base' => true,
                 'label' => __d('accelerator','Submit to Jury')
             )
