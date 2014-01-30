@@ -305,12 +305,14 @@ class IdeasController extends AcceleratorAppController {
     }
 
     public function submitIdea($ideaId){
-        $this->autoRender = false;
+        
         $idea = $this->Idea->findById($ideaId);
         if ($idea['Idea']['up_votes'] > 25 && !$idea['Idea']['toJury']){
             $idea['Idea']['toJury'] = 1;
             // Send Notification Email
             $saved_idea = $this->Idea->save($idea);
+
+            $this->autoRender = false;
 
             if ($saved_idea) {
                     $this->Session->setFlash(__d('accelerator','Your idea has been submitted to the jury.'));
