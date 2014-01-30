@@ -310,13 +310,14 @@ class IdeasController extends AcceleratorAppController {
         if ($idea['Idea']['up_votes'] > 25 && !$idea['Idea']['toJury']){
             $idea['Idea']['toJury'] = 1;
             // Send Notification Email
-            $this->Idea->save($idea);
+            $saved_idea = $this->Idea->save($idea);
 
-            if ($this->Idea->save($this->request->data)) {
+            if ($saved_idea) {
                     $this->Session->setFlash(__d('accelerator','Your idea has been submitted to the jury.'));
                     return $this->redirect(array('action' => 'index'));
                 }
-                $this->Session->setFlash(__d('accelerator','Unable to submit your idea.'));
+            $this->Session->setFlash(__d('accelerator','Unable to submit your idea.'));
+            return $this->redirect(array('action' => 'index'));
         }
     }
 
