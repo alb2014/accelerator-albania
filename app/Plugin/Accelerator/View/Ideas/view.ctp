@@ -34,7 +34,7 @@
                     'full_base' => true,
                     'module' => 'accelerator',
                     'action' => 'submitIdea',
-                    $idea['id']
+                    $idea['Idea']['id']
                     
                 ),
                     array('class' => 'button')
