@@ -4,58 +4,58 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-01-15 21:07+0100\n"
-"PO-Revision-Date: 2014-01-15 23:40+0100\n"
-"Last-Translator: Shkelzen Marku <shkelzen.marku@yunussb.com>\n"
+"POT-Creation-Date: 2014-01-27 12:05-0800\n"
+"PO-Revision-Date: 2014-01-30 14:13-0800\n"
+"Last-Translator: Emil Lamprecht <emil.t.lamprecht@gmail.com>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: sq_AL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.2\n"
 
-#: Plugin/Accelerator/Controller/IdeasController.php:78
+#: Plugin/Accelerator/Controller/IdeasController.php:82
 msgid "Your idea has been saved."
 msgstr "Idea juaj është ruajtur."
 
-#: Plugin/Accelerator/Controller/IdeasController.php:81
+#: Plugin/Accelerator/Controller/IdeasController.php:85
 msgid "Unable to add your idea."
 msgstr "E pamundur që të ruhet ideja juaj."
 
-#: Plugin/Accelerator/Controller/IdeasController.php:93
+#: Plugin/Accelerator/Controller/IdeasController.php:97
 msgid "The idea with id: %s has been deleted."
 msgstr "Idea me kod: %s u fshi"
 
-#: Plugin/Accelerator/Controller/IdeasController.php:98
+#: Plugin/Accelerator/Controller/IdeasController.php:102
 msgid "You are not authorized to delete this idea."
 msgstr "Nuk jeni i autorizuar që të fshini këtë ide"
 
-#: Plugin/Accelerator/Controller/IdeasController.php:109;115
+#: Plugin/Accelerator/Controller/IdeasController.php:113;119
 msgid "Invalid idea"
 msgstr "Ide e pavlefshme"
 
-#: Plugin/Accelerator/Controller/IdeasController.php:175;181
+#: Plugin/Accelerator/Controller/IdeasController.php:179;185
 msgid "We couldn't find that idea."
 msgstr "Idea nuk mund të gjendet"
 
-#: Plugin/Accelerator/Controller/IdeasController.php:188
+#: Plugin/Accelerator/Controller/IdeasController.php:192
 msgid "You are not authorized to edit this idea."
 msgstr "Nuk jeni i autorizuar që të modifikoni këtë ide"
 
-#: Plugin/Accelerator/Controller/IdeasController.php:198
+#: Plugin/Accelerator/Controller/IdeasController.php:202
 msgid "Your idea has been updated."
 msgstr "Idea juaj u përditësua."
 
-#: Plugin/Accelerator/Controller/IdeasController.php:201
+#: Plugin/Accelerator/Controller/IdeasController.php:205
 msgid "Unable to update your idea."
 msgstr "Idea juaj nuk mund të përditësohet."
 
-#: Plugin/Accelerator/Controller/IdeasController.php:243
+#: Plugin/Accelerator/Controller/IdeasController.php:250
 msgid "Vote cast!"
 msgstr "Voto!"
 
-#: Plugin/Accelerator/Controller/IdeasController.php:248
+#: Plugin/Accelerator/Controller/IdeasController.php:256
 msgid "Voting failed."
 msgstr "Votimi juaj nuk ishte i suksesshëm"
 
@@ -154,7 +154,7 @@ msgstr "Përmbajtja "
 
 #: Plugin/Accelerator/View/Accelerator/index.ctp:13
 #: Plugin/Users/View/Elements/add_form.ctp:53
-#: Plugin/Users/View/Elements/login_form.ctp:8
+#: Plugin/Users/View/Elements/login_form.ctp:12
 #: Plugin/Users/View/Users/forgot.ctp:12 Plugin/Users/View/Users/reset.ctp:13
 #: View/Themed/Accelerator/Layouts/default.ctp:125
 msgid "Submit"
@@ -166,13 +166,14 @@ msgid "Engage"
 msgstr "Përfshihu"
 
 #: Plugin/Accelerator/View/Accelerator/index.ctp:15
+#: Plugin/Nodes/View/Nodes/index.ctp:8
 #: View/Themed/Accelerator/Layouts/default.ctp:127
 msgid "Learn"
 msgstr "Mëso"
 
 #: Plugin/Accelerator/View/Accelerator/index.ctp:29;44
 msgid "read more"
-msgstr "Lexo më shumë"
+msgstr "lexo më shumë"
 
 #: Plugin/Accelerator/View/Accelerator/index.ctp:31
 #: View/Themed/Accelerator/Layouts/default.ctp:172
@@ -209,7 +210,7 @@ msgid ""
 "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex "
 "ea."
 msgstr ""
-"Thelbi i Çështjes Sociale: Lorem ipsum dolor sit amet, consectetur "
+"Thelbi i Problemit Social: Lorem ipsum dolor sit amet, consectetur "
 "adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna "
 "aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris "
 "nisi ut aliquip ex ea."
@@ -398,7 +399,7 @@ msgstr "Popullaritetit"
 
 #: Plugin/Accelerator/View/Ideas/index.ctp:17
 msgid "Topic"
-msgstr "Temës"
+msgstr "Tema"
 
 #: Plugin/Accelerator/View/Ideas/index.ctp:31
 msgid "Previous"
@@ -447,6 +448,18 @@ msgstr "Komente"
 #: Plugin/Accelerator/View/Ideas/view.ctp:80
 msgid "Login to Comment"
 msgstr "Logohu për të komentuar"
+
+#: Plugin/Nodes/View/Elements/categories.ctp:3
+msgid "More..."
+msgstr "Për më tepër"
+
+#: Plugin/Nodes/View/Nodes/view.ctp:45
+msgid "Who Is..."
+msgstr "Kush është..."
+
+#: Plugin/Nodes/View/Nodes/view.ctp:62
+msgid "Program Structure"
+msgstr "Struktura e Programit"
 
 #: Plugin/Users/Controller/UsersController.php:89
 msgid ""
@@ -517,11 +530,11 @@ msgstr "Fjalëkalimi juaj u ndryshua me sukses."
 msgid "Log in"
 msgstr "Hyr"
 
-#: Plugin/Users/Controller/UsersController.php:555
+#: Plugin/Users/Controller/UsersController.php:556
 msgid "Log out successful."
 msgstr "Dalja u realizua me sukses"
 
-#: Plugin/Users/Controller/UsersController.php:573
+#: Plugin/Users/Controller/UsersController.php:574
 msgid "Invalid User."
 msgstr "Përdorues i pavlefshëm"
 
@@ -566,11 +579,20 @@ msgstr ""
 msgid "* Required Field"
 msgstr "* Fushë e kërkuar"
 
-#: Plugin/Users/View/Elements/login_form.ctp:12
+#: Plugin/Users/View/Elements/login_form.ctp:5
+#: Plugin/Users/View/Users/forgot.ctp:9
+msgid "Username"
+msgstr "Përdoruesi"
+
+#: Plugin/Users/View/Elements/login_form.ctp:8
+msgid "Password"
+msgstr "Fjalëkalimi"
+
+#: Plugin/Users/View/Elements/login_form.ctp:16
 msgid "Register here"
 msgstr "Regjistrohu këtu"
 
-#: Plugin/Users/View/Elements/login_form.ctp:17
+#: Plugin/Users/View/Elements/login_form.ctp:21
 msgid "Forgot your password?"
 msgstr "Keni harruar fjalëkalimin?"
 
@@ -581,8 +603,8 @@ msgstr "Ju lutem, hyni në këtë link që të ndryshoni fjalëkalimin tuaj %s"
 #: Plugin/Users/View/Emails/text/forgot_password.ctp:14
 msgid "If you did not request a password reset, then please ignore this email."
 msgstr ""
-"Nëse ju nuk keni kërkuar një ndryshim fjalëkalimi, ju lutem mos merrni "
-"parasysh këtë email."
+"Nëse nuk keni kërkuar një ndryshim fjalëkalimi, ju lutem mos merrni parasysh "
+"këtë email."
 
 #: Plugin/Users/View/Emails/text/register.ctp:1
 msgid "Hello %s"
@@ -591,10 +613,6 @@ msgstr "Përshëndetje %s"
 #: Plugin/Users/View/Emails/text/register.ctp:10
 msgid "Please visit this link to activate your account: %s"
 msgstr "Ju lutem, hyni në këtë link që të aktivizoni llogarinë tuaj: %s"
-
-#: Plugin/Users/View/Users/forgot.ctp:9
-msgid "Username"
-msgstr "Përdoruesi"
 
 #: Plugin/Users/View/Users/index.ctp:4
 msgid "New Idea?"
@@ -637,7 +655,7 @@ msgstr "Mbyll"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:14
 msgid "accelerator"
-msgstr "përshpejtues"
+msgstr "Përshpejtues"
 
 #: View/Themed/Accelerator/Layouts/default.ctp:48
 msgid "FAQ"
@@ -710,9 +728,6 @@ msgstr "RSS"
 #: View/Themed/Accelerator/Layouts/default.ctp:196
 msgid "&copy;2013 YUNUS Albania commissioned by UNPD"
 msgstr "&copy;2013 YSB Albania në bashkëpunim me UNPD"
-
-#~ msgid "Password"
-#~ msgstr "Fjalëkalimi"
 
 #~ msgid "Name"
 #~ msgstr "Emri"
