@@ -35,6 +35,7 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
 			),
 			//'Accelerator.Idea.Tier_Level_Up' => '_alertUser',
 			'Accelerator.Idea.Tier_Level_Up' => 'alertUser',
+			'Accelerator.Idea.juryAlert' => 'juryAlert',
 
 		);
 	}
@@ -116,6 +117,39 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
 
     }
 
+    /**
+	 * alers a jury member an idea has been submitted
+	 */
+	public function juryAlert($event){
+
+		$idea = $event->data['idea'];
+
+        $this->log($idea);
+
+        $ideaUser = ClassRegistry::init('User')->find('first', array(
+            'conditions' =>array('User.id' => $idea['Idea']['user_id'])
+            )
+        );
+
+        $ideaUser = $idea['User'];
+
+        $email = Configure::read('Accelerator.jury_email');
+
+        $this->log('alert!!!!!');
+        $this->log($email);
+
+        $this->_sendEmail(
+                $email,
+                __d('accelerator', 'A new idea, %s, has been submitted for review',$idea['Idea']['name']),
+                'Accelerator.jury_alert',
+                array(
+                	'user' => $ideaUser,
+                    'idea' => $idea
+                )
+        );
+
+    }
+
 /**
  * Convenience method to send email
  *
@@ -132,7 +166,7 @@ class AcceleratorEventHandler extends Object implements CakeEventListener {
         $success = false;
 
         try {
-            $this->log(func_get_args()); //for debugging
+            // $this->log(func_get_args()); //for debugging
             $email = new CakeEmail();
             $email->config('default');
             // $email->from($from[1], $from[0]);

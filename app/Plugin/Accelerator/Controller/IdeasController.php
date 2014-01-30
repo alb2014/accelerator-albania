@@ -196,6 +196,11 @@ class IdeasController extends AcceleratorAppController {
                 ));
         }
 
+        if ($idea['Idea']['toJury']){
+            $this->Session->setFlash(__d('accelerator','Your idea has already been submitted to the jury.'));
+            return $this->redirect(array('action' => 'view', $idea['Idea']['id']));
+        }
+
         if ($this->request->is(array('post', 'put'))) {
             $this->Idea->id = $id;
             if ($this->Idea->save($this->request->data)) {
@@ -307,14 +312,23 @@ class IdeasController extends AcceleratorAppController {
     public function submitIdea($ideaId){
         
         $idea = $this->Idea->findById($ideaId);
-        if ($idea['Idea']['up_votes'] > 25 && !$idea['Idea']['toJury']){
+        
+        $votes = Configure::read('Accelerator.tier_2_votes');
+
+        if ($idea['Idea']['up_votes'] >=  $votes && !$idea['Idea']['toJury']){
             $idea['Idea']['toJury'] = 1;
-            // Send Notification Email
+            
             $saved_idea = $this->Idea->save($idea);
 
             $this->autoRender = false;
-
             if ($saved_idea) {
+                // Send Notification Email
+                    $event = new CakeEvent('Accelerator.Idea.juryAlert', $this, array(
+                        'idea' => $idea
+                    ));
+                    
+                    $this->getEventManager()->dispatch($event);
+
                     $this->Session->setFlash(__d('accelerator','Your idea has been submitted to the jury.'));
                     return $this->redirect(array('action' => 'index'));
                 }

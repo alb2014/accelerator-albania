@@ -9,9 +9,9 @@
         "theme": "Accelerator",
         "timezone": 0,
         "title": "Croogo",
-        "tier_1_votes": 20,
-        "tier_2_votes": 20,
-        "tier_3_votes": 20
+        "tier_1_votes": 25,
+        "tier_2_votes": 25,
+        "tier_3_votes": 25
     },
     "Hook": {
         "bootstraps": "Settings,Comments,Contacts,Nodes,Meta,Menus,Users,Blocks,Taxonomy,FileManager,Wysiwyg,Ckeditor,Accelerator"
@@ -52,7 +52,8 @@
         "wysiwyg": 1
     },
     "Accelerator": {
-        "tier_2_votes": 1,
-        "tier_3_votes": 2
+        "tier_2_votes": 25,
+        "tier_3_votes": 25,
+        "jury_email": "leonard.dalipi@yunussb.com"
     }
 }

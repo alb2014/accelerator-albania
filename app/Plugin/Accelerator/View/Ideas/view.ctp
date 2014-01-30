@@ -24,7 +24,24 @@
         
         if($isIdeaOwner){
             echo $this->Html->link(__d('accelerator', 'Edit my idea'),
-                array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button')); 
+                array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'edit', $idea['Idea']['id']), array('class' => 'button'));
+             
+            if($idea['Idea']['tier_level'] > 0): 
+
+                echo $this->Html->link(
+                __d('accelerator', 'Submit to Jury'),
+                array(
+                    'full_base' => true,
+                    'module' => 'accelerator',
+                    'action' => 'submitIdea',
+                    $idea['Idea']['id']
+                    
+                ),
+                    array('class' => 'button')
+                );
+
+            endif;
+
         }
         if($isAdmin){
             echo $this->Html->link(__d('accelerator', 'Edit this idea'),
