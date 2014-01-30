@@ -151,11 +151,11 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
             echo $this->Html->link(
             __d('accelerator', 'Submit to Jury'),
             array(
+                'full_base' => true,
                 'module' => 'accelerator',
                 'action' => 'submitIdea',
-                'id' => $idea['id'],
-                'full_base' => true,
-                'label' => __d('accelerator','Submit to Jury')
+                $idea['id']
+                
             ),
             array('class' => 'button')
         );
