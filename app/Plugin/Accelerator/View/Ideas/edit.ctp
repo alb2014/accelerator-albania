@@ -149,13 +149,15 @@ array('module' => 'accelerator', 'controller' => 'ideas', 'action' => 'view', $i
         <?php  if($idea['tier_level'] > 0): 
 
             echo $this->Html->link(
-            'Dashboard',
+            __d('accelerator', 'Submit to Jury'),
             array(
+                'module' => 'accelerator',
                 'action' => 'submitIdea',
                 'id' => $idea['id'],
                 'full_base' => true,
                 'label' => __d('accelerator','Submit to Jury')
-            )
+            ),
+            array('class' => 'button')
         );
 
         endif; ?>
