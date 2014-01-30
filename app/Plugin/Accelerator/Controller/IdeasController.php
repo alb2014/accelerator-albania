@@ -198,7 +198,7 @@ class IdeasController extends AcceleratorAppController {
 
         if ($idea['Idea']['toJury']){
             $this->Session->setFlash(__d('accelerator','Your idea has already been submitted to the jury.'));
-            return $this->redirect(array('action' => 'index'));
+            return $this->redirect(array('action' => 'view', $idea['Idea']['id']));
         }
 
         if ($this->request->is(array('post', 'put'))) {
