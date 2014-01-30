@@ -318,9 +318,9 @@ class IdeasController extends AcceleratorAppController {
                     $this->Session->setFlash(__d('accelerator','Your idea has been submitted to the jury.'));
                     return $this->redirect(array('action' => 'index'));
                 }
-            $this->Session->setFlash(__d('accelerator','Unable to submit your idea.'));
-            return $this->redirect(array('action' => 'index'));
         }
+        $this->Session->setFlash(__d('accelerator','Unable to submit your idea.'));
+        return $this->redirect(array('action' => 'index'));
     }
 
     private function _alertUser($idea, $tier_level){
