@@ -193,7 +193,7 @@
                         </ul>
                     </div>
 
-                    <p><?php echo __d('accelerator','&copy;2013 YUNUS Albania commissioned by UNPD')?></p>
+                    <p><?php echo __d('accelerator','&copy;2013 YUNUS Albania commissioned by UNDP')?></p>
                 </div>
 
             </footer>

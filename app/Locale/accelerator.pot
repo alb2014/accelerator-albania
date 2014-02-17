@@ -682,6 +682,6 @@ msgid "RSS"
 msgstr ""
 
 #: View/Themed/Accelerator/Layouts/default.ctp:196
-msgid "&copy;2013 YUNUS Albania commissioned by UNPD"
+msgid "&copy;2013 YUNUS Albania commissioned by UNDP"
 msgstr ""
 
